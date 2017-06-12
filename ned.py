@@ -98,9 +98,12 @@ ra = Angle('09h55m52.7s',u.hour)
 dec = Angle('69d40m46s',u.degree)
 print("Original radius: %s" %(ra.to_string()))
 print("Original declination: %s" %(dec.to_string()))
+initCoord = ra.to_string() + " +" + dec.to_string();
+
 
 z = 0
-dam = 60 #20 arcminutes
+dam = input('How many arcminutes?') #20 arcminutes
+dam = int(dam)
 #dtsquared = (pow(dalpha*math.cos(decl),2)+pow(ddecl,2))
 
 A_v = []
@@ -113,24 +116,47 @@ for j in range(0,dam+1):
 	for i in range(0,4):
 		C = coordinates.SkyCoord(coord[i])
 		table = IrsaDust.get_extinction_table(C.fk5)
+		#table.write('test.csv', format = 'csv')
 		curVal[i] = (table['A_SandF'][2])
 		curVal = curVal[:]
-#	print(j,": ",coord)
+#	print(j,": ",coord)    #used to print the coordinates for checking
 	A_v.append(curVal)
 
 #print values for each arcminute
 for sublst in A_v:
-	print(z),
-	print("Arcminutes: "),
+	print(z, "Arcminutes: "),
 	for item in sublst:
-		print(item),
+		print(item)
 	print("")
 	z+=1
 
+
+from astropy.utils.data import download_file
+from astropy.io import fits
+import matplotlib
+matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
+
+
+Ic = coordinates.SkyCoord(initCoord)
+image = IrsaDust.get_image_list(Ic.fk5, image_type="100um", radius=5*u.deg)
+
+mng = plt.get_current_fig_manager()
+
+print(image)
+image_file = download_file(image[0],cache=True)
+image_data = fits.getdata(image_file, ext=0)
+plt.figure(1)
+plt.title("Galaxy Image")
+plt.imshow(image_data,cmap='gray')
+plt.colorbar()
+plt.show(block=False)
+plt.get_current_fig_manager().window.wm_geometry("+800+45")
+
 import numpy as np
 x = np.arange(dam+1)
 A_v = np.array(A_v)
+plt.figure(2)
 plt.plot(x,A_v[:,0], color = "blue", marker = ".", label = "North")
 plt.plot(x, A_v[:,1], color = "red", marker = ".", label = "East")
 plt.plot(x, A_v[:,2], color = "green", marker = ".", label = "South")
@@ -139,4 +165,4 @@ plt.title("A_v Values by Arcminute")
 plt.xlabel("Arcminutes from Center of Star")
 plt.ylabel("A_v Value")
 plt.legend(loc='lower left', shadow=True)
-plt.show()
+plt.show(block = True)
