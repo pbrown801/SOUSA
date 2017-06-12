@@ -54,7 +54,7 @@ def unsureCoord(dam,ra,dec):
 	print(coord)
 	return coord;
 
-def fourCoord(dam,ra,dec):
+def fourCoord(dam,ra,dec,coord):
 	ds = dam*4
 
 	#e
@@ -106,29 +106,44 @@ dam = input('How many arcminutes?') #20 arcminutes
 dam = int(dam)
 #dtsquared = (pow(dalpha*math.cos(decl),2)+pow(ddecl,2))
 
-A_v = []
-curVal = [None] *4 #n = 0, e = 1, s = 2, w = 3
-coord = [None] *4 #n = 0, e = 1, s = 2, w = 3
+from astropy.table import Table
+from astropy.table import Column
 
-#get values for each arcminute
-for j in range(0,dam+1):
-	fourCoord(j, ra, dec)
-	for i in range(0,4):
-		C = coordinates.SkyCoord(coord[i])
-		table = IrsaDust.get_extinction_table(C.fk5)
-		#table.write('test.csv', format = 'csv')
-		curVal[i] = (table['A_SandF'][2])
-		curVal = curVal[:]
-#	print(j,": ",coord)    #used to print the coordinates for checking
-	A_v.append(curVal)
+def tableFill(dam, ra, dec):
+	t = Table(None) 
+	Am = Column(name = 'Arcminute')
+	North = Column(name = 'North')
+	East = Column(name = 'East')
+	South = Column(name = 'South')
+	West = Column(name = 'West')
+	t.add_columns([Am,North, East, South, West])
+
+	A_v = []
+	curVal = [None] *4 #n = 0, e = 1, s = 2, w = 3
+	coord = [None] *4 #n = 0, e = 1, s = 2, w = 3
+	#get values for each arcminute
+	for j in range(0,dam+1):
+		fourCoord(j, ra, dec, coord)
+		t.add_row()
+		t[j][0]=j
+		for i in range(0,4):
+			C = coordinates.SkyCoord(coord[i])
+			table = IrsaDust.get_extinction_table(C.fk5)
+			curVal[i] = (table['A_SandF'][2])
+			t[j][i+1] = curVal[i]
+			curVal = curVal[:]
+	#	print(j,": ",coord)    #used to print the coordinates for checking
+		A_v.append(curVal)
+	print(t)
+	return A_v;
 
 #print values for each arcminute
-for sublst in A_v:
-	print(z, "Arcminutes: "),
-	for item in sublst:
-		print(item)
-	print("")
-	z+=1
+#for sublst in A_v:
+# 	print(z, "Arcminutes: "),
+# 	for item in sublst:
+# 		print(item)
+# 	print("")
+# 	z+=1
 
 
 from astropy.utils.data import download_file
@@ -155,6 +170,7 @@ plt.get_current_fig_manager().window.wm_geometry("+800+45")
 
 import numpy as np
 x = np.arange(dam+1)
+A_v = tableFill(dam,ra,dec)
 A_v = np.array(A_v)
 plt.figure(2)
 plt.plot(x,A_v[:,0], color = "blue", marker = ".", label = "North")
