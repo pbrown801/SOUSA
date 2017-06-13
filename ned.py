@@ -109,7 +109,7 @@ dam = int(dam)
 from astropy.table import Table
 from astropy.table import Column
 
-def tableFill(dam, ra, dec):
+def tableFill(dam, ra, dec, appender):
 	t = Table(None) 
 	Am = Column(name = 'Arcminute')
 	North = Column(name = 'North')
@@ -134,17 +134,19 @@ def tableFill(dam, ra, dec):
 			curVal = curVal[:]
 	#	print(j,": ",coord)    #used to print the coordinates for checking
 		A_v.append(curVal)
+	t.add_row()
+
+	for i in range(0,5): #this adds a blank line to the table to separate queries
+		t[j+1][i] = None	
 	print(t)
+	final_vals = t.to_pandas()
+	from pandas import ExcelWriter
+	
+	with open('A_v Values.csv', appender) as f:
+		final_vals.to_csv(f, header =True, index = False, sep = ',')
 	return A_v;
 
-#print values for each arcminute
-#for sublst in A_v:
-# 	print(z, "Arcminutes: "),
-# 	for item in sublst:
-# 		print(item)
-# 	print("")
-# 	z+=1
-
+#------MAIN FUNCTION-----#
 
 from astropy.utils.data import download_file
 from astropy.io import fits
@@ -158,27 +160,28 @@ image = IrsaDust.get_image_list(Ic.fk5, image_type="100um", radius=5*u.deg)
 
 mng = plt.get_current_fig_manager()
 
-print(image)
-image_file = download_file(image[0],cache=True)
-image_data = fits.getdata(image_file, ext=0)
-plt.figure(1)
-plt.title("Galaxy Image")
-plt.imshow(image_data,cmap='gray')
-plt.colorbar()
-plt.show(block=False)
-plt.get_current_fig_manager().window.wm_geometry("+800+45")
+# print(image)
+# image_file = download_file(image[0],cache=True)
+# image_data = fits.getdata(image_file, ext=0)
+# plt.figure(1)
+# plt.title("Galaxy Image")
+# plt.imshow(image_data,cmap='gray')
+# plt.colorbar()
+# plt.show(block=False)
+# plt.get_current_fig_manager().window.wm_geometry("+800+45")
 
 import numpy as np
 x = np.arange(dam+1)
-A_v = tableFill(dam,ra,dec)
+appender = 'a'
+A_v = tableFill(dam,ra,dec,appender)
 A_v = np.array(A_v)
-plt.figure(2)
-plt.plot(x,A_v[:,0], color = "blue", marker = ".", label = "North")
-plt.plot(x, A_v[:,1], color = "red", marker = ".", label = "East")
-plt.plot(x, A_v[:,2], color = "green", marker = ".", label = "South")
-plt.plot(x, A_v[:,3], color = "black", marker = ".", label = "West")
-plt.title("A_v Values by Arcminute")
-plt.xlabel("Arcminutes from Center of Star")
-plt.ylabel("A_v Value")
-plt.legend(loc='lower left', shadow=True)
-plt.show(block = True)
+# plt.figure(2)
+# plt.plot(x,A_v[:,0], color = "blue", marker = ".", label = "North")
+# plt.plot(x, A_v[:,1], color = "red", marker = ".", label = "East")
+# plt.plot(x, A_v[:,2], color = "green", marker = ".", label = "South")
+# plt.plot(x, A_v[:,3], color = "black", marker = ".", label = "West")
+# plt.title("A_v Values by Arcminute")
+# plt.xlabel("Arcminutes from Center of Star")
+# plt.ylabel("A_v Value")
+# plt.legend(loc='lower left', shadow=True)
+# plt.show(block = True)
