@@ -7,7 +7,7 @@ from astropy.coordinates import Angle,ICRS,SkyCoord
 
 import math
 
-def timeFix(s,m,h):
+def timeFix(s,m,h): #fixes time to ensure it stays within normal range (0-60)
 	if(s>=60 or m>=60):
 		while(s>=60 or m>=60):
 			if s >= 60:
@@ -63,7 +63,7 @@ def fourCoord(dam,ra,dec,coord):
 	coord[2] = ra.to_string()+" "+decl.to_string()
 	
 	#print(coord)
-	return coord;
+	return coord; #performs transformation of initial coord into cardinal coordinates 
 
 def tableFill(dam, ra, dec, appender,nme):
 	t = Table(None) 
@@ -102,12 +102,12 @@ def tableFill(dam, ra, dec, appender,nme):
 	appender = 'a'
 	with open('A_v Values.csv', appender) as f:
 		final_vals.to_csv(f, header =True, index = False, sep = ',')
-	return A_v;
+	return A_v;  #gets the data from IRSA database and stores A_v in array
 
 def grabImage(ra,dec):
 	imagelist = IrsaDust.get_image_list(SkyCoord(ra,dec).fk5, image_type="100um", radius=5*u.deg)
 	image_file = download_file(imagelist[0],cache=True)
-	image_data.append(fits.getdata(image_file, ext=0))
+	image_data.append(fits.getdata(image_file, ext=0)) #gets image from IRSA database
 
 def PicSaver(image_data,lists):
 
@@ -141,34 +141,29 @@ def PicSaver(image_data,lists):
 			f.savefig(lists[go*(j)]+".png")
 			plt.clf()
 
-	#-----Saves Graphs and Data To The Directory-----#
+	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
 
 from astropy.coordinates import name_resolve
+
+#-----SETUP-----#
+
 lists = []
 start_coord = []
 
-num = input("Enter galaxies separated by commas: Ex. M82, M83\n")
+num = input("Enter galaxies separated by commas: Ex. M82, M83\n") #gets galaxies from user
 for x in num.split(','):
-	lists.append(x.strip())
+	lists.append(x.strip()) #separates the commas and stores names in list
 for i in range(0,len(lists)):
-	tcoord=SkyCoord.from_name(lists[i],frame ='icrs')
-	#lon = Angle((tcoord.ra.hour), unit = u.hour)
-	#lat = Angle((tcoord.dec), unit = u.degree)
-	#tcoord = SkyCoord(lon,lat,frame = 'icrs')
-	start_coord.append(tcoord)
-#print(start_coord)
-#creating angles and printing
-ra = Angle('09h55m52.7s',u.hour)
-dec = Angle('69d40m46s',u.degree)
-initCoord = ra.to_string() +" " + dec.to_string();
+	tcoord=SkyCoord.from_name(lists[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
+	start_coord.append(tcoord) #puts temporary SkyCoord in a list
 
-dam = input('How many arcminutes?') #20 arcminutes
+dam = input('How many arcminutes?')
 dam = int(dam)
-#dtsquared = (pow(dalpha*math.cos(decl),2)+pow(ddecl,2))
 
 from astropy.table import Table
 from astropy.table import Column
 
+#-----SETUP-----#
 
 #------MAIN FUNCTION-----#
 
@@ -177,29 +172,30 @@ from astropy.io import fits
 import matplotlib
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
-
-ra = Angle(start_coord[0].ra.hour,unit = u.hour)
-dec = start_coord[0].dec
+import numpy as np
 image_data = []
 
-import numpy as np
-x = np.arange(dam+1)
+ra = Angle(start_coord[0].ra.hour,unit = u.hour) #gets radius of 1st coordinate as an angle (needed for things to work)
+dec = start_coord[0].dec #dont need an angle for some reason but it works
 
-appender = 'w'
+
+x = np.arange(dam+1) #creates array of size dam+1 to store values
+
+appender = 'w' #lets us overwrite a file or make a new one
 nme = lists[0]
-A_v = tableFill(dam,ra,dec,appender,nme)
-grabImage(ra,dec)
-appender = 'a'
+A_v = tableFill(dam,ra,dec,appender,nme) #runs the main functionality and returns the data of a galaxy
+grabImage(ra,dec) #gets image data and stores in list
+appender = 'a' #lets us append a file instead of overwriting
 for i in range(1,len(start_coord)):
 	nme = lists[i]
 	ra = Angle(start_coord[i].ra.hour,unit = u.hour)
 	dec = start_coord[i].dec
 	A_v = tableFill(dam,ra,dec,appender,nme)
 	grabImage(ra,dec)
-PicSaver(image_data,lists)
+PicSaver(image_data,lists) #saves all images in .png files, don't mess with this
 
 
-A_v = np.array(A_v)
+A_v = np.array(A_v) #stores values in numpy array
 # plt.figure(2)
 # plt.plot(x,A_v[:,0], color = "blue", marker = ".", label = "North")
 # plt.plot(x, A_v[:,1], color = "red", marker = ".", label = "East")
