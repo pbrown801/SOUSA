@@ -1,9 +1,9 @@
 #query coordinates
-import astropy.units as u
+from astropy import units as u
 from astropy import coordinates
 
 from astroquery.irsa_dust import IrsaDust
-from astropy.coordinates import Angle
+from astropy.coordinates import Angle,ICRS,SkyCoord
 
 import math
 
@@ -26,34 +26,6 @@ def timeFix(s,m,h):
 				m+=60		
 	return s,m,h;
 
-def unsureCoord(dam,ra,dec):
-	ds = dam*4 #change in real seconds for radius
-	dec = dec.arcminute+dam
-	decl = Angle(dec,u.arcminute)
-	ds/=math.cos(math.radians(decl.degree))
-
-	h = ra.hms.h
-	m = ra.hms.m
-	s = (ra.hms.s)+ds
-	(s,m,h) = timeFix(s,m,h) #fix time coordinates
-
-	rad = Angle((h,m,s), unit = u.hour) #gets in new format
-
-	print("Radius after 20 arcminutes:"), 
-	print(rad.to_string(unit=u.hour))
-	print("Declination after 20 arcminutes:"),
-	print(decl.to_string(unit=u.degree))
-
-	#resetting to original format
-	rad = Angle(rad.to_string(unit=u.hour),u.hour)
-	decl = Angle(decl.to_string(unit=u.degree),u.degree)
-
-	#creating coordinates from radius and declination
-	coord = rad.to_string()+" +"+decl.to_string()
-	print("New coord:"),
-	print(coord)
-	return coord;
-
 def fourCoord(dam,ra,dec,coord):
 	ds = dam*4
 
@@ -65,13 +37,13 @@ def fourCoord(dam,ra,dec,coord):
 	(s,m,h) = timeFix(s,m,h)
 	rad = Angle((h,m,s), unit = u.hour)
 	rad = Angle(rad.to_string(unit=u.hour),u.hour)
-	coord[1] = rad.to_string()+" +"+dec.to_string()
+	coord[1] = rad.to_string()+" "+dec.to_string()
 
 	#n
 	decli = dec.arcminute+dam
 	decl = Angle(decli,u.arcminute)
 	decl = Angle(decl.to_string(unit=u.degree),u.degree)
-	coord[0] = ra.to_string()+" +"+decl.to_string()
+	coord[0] = ra.to_string()+" "+decl.to_string()
 	
 	#w
 	ds=ds*(-1)
@@ -82,34 +54,18 @@ def fourCoord(dam,ra,dec,coord):
 	(s,m,h) = timeFix(s,m,h)
 	rad = Angle((h,m,s), unit = u.hour)
 	rad = Angle(rad.to_string(unit=u.hour),u.hour)
-	coord[3] = rad.to_string()+" +"+dec.to_string()
+	coord[3] = rad.to_string()+" "+dec.to_string()
 
 	#s
 	decli = dec.arcminute-dam
 	decl = Angle(decli,u.arcminute)
 	decl = Angle(decl.to_string(unit=u.degree),u.degree)
-	coord[2] = ra.to_string()+" +"+decl.to_string()
+	coord[2] = ra.to_string()+" "+decl.to_string()
 	
 	#print(coord)
 	return coord;
 
-#creating angles and printing
-ra = Angle('09h55m52.7s',u.hour)
-dec = Angle('69d40m46s',u.degree)
-print("Original radius: %s" %(ra.to_string()))
-print("Original declination: %s" %(dec.to_string()))
-initCoord = ra.to_string() + " +" + dec.to_string();
-
-
-z = 0
-dam = input('How many arcminutes?') #20 arcminutes
-dam = int(dam)
-#dtsquared = (pow(dalpha*math.cos(decl),2)+pow(ddecl,2))
-
-from astropy.table import Table
-from astropy.table import Column
-
-def tableFill(dam, ra, dec, appender):
+def tableFill(dam, ra, dec, appender,nme):
 	t = Table(None) 
 	Am = Column(name = 'Arcminute')
 	North = Column(name = 'North')
@@ -117,7 +73,6 @@ def tableFill(dam, ra, dec, appender):
 	South = Column(name = 'South')
 	West = Column(name = 'West')
 	t.add_columns([Am,North, East, South, West])
-
 	A_v = []
 	curVal = [None] *4 #n = 0, e = 1, s = 2, w = 3
 	coord = [None] *4 #n = 0, e = 1, s = 2, w = 3
@@ -135,16 +90,85 @@ def tableFill(dam, ra, dec, appender):
 	#	print(j,": ",coord)    #used to print the coordinates for checking
 		A_v.append(curVal)
 	t.add_row()
-
 	for i in range(0,5): #this adds a blank line to the table to separate queries
 		t[j+1][i] = None	
-	print(t)
+	n = [nme]
+	namesTable = Table([n], names=('n'))
+	final_name = namesTable.to_pandas()
 	final_vals = t.to_pandas()
 	from pandas import ExcelWriter
-	
+	with open('A_v Values.csv', appender) as f:
+		final_name.to_csv(f, header =False, index = False)
+	appender = 'a'
 	with open('A_v Values.csv', appender) as f:
 		final_vals.to_csv(f, header =True, index = False, sep = ',')
 	return A_v;
+
+def grabImage(ra,dec):
+	imagelist = IrsaDust.get_image_list(SkyCoord(ra,dec).fk5, image_type="100um", radius=5*u.deg)
+	image_file = download_file(imagelist[0],cache=True)
+	image_data.append(fits.getdata(image_file, ext=0))
+
+def PicSaver(image_data,lists):
+
+	if(len(start_coord)>5):
+		go = 5
+		iend = go
+		sz1 = (int(len(lists))//go)+1
+		sz2 = (int(len(lists))-(go*(sz1-1)))
+	else:
+		go = len(lists)
+		iend = go
+		sz1 = (int(len(lists))//go)
+		sz2 = (int(len(lists))-(go*(sz1-1)))
+	for j in range(0,sz1):
+		if j==sz1-1:
+			iend = sz2
+		if iend == 1:
+			plt.figure(1)
+			plt.title(lists[len(lists)-1])
+			plt.imshow(image_data[len(image_data)-1],cmap='gray')
+			plt.colorbar()
+			plt.savefig(lists[len(lists)-1]+".png")
+		else:
+			f, axarr = plt.subplots(1,iend)
+			for i in range(go*(j),((j)*go)+iend): 
+				im = axarr[i-(go*j)].imshow(image_data[i],cmap='gray')
+				axarr[i-(go*(j))].set_title(lists[i])
+			f.subplots_adjust(right=0.8)
+			cbar_ax = f.add_axes([0.85, 0.15, 0.05, 0.7])
+			f.colorbar(im,cax = cbar_ax)
+			f.savefig(lists[go*(j)]+".png")
+			plt.clf()
+
+	#-----Saves Graphs and Data To The Directory-----#
+
+from astropy.coordinates import name_resolve
+lists = []
+start_coord = []
+
+num = input("Enter galaxies separated by commas: Ex. M82, M83\n")
+for x in num.split(','):
+	lists.append(x.strip())
+for i in range(0,len(lists)):
+	tcoord=SkyCoord.from_name(lists[i],frame ='icrs')
+	#lon = Angle((tcoord.ra.hour), unit = u.hour)
+	#lat = Angle((tcoord.dec), unit = u.degree)
+	#tcoord = SkyCoord(lon,lat,frame = 'icrs')
+	start_coord.append(tcoord)
+#print(start_coord)
+#creating angles and printing
+ra = Angle('09h55m52.7s',u.hour)
+dec = Angle('69d40m46s',u.degree)
+initCoord = ra.to_string() +" " + dec.to_string();
+
+dam = input('How many arcminutes?') #20 arcminutes
+dam = int(dam)
+#dtsquared = (pow(dalpha*math.cos(decl),2)+pow(ddecl,2))
+
+from astropy.table import Table
+from astropy.table import Column
+
 
 #------MAIN FUNCTION-----#
 
@@ -154,26 +178,27 @@ import matplotlib
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 
-
-Ic = coordinates.SkyCoord(initCoord)
-image = IrsaDust.get_image_list(Ic.fk5, image_type="100um", radius=5*u.deg)
-
-mng = plt.get_current_fig_manager()
-
-# print(image)
-# image_file = download_file(image[0],cache=True)
-# image_data = fits.getdata(image_file, ext=0)
-# plt.figure(1)
-# plt.title("Galaxy Image")
-# plt.imshow(image_data,cmap='gray')
-# plt.colorbar()
-# plt.show(block=False)
-# plt.get_current_fig_manager().window.wm_geometry("+800+45")
+ra = Angle(start_coord[0].ra.hour,unit = u.hour)
+dec = start_coord[0].dec
+image_data = []
 
 import numpy as np
 x = np.arange(dam+1)
+
+appender = 'w'
+nme = lists[0]
+A_v = tableFill(dam,ra,dec,appender,nme)
+grabImage(ra,dec)
 appender = 'a'
-A_v = tableFill(dam,ra,dec,appender)
+for i in range(1,len(start_coord)):
+	nme = lists[i]
+	ra = Angle(start_coord[i].ra.hour,unit = u.hour)
+	dec = start_coord[i].dec
+	A_v = tableFill(dam,ra,dec,appender,nme)
+	grabImage(ra,dec)
+PicSaver(image_data,lists)
+
+
 A_v = np.array(A_v)
 # plt.figure(2)
 # plt.plot(x,A_v[:,0], color = "blue", marker = ".", label = "North")
