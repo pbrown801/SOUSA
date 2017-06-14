@@ -73,7 +73,7 @@ def tableFill(dam, ra, dec, appender,nme):
 	South = Column(name = 'South')
 	West = Column(name = 'West')
 	t.add_columns([Am,North, East, South, West])
-	A_v = []
+	tA_v = []
 	curVal = [None] *4 #n = 0, e = 1, s = 2, w = 3
 	coord = [None] *4 #n = 0, e = 1, s = 2, w = 3
 	#get values for each arcminute
@@ -87,8 +87,7 @@ def tableFill(dam, ra, dec, appender,nme):
 			curVal[i] = (table['A_SandF'][2])
 			t[j][i+1] = curVal[i]
 			curVal = curVal[:]
-	#	print(j,": ",coord)    #used to print the coordinates for checking
-		A_v.append(curVal)
+		tA_v.append(curVal)
 	t.add_row()
 	for i in range(0,5): #this adds a blank line to the table to separate queries
 		t[j+1][i] = None	
@@ -102,7 +101,7 @@ def tableFill(dam, ra, dec, appender,nme):
 	appender = 'a'
 	with open('A_v Values.csv', appender) as f:
 		final_vals.to_csv(f, header =True, index = False, sep = ',')
-	return A_v;  #gets the data from IRSA database and stores A_v in array
+	return(tA_v)#gets the data from IRSA database and stores A_v in array
 
 def grabImage(ra,dec):
 	imagelist = IrsaDust.get_image_list(SkyCoord(ra,dec).fk5, image_type="100um", radius=5*u.deg)
@@ -143,6 +142,51 @@ def PicSaver(image_data,lists):
 
 	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
 
+def GraphMaker(A_v,lists):
+
+	if(len(lists)>2):
+		go = 2
+		iend = go
+		sz1 = (int(len(lists))//go)+1
+		sz2 = (int(len(lists))-(go*(sz1-1)))
+	else:
+		go = len(lists)
+		iend = go
+		sz1 = (int(len(lists))//go)
+		sz2 = (int(len(lists))-(go*(sz1-1)))
+	for j in range(0,sz1):
+		if j==sz1-1:
+			iend = sz2
+		if iend == 1:
+			plt.figure(1)
+			plt.plot(x,A_v[0][:,0], color = "blue", marker = ".", label = "North")
+			plt.plot(x, A_v[0][:,1], color = "red", marker = ".", label = "East")
+			plt.plot(x, A_v[0][:,2], color = "green", marker = ".", label = "South")
+			plt.plot(x, A_v[0][:,3], color = "black", marker = ".", label = "West")
+			plt.xlabel("Arcminutes from Center of Galaxy")
+			plt.ylabel("A_v Value")
+			plt.legend(loc='lower left', shadow=True)
+			plt.suptitle("A_v Values by Arcminute")
+			plt.title(lists[len(lists)-1])
+			plt.savefig(lists[len(lists)-1]+" Graph.png")
+			plt.clf()
+		else:
+			f, axarr = plt.subplots(nrows = 1,ncols = iend, sharey = True, sharex = True,figsize = (20,10))
+			f.text(.5,.04, 'Arcminutes From Center of Galaxy',ha='center',fontsize = 20)
+			f.text(.08,.5, 'A_V Value',va='center', rotation='vertical',fontsize = 20)
+			for i in range(go*(j),((j)*go)+iend): 
+				no, = axarr[i-(go*j)].plot(x,A_v[i][:,0], color = "blue", marker = ".", label = "North")
+				ea, = axarr[i-(go*j)].plot(x, A_v[i][:,1], color = "red", marker = ".", label = "East")
+				so, = axarr[i-(go*j)].plot(x, A_v[i][:,2], color = "green", marker = ".", label = "South")
+				we, = axarr[i-(go*j)].plot(x, A_v[i][:,3], color = "black", marker = ".", label = "West")
+				axarr[i-(go*(j))].set_title(lists[i], fontsize = 20)
+			plt.figlegend((no,ea,so,we),("North","East","South","West"),loc='center right', shadow=True, prop={'size':20})
+			plt.suptitle("A_v Values by Arcminute", fontsize = 20)
+			f.savefig(lists[go*(j)]+" Graph.png")
+			plt.clf()
+
+	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
+
 from astropy.coordinates import name_resolve
 
 #-----SETUP-----#
@@ -153,6 +197,7 @@ start_coord = []
 num = input("Enter galaxies separated by commas: Ex. M82, M83\n") #gets galaxies from user
 for x in num.split(','):
 	lists.append(x.strip()) #separates the commas and stores names in list
+choice = input("Do you want to get pictures of each galaxy? [y] [n] \n") #option to get pictures
 for i in range(0,len(lists)):
 	tcoord=SkyCoord.from_name(lists[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
 	start_coord.append(tcoord) #puts temporary SkyCoord in a list
@@ -174,35 +219,23 @@ matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import numpy as np
 image_data = []
-
+A_v = []
 ra = Angle(start_coord[0].ra.hour,unit = u.hour) #gets radius of 1st coordinate as an angle (needed for things to work)
 dec = start_coord[0].dec #dont need an angle for some reason but it works
-
 
 x = np.arange(dam+1) #creates array of size dam+1 to store values
 
 appender = 'w' #lets us overwrite a file or make a new one
 nme = lists[0]
-A_v = tableFill(dam,ra,dec,appender,nme) #runs the main functionality and returns the data of a galaxy
-grabImage(ra,dec) #gets image data and stores in list
+A_v.append(tableFill(dam,ra,dec,appender,nme)) #runs the main functionality and returns the data of a galaxy
+if choice == 'y':grabImage(ra,dec) #gets image data and stores in list
 appender = 'a' #lets us append a file instead of overwriting
 for i in range(1,len(start_coord)):
 	nme = lists[i]
 	ra = Angle(start_coord[i].ra.hour,unit = u.hour)
 	dec = start_coord[i].dec
-	A_v = tableFill(dam,ra,dec,appender,nme)
-	grabImage(ra,dec)
-PicSaver(image_data,lists) #saves all images in .png files, don't mess with this
-
-
-A_v = np.array(A_v) #stores values in numpy array
-# plt.figure(2)
-# plt.plot(x,A_v[:,0], color = "blue", marker = ".", label = "North")
-# plt.plot(x, A_v[:,1], color = "red", marker = ".", label = "East")
-# plt.plot(x, A_v[:,2], color = "green", marker = ".", label = "South")
-# plt.plot(x, A_v[:,3], color = "black", marker = ".", label = "West")
-# plt.title("A_v Values by Arcminute")
-# plt.xlabel("Arcminutes from Center of Star")
-# plt.ylabel("A_v Value")
-# plt.legend(loc='lower left', shadow=True)
-# plt.show(block = True)
+	A_v.append(tableFill(dam,ra,dec,appender,nme))
+	if choice == 'y':grabImage(ra,dec)
+if choice == 'y':PicSaver(image_data,lists) #saves all images in .png files, don't mess with this
+A_v = np.array(A_v) #numpy array needed to graph
+GraphMaker(A_v,lists)
