@@ -158,18 +158,18 @@ def GraphMaker(A_v,lists):
 		if j==sz1-1:
 			iend = sz2
 		if iend == 1:
+			plt.clf()
 			plt.figure(1)
-			plt.plot(x,A_v[0][:,0], color = "blue", marker = ".", label = "North")
-			plt.plot(x, A_v[0][:,1], color = "red", marker = ".", label = "East")
-			plt.plot(x, A_v[0][:,2], color = "green", marker = ".", label = "South")
-			plt.plot(x, A_v[0][:,3], color = "black", marker = ".", label = "West")
+			plt.plot(x,A_v[len(lists)-1][:,0], color = "blue", marker = ".", label = "North")
+			plt.plot(x, A_v[len(lists)-1][:,1], color = "red", marker = ".", label = "East")
+			plt.plot(x, A_v[len(lists)-1][:,2], color = "green", marker = ".", label = "South")
+			plt.plot(x, A_v[len(lists)-1][:,3], color = "black", marker = ".", label = "West")
 			plt.xlabel("Arcminutes from Center of Galaxy")
 			plt.ylabel("A_v Value")
 			plt.legend(loc='lower left', shadow=True)
 			plt.suptitle("A_v Values by Arcminute")
 			plt.title(lists[len(lists)-1])
 			plt.savefig(lists[len(lists)-1]+" Graph.png")
-			plt.clf()
 		else:
 			f, axarr = plt.subplots(nrows = 1,ncols = iend, sharey = True, sharex = True,figsize = (20,10))
 			f.text(.5,.04, 'Arcminutes From Center of Galaxy',ha='center',fontsize = 20)
