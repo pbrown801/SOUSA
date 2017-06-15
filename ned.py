@@ -83,7 +83,7 @@ def tableFill(dam, ra, dec, appender,nme):
 		t[j][0]=j
 		for i in range(0,4):
 			C = coordinates.SkyCoord(coord[i])
-			table = IrsaDust.get_extinction_table(C.fk5)
+			table = IrsaDust.get_extinction_table(C.fk5, show_progress = False)
 			curVal[i] = (table['A_SandF'][2])
 			t[j][i+1] = curVal[i]
 			curVal = curVal[:]
@@ -121,14 +121,18 @@ def PicSaver(image_data,lists):
 		sz1 = (int(len(lists))//go)
 		sz2 = (int(len(lists))-(go*(sz1-1)))
 	for j in range(0,sz1):
-		if j==sz1-1:
+		if j==sz1-1: #if last set of five
 			iend = sz2
-		if iend == 1:
+		if iend == 1: #if only one plot remains
 			plt.figure(1)
 			plt.title(lists[len(lists)-1])
 			plt.imshow(image_data[len(image_data)-1],cmap='gray')
 			plt.colorbar()
 			plt.savefig(lists[len(lists)-1]+".png")
+			plt.clf()
+		elif iend == 0:
+			plt.clf()
+			return
 		else:
 			f, axarr = plt.subplots(1,iend)
 			for i in range(go*(j),((j)*go)+iend): 
@@ -166,10 +170,14 @@ def GraphMaker(A_v,lists):
 			plt.plot(x, A_v[len(lists)-1][:,3], color = "black", marker = ".", label = "West")
 			plt.xlabel("Arcminutes from Center of Galaxy")
 			plt.ylabel("A_v Value")
-			plt.legend(loc='lower left', shadow=True)
+			plt.legend(loc='center right', shadow=True)
 			plt.suptitle("A_v Values by Arcminute")
 			plt.title(lists[len(lists)-1])
 			plt.savefig(lists[len(lists)-1]+" Graph.png")
+			plt.clf()
+		elif iend == 0:
+			plt.clf()
+			return
 		else:
 			f, axarr = plt.subplots(nrows = 1,ncols = iend, sharey = True, sharex = True,figsize = (20,10))
 			f.text(.5,.04, 'Arcminutes From Center of Galaxy',ha='center',fontsize = 20)
@@ -193,7 +201,8 @@ from astropy.coordinates import name_resolve
 
 lists = []
 start_coord = []
-
+print("\nWelcome to A_v Calculator!\n")
+print("Created by: Tate Walker for Dr. Peter Brown at Texas A&M University\n")
 num = input("Enter galaxies separated by commas: Ex. M82, M83\n") #gets galaxies from user
 for x in num.split(','):
 	lists.append(x.strip()) #separates the commas and stores names in list
@@ -202,7 +211,7 @@ for i in range(0,len(lists)):
 	tcoord=SkyCoord.from_name(lists[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
 	start_coord.append(tcoord) #puts temporary SkyCoord in a list
 
-dam = input('How many arcminutes?')
+dam = input("How many arcminutes?\n")
 dam = int(dam)
 
 from astropy.table import Table
@@ -227,6 +236,27 @@ x = np.arange(dam+1) #creates array of size dam+1 to store values
 
 appender = 'w' #lets us overwrite a file or make a new one
 nme = lists[0]
+
+import itertools
+import threading
+import time
+import sys
+
+done = False
+#here is the animation
+def animate():
+    for c in itertools.cycle(['|', '/', '-', '\\']):
+        if done:
+            break
+        sys.stdout.write('\rloading ' + c)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    sys.stdout.write('\rDone!')
+
+print(chr(27) + "[2J")
+threader = threading.Thread(target=animate)
+threader.start()
+
 A_v.append(tableFill(dam,ra,dec,appender,nme)) #runs the main functionality and returns the data of a galaxy
 if choice == 'y':grabImage(ra,dec) #gets image data and stores in list
 appender = 'a' #lets us append a file instead of overwriting
@@ -239,3 +269,8 @@ for i in range(1,len(start_coord)):
 if choice == 'y':PicSaver(image_data,lists) #saves all images in .png files, don't mess with this
 A_v = np.array(A_v) #numpy array needed to graph
 GraphMaker(A_v,lists)
+done = True
+time.sleep(3)
+print(chr(27) + "[2J")
+print("All pictures and graphs are saved in the project directory. The A_v values are stored in the .csv file\n")
+print("Thank you for using this program!\n")
