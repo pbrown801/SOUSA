@@ -251,6 +251,7 @@ def animate():
         sys.stdout.write('\rloading ' + c)
         sys.stdout.flush()
         time.sleep(0.1)
+    print(chr(27) + "[2J")
     sys.stdout.write('\rDone!')
 
 print(chr(27) + "[2J")
