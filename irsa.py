@@ -200,7 +200,7 @@ def GraphMaker(A_v,lists):
 from astropy.coordinates import name_resolve
 
 #-----SETUP-----#
-
+c3 = None
 lists = []
 start_coord = []
 print("\nWelcome to A_v Calculator!\n")
@@ -208,13 +208,16 @@ print("Created by: Tate Walker for Dr. Peter Brown at Texas A&M University\n")
 num = input("Enter galaxies separated by commas: Ex. M82, M83\n") #gets galaxies from user
 for x in num.split(','):
 	lists.append(x.strip()) #separates the commas and stores names in list
-choice = input("Do you want to get pictures of each galaxy? [y] [n] \n") #option to get pictures
+
+c1 = input("Do you want to get A_v values? [y] [n] \n") #option to get values
+if c1 == 'y':c3 = input("Do you want to graph these values? [y] [n] \n") #option to graph
+c2 = input("Do you want to get pictures of each galaxy? [y] [n] \n") #option to get pictures
 for i in range(0,len(lists)):
 	tcoord=SkyCoord.from_name(lists[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
 	start_coord.append(tcoord) #puts temporary SkyCoord in a list
-
-dam = input("How many arcminutes?\n")
-dam = int(dam)
+if c1 == 'y':
+	dam = input("How many arcminutes?\n")
+	dam = int(dam)
 
 from astropy.table import Table
 from astropy.table import Column
@@ -233,8 +236,6 @@ image_data = []
 A_v = []
 ra = Angle(start_coord[0].ra.hour,unit = u.hour) #gets radius of 1st coordinate as an angle (needed for things to work)
 dec = start_coord[0].dec #dont need an angle for some reason but it works
-
-x = np.arange(dam+1) #creates array of size dam+1 to store values
 
 appender = 'w' #lets us overwrite a file or make a new one
 nme = lists[0]
@@ -259,21 +260,22 @@ def animate():
 print(chr(27) + "[2J")
 threader = threading.Thread(target=animate)
 threader.start()
-
-A_v.append(tableFill(dam,ra,dec,appender,nme)) #runs the main functionality and returns the data of a galaxy
-if choice == 'y':grabImage(ra,dec) #gets image data and stores in list
+if c1 == 'y':A_v.append(tableFill(dam,ra,dec,appender,nme)) #runs the main functionality and returns the data of a galaxy
+if c2 == 'y':grabImage(ra,dec) #gets image data and stores in list
 appender = 'a' #lets us append a file instead of overwriting
 for i in range(1,len(start_coord)):
 	nme = lists[i]
 	ra = Angle(start_coord[i].ra.hour,unit = u.hour)
 	dec = start_coord[i].dec
-	A_v.append(tableFill(dam,ra,dec,appender,nme))
-	if choice == 'y':grabImage(ra,dec)
-if choice == 'y':PicSaver(image_data,lists) #saves all images in .png files, don't mess with this
-A_v = np.array(A_v) #numpy array needed to graph
-GraphMaker(A_v,lists)
+	if c1 == 'y':A_v.append(tableFill(dam,ra,dec,appender,nme))
+	if c2 == 'y':grabImage(ra,dec)
+if c2 == 'y':PicSaver(image_data,lists) #saves all images in .png files, don't mess with this
+if c3 == 'y':
+	x = np.arange(dam+1) #creates array of size dam+1 to store values
+	A_v = np.array(A_v) #numpy array needed to graph
+	GraphMaker(A_v,lists)
 done = True
 time.sleep(3)
 print(chr(27) + "[2J")
-print("All pictures and graphs are saved in the project directory. The A_v values are stored in the .csv file\n")
+print("All pictures and graphs are saved in the project directory if selected. The A_v values are stored in the .csv file if calculated\n")
 print("Thank you for using this program!\n")
