@@ -7,7 +7,7 @@ from astropy.coordinates import Angle,ICRS,SkyCoord
 
 import math
 import os.path
-
+import sys
 
 def timeFix(s,m,h): #fixes time to ensure it stays within normal range (0-60)
 	if(s>=60 or m>=60):
@@ -218,6 +218,10 @@ for i in range(0,len(lists)):
 if c1 == 'y':
 	dam = input("How many arcminutes?\n")
 	dam = int(dam)
+
+if c1 and c2 == 'n':
+	print("Those are all the options, please come back if you change your mind.")
+	sys.exit()
 
 from astropy.table import Table
 from astropy.table import Column
