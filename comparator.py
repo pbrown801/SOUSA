@@ -20,9 +20,9 @@ names = ['NGC6946','NGC3344','NGC55','NGC300','M101','NGC4214','NGC4424','NGC425
 plt.clf()
 plt.figure(1)
 plt.scatter(kvals,avals)
-plt.xlabel("A_v Value")
+plt.ylabel("A_v Value")
 plt.title("K_tot by A_v")
-plt.ylabel("K_Tot Value")
+plt.xlabel("K_Tot Value")
 scatter_names = []
 for i in range(len(kvals)):
 	scatter_names.append(plt.scatter(kvals[i],avals[i]))
