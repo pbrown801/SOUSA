@@ -1,4 +1,3 @@
-chmod u+x <Velocities.py>
 import requests
 import itertools
 import threading
@@ -48,7 +47,7 @@ def getVelocities(name,link):
 #-----SETUP-----#
 link = "https://ned.ipac.caltech.edu/cgi-bin/objsearch?"
 gals = []
-
+can_read = False
 while can_read = False:
 	choice = input("Enter [1] to enter galaxies by hand. Enter [2] to import a .txt file of names.\n")
 	if choice == '1':
