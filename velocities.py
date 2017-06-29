@@ -48,14 +48,14 @@ def getVelocities(name,link):
 link = "https://ned.ipac.caltech.edu/cgi-bin/objsearch?"
 gals = []
 can_read = False
-while can_read = False:
+while can_read == False:
 	choice = input("Enter [1] to enter galaxies by hand. Enter [2] to import a .txt file of names.\n")
 	if choice == '1':
 		galaxies = input("Enter galaxies separated by commas: Ex. M82, M83\n")
 		for x in galaxies.split(','):
 			gals.append(x.strip())
 		can_read = True	
-	if choice == '2':
+	elif choice == '2':
 		file = input("What is the name of the file? Ex. galaxies.txt\n\n")
 		with open(file) as inp:
 			gals = inp.read().splitlines()

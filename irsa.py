@@ -130,7 +130,7 @@ def PicSaver(image_data,lists):
 			plt.title(lists[len(lists)-1])
 			plt.imshow(image_data[len(image_data)-1],cmap='gray')
 			plt.colorbar()
-			plt.savefig(os.path.join('Graphs',(lists[len(lists)-1]+".png")))
+			plt.savefig(os.path.join('Pictures',(lists[len(lists)-1]+".png")))
 			plt.clf()
 		elif iend == 0:
 			plt.clf()
@@ -185,7 +185,7 @@ def GraphMaker(A_v,lists):
 			f.text(.5,.04, 'Arcminutes From Center of Galaxy',ha='center',fontsize = 20)
 			f.text(.08,.5, 'A_V Value',va='center', rotation='vertical',fontsize = 20)
 			for i in range(go*(j),((j)*go)+iend): 
-				no, = axarr[i-(go*j)].plot(x,A_v[i][:,0], color = "blue", marker = ".", label = "North")
+				no, = axarr[i-(go*j)].plot(x, A_v[i][:,0], color = "blue", marker = ".", label = "North")
 				ea, = axarr[i-(go*j)].plot(x, A_v[i][:,1], color = "red", marker = ".", label = "East")
 				so, = axarr[i-(go*j)].plot(x, A_v[i][:,2], color = "green", marker = ".", label = "South")
 				we, = axarr[i-(go*j)].plot(x, A_v[i][:,3], color = "black", marker = ".", label = "West")
@@ -205,16 +205,27 @@ lists = []
 start_coord = []
 print("\nWelcome to A_v Calculator!\n")
 print("Created by: Tate Walker for Dr. Peter Brown at Texas A&M University\n")
-num = input("Enter galaxies separated by commas: Ex. M82, M83\n") #gets galaxies from user
-for x in num.split(','):
-	lists.append(x.strip()) #separates the commas and stores names in list
+can_read = False
+while can_read == False:
+	choice = input("Enter [1] to enter galaxies by hand. Enter [2] to import a .txt file of names. Enter [q] to quit.\n")
+	if choice == '1':
+		galaxies = input("Enter galaxies separated by commas: Ex. M82, M83\n")
+		for x in galaxies.split(','):
+			lists.append(x.strip())
+		can_read = True	
+	elif choice == '2':
+		file = input("What is the name of the file? Ex. galaxies.txt\n")
+		with open(file) as inp:
+			lists = inp.read().splitlines()
+		can_read = True
+		choice == '2'
+	elif choice == 'q':sys.exit()
+	else: print("Please enter either [1], [2], or [q]\n\n")
 
 c1 = input("Do you want to get A_v values? [y] [n] \n") #option to get values
 if c1 == 'y':c3 = input("Do you want to graph these values? [y] [n] \n") #option to graph
 c2 = input("Do you want to get pictures of each galaxy? [y] [n] \n") #option to get pictures
-for i in range(0,len(lists)):
-	tcoord=SkyCoord.from_name(lists[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
-	start_coord.append(tcoord) #puts temporary SkyCoord in a list
+
 if c1 == 'y':
 	dam = input("How many arcminutes?\n")
 	dam = int(dam)
@@ -223,6 +234,10 @@ if c1 and c2 == 'n':
 	print("Those are all the options, please come back if you change your mind.")
 	sys.exit()
 
+for i in range(0,len(lists)):
+	tcoord=SkyCoord.from_name(lists[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
+	start_coord.append(tcoord) #puts temporary SkyCoord in a list
+	
 from astropy.table import Table
 from astropy.table import Column
 
