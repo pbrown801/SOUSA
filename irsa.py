@@ -234,18 +234,30 @@ def getAxis(name,link,majAxis,minAxis):
 	minor = diameters.find_all('td')[2].get_text()
 	#-----End Get Diameters-----#
 	write_file = 'Data.csv'
+	fix = False
+	fix2 = False
 	if(major != "..."):
 		major = float(major)/60
 		majAxis.append(major)
 	else:
+		major = "None"
+		fix = True
 		majAxis.append(None)
 	if(minor != "..."):
 		minor = float(minor)/60
 		minAxis.append(minor)
 	else:
+		minor = "None"
+		fix2 = True
 		minAxis.append(None)
 	with open(write_file, 'a') as output:
-		output.write(name + ',' + '%.3f' %major + ',' + '%.3f' %minor + '\n')
+		if(fix and fix2):
+			output.write(name + ',' + major + ',' + minor + '\n')	
+		elif(fix == True and fix2 == False):
+			output.write(name + ',' + major + ',' + '%.3f' %minor + '\n')
+		elif(fix == False and fix2 == True):
+			output.write(name + ',' + '%.3f' %major + ',' + minor + '\n')
+		else: output.write(name + ',' + '%.3f' %major + ',' + '%.3f' %minor + '\n')
 	
 from astropy.coordinates import name_resolve
 
