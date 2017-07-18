@@ -31,18 +31,24 @@ def getVelocities(name,link):
 	page = requests.get(link, params = inputs)
 	from bs4 import BeautifulSoup
 	soup = BeautifulSoup(page.content, 'html.parser')
-	table = soup.find_all('pre')[5]
-	Helio = list(table.children)[2]
-	VGS = list(table.children)[16]
+	#-------Get Velocities-----#
+	velocities = soup.find_all('pre')[5]
+	Helio = list(velocities.children)[2]
+	VGS = list(velocities.children)[16]
 	Helio = Helio.lstrip('\n')
 	VGS = VGS.lstrip('\n')
-
 	Hvals = [int(s) for s in Helio.split() if s.isdigit()]
 	VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
-		
-	write_file = 'Velocities.csv'
+	#-----End Get Velocities-----#
+	#-----Get Diameters-----#
+	diameters = soup.find_all('table')[22]
+	diameters = diameters.find_all('tr')[2]
+	major = diameters.find_all('td')[1].get_text()
+	minor = diameters.find_all('td')[2].get_text()
+	#-----End Get Diameters-----#
+	write_file = 'Data.csv'
 	with open(write_file, 'a') as output:
-		output.write(name + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + '\n')
+		output.write(name + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + major + ',' + minor + '\n')
 	
 #-----SETUP-----#
 link = "https://ned.ipac.caltech.edu/cgi-bin/objsearch?"
@@ -60,7 +66,7 @@ while can_read == False:
 		with open(file) as inp:
 			gals = inp.read().splitlines()
 		can_read = True
-	else
+	else:
 		print("Please enter either [1] or [2]\n\n")
 
 done = False
@@ -68,9 +74,9 @@ print(chr(27) + "[2J")
 threader = threading.Thread(target=animate)
 threader.start()
 
-write_file = 'Velocities.csv'
+write_file = 'Data.csv'
 with open(write_file, 'w') as output:
-	output.write("Name, Heliocentric Velocity (km/s), Uncertainty (km/s), VGS Velocity (km/s), Uncertainty (km/s) \n")
+	output.write("Name, Heliocentric Velocity (km/s), Uncertainty (km/s), VGS Velocity (km/s), Uncertainty (km/s), Apparent Major Axis (arcsec), Apparent Minor Axis (arcsec)\n")
 
 for i in range(0,len(gals)):
 	name = gals[i]

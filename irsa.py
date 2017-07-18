@@ -9,6 +9,8 @@ import math
 import os.path
 import sys
 
+import requests
+
 def timeFix(s,m,h): #fixes time to ensure it stays within normal range (0-60)
 	if(s>=60 or m>=60):
 		while(s>=60 or m>=60):
@@ -110,27 +112,27 @@ def grabImage(ra,dec):
 	image_file = download_file(imagelist[0],cache=True)
 	image_data.append(fits.getdata(image_file, ext=0)) #gets image from IRSA database
 
-def PicSaver(image_data,lists):
+def PicSaver(image_data,gals):
 
 	if(len(start_coord)>5):
 		go = 5
 		iend = go
-		sz1 = (int(len(lists))//go)+1
-		sz2 = (int(len(lists))-(go*(sz1-1)))
+		sz1 = (int(len(gals))//go)+1
+		sz2 = (int(len(gals))-(go*(sz1-1)))
 	else:
-		go = len(lists)
+		go = len(gals)
 		iend = go
-		sz1 = (int(len(lists))//go)
-		sz2 = (int(len(lists))-(go*(sz1-1)))
+		sz1 = (int(len(gals))//go)
+		sz2 = (int(len(gals))-(go*(sz1-1)))
 	for j in range(0,sz1):
 		if j==sz1-1: #if last set of five
 			iend = sz2
 		if iend == 1: #if only one plot remains
 			plt.figure(1)
-			plt.title(lists[len(lists)-1])
+			plt.title(gals[len(gals)-1])
 			plt.imshow(image_data[len(image_data)-1],cmap='gray')
 			plt.colorbar()
-			plt.savefig(os.path.join('Pictures',(lists[len(lists)-1]+".png")))
+			plt.savefig(os.path.join('Pictures',(gals[len(gals)-1]+".png")))
 			plt.clf()
 		elif iend == 0:
 			plt.clf()
@@ -139,43 +141,44 @@ def PicSaver(image_data,lists):
 			f, axarr = plt.subplots(1,iend)
 			for i in range(go*(j),((j)*go)+iend): 
 				im = axarr[i-(go*j)].imshow(image_data[i],cmap='gray')
-				axarr[i-(go*(j))].set_title(lists[i])
+				axarr[i-(go*(j))].set_title(gals[i])
 			f.subplots_adjust(right=0.8)
 			cbar_ax = f.add_axes([0.85, 0.15, 0.05, 0.7])
 			f.colorbar(im,cax = cbar_ax)
-			f.savefig(os.path.join('Pictures',(lists[go*(j)]+".png")))
+			f.savefig(os.path.join('Pictures',(gals[go*(j)]+".png")))
 			plt.clf()
 
 	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
 
-def GraphMaker(A_v,lists):
+def GraphMaker(A_v,gals,majAxis):
 
-	if(len(lists)>2):
+	if(len(gals)>2):
 		go = 2
 		iend = go
-		sz1 = (int(len(lists))//go)+1
-		sz2 = (int(len(lists))-(go*(sz1-1)))
+		sz1 = (int(len(gals))//go)+1
+		sz2 = (int(len(gals))-(go*(sz1-1)))
 	else:
-		go = len(lists)
+		go = len(gals)
 		iend = go
-		sz1 = (int(len(lists))//go)
-		sz2 = (int(len(lists))-(go*(sz1-1)))
+		sz1 = (int(len(gals))//go)
+		sz2 = (int(len(gals))-(go*(sz1-1)))
 	for j in range(0,sz1):
 		if j==sz1-1:
 			iend = sz2
 		if iend == 1:
 			plt.clf()
 			plt.figure(1)
-			plt.plot(x,A_v[len(lists)-1][:,0], color = "blue", marker = ".", label = "North")
-			plt.plot(x, A_v[len(lists)-1][:,1], color = "red", marker = ".", label = "East")
-			plt.plot(x, A_v[len(lists)-1][:,2], color = "green", marker = ".", label = "South")
-			plt.plot(x, A_v[len(lists)-1][:,3], color = "black", marker = ".", label = "West")
+			plt.plot(x,A_v[len(gals)-1][:,0], color = "blue", marker = ".", label = "North")
+			plt.plot(x, A_v[len(gals)-1][:,1], color = "red", marker = ".", label = "East")
+			plt.plot(x, A_v[len(gals)-1][:,2], color = "green", marker = ".", label = "South")
+			plt.plot(x, A_v[len(gals)-1][:,3], color = "black", marker = ".", label = "West")
+			plt.axvline(x=majAxis[j])
 			plt.xlabel("Arcminutes from Center of Galaxy")
 			plt.ylabel("A_v Value")
 			plt.legend(loc='center right', shadow=True)
 			plt.suptitle("A_v Values by Arcminute")
-			plt.title(lists[len(lists)-1])
-			plt.savefig(os.path.join('Graphs',(lists[len(lists)-1]+" Graph.png")))
+			plt.title(gals[len(gals)-1])
+			plt.savefig(os.path.join('Graphs',(gals[len(gals)-1]+" Graph.png")))
 			plt.clf()
 		elif iend == 0:
 			plt.clf()
@@ -189,19 +192,67 @@ def GraphMaker(A_v,lists):
 				ea, = axarr[i-(go*j)].plot(x, A_v[i][:,1], color = "red", marker = ".", label = "East")
 				so, = axarr[i-(go*j)].plot(x, A_v[i][:,2], color = "green", marker = ".", label = "South")
 				we, = axarr[i-(go*j)].plot(x, A_v[i][:,3], color = "black", marker = ".", label = "West")
-				axarr[i-(go*(j))].set_title(lists[i], fontsize = 20)
+				axarr[i-(go*j)].axvline(x=majAxis[i])
+				axarr[i-(go*(j))].set_title(gals[i], fontsize = 20)
 			plt.figlegend((no,ea,so,we),("North","East","South","West"),loc='center right', shadow=True, prop={'size':20})
 			plt.suptitle("A_v Values by Arcminute", fontsize = 20)
-			f.savefig(os.path.join('Graphs',(lists[go*(j)]+" Graph.png")))
+			f.savefig(os.path.join('Graphs',(gals[go*(j)]+" Graph.png")))
 			plt.clf()
 
 	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
 
+def getAxis(name,link,majAxis,minAxis):
+	inputs = {'objname': name,
+				'extend': 'no',
+				'hconst': '73',
+				'omegam': '0.27',
+				'omegav': '0.73',
+				'corr_z': '1',
+				'out_csys': 'Equatorial',
+				'out_equinox': 'J2000.0',
+				'obj_sort': "RA or Longitude",
+				'of': 'pre_text',
+				'zv_breaker': '30000.0',
+				'list_limit': '5',
+				'img_stamp': 'YES'}
+	page = requests.get(link, params = inputs)
+	from bs4 import BeautifulSoup
+	soup = BeautifulSoup(page.content, 'html.parser')
+	#-------Get Velocities-----#
+	# velocities = soup.find_all('pre')[5]
+	# Helio = list(velocities.children)[2]
+	# VGS = list(velocities.children)[16]
+	# Helio = Helio.lstrip('\n')
+	# VGS = VGS.lstrip('\n')
+	# Hvals = [int(s) for s in Helio.split() if s.isdigit()]
+	# VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
+	#-----End Get Velocities-----#
+	#-----Get Diameters-----#
+	diameters = soup.find_all('table')[22]
+	diameters = diameters.find_all('tr')[2]
+	major = diameters.find_all('td')[1].get_text()
+	minor = diameters.find_all('td')[2].get_text()
+	#-----End Get Diameters-----#
+	write_file = 'Data.csv'
+	if(major != "..."):
+		major = float(major)/60
+		majAxis.append(major)
+	else:
+		majAxis.append(None)
+	if(minor != "..."):
+		minor = float(minor)/60
+		minAxis.append(minor)
+	else:
+		minAxis.append(None)
+	with open(write_file, 'a') as output:
+		output.write(name + ',' + '%.3f' %major + ',' + '%.3f' %minor + '\n')
+	
 from astropy.coordinates import name_resolve
 
 #-----SETUP-----#
 c3 = None
-lists = []
+link = "https://ned.ipac.caltech.edu/cgi-bin/objsearch?"
+gals = []
 start_coord = []
 print("\nWelcome to A_v Calculator!\n")
 print("Created by: Tate Walker for Dr. Peter Brown at Texas A&M University\n")
@@ -211,12 +262,12 @@ while can_read == False:
 	if choice == '1':
 		galaxies = input("Enter galaxies separated by commas: Ex. M82, M83\n")
 		for x in galaxies.split(','):
-			lists.append(x.strip())
+			gals.append(x.strip())
 		can_read = True	
 	elif choice == '2':
 		file = input("What is the name of the file? Ex. galaxies.txt\n")
 		with open(file) as inp:
-			lists = inp.read().splitlines()
+			gals = inp.read().splitlines()
 		can_read = True
 		choice == '2'
 	elif choice == 'q':sys.exit()
@@ -230,12 +281,12 @@ if c1 == 'y':
 	dam = input("How many arcminutes?\n")
 	dam = int(dam)
 
-if c1 and c2 == 'n':
+elif c1 and c2 == 'n':
 	print("Those are all the options, please come back if you change your mind.")
 	sys.exit()
 
-for i in range(0,len(lists)):
-	tcoord=SkyCoord.from_name(lists[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
+for i in range(0,len(gals)):
+	tcoord=SkyCoord.from_name(gals[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
 	start_coord.append(tcoord) #puts temporary SkyCoord in a list
 	
 from astropy.table import Table
@@ -253,11 +304,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 image_data = []
 A_v = []
+majAxis = []
+minAxis = []
 ra = Angle(start_coord[0].ra.hour,unit = u.hour) #gets radius of 1st coordinate as an angle (needed for things to work)
 dec = start_coord[0].dec #dont need an angle for some reason but it works
 
 appender = 'w' #lets us overwrite a file or make a new one
-nme = lists[0]
+nme = gals[0]
 
 import itertools
 import threading
@@ -283,16 +336,22 @@ if c1 == 'y':A_v.append(tableFill(dam,ra,dec,appender,nme)) #runs the main funct
 if c2 == 'y':grabImage(ra,dec) #gets image data and stores in list
 appender = 'a' #lets us append a file instead of overwriting
 for i in range(1,len(start_coord)):
-	nme = lists[i]
+	nme = gals[i]
 	ra = Angle(start_coord[i].ra.hour,unit = u.hour)
 	dec = start_coord[i].dec
 	if c1 == 'y':A_v.append(tableFill(dam,ra,dec,appender,nme))
 	if c2 == 'y':grabImage(ra,dec)
-if c2 == 'y':PicSaver(image_data,lists) #saves all images in .png files, don't mess with this
+if c2 == 'y':PicSaver(image_data,gals) #saves all images in .png files, don't mess with this
 if c3 == 'y':
 	x = np.arange(dam+1) #creates array of size dam+1 to store values
 	A_v = np.array(A_v) #numpy array needed to graph
-	GraphMaker(A_v,lists)
+	write_file = 'Data.csv'
+	with open(write_file, 'w') as output:
+		output.write("Name, Apparent Major Axis (arcmin), Apparent Minor Axis (arcmin)\n")
+	for i in range(0,len(gals)):
+		nme = gals[i]
+		getAxis(nme,link,majAxis,minAxis)
+	GraphMaker(A_v,gals,majAxis)
 done = True
 time.sleep(3)
 print(chr(27) + "[2J")
