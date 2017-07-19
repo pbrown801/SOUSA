@@ -112,92 +112,108 @@ def grabImage(ra,dec):
 	image_file = download_file(imagelist[0],cache=True)
 	image_data.append(fits.getdata(image_file, ext=0)) #gets image from IRSA database
 
-def PicSaver(image_data,gals):
+def PicSaver(image_data,gals,goPics):
 
-	if(len(start_coord)>5):
-		go = 5
-		iend = go
-		sz1 = (int(len(gals))//go)+1
-		sz2 = (int(len(gals))-(go*(sz1-1)))
-	else:
-		go = len(gals)
-		iend = go
-		sz1 = (int(len(gals))//go)
-		sz2 = (int(len(gals))-(go*(sz1-1)))
+	go = int(goPics)
+	iend = go
+	sz1 = (int(len(gals))//go)+1
+	sz2 = (int(len(gals))-(go*(sz1-1)))
+	if go==1:
+		sz1 = sz1-1
 	for j in range(0,sz1):
-		if j==sz1-1: #if last set of five
-			iend = sz2
-		if iend == 1: #if only one plot remains
+		if go == 1:
 			plt.figure(1)
-			plt.title(gals[len(gals)-1])
-			plt.imshow(image_data[len(image_data)-1],cmap='gray')
+			plt.title(gals[j])
+			plt.imshow(image_data[j],cmap='gray')
 			plt.colorbar()
-			plt.savefig(os.path.join('Pictures',(gals[len(gals)-1]+".png")))
+			plt.savefig(os.path.join('Pictures',(gals[j]+".png")))
 			plt.clf()
-		elif iend == 0:
-			plt.clf()
-			return
-		else:
-			f, axarr = plt.subplots(1,iend)
-			for i in range(go*(j),((j)*go)+iend): 
-				im = axarr[i-(go*j)].imshow(image_data[i],cmap='gray')
-				axarr[i-(go*(j))].set_title(gals[i])
-			f.subplots_adjust(right=0.8)
-			cbar_ax = f.add_axes([0.85, 0.15, 0.05, 0.7])
-			f.colorbar(im,cax = cbar_ax)
-			f.savefig(os.path.join('Pictures',(gals[go*(j)]+".png")))
-			plt.clf()
+		else:	
+			if j==sz1-1: #if last set
+				iend = sz2
+			if iend == 1: #if only one plot remains
+				plt.figure(1)
+				plt.title(gals[len(gals)-1])
+				plt.imshow(image_data[len(image_data)-1],cmap='gray')
+				plt.colorbar()
+				plt.savefig(os.path.join('Pictures',(gals[len(gals)-1]+".png")))
+				plt.clf()
+			elif iend == 0:
+				plt.clf()
+				return
+			else:
+				f, axarr = plt.subplots(1,iend)
+				for i in range(go*(j),((j)*go)+iend): 
+					im = axarr[i-(go*j)].imshow(image_data[i],cmap='gray')
+					axarr[i-(go*(j))].set_title(gals[i])
+				f.subplots_adjust(right=0.8)
+				cbar_ax = f.add_axes([0.85, 0.15, 0.05, 0.7])
+				f.colorbar(im,cax = cbar_ax)
+				f.savefig(os.path.join('Pictures',(gals[go*(j)]+".png")))
+				plt.clf()
 
 	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
 
-def GraphMaker(A_v,gals,majAxis):
+def GraphMaker(A_v,gals,majAxis,goGraphs):
 
-	if(len(gals)>2):
-		go = 2
-		iend = go
-		sz1 = (int(len(gals))//go)+1
-		sz2 = (int(len(gals))-(go*(sz1-1)))
-	else:
-		go = len(gals)
-		iend = go
-		sz1 = (int(len(gals))//go)
-		sz2 = (int(len(gals))-(go*(sz1-1)))
+	go = int(goGraphs)
+	iend = go
+	sz1 = (int(len(gals))//go)+1
+	sz2 = (int(len(gals))-(go*(sz1-1)))
+	if go==1:
+		sz1 = sz1-1
 	for j in range(0,sz1):
-		if j==sz1-1:
-			iend = sz2
-		if iend == 1:
+		if go == 1:
 			plt.clf()
 			plt.figure(1)
-			plt.plot(x,A_v[len(gals)-1][:,0], color = "blue", marker = ".", label = "North")
-			plt.plot(x, A_v[len(gals)-1][:,1], color = "red", marker = ".", label = "East")
-			plt.plot(x, A_v[len(gals)-1][:,2], color = "green", marker = ".", label = "South")
-			plt.plot(x, A_v[len(gals)-1][:,3], color = "black", marker = ".", label = "West")
+			plt.plot(x,A_v[j][:,0], color = "blue", marker = ".", label = "North")
+			plt.plot(x, A_v[j][:,1], color = "red", marker = ".", label = "East")
+			plt.plot(x, A_v[j][:,2], color = "green", marker = ".", label = "South")
+			plt.plot(x, A_v[j][:,3], color = "black", marker = ".", label = "West")
 			plt.axvline(x=majAxis[j])
 			plt.xlabel("Arcminutes from Center of Galaxy")
 			plt.ylabel("A_v Value")
 			plt.legend(loc='center right', shadow=True)
 			plt.suptitle("A_v Values by Arcminute")
-			plt.title(gals[len(gals)-1])
-			plt.savefig(os.path.join('Graphs',(gals[len(gals)-1]+" Graph.png")))
+			plt.title(gals[j])
+			plt.savefig(os.path.join('Graphs',(gals[j]+" Graph.png")))
 			plt.clf()
-		elif iend == 0:
-			plt.clf()
-			return
 		else:
-			f, axarr = plt.subplots(nrows = 1,ncols = iend, sharey = True, sharex = True,figsize = (20,10))
-			f.text(.5,.04, 'Arcminutes From Center of Galaxy',ha='center',fontsize = 20)
-			f.text(.08,.5, 'A_V Value',va='center', rotation='vertical',fontsize = 20)
-			for i in range(go*(j),((j)*go)+iend): 
-				no, = axarr[i-(go*j)].plot(x, A_v[i][:,0], color = "blue", marker = ".", label = "North")
-				ea, = axarr[i-(go*j)].plot(x, A_v[i][:,1], color = "red", marker = ".", label = "East")
-				so, = axarr[i-(go*j)].plot(x, A_v[i][:,2], color = "green", marker = ".", label = "South")
-				we, = axarr[i-(go*j)].plot(x, A_v[i][:,3], color = "black", marker = ".", label = "West")
-				axarr[i-(go*j)].axvline(x=majAxis[i])
-				axarr[i-(go*(j))].set_title(gals[i], fontsize = 20)
-			plt.figlegend((no,ea,so,we),("North","East","South","West"),loc='center right', shadow=True, prop={'size':20})
-			plt.suptitle("A_v Values by Arcminute", fontsize = 20)
-			f.savefig(os.path.join('Graphs',(gals[go*(j)]+" Graph.png")))
-			plt.clf()
+			if j==sz1-1:
+				iend = sz2
+			if iend == 1:
+				plt.clf()
+				plt.figure(1)
+				plt.plot(x,A_v[len(gals)-1][:,0], color = "blue", marker = ".", label = "North")
+				plt.plot(x, A_v[len(gals)-1][:,1], color = "red", marker = ".", label = "East")
+				plt.plot(x, A_v[len(gals)-1][:,2], color = "green", marker = ".", label = "South")
+				plt.plot(x, A_v[len(gals)-1][:,3], color = "black", marker = ".", label = "West")
+				plt.axvline(x=majAxis[j])
+				plt.xlabel("Arcminutes from Center of Galaxy")
+				plt.ylabel("A_v Value")
+				plt.legend(loc='center right', shadow=True)
+				plt.suptitle("A_v Values by Arcminute")
+				plt.title(gals[len(gals)-1])
+				plt.savefig(os.path.join('Graphs',(gals[len(gals)-1]+" Graph.png")))
+				plt.clf()
+			elif iend == 0:
+				plt.clf()
+				return
+			else:
+				f, axarr = plt.subplots(nrows = 1,ncols = iend, sharey = True, sharex = True,figsize = (20,10))
+				f.text(.5,.04, 'Arcminutes From Center of Galaxy',ha='center',fontsize = 20)
+				f.text(.08,.5, 'A_V Value',va='center', rotation='vertical',fontsize = 20)
+				for i in range(go*(j),((j)*go)+iend): 
+					no, = axarr[i-(go*j)].plot(x, A_v[i][:,0], color = "blue", marker = ".", label = "North")
+					ea, = axarr[i-(go*j)].plot(x, A_v[i][:,1], color = "red", marker = ".", label = "East")
+					so, = axarr[i-(go*j)].plot(x, A_v[i][:,2], color = "green", marker = ".", label = "South")
+					we, = axarr[i-(go*j)].plot(x, A_v[i][:,3], color = "black", marker = ".", label = "West")
+					axarr[i-(go*j)].axvline(x=majAxis[i])
+					axarr[i-(go*(j))].set_title(gals[i], fontsize = 20)
+				plt.figlegend((no,ea,so,we),("North","East","South","West"),loc='center right', shadow=True, prop={'size':20})
+				plt.suptitle("A_v Values by Arcminute", fontsize = 20)
+				f.savefig(os.path.join('Graphs',(gals[go*(j)]+" Graph.png")))
+				plt.clf()
 
 	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
 
@@ -286,8 +302,11 @@ while can_read == False:
 	else: print("Please enter either [1], [2], or [q]\n\n")
 
 c1 = input("Do you want to get A_v values? [y] [n] \n") #option to get values
-if c1 == 'y':c3 = input("Do you want to graph these values? [y] [n] \n") #option to graph
+if c1 == 'y':
+	c3 = input("Do you want to graph these values? [y] [n] \n") #option to graph
+	if c3 == 'y': goGraphs = input("How many graphs per file?\n")
 c2 = input("Do you want to get pictures of each galaxy? [y] [n] \n") #option to get pictures
+if c2 == 'y':goPics = input("How many pictures per file?\n")
 
 if c1 == 'y':
 	dam = input("How many arcminutes?\n")
@@ -353,7 +372,7 @@ for i in range(1,len(start_coord)):
 	dec = start_coord[i].dec
 	if c1 == 'y':A_v.append(tableFill(dam,ra,dec,appender,nme))
 	if c2 == 'y':grabImage(ra,dec)
-if c2 == 'y':PicSaver(image_data,gals) #saves all images in .png files, don't mess with this
+if c2 == 'y':PicSaver(image_data,gals,goPics) #saves all images in .png files, don't mess with this
 if c3 == 'y':
 	x = np.arange(dam+1) #creates array of size dam+1 to store values
 	A_v = np.array(A_v) #numpy array needed to graph
@@ -363,7 +382,7 @@ if c3 == 'y':
 	for i in range(0,len(gals)):
 		nme = gals[i]
 		getAxis(nme,link,majAxis,minAxis)
-	GraphMaker(A_v,gals,majAxis)
+	GraphMaker(A_v,gals,majAxis,goGraphs)
 done = True
 time.sleep(3)
 print(chr(27) + "[2J")
