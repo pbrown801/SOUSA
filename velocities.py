@@ -32,17 +32,19 @@ def getVelocities(name,link):
 	from bs4 import BeautifulSoup
 	soup = BeautifulSoup(page.content, 'html.parser')
 	#-------Get Velocities-----#
-	velocities = soup.find_all('pre')[5]
-	Helio = list(velocities.children)[2]
-	VGS = list(velocities.children)[16]
-	Helio = Helio.lstrip('\n')
-	VGS = VGS.lstrip('\n')
-	Hvals = [int(s) for s in Helio.split() if s.isdigit()]
-	VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
+	# velocities = soup.find_all('pre')[5]
+	# Helio = list(velocities.children)[2]
+	# VGS = list(velocities.children)[16]
+	# Helio = Helio.lstrip('\n')
+	# VGS = VGS.lstrip('\n')
+	# Hvals = [int(s) for s in Helio.split() if s.isdigit()]
+	# VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
 	#-----End Get Velocities-----#
 	#-----Get Diameters-----#
 	diameters = soup.find_all('table')[22]
-	diameters = diameters.find_all('tr')[2]
+	at = diameters.find('tr')
+	print(at.get_text)
+	diameters = diameters.find_all('tr')[0]
 	major = diameters.find_all('td')[1].get_text()
 	minor = diameters.find_all('td')[2].get_text()
 	#-----End Get Diameters-----#

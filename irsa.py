@@ -170,7 +170,7 @@ def GraphMaker(A_v,gals,majAxis,goGraphs):
 			plt.plot(x, A_v[j][:,1], color = "red", marker = ".", label = "East")
 			plt.plot(x, A_v[j][:,2], color = "green", marker = ".", label = "South")
 			plt.plot(x, A_v[j][:,3], color = "black", marker = ".", label = "West")
-			plt.axvline(x=majAxis[j])
+			#plt.axvline(x=majAxis[j])
 			plt.xlabel("Arcminutes from Center of Galaxy")
 			plt.ylabel("A_v Value")
 			plt.legend(loc='center right', shadow=True)
@@ -188,7 +188,7 @@ def GraphMaker(A_v,gals,majAxis,goGraphs):
 				plt.plot(x, A_v[len(gals)-1][:,1], color = "red", marker = ".", label = "East")
 				plt.plot(x, A_v[len(gals)-1][:,2], color = "green", marker = ".", label = "South")
 				plt.plot(x, A_v[len(gals)-1][:,3], color = "black", marker = ".", label = "West")
-				plt.axvline(x=majAxis[j])
+				#plt.axvline(x=majAxis[j])
 				plt.xlabel("Arcminutes from Center of Galaxy")
 				plt.ylabel("A_v Value")
 				plt.legend(loc='center right', shadow=True)
@@ -208,7 +208,7 @@ def GraphMaker(A_v,gals,majAxis,goGraphs):
 					ea, = axarr[i-(go*j)].plot(x, A_v[i][:,1], color = "red", marker = ".", label = "East")
 					so, = axarr[i-(go*j)].plot(x, A_v[i][:,2], color = "green", marker = ".", label = "South")
 					we, = axarr[i-(go*j)].plot(x, A_v[i][:,3], color = "black", marker = ".", label = "West")
-					axarr[i-(go*j)].axvline(x=majAxis[i])
+					#axarr[i-(go*j)].axvline(x=majAxis[i])
 					axarr[i-(go*(j))].set_title(gals[i], fontsize = 20)
 				plt.figlegend((no,ea,so,we),("North","East","South","West"),loc='center right', shadow=True, prop={'size':20})
 				plt.suptitle("A_v Values by Arcminute", fontsize = 20)
@@ -235,13 +235,13 @@ def getAxis(name,link,majAxis,minAxis):
 	from bs4 import BeautifulSoup
 	soup = BeautifulSoup(page.content, 'html.parser')
 	#-------Get Velocities-----#
-	# velocities = soup.find_all('pre')[5]
-	# Helio = list(velocities.children)[2]
-	# VGS = list(velocities.children)[16]
-	# Helio = Helio.lstrip('\n')
-	# VGS = VGS.lstrip('\n')
-	# Hvals = [int(s) for s in Helio.split() if s.isdigit()]
-	# VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
+	velocities = soup.find_all('pre')[5]
+	Helio = list(velocities.children)[2]
+	VGS = list(velocities.children)[16]
+	Helio = Helio.lstrip('\n')
+	VGS = VGS.lstrip('\n')
+	Hvals = [int(s) for s in Helio.split() if s.isdigit()]
+	VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
 	#-----End Get Velocities-----#
 	#-----Get Diameters-----#
 	diameters = soup.find_all('table')[22]
