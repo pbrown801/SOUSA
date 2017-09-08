@@ -1,7 +1,7 @@
 # Galactic Data
 -Script to query IRSA database for galactic A_v Extinction values at a certain arcminute length away
 
--Option to graph values and fetch IR images off IRSA
+  -Option to graph values and fetch IR images off IRSA
 
 -Script to grab Heliocentric and VGS Velocities from NED for different galaxies
 
