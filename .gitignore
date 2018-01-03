@@ -10,6 +10,10 @@ __pycache__/
 .DS_Store
 .bash_profile/
 
+#personal
+tester.py
+*.csv
+
 # Distribution / packaging
 .Python
 Python.sublime-workspace
