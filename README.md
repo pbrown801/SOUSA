@@ -1,16 +1,28 @@
 # Galactic Data
 irsa.py:
+
 -Script to query IRSA database for galactic A_v Extinction values at a certain arcminute length away
+
 -Option to graph values and fetch IR images off IRSA
+
 -Does not contain error checking, ensure names of galaxies are correct
 
-quickdata.py
+ 
+
+quickdata.py:
+
 -Script to grab various properties from NED for different galaxies
+
 -Contains error checking
 
-randomGal.py
+
+randomGal.py:
+
 -Script to create x amount of random coordinates and pull AV values for each
+
 -Contains error checking
+
+
 
 All values are stored in .csv files and appropriate pictures and graphs are stored in their respective folders.
 
