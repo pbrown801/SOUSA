@@ -1,4 +1,4 @@
- #	 Copyright 2017 Tate M. Walker
+ #	 Copyright 2018 Tate M. Walker
 
  #   Licensed under the Apache License, Version 2.0 (the "License");
  #   you may not use this file except in compliance with the License.
@@ -105,6 +105,7 @@ def tableFill(dam, ra, dec, appender,nme):
 			t[j][i+1] = curVal[i]
 			curVal = curVal[:]
 		tA_v.append(curVal)
+	
 	t.add_row()
 	for i in range(0,5): #this adds a blank line to the table to separate queries
 		t[j+1][i] = None	
@@ -230,64 +231,64 @@ def GraphMaker(A_v,gals,majAxis,goGraphs):
 
 	#-----Saves Graphs and Data To The Directory-----# #saves all images in .png files
 
-def getAxis(name,link,majAxis,minAxis):
-	inputs = {'objname': name,
-				'extend': 'no',
-				'hconst': '73',
-				'omegam': '0.27',
-				'omegav': '0.73',
-				'corr_z': '1',
-				'out_csys': 'Equatorial',
-				'out_equinox': 'J2000.0',
-				'obj_sort': "RA or Longitude",
-				'of': 'pre_text',
-				'zv_breaker': '30000.0',
-				'list_limit': '5',
-				'img_stamp': 'YES'}
-	page = requests.get(link, params = inputs)
-	from bs4 import BeautifulSoup
-	soup = BeautifulSoup(page.content, 'html.parser')
-	#-------Get Velocities-----#
-	velocities = soup.find_all('pre')[5]
-	Helio = list(velocities.children)[2]
-	VGS = list(velocities.children)[16]
-	Helio = Helio.lstrip('\n')
-	VGS = VGS.lstrip('\n')
-	Hvals = [int(s) for s in Helio.split() if s.isdigit()]
-	VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
-	#-----End Get Velocities-----#
-	#-----Get Diameters-----#
-	diameters = soup.find_all('table')[22]
-	diameters = diameters.find_all('tr')[2]
-	major = diameters.find_all('td')[1].get_text()
-	minor = diameters.find_all('td')[2].get_text()
-	#-----End Get Diameters-----#
-	write_file = 'Data.csv'
-	fix = False
-	fix2 = False
-	if(major != "..."):
-		major = float(major)/60
-		majAxis.append(major)
-	else:
-		major = "None"
-		fix = True
-		majAxis.append(None)
-	if(minor != "..."):
-		minor = float(minor)/60
-		minAxis.append(minor)
-	else:
-		minor = "None"
-		fix2 = True
-		minAxis.append(None)
-	with open(write_file, 'a') as output:
-		if(fix and fix2):
-			output.write(name + ',' + major + ',' + minor + '\n')	
-		elif(fix == True and fix2 == False):
-			output.write(name + ',' + major + ',' + '%.3f' %minor + '\n')
-		elif(fix == False and fix2 == True):
-			output.write(name + ',' + '%.3f' %major + ',' + minor + '\n')
-		else: output.write(name + ',' + '%.3f' %major + ',' + '%.3f' %minor + '\n')
-	
+# def getAxis(name,link,majAxis,minAxis,ra, dec):
+	# inputs = {'objname': name,
+	# 			'extend': 'no',
+	# 			'hconst': '73',
+	# 			'omegam': '0.27',
+	# 			'omegav': '0.73',
+	# 			'corr_z': '1',
+	# 			'out_csys': 'Equatorial',
+	# 			'out_equinox': 'J2000.0',
+	# 			'obj_sort': "RA or Longitude",
+	# 			'of': 'pre_text',
+	# 			'zv_breaker': '30000.0',
+	# 			'list_limit': '5',
+	# 			'img_stamp': 'YES'}
+	# page = requests.get(link, params = inputs)
+	# from bs4 import BeautifulSoup
+	# soup = BeautifulSoup(page.content, 'html.parser')
+	# #-------Get Velocities-----#
+	# velocities = soup.find_all('pre')[5]
+	# Helio = list(velocities.children)[2]
+	# VGS = list(velocities.children)[16]
+	# Helio = Helio.lstrip('\n')
+	# VGS = VGS.lstrip('\n')
+	# Hvals = [int(s) for s in Helio.split() if s.isdigit()]
+	# VGSVals = [int(s) for s in VGS.split() if s.isdigit()]
+	# #-----End Get Velocities-----#
+	# #-----Get Diameters-----#
+	# diameters = soup.find_all('table')[22]
+	# diameters = diameters.find_all('tr')[2]
+	# major = diameters.find_all('td')[1].get_text()
+	# minor = diameters.find_all('td')[2].get_text()
+	# #-----End Get Diameters-----#
+	# write_file = 'Data.csv'
+	# fix = False
+	# fix2 = False
+	# if(major != "..."):
+	# 	major = float(major)/60
+	# 	majAxis.append(major)
+	# else:
+	# 	major = "None"
+	# 	fix = True
+	# 	majAxis.append(None)
+	# if(minor != "..."):
+	# 	minor = float(minor)/60
+	# 	minAxis.append(minor)
+	# else:
+	# 	minor = "None"
+	# 	fix2 = True
+	# 	minAxis.append(None)
+	# with open(write_file, 'a') as output:
+	# 	if(fix and fix2):
+	# 		output.write(name + ',' + ra.to_string() + ',' + dec.to_string() + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + major + ',' + minor + '\n')	
+	# 	elif(fix == True and fix2 == False):
+	# 		output.write(name + ',' + ra.to_string() + ',' + dec.to_string() + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + major + ',' + '%.3f' %minor + '\n')
+	# 	elif(fix == False and fix2 == True):
+	# 		output.write(name + ',' + ra.to_string() + ',' + dec.to_string() + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + '%.3f' %major + ',' + minor + '\n')
+	# 	else: output.write(name + ',' + ra.to_string() + ',' + dec.to_string() + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + '%.3f' %major + ',' + '%.3f' %minor + '\n')
+
 from astropy.coordinates import name_resolve
 
 #-----SETUP-----#
@@ -322,7 +323,7 @@ c2 = input("Do you want to get pictures of each galaxy? [y] [n] \n") #option to 
 if c2 == 'y':goPics = input("How many pictures per file?\n")
 
 if c1 == 'y':
-	dam = input("How many arcminutes?\n")
+	dam = input("How many arcminutes?\n") #dam = delta arcminutes
 	dam = int(dam)
 
 elif c1 and c2 == 'n':
@@ -389,12 +390,14 @@ if c2 == 'y':PicSaver(image_data,gals,goPics) #saves all images in .png files, d
 if c3 == 'y':
 	x = np.arange(dam+1) #creates array of size dam+1 to store values
 	A_v = np.array(A_v) #numpy array needed to graph
-	write_file = 'Data.csv'
-	with open(write_file, 'w') as output:
-		output.write("Name, Apparent Major Axis (arcmin), Apparent Minor Axis (arcmin)\n")
-	for i in range(0,len(gals)):
-		nme = gals[i]
-		getAxis(nme,link,majAxis,minAxis)
+	# write_file = 'Data.csv'
+	# with open(write_file, 'w') as output:
+	# 	output.write("Name, Ra, Dec, Heliocentric Velocity (km/s), Uncertainty (km/s), VGS Velocity (km/s), Uncertainty (km/s), Apparent Major Axis (arcmin), Apparent Minor Axis (arcmin)\n")
+	# for i in range(0,len(gals)):
+	# 	nme = gals[i]
+	# 	ra = Angle(start_coord[i].ra.hour,unit = u.hour)
+	# 	dec = start_coord[i].dec
+	# 	getAxis(nme,link,majAxis,minAxis,ra,dec)
 	GraphMaker(A_v,gals,majAxis,goGraphs)
 done = True
 time.sleep(3)
