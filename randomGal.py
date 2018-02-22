@@ -16,11 +16,10 @@ import time
 
 import requests
 from astropy.coordinates import SkyCoord
-
 from random import randint
 
-#LOOK AT QUICKDATA.PY FOR MULTIPLE GALAXY CONFIG
 
+#LOOK AT QUICKDATA.PY FOR MULTIPLE GALAXY CONFIG
 def getRandomCoordinate():
 	h = randint(0,23)
 	# print("h = " + str(h))
@@ -42,6 +41,9 @@ def getRandomCoordinate():
 	# print(dec.to_string())
 	return SkyCoord(ra, dec, frame = 'fk5')
 
+
+
+
 def timeFix(s,m,h): #fixes time to ensure it stays within normal range (0-60)
 	if(s>=60 or m>=60):
 		while(s>=60 or m>=60):
@@ -49,22 +51,41 @@ def timeFix(s,m,h): #fixes time to ensure it stays within normal range (0-60)
 				m+=1
 				s-=60
 			if m >= 60:
-				h+=1
-				m-=60
+				if h == 23:
+					h = 0
+					m-=60
+				else:
+					h+=1
+					m-=60
 	elif(s<0 or m<0):
 		while(s<0 or m<0):
 			if s < 0:
 				m-=1
 				s+=60
 			if m < 0:
-				h-=1
-				m+=60		
+				if h == 0:
+					h = 23
+					m+=60
+				else:
+					h-=1
+					m+=60		
 	return s,m,h;
+
 
 
 def fourCoord(dam,ra,dec,coord):
 
 	ds = dam*4
+
+	coord[0] = ra.to_string()+" "+dec.to_string()
+
+	#n
+	decli = dec.arcminute+dam
+	if decli > 90:
+		decli -=90
+	decl = Angle(decli,u.arcminute)
+	decl = Angle(decl.to_string(unit=u.degree),u.degree)
+	coord[1] = ra.to_string()+" "+decl.to_string()
 
 	#e
 	ds/=math.cos(math.radians(dec.degree))
@@ -74,14 +95,8 @@ def fourCoord(dam,ra,dec,coord):
 	(s,m,h) = timeFix(s,m,h)
 	rad = Angle((h,m,s), unit = u.hour)
 	rad = Angle(rad.to_string(unit=u.hour),u.hour)
-	coord[1] = rad.to_string()+" "+dec.to_string()
+	coord[2] = rad.to_string()+" "+dec.to_string()
 
-	#n
-	decli = dec.arcminute+dam
-	decl = Angle(decli,u.arcminute)
-	decl = Angle(decl.to_string(unit=u.degree),u.degree)
-	coord[0] = ra.to_string()+" "+decl.to_string()
-	
 	#w
 	ds=ds*(-1)
 	ds/=math.cos(math.radians(dec.degree))
@@ -91,32 +106,35 @@ def fourCoord(dam,ra,dec,coord):
 	(s,m,h) = timeFix(s,m,h)
 	rad = Angle((h,m,s), unit = u.hour)
 	rad = Angle(rad.to_string(unit=u.hour),u.hour)
-	coord[3] = rad.to_string()+" "+dec.to_string()
+	coord[4] = rad.to_string()+" "+dec.to_string()
 
 	#s
 	decli = dec.arcminute-dam
+	if decli < 0:
+		decli +=90
 	decl = Angle(decli,u.arcminute)
 	decl = Angle(decl.to_string(unit=u.degree),u.degree)
-	coord[2] = ra.to_string()+" "+decl.to_string()
+	coord[3] = ra.to_string()+" "+decl.to_string()
 	
 	#print(coord)
 	return coord; #performs transformation of initial coord into cardinal coordinates 
 
 def tableFill(dam, ra, dec):
-	# curVal = [None] *4 #n = 0, e = 1, s = 2, w = 3
-	coord = [None] *4 #n = 0, e = 1, s = 2, w = 3
+	curVal = [None] *5 #n = 0, e = 1, s = 2, w = 3
+	coord = [None] *5 #n = 0, e = 1, s = 2, w = 3
 	#get values for each arcminute
-	for j in range(0,dam+1):
-		fourCoord(j, ra, dec, coord)
-		with open('randomAv.csv','a') as output:
-			output.write(str(j)+',')
-			for i in range(0,4):
-
+	for j in range(dam,dam+1): #change 1st dam to 0 for concurrent values
+		coord = fourCoord(j, ra, dec, coord)
+		for i in range(0,5):
+			try:
 				C = coordinates.SkyCoord(coord[i])
 				table = IrsaDust.get_extinction_table(C.fk5, show_progress = False)
-				output.write(str(table['A_SandF'][2])+',')
-				# curVal[i] = (table['A_SandF'][2])	
-			output.write('\n')
+				curVal[i] = (table['A_SandF'][2])	
+			except Exception as e:
+				curVal = [None] * 5
+				break
+		output1.write('\n')
+	return curVal
 
 def animate():
     for c in itertools.cycle(['|', '/', '-', '\\']):
@@ -128,30 +146,39 @@ def animate():
     print(chr(27) + "[2J")
     sys.stdout.write('\rDone!')
 
+# MAIN FUNCTION
 
-coords = []
 
-for i in range(0,10): #get x number of random coordinates
-	coords.append(getRandomCoordinate())
-	# print(coords[i])
+
 
 write_file = 'randomAV.csv'
-arcMinutes = 5
+arcMinutes = 20
 
-
-# threading
 done = False
 print(chr(27) + "[2J")
 threader = threading.Thread(target=animate)
 threader.start()
+coords = [None] * 100
+avData = [None] * len(coords)
 
-with open(write_file,'w'):
-
-	for i in range(0,len(coords)):
-
-		with open(write_file,'a') as output:
-			output.write(str(coords[i].ra.to_string(unit = u.hour)) + ',' + str(coords[i].dec.to_string()) + ", \n Arcminute, North, East, South, West,\n")
-		tableFill(arcMinutes,coords[i].ra,coords[i].dec)
-		print('\n'+str(len(coords)-i) + " left!")
+with open(write_file,'w') as output:
+	output.write(str(arcMinutes) + " Arcminutes\nCenter, North, East, South, West\n")
+	output.close()
+for i in range(0,len(coords)):
+	coords[i] = getRandomCoordinate()
+	with open(write_file,'a') as output1:
+		try:
+			avData[i] = tableFill(arcMinutes,coords[i].ra,coords[i].dec)
+			output1.write(str(coords[i].ra.to_string(unit = u.hour)) + ',' + str(coords[i].dec.to_string()) + '\n')
+			for j in avData[i]:
+				output1.write(str(j) + ',')
+			output1.write('\n')
+			output1.close()
+			print('\n'+str(len(coords)-1-i) + " left!")
+		except Exception as e:
+			print(e)
+				
+			
 
 done = True
+
