@@ -52,7 +52,7 @@ def plotData(avData):
 import csv
 currData = [None] * 5
 avData=[]
-with open('RandomAv1.csv') as csvinp:
+with open('RandomAv.csv') as csvinp:
 	reader = csv.reader(csvinp,delimiter = ',')
 	count = 3
 	count2 = 0

@@ -41,7 +41,21 @@ def getRandomCoordinate():
 	# print(dec.to_string())
 	return SkyCoord(ra, dec, frame = 'fk5')
 
-
+# import pandas as pd:
+import csv
+def readCoordinate():
+ 	names = [None]*462 #there are 462 entries
+ 	read_file = 'NewSN.csv'
+ 	i = 0
+ 	with open(read_file) as csvinp:
+ 		reader = csv.reader(csvinp,delimiter = ',')
+ 		for row in reader:
+ 			names[i] = row[0]
+ 			ra = row[1]
+ 			dec = row[2]
+ 			coords[i] = SkyCoord(ra,dec,frame = 'fk5')
+ 			i+=1
+ 	return [names,coords]
 
 
 def timeFix(s,m,h): #fixes time to ensure it stays within normal range (0-60)
@@ -158,18 +172,19 @@ done = False
 print(chr(27) + "[2J")
 threader = threading.Thread(target=animate)
 threader.start()
-coords = [None] * 100
+coords = [None] * 462
 avData = [None] * len(coords)
 
 with open(write_file,'w') as output:
 	output.write(str(arcMinutes) + " Arcminutes\nCenter, North, East, South, West\n")
 	output.close()
+[names, coords] = readCoordinate()
 for i in range(0,len(coords)):
-	coords[i] = getRandomCoordinate()
+# 	coords[i] = getRandomCoordinate()
 	with open(write_file,'a') as output1:
 		try:
 			avData[i] = tableFill(arcMinutes,coords[i].ra,coords[i].dec)
-			output1.write(str(coords[i].ra.to_string(unit = u.hour)) + ',' + str(coords[i].dec.to_string()) + '\n')
+			output1.write(str(names[i]) + ',' + str(coords[i].ra.to_string(unit = u.hour)) + ',' + str(coords[i].dec.to_string()) + '\n')
 			for j in avData[i]:
 				output1.write(str(j) + ',')
 			output1.write('\n')
