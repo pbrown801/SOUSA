@@ -45,15 +45,21 @@ def getRandomCoordinate():
 import csv
 def readCoordinate():
  	names = [None]*462 #there are 462 entries
- 	read_file = 'NewSN.csv'
+ 	read_file = 'cepheidGals.csv'
  	i = 0
  	with open(read_file) as csvinp:
  		reader = csv.reader(csvinp,delimiter = ',')
  		for row in reader:
  			names[i] = row[0]
- 			ra = row[1]
- 			dec = row[2]
- 			coords[i] = SkyCoord(ra,dec,frame = 'fk5')
+ 			try:
+ 				tcoord = SkyCoord.from_name(row[0],frame = 'icrs')
+ 				coords[i] = tcoord
+ 			except:
+ 				print(row[0])
+ 				i-=1
+ 			# ra = row[1]
+ 			# dec = row[2]
+ 			#SkyCoord(ra,dec,frame = 'fk5')
  			i+=1
  	return [names,coords]
 
@@ -147,7 +153,7 @@ def tableFill(dam, ra, dec):
 			except Exception as e:
 				curVal = [None] * 5
 				break
-		output1.write('\n')
+		# output1.write('\n')
 	return curVal
 
 def animate():
@@ -162,38 +168,38 @@ def animate():
 
 # MAIN FUNCTION
 
+if __name__ == '__main__':
 
 
+	write_file = 'randomAV.csv'
+	arcMinutes = 20
 
-write_file = 'randomAV.csv'
-arcMinutes = 20
+	done = False
+	print(chr(27) + "[2J")
+	threader = threading.Thread(target=animate)
+	threader.start()
+	coords = [None] * 462
+	avData = [None] * len(coords)
 
-done = False
-print(chr(27) + "[2J")
-threader = threading.Thread(target=animate)
-threader.start()
-coords = [None] * 462
-avData = [None] * len(coords)
-
-with open(write_file,'w') as output:
-	output.write(str(arcMinutes) + " Arcminutes\nCenter, North, East, South, West\n")
-	output.close()
-[names, coords] = readCoordinate()
-for i in range(0,len(coords)):
-# 	coords[i] = getRandomCoordinate()
-	with open(write_file,'a') as output1:
-		try:
-			avData[i] = tableFill(arcMinutes,coords[i].ra,coords[i].dec)
-			output1.write(str(names[i]) + ',' + str(coords[i].ra.to_string(unit = u.hour)) + ',' + str(coords[i].dec.to_string()) + '\n')
-			for j in avData[i]:
-				output1.write(str(j) + ',')
-			output1.write('\n')
-			output1.close()
-			print('\n'+str(len(coords)-1-i) + " left!")
-		except Exception as e:
-			print(e)
+	with open(write_file,'w') as output:
+		output.write(str(arcMinutes) + " Arcminutes\nCenter, North, East, South, West\n")
+		output.close()
+	[names, coords] = readCoordinate()
+	for i in range(0,len(coords)):
+	# 	coords[i] = getRandomCoordinate()
+		with open(write_file,'a') as output1:
+			try:
+				avData[i] = tableFill(arcMinutes,coords[i].ra,coords[i].dec)
+				output1.write(str(names[i]) + ',' + str(coords[i].ra.to_string(unit = u.hour)) + ',' + str(coords[i].dec.to_string()) + '\n')
+				for j in avData[i]:
+					output1.write(str(j) + ',')
+				output1.write('\n')
+				output1.close()
+				print('\n'+str(len(coords)-1-i) + " left!")
+			except Exception as e:
+				print(e)
+					
 				
-			
 
-done = True
+	done = True
 

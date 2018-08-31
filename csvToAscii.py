@@ -4,7 +4,7 @@ import sys
 import itertools
 import csv
 
-with open('RandomAv.txt','w') as output:
+with open('cepheidGals.txt','w') as output:
 	with open('RandomAv.csv') as csvinp:
 		reader = csv.reader(csvinp,delimiter = ',')
 		for row in reader:
