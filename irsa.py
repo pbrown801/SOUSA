@@ -12,6 +12,12 @@
  #   See the License for the specific language governing permissions and
  #   limitations under the License.
 
+
+ """
+ REDO ALL THIS, IT LOOKS LIKE CRAP
+ """
+ 
+
 from astropy import units as u
 from astropy import coordinates
 
