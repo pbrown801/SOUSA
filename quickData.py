@@ -61,7 +61,7 @@ def Morphology(name):
 	except (IndexError, AttributeError) as e:
 		morphology = None
 		return morphology
-		
+
 def Redshift(name):
 	try:
 		soup = getLink(name)
@@ -123,22 +123,22 @@ import threading
 import time
 
 import requests
-from Utilities import utilities
+from utlilities import *
 
 done = False
 print(chr(27) + "[2J")
 threader = threading.Thread(target=animate)
 threader.start()
 
-gals = utilities.read_gals('input.txt') #read in galaxies from input file
-[gals, start_coord] = utilities.get_coords(gals) #grab coordinates given galaxy list
+gals = read_gals('input.txt') #read in galaxies from input file
+[gals, start_coord] = get_coords(gals) #grab coordinates given galaxy list
 
 write_file = 'scriptData.csv'
 
 with open(write_file,'w') as output:
 	output.write("Name, Ra, Dec, Lat, Long, Av, Morph, Red, Helio, Error, VGS, Error, \n")
 for i in range(0,len(gals)):
-	[ra,dec] =  utilities.coord_breakup(start_coord[i])
+	[ra,dec] = coord_breakup(start_coord[i])
 	Av = AvFill(ra, dec)
 	redshift = Redshift(gals[i])
 	vels = scrapeValues(gals[i])

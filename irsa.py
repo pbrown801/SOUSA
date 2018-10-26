@@ -16,7 +16,7 @@
  """
  REDO ALL THIS, IT LOOKS LIKE CRAP
  """
- 
+
 
 from astropy import units as u
 from astropy import coordinates
@@ -46,7 +46,7 @@ def timeFix(s,m,h): #fixes time to ensure it stays within normal range (0-60)
 				s+=60
 			if m < 0:
 				h-=1
-				m+=60		
+				m+=60
 	return s,m,h;
 
 def fourCoord(dam,ra,dec,coord):
@@ -67,7 +67,7 @@ def fourCoord(dam,ra,dec,coord):
 	decl = Angle(decli,u.arcminute)
 	decl = Angle(decl.to_string(unit=u.degree),u.degree)
 	coord[0] = ra.to_string()+" "+decl.to_string()
-	
+
 	#w
 	ds=ds*(-1)
 	ds/=math.cos(math.radians(dec.degree))
@@ -84,12 +84,12 @@ def fourCoord(dam,ra,dec,coord):
 	decl = Angle(decli,u.arcminute)
 	decl = Angle(decl.to_string(unit=u.degree),u.degree)
 	coord[2] = ra.to_string()+" "+decl.to_string()
-	
+
 	#print(coord)
-	return coord; #performs transformation of initial coord into cardinal coordinates 
+	return coord; #performs transformation of initial coord into cardinal coordinates
 
 def tableFill(dam, ra, dec, appender,nme):
-	t = Table(None) 
+	t = Table(None)
 	Am = Column(name = 'Arcminute')
 	North = Column(name = 'North')
 	East = Column(name = 'East')
@@ -111,10 +111,10 @@ def tableFill(dam, ra, dec, appender,nme):
 			t[j][i+1] = curVal[i]
 			curVal = curVal[:]
 		tA_v.append(curVal)
-	
+
 	t.add_row()
 	for i in range(0,5): #this adds a blank line to the table to separate queries
-		t[j+1][i] = None	
+		t[j+1][i] = None
 	n = [nme]
 	namesTable = Table([n], names=('n'))
 	final_name = namesTable.to_pandas()
@@ -148,7 +148,7 @@ def PicSaver(image_data,gals,goPics):
 			plt.colorbar()
 			plt.savefig(os.path.join('Pictures',(gals[j]+".png")))
 			plt.clf()
-		else:	
+		else:
 			if j==sz1-1: #if last set
 				iend = sz2
 			if iend == 1: #if only one plot remains
@@ -163,7 +163,7 @@ def PicSaver(image_data,gals,goPics):
 				return
 			else:
 				f, axarr = plt.subplots(1,iend)
-				for i in range(go*(j),((j)*go)+iend): 
+				for i in range(go*(j),((j)*go)+iend):
 					im = axarr[i-(go*j)].imshow(image_data[i],cmap='gray')
 					axarr[i-(go*(j))].set_title(gals[i])
 				f.subplots_adjust(right=0.8)
@@ -223,7 +223,7 @@ def GraphMaker(A_v,gals,majAxis,goGraphs):
 				f, axarr = plt.subplots(nrows = 1,ncols = iend, sharey = True, sharex = True,figsize = (20,10))
 				f.text(.5,.04, 'Arcminutes From Center of Galaxy',ha='center',fontsize = 20)
 				f.text(.08,.5, 'A_V Value',va='center', rotation='vertical',fontsize = 20)
-				for i in range(go*(j),((j)*go)+iend): 
+				for i in range(go*(j),((j)*go)+iend):
 					no, = axarr[i-(go*j)].plot(x, A_v[i][:,0], color = "blue", marker = ".", label = "North")
 					ea, = axarr[i-(go*j)].plot(x, A_v[i][:,1], color = "red", marker = ".", label = "East")
 					so, = axarr[i-(go*j)].plot(x, A_v[i][:,2], color = "green", marker = ".", label = "South")
@@ -288,7 +288,7 @@ def GraphMaker(A_v,gals,majAxis,goGraphs):
 	# 	minAxis.append(None)
 	# with open(write_file, 'a') as output:
 	# 	if(fix and fix2):
-	# 		output.write(name + ',' + ra.to_string() + ',' + dec.to_string() + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + major + ',' + minor + '\n')	
+	# 		output.write(name + ',' + ra.to_string() + ',' + dec.to_string() + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + major + ',' + minor + '\n')
 	# 	elif(fix == True and fix2 == False):
 	# 		output.write(name + ',' + ra.to_string() + ',' + dec.to_string() + ',' + str(Hvals[0]) + ',' + str(Hvals[1]) + ',' + str(VGSVals[0]) + ',' + str(VGSVals[1]) + ',' + major + ',' + '%.3f' %minor + '\n')
 	# 	elif(fix == False and fix2 == True):
@@ -311,7 +311,7 @@ while can_read == False:
 		galaxies = input("Enter galaxies separated by commas: Ex. M82, M83\n")
 		for x in galaxies.split(','):
 			gals.append(x.strip())
-		can_read = True	
+		can_read = True
 	elif choice == '2':
 		file = input("What is the name of the file? Ex. galaxies.txt\n")
 		with open(file) as inp:
@@ -339,7 +339,7 @@ elif c1 and c2 == 'n':
 for i in range(0,len(gals)):
 	tcoord=SkyCoord.from_name(gals[i],frame ='icrs') #gets coordinate from name given and stores in temporary SkyCoord
 	start_coord.append(tcoord) #puts temporary SkyCoord in a list
-	
+
 from astropy.table import Table
 from astropy.table import Column
 
