@@ -1,0 +1,133 @@
+#!/bin/csh -f
+
+##########################################################################
+# modified by Peter Brown from                                           #
+# makeuvotimages version 5                                               #
+# by Chris Williams\Stefan Immler					 #
+# 									 #
+##########################################################################
+#    called using --> source makecommands2013.txt SNNAME tempid
+#    where tempid is either the target id of a separate template observation 
+#    or the obs id if the template observation has the same target id 
+#    as the SN observations -- this is optional								 
+									 
+# set default list of bands to be processed
+set bandlist = (vv bb uu w1 m2 w2)
+
+# Parse command line options
+#
+set	NAME=$argv[1] 
+#set	rawdatadir=$argv[2] 
+#rawdatadir=$SWIFT_RAWDATA
+# set	SNid=$argv[2] 
+if ( $#argv == 2 ) then
+	set tempid=$argv[2] 
+	else
+	@ tempid= -1
+endif
+#############################
+#Set up script files file
+set downloadscript = $NAME'_downloadcommands.txt'
+set sumscript = $NAME'_sumcommands.txt'
+set othersumscript = $NAME'_othersumcommands.txt'
+set otherappendscript = $NAME'_otherappendcommands.txt'
+set appendscript = $NAME'_appendcommands.txt'
+set allscript = $NAME'_allcommands.txt'
+echo "Generating sum/append commands and printing to $sumscript and $appendscript"
+if (-e $allscript) rm $allscript
+if (-e $sumscript) rm $sumscript
+if (-e $appendscript) rm $appendscript
+#########################################
+#Initialize start time
+set DATE = `date`
+echo "#summing commands generated on $DATE" >> $sumscript
+echo "#appending commands generated on $DATE" > $appendscript
+
+echo "rm $NAME*.img*" >> $appendscript
+
+############################ find all the sky images for a given filter
+############################ set the names for the appropriate exposure maps and attitude files
+############################ create large scale structure maps
+############################ create commands for summing the images, exposure maps, and lss maps
+foreach BAND ($bandlist)
+		set COUNT = 0
+		set TEMPCOUNT = 0
+
+	foreach file (`find . -name "*"$BAND"_sk*" | grep .gz | grep -v .bak | grep -v _sum | sort -n  `)
+
+		set DIRNAME = `dirname $file`
+		set FILENAME = `basename $file | awk 'BEGIN {FS="."} {NF=1;print}' `
+		set SEGID = `echo $FILENAME | sed "s/sw//"  | sed "s/u$BAND//" | sed "s/_sk.img.gz//"  `
+		set ATTDIR = `echo $DIRNAME | sed 's/uvot\/image/auxil/'`
+		set ATTNAME = `echo $ATTDIR'/sw'$SEGID'sat.fits.gz'`
+	
+	   	set OUTFILE = `echo -n $DIRNAME"/sw"$SEGID"u"$BAND"_sk_sum.img"`
+   	    	echo "uvotimsum infile=$file outfile=$OUTFILE clobber=no exclude=NONE chatter=0" >> $sumscript
+
+# create append commands
+
+	    	set STACKFILE = `echo -n $NAME"_"$BAND".img"`
+	    	set TEMPFILE = `echo -n $NAME"_"$BAND"_temp.img"`
+
+		if ("$FILENAME" =~ *"$tempid"* ) then 	
+			@ TEMPCOUNT = $TEMPCOUNT + 1
+			if ($TEMPCOUNT == 1) then 
+			echo "fcopy $OUTFILE $TEMPFILE " >> $appendscript
+			else
+			echo "ftappend $OUTFILE $TEMPFILE " >> $appendscript
+			endif
+		else	
+			@ COUNT = $COUNT + 1
+			if ($COUNT == 1) then
+			echo "fcopy $OUTFILE $STACKFILE " >> $appendscript	
+			else
+			echo "ftappend $OUTFILE $STACKFILE " >> $appendscript
+			endif
+		endif
+	end
+
+	if ($COUNT > 0) then 
+     		set STACKFILE = `echo -n $NAME"_"$BAND".img"`
+    		set SUMFILE = `echo -n $NAME"_"$BAND"_sum.img"`
+		echo "uvotimsum infile=$STACKFILE outfile=$SUMFILE clobber=no exclude=NONE chatter=0" >> $appendscript
+	endif
+
+	if ($TEMPCOUNT > 0) then 
+    		set TEMPFILE = `echo -n $NAME"_"$BAND"_temp.img"`
+   		set TEMPSUMFILE = `echo -n $NAME"_"$BAND"_tempsum.img"`
+		echo "uvotimsum infile=$TEMPFILE outfile=$TEMPSUMFILE clobber=no exclude=NONE chatter=0" >> $appendscript
+	endif
+end
+
+set BLUEFILE = `echo -n $NAME"_m2_sum.img"`
+set GREENFILE = `echo -n $NAME"_uu_sum.img"`
+set REDFILE = `echo -n $NAME"_vv_sum.img"`
+set BLUETEMP = `echo -n $NAME"_m2_tempsum.img"`
+set GREENTEMP = `echo -n $NAME"_uu_tempsum.img"`
+set REDTEMP = `echo -n $NAME"_vv_tempsum.img"`
+
+# echo "ds9  -scale log -rgb -red $REDFILE -green $GREENFILE -blue $BLUEFILE &" >> $appendscript
+echo "ds9  -scale log -rgb -red $REDTEMP -green $GREENTEMP -blue $BLUETEMP -frame -new -rgb -red $REDFILE -green $GREENFILE -blue $BLUEFILE &" >> $appendscript
+
+set BLUEFILE = `echo -n $NAME"_m2_sum.img.gz"`
+set GREENFILE = `echo -n $NAME"_uu_sum.img.gz"`
+set REDFILE = `echo -n $NAME"_vv_sum.img.gz"`
+set BLUETEMP = `echo -n $NAME"_m2_tempsum.img.gz"`
+set GREENTEMP = `echo -n $NAME"_uu_tempsum.img.gz"`
+set REDTEMP = `echo -n $NAME"_vv_tempsum.img.gz"`
+
+# echo "ds9 -scale log -rgb -red $REDFILE -green $GREENFILE -blue $BLUEFILE &" >> $appendscript
+echo "ds9  -scale log -rgb -red $REDTEMP -green $GREENTEMP -blue $BLUETEMP -frame -new -rgb -red $REDFILE -green $GREENFILE -blue $BLUEFILE &" >> $appendscript
+
+# should already be downloaded  cat $downloadscript >> $allscript
+cat $sumscript >> $allscript
+cat $othersumscript >> $allscript
+cat $appendscript >> $allscript
+cat $otherappendscript >> $allscript
+#echo "gzip *.img" >> $appendscript
+#echo "gzip *.lss" >> $appendscript
+echo "rm */uvot/image/*lss*" >> $appendscript
+echo "rm */uvot/image/*rw*" >> $appendscript
+echo "rm */uvot/image/*ex*" >> $appendscript
+
+exit 0
