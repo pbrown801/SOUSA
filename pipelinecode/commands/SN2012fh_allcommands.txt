@@ -1,0 +1,29 @@
+#summing commands generated on Mon Feb 22 15:22:20 CST 2016
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uvv_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001ubb_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uuu_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uw1_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581003/uvot/image/sw00036581003uw1_sk.img.gz outfile=./00036581003/uvot/image/sw00036581003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001um2_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581002/uvot/image/sw00036581002um2_sk.img.gz outfile=./00036581002/uvot/image/sw00036581002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uw2_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+#appending commands generated on Mon Feb 22 15:22:20 CST 2016
+rm SN2012fh*.img*
+fcopy ./00036581001/uvot/image/sw00036581001uvv_sk_sum.img SN2012fh_vv_temp.img 
+uvotimsum infile=SN2012fh_vv_temp.img outfile=SN2012fh_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036581001/uvot/image/sw00036581001ubb_sk_sum.img SN2012fh_bb_temp.img 
+uvotimsum infile=SN2012fh_bb_temp.img outfile=SN2012fh_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036581001/uvot/image/sw00036581001uuu_sk_sum.img SN2012fh_uu_temp.img 
+uvotimsum infile=SN2012fh_uu_temp.img outfile=SN2012fh_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036581001/uvot/image/sw00036581001uw1_sk_sum.img SN2012fh_w1_temp.img 
+fcopy ./00036581003/uvot/image/sw00036581003uw1_sk_sum.img SN2012fh_w1.img 
+uvotimsum infile=SN2012fh_w1.img outfile=SN2012fh_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2012fh_w1_temp.img outfile=SN2012fh_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036581001/uvot/image/sw00036581001um2_sk_sum.img SN2012fh_m2_temp.img 
+fcopy ./00036581002/uvot/image/sw00036581002um2_sk_sum.img SN2012fh_m2.img 
+uvotimsum infile=SN2012fh_m2.img outfile=SN2012fh_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2012fh_m2_temp.img outfile=SN2012fh_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036581001/uvot/image/sw00036581001uw2_sk_sum.img SN2012fh_w2_temp.img 
+uvotimsum infile=SN2012fh_w2_temp.img outfile=SN2012fh_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2012fh_vv_tempsum.img -green SN2012fh_uu_tempsum.img -blue SN2012fh_m2_tempsum.img -frame -new -rgb -red SN2012fh_vv_sum.img -green SN2012fh_uu_sum.img -blue SN2012fh_m2_sum.img &
+ds9  -scale log -rgb -red SN2012fh_vv_tempsum.img.gz -green SN2012fh_uu_tempsum.img.gz -blue SN2012fh_m2_tempsum.img.gz -frame -new -rgb -red SN2012fh_vv_sum.img.gz -green SN2012fh_uu_sum.img.gz -blue SN2012fh_m2_sum.img.gz &

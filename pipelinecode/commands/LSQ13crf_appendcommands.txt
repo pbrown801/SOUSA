@@ -1,0 +1,57 @@
+#appending commands generated on Tue Feb 16 10:39:05 CST 2016
+rm LSQ13crf*.img*
+fcopy ./00033013001/uvot/image/sw00033013001uvv_sk_sum.img LSQ13crf_vv.img 
+ftappend ./00033013002/uvot/image/sw00033013002uvv_sk_sum.img LSQ13crf_vv.img 
+ftappend ./00033013003/uvot/image/sw00033013003uvv_sk_sum.img LSQ13crf_vv.img 
+ftappend ./00033013005/uvot/image/sw00033013005uvv_sk_sum.img LSQ13crf_vv.img 
+ftappend ./00033013006/uvot/image/sw00033013006uvv_sk_sum.img LSQ13crf_vv.img 
+ftappend ./00033013007/uvot/image/sw00033013007uvv_sk_sum.img LSQ13crf_vv.img 
+ftappend ./00033013008/uvot/image/sw00033013008uvv_sk_sum.img LSQ13crf_vv.img 
+ftappend ./00033013009/uvot/image/sw00033013009uvv_sk_sum.img LSQ13crf_vv.img 
+fcopy ./00085553001/uvot/image/sw00085553001uvv_sk_sum.img LSQ13crf_vv_temp.img 
+ftappend ./00085553002/uvot/image/sw00085553002uvv_sk_sum.img LSQ13crf_vv_temp.img 
+uvotimsum infile=LSQ13crf_vv.img outfile=LSQ13crf_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=LSQ13crf_vv_temp.img outfile=LSQ13crf_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033013001/uvot/image/sw00033013001ubb_sk_sum.img LSQ13crf_bb.img 
+ftappend ./00033013002/uvot/image/sw00033013002ubb_sk_sum.img LSQ13crf_bb.img 
+ftappend ./00033013003/uvot/image/sw00033013003ubb_sk_sum.img LSQ13crf_bb.img 
+ftappend ./00033013005/uvot/image/sw00033013005ubb_sk_sum.img LSQ13crf_bb.img 
+ftappend ./00033013006/uvot/image/sw00033013006ubb_sk_sum.img LSQ13crf_bb.img 
+ftappend ./00033013007/uvot/image/sw00033013007ubb_sk_sum.img LSQ13crf_bb.img 
+ftappend ./00033013008/uvot/image/sw00033013008ubb_sk_sum.img LSQ13crf_bb.img 
+ftappend ./00033013009/uvot/image/sw00033013009ubb_sk_sum.img LSQ13crf_bb.img 
+fcopy ./00085553001/uvot/image/sw00085553001ubb_sk_sum.img LSQ13crf_bb_temp.img 
+ftappend ./00085553002/uvot/image/sw00085553002ubb_sk_sum.img LSQ13crf_bb_temp.img 
+uvotimsum infile=LSQ13crf_bb.img outfile=LSQ13crf_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=LSQ13crf_bb_temp.img outfile=LSQ13crf_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033013001/uvot/image/sw00033013001uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033013002/uvot/image/sw00033013002uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033013003/uvot/image/sw00033013003uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033013005/uvot/image/sw00033013005uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033013006/uvot/image/sw00033013006uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033013007/uvot/image/sw00033013007uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033013008/uvot/image/sw00033013008uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033013009/uvot/image/sw00033013009uuu_sk_sum.img LSQ13crf_uu.img 
+ftappend ./00033348001/uvot/image/sw00033348001uuu_sk_sum.img LSQ13crf_uu.img 
+fcopy ./00085553001/uvot/image/sw00085553001uuu_sk_sum.img LSQ13crf_uu_temp.img 
+ftappend ./00085553002/uvot/image/sw00085553002uuu_sk_sum.img LSQ13crf_uu_temp.img 
+uvotimsum infile=LSQ13crf_uu.img outfile=LSQ13crf_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=LSQ13crf_uu_temp.img outfile=LSQ13crf_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033013001/uvot/image/sw00033013001uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013002/uvot/image/sw00033013002uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013003/uvot/image/sw00033013003uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013004/uvot/image/sw00033013004uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013005/uvot/image/sw00033013005uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013006/uvot/image/sw00033013006uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013007/uvot/image/sw00033013007uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013008/uvot/image/sw00033013008uw1_sk_sum.img LSQ13crf_w1.img 
+ftappend ./00033013009/uvot/image/sw00033013009uw1_sk_sum.img LSQ13crf_w1.img 
+fcopy ./00085553001/uvot/image/sw00085553001uw1_sk_sum.img LSQ13crf_w1_temp.img 
+ftappend ./00085553002/uvot/image/sw00085553002uw1_sk_sum.img LSQ13crf_w1_temp.img 
+uvotimsum infile=LSQ13crf_w1.img outfile=LSQ13crf_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=LSQ13crf_w1_temp.img outfile=LSQ13crf_w1_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red LSQ13crf_vv_tempsum.img -green LSQ13crf_uu_tempsum.img -blue LSQ13crf_m2_tempsum.img -frame -new -rgb -red LSQ13crf_vv_sum.img -green LSQ13crf_uu_sum.img -blue LSQ13crf_m2_sum.img &
+ds9  -scale log -rgb -red LSQ13crf_vv_tempsum.img.gz -green LSQ13crf_uu_tempsum.img.gz -blue LSQ13crf_m2_tempsum.img.gz -frame -new -rgb -red LSQ13crf_vv_sum.img.gz -green LSQ13crf_uu_sum.img.gz -blue LSQ13crf_m2_sum.img.gz &
+rm */uvot/image/*lss*
+rm */uvot/image/*rw*
+rm */uvot/image/*ex*

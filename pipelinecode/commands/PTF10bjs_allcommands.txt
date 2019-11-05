@@ -1,0 +1,46 @@
+#summing commands generated on Thu Aug 16 10:45:28 CDT 2012
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uvv_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uvv_ex.img.gz outfile=./00031638001/uvot/image/sw00031638001uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031638001/uvot/image/sw00031638001uvv_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001uvv_sk.lss attfile=./00031638001/auxil/sw00031638001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uvv_sk.lss outfile=./00031638001/uvot/image/sw00031638001uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031638001/uvot/image/sw00031638001ubb_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031638001/uvot/image/sw00031638001ubb_ex.img.gz outfile=./00031638001/uvot/image/sw00031638001ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031638001/uvot/image/sw00031638001ubb_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001ubb_sk.lss attfile=./00031638001/auxil/sw00031638001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031638001/uvot/image/sw00031638001ubb_sk.lss outfile=./00031638001/uvot/image/sw00031638001ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uuu_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uuu_ex.img.gz outfile=./00031638001/uvot/image/sw00031638001uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031638001/uvot/image/sw00031638001uuu_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001uuu_sk.lss attfile=./00031638001/auxil/sw00031638001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uuu_sk.lss outfile=./00031638001/uvot/image/sw00031638001uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uw1_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uw1_ex.img.gz outfile=./00031638001/uvot/image/sw00031638001uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031638001/uvot/image/sw00031638001uw1_sk.img.gz outfile=./00031638001/uvot/image/sw00031638001uw1_sk.lss attfile=./00031638001/auxil/sw00031638001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031638001/uvot/image/sw00031638001uw1_sk.lss outfile=./00031638001/uvot/image/sw00031638001uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+#appending commands generated on Thu Aug 16 10:45:28 CDT 2012
+rm PTF10bjs*.img*
+rm PTF10bjs*.lss*
+fcopy ./00031638001/uvot/image/sw00031638001uvv_sk_sum.img PTF10bjs_vv.img 
+fcopy ./00031638001/uvot/image/sw00031638001uvv_lss_sum.img PTF10bjs_vv.lss 
+fcopy ./00031638001/uvot/image/sw00031638001uvv_ex_sum.img PTF10bjs_vv_ex.img 
+uvotimsum infile=PTF10bjs_vv.img outfile=PTF10bjs_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF10bjs_vv_ex.img outfile=PTF10bjs_vv_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF10bjs_vv.lss outfile=PTF10bjs_vv_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00031638001/uvot/image/sw00031638001ubb_sk_sum.img PTF10bjs_bb.img 
+fcopy ./00031638001/uvot/image/sw00031638001ubb_lss_sum.img PTF10bjs_bb.lss 
+fcopy ./00031638001/uvot/image/sw00031638001ubb_ex_sum.img PTF10bjs_bb_ex.img 
+uvotimsum infile=PTF10bjs_bb.img outfile=PTF10bjs_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF10bjs_bb_ex.img outfile=PTF10bjs_bb_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF10bjs_bb.lss outfile=PTF10bjs_bb_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00031638001/uvot/image/sw00031638001uuu_sk_sum.img PTF10bjs_uu.img 
+fcopy ./00031638001/uvot/image/sw00031638001uuu_lss_sum.img PTF10bjs_uu.lss 
+fcopy ./00031638001/uvot/image/sw00031638001uuu_ex_sum.img PTF10bjs_uu_ex.img 
+uvotimsum infile=PTF10bjs_uu.img outfile=PTF10bjs_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF10bjs_uu_ex.img outfile=PTF10bjs_uu_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF10bjs_uu.lss outfile=PTF10bjs_uu_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00031638001/uvot/image/sw00031638001uw1_sk_sum.img PTF10bjs_w1.img 
+fcopy ./00031638001/uvot/image/sw00031638001uw1_lss_sum.img PTF10bjs_w1.lss 
+fcopy ./00031638001/uvot/image/sw00031638001uw1_ex_sum.img PTF10bjs_w1_ex.img 
+uvotimsum infile=PTF10bjs_w1.img outfile=PTF10bjs_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF10bjs_w1_ex.img outfile=PTF10bjs_w1_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF10bjs_w1.lss outfile=PTF10bjs_w1_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+ds9 -rgb -red PTF10bjs_vv_tempsum.img -green PTF10bjs_uu_tempsum.img -blue PTF10bjs_m2_tempsum.img -frame -new -rgb -red PTF10bjs_vv_sum.img -green PTF10bjs_uu_sum.img -blue PTF10bjs_m2_sum.img &
+ds9 -rgb -red PTF10bjs_vv_sum.img -green PTF10bjs_uu_sum.img -blue PTF10bjs_w1_sum.img &

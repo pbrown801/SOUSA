@@ -1,0 +1,23 @@
+#summing commands generated on Mon Jun 13 13:00:10 CDT 2016
+uvotimsum infile=./00034498001/uvot/image/sw00034498001uvv_sk.img.gz outfile=./00034498001/uvot/image/sw00034498001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00034498001/uvot/image/sw00034498001ubb_sk.img.gz outfile=./00034498001/uvot/image/sw00034498001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00034498001/uvot/image/sw00034498001uuu_sk.img.gz outfile=./00034498001/uvot/image/sw00034498001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00034498001/uvot/image/sw00034498001uw1_sk.img.gz outfile=./00034498001/uvot/image/sw00034498001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00034498001/uvot/image/sw00034498001um2_sk.img.gz outfile=./00034498001/uvot/image/sw00034498001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00034498001/uvot/image/sw00034498001uw2_sk.img.gz outfile=./00034498001/uvot/image/sw00034498001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+#appending commands generated on Mon Jun 13 13:00:10 CDT 2016
+rm Gaia16alf*.img*
+fcopy ./00034498001/uvot/image/sw00034498001uvv_sk_sum.img Gaia16alf_vv.img 
+uvotimsum infile=Gaia16alf_vv.img outfile=Gaia16alf_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00034498001/uvot/image/sw00034498001ubb_sk_sum.img Gaia16alf_bb.img 
+uvotimsum infile=Gaia16alf_bb.img outfile=Gaia16alf_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00034498001/uvot/image/sw00034498001uuu_sk_sum.img Gaia16alf_uu.img 
+uvotimsum infile=Gaia16alf_uu.img outfile=Gaia16alf_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00034498001/uvot/image/sw00034498001uw1_sk_sum.img Gaia16alf_w1.img 
+uvotimsum infile=Gaia16alf_w1.img outfile=Gaia16alf_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00034498001/uvot/image/sw00034498001um2_sk_sum.img Gaia16alf_m2.img 
+uvotimsum infile=Gaia16alf_m2.img outfile=Gaia16alf_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00034498001/uvot/image/sw00034498001uw2_sk_sum.img Gaia16alf_w2.img 
+uvotimsum infile=Gaia16alf_w2.img outfile=Gaia16alf_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red Gaia16alf_vv_tempsum.img -green Gaia16alf_uu_tempsum.img -blue Gaia16alf_m2_tempsum.img -frame -new -rgb -red Gaia16alf_vv_sum.img -green Gaia16alf_uu_sum.img -blue Gaia16alf_m2_sum.img &
+ds9  -scale log -rgb -red Gaia16alf_vv_tempsum.img.gz -green Gaia16alf_uu_tempsum.img.gz -blue Gaia16alf_m2_tempsum.img.gz -frame -new -rgb -red Gaia16alf_vv_sum.img.gz -green Gaia16alf_uu_sum.img.gz -blue Gaia16alf_m2_sum.img.gz &

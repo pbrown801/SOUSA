@@ -1,0 +1,31 @@
+#appending commands generated on Mon Oct 13 18:04:15 CDT 2014
+rm SN2012cg*.img*
+fcopy ./00032463033/uvot/image/sw00032463033uvv_sk_sum.img SN2012cg_vv_temp.img 
+ftappend ./00032463034/uvot/image/sw00032463034uvv_sk_sum.img SN2012cg_vv_temp.img 
+ftappend ./00032463035/uvot/image/sw00032463035uvv_sk_sum.img SN2012cg_vv_temp.img 
+uvotimsum infile=SN2012cg_vv_temp.img outfile=SN2012cg_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032463033/uvot/image/sw00032463033ubb_sk_sum.img SN2012cg_bb_temp.img 
+ftappend ./00032463034/uvot/image/sw00032463034ubb_sk_sum.img SN2012cg_bb_temp.img 
+ftappend ./00032463035/uvot/image/sw00032463035ubb_sk_sum.img SN2012cg_bb_temp.img 
+uvotimsum infile=SN2012cg_bb_temp.img outfile=SN2012cg_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032463033/uvot/image/sw00032463033uuu_sk_sum.img SN2012cg_uu_temp.img 
+ftappend ./00032463034/uvot/image/sw00032463034uuu_sk_sum.img SN2012cg_uu_temp.img 
+ftappend ./00032463035/uvot/image/sw00032463035uuu_sk_sum.img SN2012cg_uu_temp.img 
+uvotimsum infile=SN2012cg_uu_temp.img outfile=SN2012cg_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032463033/uvot/image/sw00032463033uw1_sk_sum.img SN2012cg_w1_temp.img 
+ftappend ./00032463034/uvot/image/sw00032463034uw1_sk_sum.img SN2012cg_w1_temp.img 
+ftappend ./00032463035/uvot/image/sw00032463035uw1_sk_sum.img SN2012cg_w1_temp.img 
+uvotimsum infile=SN2012cg_w1_temp.img outfile=SN2012cg_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032463033/uvot/image/sw00032463033um2_sk_sum.img SN2012cg_m2_temp.img 
+ftappend ./00032463034/uvot/image/sw00032463034um2_sk_sum.img SN2012cg_m2_temp.img 
+ftappend ./00032463035/uvot/image/sw00032463035um2_sk_sum.img SN2012cg_m2_temp.img 
+ftappend ./00032463036/uvot/image/sw00032463036um2_sk_sum.img SN2012cg_m2_temp.img 
+uvotimsum infile=SN2012cg_m2_temp.img outfile=SN2012cg_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032463033/uvot/image/sw00032463033uw2_sk_sum.img SN2012cg_w2_temp.img 
+ftappend ./00032463034/uvot/image/sw00032463034uw2_sk_sum.img SN2012cg_w2_temp.img 
+ftappend ./00032463035/uvot/image/sw00032463035uw2_sk_sum.img SN2012cg_w2_temp.img 
+uvotimsum infile=SN2012cg_w2_temp.img outfile=SN2012cg_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2012cg_vv_tempsum.img -green SN2012cg_uu_tempsum.img -blue SN2012cg_m2_tempsum.img -frame -new -rgb -red SN2012cg_vv_sum.img -green SN2012cg_uu_sum.img -blue SN2012cg_m2_sum.img &
+ds9  -scale log -rgb -red SN2012cg_vv_tempsum.img.gz -green SN2012cg_uu_tempsum.img.gz -blue SN2012cg_m2_tempsum.img.gz -frame -new -rgb -red SN2012cg_vv_sum.img.gz -green SN2012cg_uu_sum.img.gz -blue SN2012cg_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

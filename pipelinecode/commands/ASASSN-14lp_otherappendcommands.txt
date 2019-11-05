@@ -1,0 +1,178 @@
+gunzip -f *.gz
+
+#gunzip -f 00033545005/uvot/image/sw00033545005u*.gz
+#perl $SNSCRIPTS/uaspect.pl 00033545005/uvot/image/sw00033545005uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545005/uvot/image/sw00033545005ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545005/uvot/image/sw00033545005uuu_sk.img coo.reg
+#gunzip -f 00033545007/uvot/image/sw00033545007u*.gz
+#perl $SNSCRIPTS/uaspect.pl 00033545007/uvot/image/sw00033545007uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545007/uvot/image/sw00033545007ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545007/uvot/image/sw00033545007uuu_sk.img coo.reg
+
+
+#gunzip -f 00033545009/uvot/image/sw00033545009u*.gz
+#gunzip -f 00033545010/uvot/image/sw00033545010u*.gz
+gunzip -f 00033545013/uvot/image/sw00033545013u*.gz
+#perl $SNSCRIPTS/uaspect.pl 00033545009/uvot/image/sw00033545009uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545010/uvot/image/sw00033545010uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545010/uvot/image/sw00033545010ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545010/uvot/image/sw00033545010uuu_sk.img coo.reg
+
+#perl $SNSCRIPTS/uaspect.pl 00033545012/uvot/image/sw00033545012uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545012/uvot/image/sw00033545012ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545012/uvot/image/sw00033545012uuu_sk.img coo.reg
+
+#perl $SNSCRIPTS/uaspect.pl 00033545013/uvot/image/sw00033545013uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545013/uvot/image/sw00033545013ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545013/uvot/image/sw00033545013uuu_sk.img coo.reg
+
+gunzip -f */uvot/image/*sk.img.gz
+
+
+#ftappend ./00033545005/uvot/image/sw00033545005uvv_sk.img\[1\] ASASSN-14lp_vv.img 
+ftappend ./00033545005/uvot/image/sw00033545005uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+#ftappend ./00033545007/uvot/image/sw00033545007uvv_sk.img\[1\] ASASSN-14lp_vv.img 
+ftappend ./00033545007/uvot/image/sw00033545007uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+#ftappend ./00033545007/uvot/image/sw00033545007uvv_sk.img\[3\] ASASSN-14lp_vv.img 
+ftappend ./00033545007/uvot/image/sw00033545007uvv_sk.img\[4\] ASASSN-14lp_vv.img 
+
+#ftappend ./00033545005/uvot/image/sw00033545005ubb_sk.img\[1\] ASASSN-14lp_bb.img 
+ftappend ./00033545005/uvot/image/sw00033545005ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+#ftappend ./00033545007/uvot/image/sw00033545007ubb_sk.img\[1\] ASASSN-14lp_bb.img 
+ftappend ./00033545007/uvot/image/sw00033545007ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+#ftappend ./00033545007/uvot/image/sw00033545007ubb_sk.img\[3\] ASASSN-14lp_bb.img 
+ftappend ./00033545007/uvot/image/sw00033545007ubb_sk.img\[4\] ASASSN-14lp_bb.img 
+
+#ftappend ./00033545005/uvot/image/sw00033545005uuu_sk.img\[1\] ASASSN-14lp_uu.img 
+ftappend ./00033545005/uvot/image/sw00033545005uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+#ftappend ./00033545007/uvot/image/sw00033545007uuu_sk.img\[1\] ASASSN-14lp_uu.img 
+ftappend ./00033545007/uvot/image/sw00033545007uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+#ftappend ./00033545007/uvot/image/sw00033545007uuu_sk.img\[3\] ASASSN-14lp_uu.img 
+ftappend ./00033545007/uvot/image/sw00033545007uuu_sk.img\[4\] ASASSN-14lp_uu.img 
+
+
+
+
+ftappend ./00033545009/uvot/image/sw00033545009uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+ftappend ./00033545009/uvot/image/sw00033545009uuu_sk.img\[4\] ASASSN-14lp_uu.img 
+ftappend ./00033545010/uvot/image/sw00033545010uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+
+
+ftappend ./00033545009/uvot/image/sw00033545009ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+ftappend ./00033545009/uvot/image/sw00033545009ubb_sk.img\[4\] ASASSN-14lp_bb.img 
+ftappend ./00033545010/uvot/image/sw00033545010ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+
+
+ftappend ./00033545009/uvot/image/sw00033545009uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+ftappend ./00033545009/uvot/image/sw00033545009uvv_sk.img\[4\] ASASSN-14lp_vv.img 
+ftappend ./00033545010/uvot/image/sw00033545010uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+
+
+ftappend ./00033545011/uvot/image/sw00033545011uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+ftappend ./00033545011/uvot/image/sw00033545011uuu_sk.img\[4\] ASASSN-14lp_uu.img 
+
+ftappend ./00033545011/uvot/image/sw00033545011ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+ftappend ./00033545011/uvot/image/sw00033545011ubb_sk.img\[4\] ASASSN-14lp_bb.img 
+
+ftappend ./00033545011/uvot/image/sw00033545011uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+ftappend ./00033545011/uvot/image/sw00033545011uvv_sk.img\[4\] ASASSN-14lp_vv.img 
+
+
+
+ftappend ./00033545012/uvot/image/sw00033545012uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+ftappend ./00033545012/uvot/image/sw00033545012uuu_sk.img\[4\] ASASSN-14lp_uu.img 
+
+ftappend ./00033545012/uvot/image/sw00033545012ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+ftappend ./00033545012/uvot/image/sw00033545012ubb_sk.img\[4\] ASASSN-14lp_bb.img 
+
+ftappend ./00033545012/uvot/image/sw00033545012uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+ftappend ./00033545012/uvot/image/sw00033545012uvv_sk.img\[4\] ASASSN-14lp_vv.img 
+
+
+#######
+
+ftappend ./00033545013/uvot/image/sw00033545013uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+ftappend ./00033545013/uvot/image/sw00033545013uuu_sk.img\[4\] ASASSN-14lp_uu.img 
+
+ftappend ./00033545013/uvot/image/sw00033545013ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+ftappend ./00033545013/uvot/image/sw00033545013ubb_sk.img\[4\] ASASSN-14lp_bb.img 
+
+ftappend ./00033545013/uvot/image/sw00033545013uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+ftappend ./00033545013/uvot/image/sw00033545013uvv_sk.img\[4\] ASASSN-14lp_vv.img 
+
+
+
+ftappend ./00033545016/uvot/image/sw00033545016uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+ftappend ./00033545016/uvot/image/sw00033545016uuu_sk.img\[4\] ASASSN-14lp_uu.img 
+
+ftappend ./00033545016/uvot/image/sw00033545016ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+ftappend ./00033545016/uvot/image/sw00033545016ubb_sk.img\[4\] ASASSN-14lp_bb.img 
+
+ftappend ./00033545016/uvot/image/sw00033545016uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+ftappend ./00033545016/uvot/image/sw00033545016uvv_sk.img\[4\] ASASSN-14lp_vv.img 
+
+
+
+ftappend ./00033545017/uvot/image/sw00033545017uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+ftappend ./00033545017/uvot/image/sw00033545017ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+ftappend ./00033545017/uvot/image/sw00033545017uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+
+ftappend ./00033545018/uvot/image/sw00033545018uuu_sk.img\[2\] ASASSN-14lp_uu.img 
+ftappend ./00033545018/uvot/image/sw00033545018uuu_sk.img\[4\] ASASSN-14lp_uu.img 
+
+ftappend ./00033545018/uvot/image/sw00033545018ubb_sk.img\[2\] ASASSN-14lp_bb.img 
+ftappend ./00033545018/uvot/image/sw00033545018ubb_sk.img\[4\] ASASSN-14lp_bb.img 
+
+ftappend ./00033545018/uvot/image/sw00033545018uvv_sk.img\[2\] ASASSN-14lp_vv.img 
+ftappend ./00033545018/uvot/image/sw00033545018uvv_sk.img\[4\] ASASSN-14lp_vv.img 
+
+#gzip 00033545007/uvot/image/sw00033545007uw*sk.img
+#gzip 00033545009/uvot/image/sw00033545009uw*sk.img
+#gzip 00033545007/uvot/image/sw00033545007um*sk.img
+#gzip 00033545009/uvot/image/sw00033545009um*sk.img
+
+#gzip 00033545010/uvot/image/sw00033545010uw*sk.img
+#gzip 00033545010/uvot/image/sw00033545010um*sk.img
+
+#gzip 00033545011/uvot/image/sw00033545011uw*sk.img
+#gzip 00033545011/uvot/image/sw00033545011um*sk.img
+
+
+#gunzip -f 00033545011/uvot/image/sw00033545011u*.gz
+
+#perl $SNSCRIPTS/uaspect.pl 00033545011/uvot/image/sw00033545011uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545011/uvot/image/sw00033545011ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545011/uvot/image/sw00033545011uuu_sk.img coo.reg
+
+#perl $SNSCRIPTS/uaspect.pl 00033545011/uvot/image/sw00033545011uw2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545011/uvot/image/sw00033545011um2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545011/uvot/image/sw00033545011uw1_sk.img coo.reg
+
+#gzip -f 00033545011/uvot/image/sw00033545011u*sk.img
+#uvotimsum infile=./00033545011/uvot/image/sw00033545011um2_sk.img.gz outfile=./00033545011/uvot/image/sw00033545011um2_sk_sum.img clobber=yes exclude=NONE chatter=0
+#uvotimsum infile=./00033545011/uvot/image/sw00033545011uw2_sk.img.gz outfile=./00033545011/uvot/image/sw00033545011uw2_sk_sum.img clobber=yes exclude=NONE chatter=0
+#uvotimsum infile=./00033545011/uvot/image/sw00033545011uw1_sk.img.gz outfile=./00033545011/uvot/image/sw00033545011uw1_sk_sum.img clobber=yes exclude=NONE chatter=0
+
+
+#gunzip *501*/uvot/image/*sk.img.gz
+#perl $SNSCRIPTS/uaspect.pl 00033545016/uvot/image/sw00033545016uw2_sk.img coo.reg
+#erl $SNSCRIPTS/uaspect.pl 00033545016/uvot/image/sw00033545016um2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545016/uvot/image/sw00033545016uw1_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545016/uvot/image/sw00033545016uuu_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545016/uvot/image/sw00033545016ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545016/uvot/image/sw00033545016uvv_sk.img coo.reg
+
+#perl $SNSCRIPTS/uaspect.pl 00033545017/uvot/image/sw00033545017uw2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545017/uvot/image/sw00033545017um2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545017/uvot/image/sw00033545017uw1_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545017/uvot/image/sw00033545017uuu_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545017/uvot/image/sw00033545017ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545017/uvot/image/sw00033545017uvv_sk.img coo.reg
+
+#perl $SNSCRIPTS/uaspect.pl 00033545018/uvot/image/sw00033545018uw2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545018/uvot/image/sw00033545018um2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545018/uvot/image/sw00033545018uw1_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545018/uvot/image/sw00033545018uuu_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545018/uvot/image/sw00033545018ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033545018/uvot/image/sw00033545018uvv_sk.img coo.reg
+

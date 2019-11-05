@@ -1,0 +1,6 @@
+#summing commands generated on Thu Mar 5 16:02:07 CST 2015
+# smeared images  m2 and w1 look fine
+uvotimsum infile=./00033049003/uvot/image/sw00033049003uvv_sk.img.gz outfile=./00033049003/uvot/image/sw00033049003uvv_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00033049003/uvot/image/sw00033049003ubb_sk.img.gz outfile=./00033049003/uvot/image/sw00033049003ubb_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00033049003/uvot/image/sw00033049003uuu_sk.img.gz outfile=./00033049003/uvot/image/sw00033049003uuu_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00033049003/uvot/image/sw00033049003uw2_sk.img.gz outfile=./00033049003/uvot/image/sw00033049003uw2_sk_sum.img clobber=yes exclude=1 chatter=0

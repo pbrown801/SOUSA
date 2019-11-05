@@ -1,0 +1,43 @@
+#summing commands generated on Tue Nov 19 17:29:57 CST 2013
+read event ./00032891001/xrt/event/sw00032891001xpcw3po_cl.evt.gz  
+read event ./00032891002/xrt/event/sw00032891002xpcw3po_cl.evt.gz  
+read event ./00032891003/xrt/event/sw00032891003xpcw3po_cl.evt.gz  
+read event ./00032891004/xrt/event/sw00032891004xpcw3po_cl.evt.gz  
+read event ./00032891005/xrt/event/sw00032891005xpcw3po_cl.evt.gz  
+read event ./00032891006/xrt/event/sw00032891006xpcw3po_cl.evt.gz  
+read event ./00032891007/xrt/event/sw00032891007xpcw3po_cl.evt.gz  
+read event ./00032891008/xrt/event/sw00032891008xpcw3po_cl.evt.gz  
+read event ./00032891009/xrt/event/sw00032891009xpcw3po_cl.evt.gz  
+read event ./00032891010/xrt/event/sw00032891010xpcw3po_cl.evt.gz  
+read event ./00032891011/xrt/event/sw00032891011xpcw3po_cl.evt.gz  
+read event ./00032891012/xrt/event/sw00032891012xpcw3po_cl.evt.gz  
+read event ./00032891013/xrt/event/sw00032891013xpcw3po_cl.evt.gz  
+read event ./00032891014/xrt/event/sw00032891014xpcw3po_cl.evt.gz  
+read event ./00032891015/xrt/event/sw00032891015xpcw3po_cl.evt.gz  
+read event ./00032891017/xrt/event/sw00032891017xpcw3po_cl.evt.gz  
+read event ./00032891018/xrt/event/sw00032891018xpcw3po_cl.evt.gz  
+read event ./00032891019/xrt/event/sw00032891019xpcw3po_cl.evt.gz  
+read event ./00032891021/xrt/event/sw00032891021xpcw3po_cl.evt.gz  
+read event ./00032891022/xrt/event/sw00032891022xpcw3po_cl.evt.gz  
+read event ./00032891023/xrt/event/sw00032891023xpcw3po_cl.evt.gz  
+read event ./00032891024/xrt/event/sw00032891024xpcw3po_cl.evt.gz  
+read event ./00032891025/xrt/event/sw00032891025xpcw3po_cl.evt.gz  
+
+read event ./00032891026/xrt/event/sw00032891026xpcw3po_cl.evt.gz  
+read event ./00032891027/xrt/event/sw00032891027xpcw3po_cl.evt.gz  
+read event ./00032891029/xrt/event/sw00032891029xpcw3po_cl.evt.gz  
+read event ./00032891030/xrt/event/sw00032891030xpcw3po_cl.evt.gz  
+read event ./00032891031/xrt/event/sw00032891031xpcw3po_cl.evt.gz  
+read event ./00032891032/xrt/event/sw00032891032xpcw3po_cl.evt.gz  
+read event ./00032891034/xrt/event/sw00032891034xpcw3po_cl.evt.gz  
+read event ./00032891035/xrt/event/sw00032891035xpcw3po_cl.evt.gz  
+read event ./00032891039/xrt/event/sw00032891039xpcw3po_cl.evt.gz  
+read event ./00035868001/xrt/event/sw00035868001xpcw2po_cl.evt.gz  
+read event ./00035868002/xrt/event/sw00035868002xpcw2po_cl.evt.gz  
+read event ./00036568001/xrt/event/sw00036568001xpcw2po_cl.evt.gz  
+extract image
+save image SN2013ej_xrt.img  
+
+
+
+

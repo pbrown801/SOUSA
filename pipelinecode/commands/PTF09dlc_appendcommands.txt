@@ -1,0 +1,29 @@
+#appending commands generated on Wed Oct 10 12:19:13 CDT 2012
+rm PTF09dlc*.img*
+fcopy ./00031478001/uvot/image/sw00031478001uw1_sk_sum.img PTF09dlc_w1.img 
+fcopy ./00031478001/uvot/image/sw00031478001uw1_ex_sum.img PTF09dlc_w1_ex.img 
+fcopy ./00031478002/uvot/image/sw00031478002uw1_sk_sum.img PTF09dlc_w1_temp.img 
+fcopy ./00031478002/uvot/image/sw00031478002uw1_ex_sum.img PTF09dlc_w1_ex_temp.img 
+uvotimsum infile=PTF09dlc_w1.img outfile=PTF09dlc_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF09dlc_w1_ex.img outfile=PTF09dlc_w1_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF09dlc_w1_temp.img outfile=PTF09dlc_w1_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF09dlc_w1_ex_temp.img outfile=PTF09dlc_w1_ex_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031478001/uvot/image/sw00031478001um2_sk_sum.img PTF09dlc_m2.img 
+fcopy ./00031478001/uvot/image/sw00031478001um2_ex_sum.img PTF09dlc_m2_ex.img 
+fcopy ./00031478002/uvot/image/sw00031478002um2_sk_sum.img PTF09dlc_m2_temp.img 
+fcopy ./00031478002/uvot/image/sw00031478002um2_ex_sum.img PTF09dlc_m2_ex_temp.img 
+uvotimsum infile=PTF09dlc_m2.img outfile=PTF09dlc_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF09dlc_m2_ex.img outfile=PTF09dlc_m2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF09dlc_m2_temp.img outfile=PTF09dlc_m2_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF09dlc_m2_ex_temp.img outfile=PTF09dlc_m2_ex_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031478001/uvot/image/sw00031478001uw2_sk_sum.img PTF09dlc_w2.img 
+fcopy ./00031478001/uvot/image/sw00031478001uw2_ex_sum.img PTF09dlc_w2_ex.img 
+fcopy ./00031478002/uvot/image/sw00031478002uw2_sk_sum.img PTF09dlc_w2_temp.img 
+fcopy ./00031478002/uvot/image/sw00031478002uw2_ex_sum.img PTF09dlc_w2_ex_temp.img 
+uvotimsum infile=PTF09dlc_w2.img outfile=PTF09dlc_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF09dlc_w2_ex.img outfile=PTF09dlc_w2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF09dlc_w2_temp.img outfile=PTF09dlc_w2_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF09dlc_w2_ex_temp.img outfile=PTF09dlc_w2_ex_tempsum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red PTF09dlc_vv_tempsum.img -green PTF09dlc_uu_tempsum.img -blue PTF09dlc_m2_tempsum.img -frame -new -rgb -red PTF09dlc_vv_sum.img -green PTF09dlc_uu_sum.img -blue PTF09dlc_m2_sum.img &
+gzip *.img
+gzip *.lss

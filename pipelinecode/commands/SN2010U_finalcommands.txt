@@ -1,0 +1,80 @@
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2013_10//00040797001/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_05//00084399003/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_04//00084399002/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_08//00084399005/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2013_10//00040797001/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_08//00084399005/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2010_03//00035872002/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_05//00084399003/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_03//00084399001/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_04//00084399002/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_03//00084399001/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2010_03//00035872002/uvot/
+
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425003/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425002/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425002/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425004/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425005/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2010_03//00035872002/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2010_03//00035872002/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425003/uvot/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425004/auxil/
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2014_11//00085425005/auxil/
+
+#summing commands generated on Wed Feb 4 10:30:15 CST 2015
+uvotimsum infile=./00085425002/uvot/image/sw00085425002uuu_sk.img.gz outfile=./00085425002/uvot/image/sw00085425002uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00085425004/uvot/image/sw00085425004uuu_sk.img.gz outfile=./00085425004/uvot/image/sw00085425004uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00040797001/uvot/image/sw00040797001uw1_sk.img.gz outfile=./00040797001/uvot/image/sw00040797001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00084399001/uvot/image/sw00084399001uw1_sk.img.gz outfile=./00084399001/uvot/image/sw00084399001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00084399002/uvot/image/sw00084399002uw1_sk.img.gz outfile=./00084399002/uvot/image/sw00084399002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00084399003/uvot/image/sw00084399003uw1_sk.img.gz outfile=./00084399003/uvot/image/sw00084399003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00084399005/uvot/image/sw00084399005uw1_sk.img.gz outfile=./00084399005/uvot/image/sw00084399005uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00085425004/uvot/image/sw00085425004uw1_sk.img.gz outfile=./00085425004/uvot/image/sw00085425004uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00040797001/uvot/image/sw00040797001um2_sk.img.gz outfile=./00040797001/uvot/image/sw00040797001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00085425003/uvot/image/sw00085425003um2_sk.img.gz outfile=./00085425003/uvot/image/sw00085425003um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00085425005/uvot/image/sw00085425005um2_sk.img.gz outfile=./00085425005/uvot/image/sw00085425005um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00040797001/uvot/image/sw00040797001uw2_sk.img.gz outfile=./00040797001/uvot/image/sw00040797001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00085425002/uvot/image/sw00085425002uw2_sk.img.gz outfile=./00085425002/uvot/image/sw00085425002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00085425005/uvot/image/sw00085425005uw2_sk.img.gz outfile=./00085425005/uvot/image/sw00085425005uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uw2_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uw2_sk_sum.img clobber=yes exclude=2 chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uvv_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002ubb_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uuu_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uw1_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002um2_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uw2_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+#appending commands generated on Wed Feb 4 10:30:15 CST 2015
+rm SN2010U*.img*
+fcopy ./00085425002/uvot/image/sw00085425002uuu_sk_sum.img SN2010U_uu_temp.img 
+ftappend ./00085425004/uvot/image/sw00085425004uuu_sk_sum.img SN2010U_uu_temp.img 
+uvotimsum infile=SN2010U_uu_temp.img outfile=SN2010U_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00040797001/uvot/image/sw00040797001uw1_sk_sum.img SN2010U_w1_temp.img 
+ftappend ./00084399001/uvot/image/sw00084399001uw1_sk_sum.img SN2010U_w1_temp.img 
+ftappend ./00084399002/uvot/image/sw00084399002uw1_sk_sum.img SN2010U_w1_temp.img 
+ftappend ./00084399003/uvot/image/sw00084399003uw1_sk_sum.img SN2010U_w1_temp.img 
+ftappend ./00084399005/uvot/image/sw00084399005uw1_sk_sum.img SN2010U_w1_temp.img 
+ftappend ./00085425004/uvot/image/sw00085425004uw1_sk_sum.img SN2010U_w1_temp.img 
+uvotimsum infile=SN2010U_w1_temp.img outfile=SN2010U_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00040797001/uvot/image/sw00040797001um2_sk_sum.img SN2010U_m2_temp.img 
+ftappend ./00085425003/uvot/image/sw00085425003um2_sk_sum.img SN2010U_m2_temp.img 
+ftappend ./00085425005/uvot/image/sw00085425005um2_sk_sum.img SN2010U_m2_temp.img 
+uvotimsum infile=SN2010U_m2_temp.img outfile=SN2010U_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00040797001/uvot/image/sw00040797001uw2_sk_sum.img SN2010U_w2_temp.img 
+ftappend ./00085425002/uvot/image/sw00085425002uw2_sk_sum.img SN2010U_w2_temp.img 
+ftappend ./00085425005/uvot/image/sw00085425005uw2_sk_sum.img SN2010U_w2_temp.img 
+uvotimsum infile=SN2010U_w2_temp.img outfile=SN2010U_w2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002uvv_sk_sum.img SN2010U_vv.img 
+uvotimsum infile=SN2010U_vv.img outfile=SN2010U_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002ubb_sk_sum.img SN2010U_bb.img 
+uvotimsum infile=SN2010U_bb.img outfile=SN2010U_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002uuu_sk_sum.img SN2010U_uu.img 
+uvotimsum infile=SN2010U_uu.img outfile=SN2010U_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002uw1_sk_sum.img SN2010U_w1.img 
+uvotimsum infile=SN2010U_w1.img outfile=SN2010U_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002um2_sk_sum.img SN2010U_m2.img 
+uvotimsum infile=SN2010U_m2.img outfile=SN2010U_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002uw2_sk_sum.img SN2010U_w2.img 
+uvotimsum infile=SN2010U_w2.img outfile=SN2010U_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2010U_vv_tempsum.img -green SN2010U_uu_tempsum.img -blue SN2010U_m2_tempsum.img -frame -new -rgb -red SN2010U_vv_sum.img -green SN2010U_uu_sum.img -blue SN2010U_m2_sum.img &
+ds9  -scale log -rgb -red SN2010U_vv_tempsum.img.gz -green SN2010U_uu_tempsum.img.gz -blue SN2010U_m2_tempsum.img.gz -frame -new -rgb -red SN2010U_vv_sum.img.gz -green SN2010U_uu_sum.img.gz -blue SN2010U_m2_sum.img.gz &

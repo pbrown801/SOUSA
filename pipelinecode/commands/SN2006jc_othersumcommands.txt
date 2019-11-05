@@ -1,0 +1,54 @@
+#summing commands generated on Tue Sep 30 14:37:19 CDT 2014
+uvotimsum infile=./00030810026/uvot/image/sw00030810026uw1_sk.img.gz outfile=./00030810026/uvot/image/sw00030810026uw1_sk_sum.img clobber=yes exclude=7 chatter=0
+uvotimsum infile=./00030810026/uvot/image/sw00030810026um2_sk.img.gz outfile=./00030810026/uvot/image/sw00030810026um2_sk_sum.img clobber=yes exclude=7 chatter=0
+uvotimsum infile=./00030810023/uvot/image/sw00030810023uw1_sk.img.gz outfile=./00030810023/uvot/image/sw00030810023uw1_sk_sum.img clobber=yes exclude=1 chatter=0
+%uvotimsum infile=./00030810057/uvot/image/sw00030810057uw1_sk.img.gz outfile=./00030810057/uvot/image/sw00030810057uw1_sk_sum.img clobber=yes exclude=4 chatter=0
+
+;;;segment four was separated by 68 hours
+uvotimsum infile=./00030810008/uvot/image/sw00030810008uvv_sk.img.gz outfile=./00030810008/uvot/image/sw00030810008uvv_sk_sum.img clobber=yes exclude=4 chatter=0
+
+uvotimsum infile=./00030810008/uvot/image/sw00030810008ubb_sk.img.gz outfile=./00030810008/uvot/image/sw00030810008ubb_sk_sum.img clobber=yes exclude=4 chatter=0
+
+uvotimsum infile=./00030810008/uvot/image/sw00030810008uuu_sk.img.gz outfile=./00030810008/uvot/image/sw00030810008uuu_sk_sum.img clobber=yes exclude=4 chatter=0
+
+uvotimsum infile=./00030810008/uvot/image/sw00030810008uw1_sk.img.gz outfile=./00030810008/uvot/image/sw00030810008uw1_sk_sum.img clobber=yes exclude=4 chatter=0
+
+uvotimsum infile=./00030810008/uvot/image/sw00030810008um2_sk.img.gz outfile=./00030810008/uvot/image/sw00030810008um2_sk_sum.img clobber=yes exclude=4 chatter=0
+
+uvotimsum infile=./00030810008/uvot/image/sw00030810008uw2_sk.img.gz outfile=./00030810008/uvot/image/sw00030810008uw2_sk_sum.img clobber=yes exclude=4 chatter=0
+
+
+uvotimsum infile=./00030810044/uvot/image/sw00030810044um2_sk.img.gz outfile=./00030810044/uvot/image/sw00030810044um2_sk_sum.img clobber=yes exclude=1-3 chatter=0
+
+
+
+%%%%%%% templates
+rm SN2006jc_vv_temp.img 
+fcopy ./00030810060/uvot/image/sw00030810060uvv_sk_sum.img SN2006jc_vv_temp.img 
+ftappend ./00030810059/uvot/image/sw00030810059uvv_sk_sum.img SN2006jc_vv_temp.img 
+uvotimsum infile=SN2006jc_vv_temp.img outfile=SN2006jc_vv_tempsum.img clobber=yes exclude=NONE chatter=0
+
+rm SN2006jc_bb_temp.img 
+fcopy ./00030810060/uvot/image/sw00030810060ubb_sk_sum.img SN2006jc_bb_temp.img 
+ftappend ./00030810059/uvot/image/sw00030810059ubb_sk_sum.img SN2006jc_bb_temp.img 
+uvotimsum infile=SN2006jc_bb_temp.img outfile=SN2006jc_bb_tempsum.img clobber=yes exclude=NONE chatter=0
+
+rm SN2006jc_uu_temp.img 
+fcopy ./00030810060/uvot/image/sw00030810060uuu_sk_sum.img SN2006jc_uu_temp.img 
+ftappend ./00030810059/uvot/image/sw00030810059uuu_sk_sum.img SN2006jc_uu_temp.img 
+uvotimsum infile=SN2006jc_uu_temp.img outfile=SN2006jc_uu_tempsum.img clobber=yes exclude=NONE chatter=0
+
+rm SN2006jc_w1_temp.img 
+fcopy ./00030810060/uvot/image/sw00030810060uw1_sk_sum.img SN2006jc_w1_temp.img 
+ftappend ./00030810059/uvot/image/sw00030810059uw1_sk_sum.img SN2006jc_w1_temp.img 
+uvotimsum infile=SN2006jc_w1_temp.img outfile=SN2006jc_w1_tempsum.img clobber=yes exclude=NONE chatter=0
+
+rm SN2006jc_m2_temp.img 
+fcopy ./00030810060/uvot/image/sw00030810060um2_sk_sum.img SN2006jc_m2_temp.img 
+ftappend ./00030810059/uvot/image/sw00030810059um2_sk_sum.img SN2006jc_m2_temp.img 
+uvotimsum infile=SN2006jc_m2_temp.img outfile=SN2006jc_m2_tempsum.img clobber=yes exclude=NONE chatter=0
+
+rm SN2006jc_w2_temp.img 
+fcopy ./00030810060/uvot/image/sw00030810060uw2_sk_sum.img SN2006jc_w2_temp.img 
+ftappend ./00030810059/uvot/image/sw00030810059uw2_sk_sum.img SN2006jc_w2_temp.img 
+uvotimsum infile=SN2006jc_w2_temp.img outfile=SN2006jc_w2_tempsum.img clobber=yes exclude=NONE chatter=0

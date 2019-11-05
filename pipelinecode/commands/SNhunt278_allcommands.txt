@@ -1,0 +1,23 @@
+#summing commands generated on Tue Feb 17 08:21:49 CST 2015
+uvotimsum infile=./00033641001/uvot/image/sw00033641001uvv_sk.img.gz outfile=./00033641001/uvot/image/sw00033641001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00033641001/uvot/image/sw00033641001ubb_sk.img.gz outfile=./00033641001/uvot/image/sw00033641001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00033641001/uvot/image/sw00033641001uuu_sk.img.gz outfile=./00033641001/uvot/image/sw00033641001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00033641001/uvot/image/sw00033641001uw1_sk.img.gz outfile=./00033641001/uvot/image/sw00033641001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00033641001/uvot/image/sw00033641001um2_sk.img.gz outfile=./00033641001/uvot/image/sw00033641001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00033641001/uvot/image/sw00033641001uw2_sk.img.gz outfile=./00033641001/uvot/image/sw00033641001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+#appending commands generated on Tue Feb 17 08:21:49 CST 2015
+rm SNhunt278*.img*
+fcopy ./00033641001/uvot/image/sw00033641001uvv_sk_sum.img SNhunt278_vv.img 
+uvotimsum infile=SNhunt278_vv.img outfile=SNhunt278_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033641001/uvot/image/sw00033641001ubb_sk_sum.img SNhunt278_bb.img 
+uvotimsum infile=SNhunt278_bb.img outfile=SNhunt278_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033641001/uvot/image/sw00033641001uuu_sk_sum.img SNhunt278_uu.img 
+uvotimsum infile=SNhunt278_uu.img outfile=SNhunt278_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033641001/uvot/image/sw00033641001uw1_sk_sum.img SNhunt278_w1.img 
+uvotimsum infile=SNhunt278_w1.img outfile=SNhunt278_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033641001/uvot/image/sw00033641001um2_sk_sum.img SNhunt278_m2.img 
+uvotimsum infile=SNhunt278_m2.img outfile=SNhunt278_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033641001/uvot/image/sw00033641001uw2_sk_sum.img SNhunt278_w2.img 
+uvotimsum infile=SNhunt278_w2.img outfile=SNhunt278_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SNhunt278_vv_tempsum.img -green SNhunt278_uu_tempsum.img -blue SNhunt278_m2_tempsum.img -frame -new -rgb -red SNhunt278_vv_sum.img -green SNhunt278_uu_sum.img -blue SNhunt278_m2_sum.img &
+ds9  -scale log -rgb -red SNhunt278_vv_tempsum.img.gz -green SNhunt278_uu_tempsum.img.gz -blue SNhunt278_m2_tempsum.img.gz -frame -new -rgb -red SNhunt278_vv_sum.img.gz -green SNhunt278_uu_sum.img.gz -blue SNhunt278_m2_sum.img.gz &

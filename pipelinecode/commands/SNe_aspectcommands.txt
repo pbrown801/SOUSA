@@ -1,0 +1,277 @@
+gunzip -f 00030083005/uvot/image/sw0003008300*.img.gz
+rm 00030083005/uvot/image/sw0003008300*sum*
+perl $SNSCRIPTS/uaspect.pl  00030083005/uvot/image/sw00030083005uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083005/uvot/image/sw00030083005uvv_sk.img coo.reg
+gzip 00030083005/uvot/image/sw0003008300*.img
+
+
+rm 00032017012/uvot/image/sw*sum*
+
+
+
+
+perl $SNSCRIPTS/uaspect.pl  00032017015/uvot/image/sw00032017015uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017019/uvot/image/sw00032017019uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017022/uvot/image/sw00032017022uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017025/uvot/image/sw00032017025uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017033/uvot/image/sw00032017033uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017036/uvot/image/sw00032017036uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017037/uvot/image/sw00032017037uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017044/uvot/image/sw00032017044uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017046/uvot/image/sw00032017046uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017047/uvot/image/sw00032017047uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017051/uvot/image/sw00032017051uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017053/uvot/image/sw00032017053uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017055/uvot/image/sw00032017055uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017057/uvot/image/sw00032017057uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017059/uvot/image/sw00032017059uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017061/uvot/image/sw00032017061uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017064/uvot/image/sw00032017064uvv_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017066/uvot/image/sw00032017066uvv_sk.img coodh.reg
+
+
+perl $SNSCRIPTS/uaspect.pl  00032017015/uvot/image/sw00032017015ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017019/uvot/image/sw00032017019ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017022/uvot/image/sw00032017022ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017025/uvot/image/sw00032017025ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017033/uvot/image/sw00032017033ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017036/uvot/image/sw00032017036ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017037/uvot/image/sw00032017037ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017044/uvot/image/sw00032017044ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017046/uvot/image/sw00032017046ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017047/uvot/image/sw00032017047ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017051/uvot/image/sw00032017051ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017053/uvot/image/sw00032017053ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017055/uvot/image/sw00032017055ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017057/uvot/image/sw00032017057ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017059/uvot/image/sw00032017059ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017061/uvot/image/sw00032017061ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017064/uvot/image/sw00032017064ubb_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017066/uvot/image/sw00032017066ubb_sk.img coodh.reg
+
+perl $SNSCRIPTS/uaspect.pl  00032017009/uvot/image/sw00032017009uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017015/uvot/image/sw00032017015uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017019/uvot/image/sw00032017019uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017022/uvot/image/sw00032017022uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017025/uvot/image/sw00032017025uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017033/uvot/image/sw00032017033uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017036/uvot/image/sw00032017036uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017037/uvot/image/sw00032017037uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017044/uvot/image/sw00032017044uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017046/uvot/image/sw00032017046uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017047/uvot/image/sw00032017047uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017051/uvot/image/sw00032017051uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017053/uvot/image/sw00032017053uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017055/uvot/image/sw00032017055uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017057/uvot/image/sw00032017057uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017059/uvot/image/sw00032017059uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017061/uvot/image/sw00032017061uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017064/uvot/image/sw00032017064uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017066/uvot/image/sw00032017066uuu_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017010/uvot/image/sw00032017010uw1_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uw1_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uw1_sk.img coodh.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uw1_sk.img coodh.reg
+
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017014um2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017014um2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028um2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030um2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031um2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017012/uvot/image/sw00032017012uw2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uw2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uw2_sk.img coodhuv.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uw2_sk.img coodhuv.reg
+
+
+gunzip -f 00032017014/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017012um2_sk.img coo.reg
+gzip 00032017014/uvot/image/sw*.img
+
+
+gunzip -f 00032017014/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017012um2_sk.img coo.reg
+gzip 00032017014/uvot/image/sw*.img
+
+
+gunzip -f 00032017014/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017012um2_sk.img coo.reg
+gzip 00032017014/uvot/image/sw*.img
+
+
+gunzip -f 00032017014/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017012um2_sk.img coo.reg
+gzip 00032017014/uvot/image/sw*.img
+
+
+gunzip -f 00032017014/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017012um2_sk.img coo.reg
+gzip 00032017014/uvot/image/sw*.img
+
+gunzip -f 00032017010/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017010/uvot/image/sw00032017010uw1_sk.img coo.reg
+gzip 00032017010/uvot/image/sw*.img
+
+gunzip -f 00032017012/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017012/uvot/image/sw00032017012uw2_sk.img coo.reg
+gzip 00032017012/uvot/image/sw*.img
+
+gunzip -f 00032017014/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017012um2_sk.img coo.reg
+gzip 00032017014/uvot/image/sw*.img
+
+
+rm 00032017028/uvot/image/sw*sum*
+gunzip -f 00032017028/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uw1_sk.img coo.reg
+gzip 00032017028/uvot/image/sw*.img
+
+rm 0003201700/uvot/image/sw*sum*
+gunzip -f 00032017030/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017012/uvot/image/sw00032017030uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017012/uvot/image/sw00032017030uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017012/uvot/image/sw00032017030um2_sk.img coo.reg
+gzip 00032017030/uvot/image/sw*.img
+
+rm 00032017031/uvot/image/sw*sum*
+gunzip -f 00032017031/uvot/image/sw*.img.gz
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031um2_sk.img coo.reg
+gzip 00032017031/uvot/image/sw*.img
+
+
+
+perl $SNSCRIPTS/uaspect.pl  00030083009/uvot/image/sw00030083009uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083013/uvot/image/sw00030083013uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083014/uvot/image/sw00030083014uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083018/uvot/image/sw00030083018uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083019/uvot/image/sw00030083019uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083020/uvot/image/sw00030083020uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083021/uvot/image/sw00030083021uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083024/uvot/image/sw00030083024uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083025/uvot/image/sw00030083025uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083028/uvot/image/sw00030083028uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083033/uvot/image/sw00030083033uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083037/uvot/image/sw00030083037uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083040/uvot/image/sw00030083040uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083041/uvot/image/sw00030083041uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017002/uvot/image/sw00032017002uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017004/uvot/image/sw00032017004uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017005/uvot/image/sw00032017005uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017008/uvot/image/sw00032017008uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017012/uvot/image/sw00032017012uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017013/uvot/image/sw00032017013uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017017/uvot/image/sw00032017017uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017034/uvot/image/sw00032017034uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017039/uvot/image/sw00032017039uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017075/uvot/image/sw00032017075uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895002/uvot/image/sw00035895002uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895003/uvot/image/sw00035895003uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895005/uvot/image/sw00035895005uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00037267004/uvot/image/sw00037267004uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083013/uvot/image/sw00030083013um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083014/uvot/image/sw00030083014um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083018/uvot/image/sw00030083018um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083019/uvot/image/sw00030083019um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083020/uvot/image/sw00030083020um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083021/uvot/image/sw00030083021um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083025/uvot/image/sw00030083025um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083028/uvot/image/sw00030083028um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083033/uvot/image/sw00030083033um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083037/uvot/image/sw00030083037um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083041/uvot/image/sw00030083041um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017004/uvot/image/sw00032017004um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017014/uvot/image/sw00032017014um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017016/uvot/image/sw00032017016um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017021/uvot/image/sw00032017021um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017024/uvot/image/sw00032017024um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017038/uvot/image/sw00032017038um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895002/uvot/image/sw00035895002um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895003/uvot/image/sw00035895003um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895004/uvot/image/sw00035895004um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083013/uvot/image/sw00030083013uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083014/uvot/image/sw00030083014uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083018/uvot/image/sw00030083018uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083019/uvot/image/sw00030083019uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083020/uvot/image/sw00030083020uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083021/uvot/image/sw00030083021uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083025/uvot/image/sw00030083025uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083028/uvot/image/sw00030083028uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083033/uvot/image/sw00030083033uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083037/uvot/image/sw00030083037uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083041/uvot/image/sw00030083041uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017004/uvot/image/sw00032017004uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017010/uvot/image/sw00032017010uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017024/uvot/image/sw00032017024uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895001/uvot/image/sw00035895001uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895002/uvot/image/sw00035895002uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895003/uvot/image/sw00035895003uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00035895005/uvot/image/sw00035895005uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00037267002/uvot/image/sw00037267002uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083015/uvot/image/sw00030083015uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00030083021/uvot/image/sw00030083021uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017009/uvot/image/sw00032017009uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017015/uvot/image/sw00032017015uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017019/uvot/image/sw00032017019uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017022/uvot/image/sw00032017022uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017025/uvot/image/sw00032017025uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017033/uvot/image/sw00032017033uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017037/uvot/image/sw00032017037uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017044/uvot/image/sw00032017044uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017046/uvot/image/sw00032017046uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017047/uvot/image/sw00032017047uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017051/uvot/image/sw00032017051uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017053/uvot/image/sw00032017053uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017055/uvot/image/sw00032017055uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017057/uvot/image/sw00032017057uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017059/uvot/image/sw00032017059uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017064/uvot/image/sw00032017064uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017066/uvot/image/sw00032017066uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017019/uvot/image/sw00032017019ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017022/uvot/image/sw00032017022ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017025/uvot/image/sw00032017025ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017033/uvot/image/sw00032017033ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017036/uvot/image/sw00032017036ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017037/uvot/image/sw00032017037ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017046/uvot/image/sw00032017046ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017051/uvot/image/sw00032017051ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017053/uvot/image/sw00032017053ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017055/uvot/image/sw00032017055ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017057/uvot/image/sw00032017057ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017059/uvot/image/sw00032017059ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017061/uvot/image/sw00032017061ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017064/uvot/image/sw00032017064ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017066/uvot/image/sw00032017066ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017019/uvot/image/sw00032017019uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017022/uvot/image/sw00032017022uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017025/uvot/image/sw00032017025uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017028/uvot/image/sw00032017028uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017030/uvot/image/sw00032017030uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017031/uvot/image/sw00032017031uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017036/uvot/image/sw00032017036uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017046/uvot/image/sw00032017046uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017047/uvot/image/sw00032017047uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017053/uvot/image/sw00032017053uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017059/uvot/image/sw00032017059uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017064/uvot/image/sw00032017064uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032017066/uvot/image/sw00032017066uvv_sk.img coo.reg

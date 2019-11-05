@@ -1,0 +1,5 @@
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2009ip/00031486012/uvot/image/sw00031486012u*sk.img.gz 
+perl $SNSCRIPTS/uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2009ip/00031486012/uvot/image/sw00031486012uw1_sk.img coouv.reg
+perl $SNSCRIPTS/uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2009ip/00031486012/uvot/image/sw00031486012um2_sk.img coouv.reg
+perl $SNSCRIPTS/uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2009ip/00031486012/uvot/image/sw00031486012uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2009ip/00031486012/uvot/image/sw00031486012u*.img 

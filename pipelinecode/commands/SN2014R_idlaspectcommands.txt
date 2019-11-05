@@ -1,0 +1,6 @@
+perl $SNSCRIPTS/uaspect.pl  00033150002/uvot/image/sw00033150002uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033150006/uvot/image/sw00033150006uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033150002/uvot/image/sw00033150002ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033150006/uvot/image/sw00033150006ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033150002/uvot/image/sw00033150002uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033150006/uvot/image/sw00033150006uvv_sk.img coo.reg

@@ -1,0 +1,42 @@
+#appending commands generated on Mon Mar 19 14:59:21 CDT 2012
+rm PTF09dnp_w1.img
+rm PTF09dnp_w1.img*.gz
+fcopy ./00031477001/uvot/image/sw00031477001uw1_sk.img.gz_sum.fits PTF09dnp_w1.img 
+ftappend ./00031477002/uvot/image/sw00031477002uw1_sk.img.gz_sum.fits PTF09dnp_w1.img 
+ftappend ./00031477003/uvot/image/sw00031477003uw1_sk.img.gz_sum.fits PTF09dnp_w1.img 
+fcopy ./00031477003/uvot/image/sw00031477003uw1_sk.img.gz_sum.fits PTF09dnp_w1_temp.img 
+ftappend ./00031477004/uvot/image/sw00031477004uw1_sk.img.gz_sum.fits PTF09dnp_w1.img 
+rm PTF09dnp_m2.img
+rm PTF09dnp_m2.img*.gz
+fcopy ./00031477001/uvot/image/sw00031477001um2_sk.img.gz_sum.fits PTF09dnp_m2.img 
+ftappend ./00031477002/uvot/image/sw00031477002um2_sk.img.gz_sum.fits PTF09dnp_m2.img 
+ftappend ./00031477003/uvot/image/sw00031477003um2_sk.img.gz_sum.fits PTF09dnp_m2.img 
+fcopy ./00031477003/uvot/image/sw00031477003um2_sk.img.gz_sum.fits PTF09dnp_m2_temp.img 
+ftappend ./00031477004/uvot/image/sw00031477004um2_sk.img.gz_sum.fits PTF09dnp_m2.img 
+rm PTF09dnp_w2.img
+rm PTF09dnp_w2.img*.gz
+fcopy ./00031477001/uvot/image/sw00031477001uw2_sk.img.gz_sum.fits PTF09dnp_w2.img 
+ftappend ./00031477002/uvot/image/sw00031477002uw2_sk.img.gz_sum.fits PTF09dnp_w2.img 
+ftappend ./00031477003/uvot/image/sw00031477003uw2_sk.img.gz_sum.fits PTF09dnp_w2.img 
+fcopy ./00031477003/uvot/image/sw00031477003uw2_sk.img.gz_sum.fits PTF09dnp_w2_temp.img 
+ftappend ./00031477004/uvot/image/sw00031477004uw2_sk.img.gz_sum.fits PTF09dnp_w2.img 
+rm PTF09dnp_vv_sum.img
+uvotimsum infile=PTF09dnp_vv.img outfile=PTF09dnp_vv_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF09dnp_bb_sum.img
+uvotimsum infile=PTF09dnp_bb.img outfile=PTF09dnp_bb_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF09dnp_uu_sum.img
+uvotimsum infile=PTF09dnp_uu.img outfile=PTF09dnp_uu_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF09dnp_w1_sum.img
+uvotimsum infile=PTF09dnp_w1.img outfile=PTF09dnp_w1_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF09dnp_m2_sum.img
+uvotimsum infile=PTF09dnp_m2.img outfile=PTF09dnp_m2_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF09dnp_w2_sum.img
+uvotimsum infile=PTF09dnp_w2.img outfile=PTF09dnp_w2_sum.img clobber=yes exclude=NONE chatter=0
+uvotimsum infile=PTF09dnp_vv_temp.img outfile=PTF09dnp_vv_tempsum.img clobber=yes exclude=NONE chatter=0
+uvotimsum infile=PTF09dnp_bb_temp.img outfile=PTF09dnp_bb_tempsum.img clobber=yes exclude=NONE chatter=0
+uvotimsum infile=PTF09dnp_uu_temp.img outfile=PTF09dnp_uu_tempsum.img clobber=yes exclude=NONE chatter=0
+uvotimsum infile=PTF09dnp_w1_temp.img outfile=PTF09dnp_w1_tempsum.img clobber=yes exclude=NONE chatter=0
+uvotimsum infile=PTF09dnp_m2_temp.img outfile=PTF09dnp_m2_tempsum.img clobber=yes exclude=NONE chatter=0
+uvotimsum infile=PTF09dnp_w2_temp.img outfile=PTF09dnp_w2_tempsum.img clobber=yes exclude=NONE chatter=0
+rm sw*.fits
+ds9 -rgb -red PTF09dnp_vv_sum.img -green PTF09dnp_uu_sum.img -blue PTF09dnp_m2_sum.img &

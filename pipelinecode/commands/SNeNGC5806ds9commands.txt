@@ -1,0 +1,7 @@
+ds9 -rgb -red SN2012P_vv_sum.img.gz -green SN2012P_uu_sum.img.gz -blue SN2012P_m2_sum.img.gz -rgb -red iPTF13bvn_vv_sum.img.gz -green iPTF13bvn_uu_sum.img.gz -blue iPTF13bvn_m2_sum.img.gz -rgb -red noSN_vv_tempsum.img.gz -green noSN_uu_tempsum.img.gz -blue noSN_m2_tempsum.img.gz -frame -new -rgb -red SNinNGC5806_vv_sum.img.gz -green SNinNGC5806_uu_sum.img.gz -blue SNinNGC5806_m2_sum.img.gz &
+
+ds9 -rgb -red  SN2012P_vv_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -green   SN2012P_uu_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -blue   SN2012P_m2_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -rgb -red   iPTF13bvn_vv_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -green   iPTF13bvn_uu_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -blue   iPTF13bvn_m2_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -rgb -red   noSN_vv_tempsum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -green   noSN_uu_tempsum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -blue   noSN_m2_tempsum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -frame -new -rgb -red   SNinNGC5806_vv_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -green  SNinNGC5806_uu_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 -blue  SNinNGC5806_m2_sum.img.gz   -smooth yes -smooth function gaussian -smooth radius 3 &
+
+
+
+  -smooth yes -smooth function gaussian -smooth radius 3 

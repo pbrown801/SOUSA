@@ -1,0 +1,30 @@
+#appending commands generated on Thu Apr 4 08:59:59 CDT 2013
+rm PTF12efz*.img*
+fcopy ./00032462001/uvot/image/sw00032462001uvv_sk_sum.img PTF12efz_vv.img 
+ftappend ./00032462002/uvot/image/sw00032462002uvv_sk_sum.img PTF12efz_vv.img 
+ftappend ./00032462003/uvot/image/sw00032462003uvv_sk_sum.img PTF12efz_vv.img 
+uvotimsum infile=PTF12efz_vv.img outfile=PTF12efz_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032462001/uvot/image/sw00032462001ubb_sk_sum.img PTF12efz_bb.img 
+ftappend ./00032462002/uvot/image/sw00032462002ubb_sk_sum.img PTF12efz_bb.img 
+ftappend ./00032462003/uvot/image/sw00032462003ubb_sk_sum.img PTF12efz_bb.img 
+uvotimsum infile=PTF12efz_bb.img outfile=PTF12efz_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032462001/uvot/image/sw00032462001uuu_sk_sum.img PTF12efz_uu.img 
+ftappend ./00032462002/uvot/image/sw00032462002uuu_sk_sum.img PTF12efz_uu.img 
+ftappend ./00032462003/uvot/image/sw00032462003uuu_sk_sum.img PTF12efz_uu.img 
+uvotimsum infile=PTF12efz_uu.img outfile=PTF12efz_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032462001/uvot/image/sw00032462001uw1_sk_sum.img PTF12efz_w1.img 
+ftappend ./00032462002/uvot/image/sw00032462002uw1_sk_sum.img PTF12efz_w1.img 
+ftappend ./00032462003/uvot/image/sw00032462003uw1_sk_sum.img PTF12efz_w1.img 
+uvotimsum infile=PTF12efz_w1.img outfile=PTF12efz_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032462001/uvot/image/sw00032462001um2_sk_sum.img PTF12efz_m2.img 
+ftappend ./00032462002/uvot/image/sw00032462002um2_sk_sum.img PTF12efz_m2.img 
+ftappend ./00032462003/uvot/image/sw00032462003um2_sk_sum.img PTF12efz_m2.img 
+uvotimsum infile=PTF12efz_m2.img outfile=PTF12efz_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032462001/uvot/image/sw00032462001uw2_sk_sum.img PTF12efz_w2.img 
+ftappend ./00032462002/uvot/image/sw00032462002uw2_sk_sum.img PTF12efz_w2.img 
+ftappend ./00032462003/uvot/image/sw00032462003uw2_sk_sum.img PTF12efz_w2.img 
+uvotimsum infile=PTF12efz_w2.img outfile=PTF12efz_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red PTF12efz_vv_tempsum.img -green PTF12efz_uu_tempsum.img -blue PTF12efz_m2_tempsum.img -frame -new -rgb -red PTF12efz_vv_sum.img -green PTF12efz_uu_sum.img -blue PTF12efz_m2_sum.img &
+ds9 -rgb -red PTF12efz_vv_tempsum.img.gz -green PTF12efz_uu_tempsum.img.gz -blue PTF12efz_m2_tempsum.img.gz -frame -new -rgb -red PTF12efz_vv_sum.img.gz -green PTF12efz_uu_sum.img.gz -blue PTF12efz_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

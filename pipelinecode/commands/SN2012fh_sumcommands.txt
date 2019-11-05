@@ -1,0 +1,9 @@
+#summing commands generated on Mon Feb 22 15:22:20 CST 2016
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uvv_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001ubb_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uuu_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uw1_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581003/uvot/image/sw00036581003uw1_sk.img.gz outfile=./00036581003/uvot/image/sw00036581003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001um2_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581002/uvot/image/sw00036581002um2_sk.img.gz outfile=./00036581002/uvot/image/sw00036581002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00036581001/uvot/image/sw00036581001uw2_sk.img.gz outfile=./00036581001/uvot/image/sw00036581001uw2_sk_sum.img clobber=no exclude=NONE chatter=0

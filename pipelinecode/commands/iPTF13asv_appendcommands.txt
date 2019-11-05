@@ -1,0 +1,27 @@
+#appending commands generated on Wed Jan 27 12:41:37 CST 2016
+rm iPTF13asv*.img*
+fcopy ./00032823001/uvot/image/sw00032823001um2_sk_sum.img iPTF13asv_m2.img 
+ftappend ./00032823002/uvot/image/sw00032823002um2_sk_sum.img iPTF13asv_m2.img 
+ftappend ./00032823003/uvot/image/sw00032823003um2_sk_sum.img iPTF13asv_m2.img 
+ftappend ./00032823004/uvot/image/sw00032823004um2_sk_sum.img iPTF13asv_m2.img 
+ftappend ./00032823005/uvot/image/sw00032823005um2_sk_sum.img iPTF13asv_m2.img 
+ftappend ./00032823006/uvot/image/sw00032823006um2_sk_sum.img iPTF13asv_m2.img 
+ftappend ./00032823007/uvot/image/sw00032823007um2_sk_sum.img iPTF13asv_m2.img 
+fcopy ./00032823008/uvot/image/sw00032823008um2_sk_sum.img iPTF13asv_m2_temp.img 
+uvotimsum infile=iPTF13asv_m2.img outfile=iPTF13asv_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=iPTF13asv_m2_temp.img outfile=iPTF13asv_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032823001/uvot/image/sw00032823001uw2_sk_sum.img iPTF13asv_w2.img 
+ftappend ./00032823002/uvot/image/sw00032823002uw2_sk_sum.img iPTF13asv_w2.img 
+ftappend ./00032823003/uvot/image/sw00032823003uw2_sk_sum.img iPTF13asv_w2.img 
+ftappend ./00032823004/uvot/image/sw00032823004uw2_sk_sum.img iPTF13asv_w2.img 
+ftappend ./00032823005/uvot/image/sw00032823005uw2_sk_sum.img iPTF13asv_w2.img 
+ftappend ./00032823006/uvot/image/sw00032823006uw2_sk_sum.img iPTF13asv_w2.img 
+ftappend ./00032823007/uvot/image/sw00032823007uw2_sk_sum.img iPTF13asv_w2.img 
+fcopy ./00032823008/uvot/image/sw00032823008uw2_sk_sum.img iPTF13asv_w2_temp.img 
+uvotimsum infile=iPTF13asv_w2.img outfile=iPTF13asv_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=iPTF13asv_w2_temp.img outfile=iPTF13asv_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red iPTF13asv_vv_tempsum.img -green iPTF13asv_uu_tempsum.img -blue iPTF13asv_m2_tempsum.img -frame -new -rgb -red iPTF13asv_vv_sum.img -green iPTF13asv_uu_sum.img -blue iPTF13asv_m2_sum.img &
+ds9  -scale log -rgb -red iPTF13asv_vv_tempsum.img.gz -green iPTF13asv_uu_tempsum.img.gz -blue iPTF13asv_m2_tempsum.img.gz -frame -new -rgb -red iPTF13asv_vv_sum.img.gz -green iPTF13asv_uu_sum.img.gz -blue iPTF13asv_m2_sum.img.gz &
+rm */uvot/image/*lss*
+rm */uvot/image/*rw*
+rm */uvot/image/*ex*

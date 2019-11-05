@@ -1,0 +1,162 @@
+#appending commands generated on Tue Jul 10 08:22:48 CDT 2012
+rm PTF12ena*.img*
+rm PTF12ena*.lss*
+fcopy ./00032469001/uvot/image/sw00032469001uvv_sk_sum.img PTF12ena_vv.img 
+fcopy ./00032469001/uvot/image/sw00032469001uvv_lss_sum.img PTF12ena_vv.lss 
+fcopy ./00032469001/uvot/image/sw00032469001uvv_ex_sum.img PTF12ena_vv_ex.img 
+ftappend ./00032469003/uvot/image/sw00032469003uvv_sk_sum.img PTF12ena_vv.img 
+ftappend ./00032469003/uvot/image/sw00032469003uvv_lss_sum.img PTF12ena_vv.lss 
+ftappend ./00032469003/uvot/image/sw00032469003uvv_ex_sum.img PTF12ena_vv_ex.img 
+ftappend ./00032469004/uvot/image/sw00032469004uvv_sk_sum.img PTF12ena_vv.img 
+ftappend ./00032469004/uvot/image/sw00032469004uvv_lss_sum.img PTF12ena_vv.lss 
+ftappend ./00032469004/uvot/image/sw00032469004uvv_ex_sum.img PTF12ena_vv_ex.img 
+ftappend ./00032469005/uvot/image/sw00032469005uvv_sk_sum.img PTF12ena_vv.img 
+ftappend ./00032469005/uvot/image/sw00032469005uvv_lss_sum.img PTF12ena_vv.lss 
+ftappend ./00032469005/uvot/image/sw00032469005uvv_ex_sum.img PTF12ena_vv_ex.img 
+ftappend ./00032469006/uvot/image/sw00032469006uvv_sk_sum.img PTF12ena_vv.img 
+ftappend ./00032469006/uvot/image/sw00032469006uvv_lss_sum.img PTF12ena_vv.lss 
+ftappend ./00032469006/uvot/image/sw00032469006uvv_ex_sum.img PTF12ena_vv_ex.img 
+ftappend ./00032469011/uvot/image/sw00032469011uvv_sk_sum.img PTF12ena_vv.img 
+ftappend ./00032469011/uvot/image/sw00032469011uvv_lss_sum.img PTF12ena_vv.lss 
+ftappend ./00032469011/uvot/image/sw00032469011uvv_ex_sum.img PTF12ena_vv_ex.img 
+ftappend ./00032469015/uvot/image/sw00032469015uvv_sk_sum.img PTF12ena_vv.img 
+ftappend ./00032469015/uvot/image/sw00032469015uvv_lss_sum.img PTF12ena_vv.lss 
+ftappend ./00032469015/uvot/image/sw00032469015uvv_ex_sum.img PTF12ena_vv_ex.img 
+uvotimsum infile=PTF12ena_vv.img outfile=PTF12ena_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF12ena_vv_ex.img outfile=PTF12ena_vv_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF12ena_vv.lss outfile=PTF12ena_vv_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00032469001/uvot/image/sw00032469001ubb_sk_sum.img PTF12ena_bb.img 
+fcopy ./00032469001/uvot/image/sw00032469001ubb_lss_sum.img PTF12ena_bb.lss 
+fcopy ./00032469001/uvot/image/sw00032469001ubb_ex_sum.img PTF12ena_bb_ex.img 
+ftappend ./00032469003/uvot/image/sw00032469003ubb_sk_sum.img PTF12ena_bb.img 
+ftappend ./00032469003/uvot/image/sw00032469003ubb_lss_sum.img PTF12ena_bb.lss 
+ftappend ./00032469003/uvot/image/sw00032469003ubb_ex_sum.img PTF12ena_bb_ex.img 
+ftappend ./00032469004/uvot/image/sw00032469004ubb_sk_sum.img PTF12ena_bb.img 
+ftappend ./00032469004/uvot/image/sw00032469004ubb_lss_sum.img PTF12ena_bb.lss 
+ftappend ./00032469004/uvot/image/sw00032469004ubb_ex_sum.img PTF12ena_bb_ex.img 
+ftappend ./00032469005/uvot/image/sw00032469005ubb_sk_sum.img PTF12ena_bb.img 
+ftappend ./00032469005/uvot/image/sw00032469005ubb_lss_sum.img PTF12ena_bb.lss 
+ftappend ./00032469005/uvot/image/sw00032469005ubb_ex_sum.img PTF12ena_bb_ex.img 
+ftappend ./00032469006/uvot/image/sw00032469006ubb_sk_sum.img PTF12ena_bb.img 
+ftappend ./00032469006/uvot/image/sw00032469006ubb_lss_sum.img PTF12ena_bb.lss 
+ftappend ./00032469006/uvot/image/sw00032469006ubb_ex_sum.img PTF12ena_bb_ex.img 
+ftappend ./00032469009/uvot/image/sw00032469009ubb_sk_sum.img PTF12ena_bb.img 
+ftappend ./00032469009/uvot/image/sw00032469009ubb_lss_sum.img PTF12ena_bb.lss 
+ftappend ./00032469009/uvot/image/sw00032469009ubb_ex_sum.img PTF12ena_bb_ex.img 
+ftappend ./00032469011/uvot/image/sw00032469011ubb_sk_sum.img PTF12ena_bb.img 
+ftappend ./00032469011/uvot/image/sw00032469011ubb_lss_sum.img PTF12ena_bb.lss 
+ftappend ./00032469011/uvot/image/sw00032469011ubb_ex_sum.img PTF12ena_bb_ex.img 
+ftappend ./00032469015/uvot/image/sw00032469015ubb_sk_sum.img PTF12ena_bb.img 
+ftappend ./00032469015/uvot/image/sw00032469015ubb_lss_sum.img PTF12ena_bb.lss 
+ftappend ./00032469015/uvot/image/sw00032469015ubb_ex_sum.img PTF12ena_bb_ex.img 
+uvotimsum infile=PTF12ena_bb.img outfile=PTF12ena_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF12ena_bb_ex.img outfile=PTF12ena_bb_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF12ena_bb.lss outfile=PTF12ena_bb_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00032469001/uvot/image/sw00032469001uuu_sk_sum.img PTF12ena_uu.img 
+fcopy ./00032469001/uvot/image/sw00032469001uuu_lss_sum.img PTF12ena_uu.lss 
+fcopy ./00032469001/uvot/image/sw00032469001uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469002/uvot/image/sw00032469002uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469002/uvot/image/sw00032469002uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469002/uvot/image/sw00032469002uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469003/uvot/image/sw00032469003uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469003/uvot/image/sw00032469003uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469003/uvot/image/sw00032469003uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469004/uvot/image/sw00032469004uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469004/uvot/image/sw00032469004uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469004/uvot/image/sw00032469004uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469005/uvot/image/sw00032469005uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469005/uvot/image/sw00032469005uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469005/uvot/image/sw00032469005uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469006/uvot/image/sw00032469006uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469006/uvot/image/sw00032469006uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469006/uvot/image/sw00032469006uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469009/uvot/image/sw00032469009uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469009/uvot/image/sw00032469009uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469009/uvot/image/sw00032469009uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469011/uvot/image/sw00032469011uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469011/uvot/image/sw00032469011uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469011/uvot/image/sw00032469011uuu_ex_sum.img PTF12ena_uu_ex.img 
+ftappend ./00032469015/uvot/image/sw00032469015uuu_sk_sum.img PTF12ena_uu.img 
+ftappend ./00032469015/uvot/image/sw00032469015uuu_lss_sum.img PTF12ena_uu.lss 
+ftappend ./00032469015/uvot/image/sw00032469015uuu_ex_sum.img PTF12ena_uu_ex.img 
+uvotimsum infile=PTF12ena_uu.img outfile=PTF12ena_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF12ena_uu_ex.img outfile=PTF12ena_uu_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF12ena_uu.lss outfile=PTF12ena_uu_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00032469001/uvot/image/sw00032469001uw1_sk_sum.img PTF12ena_w1.img 
+fcopy ./00032469001/uvot/image/sw00032469001uw1_lss_sum.img PTF12ena_w1.lss 
+fcopy ./00032469001/uvot/image/sw00032469001uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469002/uvot/image/sw00032469002uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469002/uvot/image/sw00032469002uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469002/uvot/image/sw00032469002uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469003/uvot/image/sw00032469003uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469003/uvot/image/sw00032469003uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469003/uvot/image/sw00032469003uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469004/uvot/image/sw00032469004uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469004/uvot/image/sw00032469004uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469004/uvot/image/sw00032469004uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469005/uvot/image/sw00032469005uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469005/uvot/image/sw00032469005uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469005/uvot/image/sw00032469005uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469006/uvot/image/sw00032469006uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469006/uvot/image/sw00032469006uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469006/uvot/image/sw00032469006uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469009/uvot/image/sw00032469009uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469009/uvot/image/sw00032469009uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469009/uvot/image/sw00032469009uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469011/uvot/image/sw00032469011uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469011/uvot/image/sw00032469011uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469011/uvot/image/sw00032469011uw1_ex_sum.img PTF12ena_w1_ex.img 
+ftappend ./00032469015/uvot/image/sw00032469015uw1_sk_sum.img PTF12ena_w1.img 
+ftappend ./00032469015/uvot/image/sw00032469015uw1_lss_sum.img PTF12ena_w1.lss 
+ftappend ./00032469015/uvot/image/sw00032469015uw1_ex_sum.img PTF12ena_w1_ex.img 
+uvotimsum infile=PTF12ena_w1.img outfile=PTF12ena_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF12ena_w1_ex.img outfile=PTF12ena_w1_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF12ena_w1.lss outfile=PTF12ena_w1_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00032469001/uvot/image/sw00032469001um2_sk_sum.img PTF12ena_m2.img 
+fcopy ./00032469001/uvot/image/sw00032469001um2_lss_sum.img PTF12ena_m2.lss 
+fcopy ./00032469001/uvot/image/sw00032469001um2_ex_sum.img PTF12ena_m2_ex.img 
+ftappend ./00032469002/uvot/image/sw00032469002um2_sk_sum.img PTF12ena_m2.img 
+ftappend ./00032469002/uvot/image/sw00032469002um2_lss_sum.img PTF12ena_m2.lss 
+ftappend ./00032469002/uvot/image/sw00032469002um2_ex_sum.img PTF12ena_m2_ex.img 
+ftappend ./00032469003/uvot/image/sw00032469003um2_sk_sum.img PTF12ena_m2.img 
+ftappend ./00032469003/uvot/image/sw00032469003um2_lss_sum.img PTF12ena_m2.lss 
+ftappend ./00032469003/uvot/image/sw00032469003um2_ex_sum.img PTF12ena_m2_ex.img 
+ftappend ./00032469004/uvot/image/sw00032469004um2_sk_sum.img PTF12ena_m2.img 
+ftappend ./00032469004/uvot/image/sw00032469004um2_lss_sum.img PTF12ena_m2.lss 
+ftappend ./00032469004/uvot/image/sw00032469004um2_ex_sum.img PTF12ena_m2_ex.img 
+ftappend ./00032469005/uvot/image/sw00032469005um2_sk_sum.img PTF12ena_m2.img 
+ftappend ./00032469005/uvot/image/sw00032469005um2_lss_sum.img PTF12ena_m2.lss 
+ftappend ./00032469005/uvot/image/sw00032469005um2_ex_sum.img PTF12ena_m2_ex.img 
+ftappend ./00032469006/uvot/image/sw00032469006um2_sk_sum.img PTF12ena_m2.img 
+ftappend ./00032469006/uvot/image/sw00032469006um2_lss_sum.img PTF12ena_m2.lss 
+ftappend ./00032469006/uvot/image/sw00032469006um2_ex_sum.img PTF12ena_m2_ex.img 
+ftappend ./00032469010/uvot/image/sw00032469010um2_sk_sum.img PTF12ena_m2.img 
+ftappend ./00032469010/uvot/image/sw00032469010um2_lss_sum.img PTF12ena_m2.lss 
+ftappend ./00032469010/uvot/image/sw00032469010um2_ex_sum.img PTF12ena_m2_ex.img 
+uvotimsum infile=PTF12ena_m2.img outfile=PTF12ena_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF12ena_m2_ex.img outfile=PTF12ena_m2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF12ena_m2.lss outfile=PTF12ena_m2_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+fcopy ./00032469001/uvot/image/sw00032469001uw2_sk_sum.img PTF12ena_w2.img 
+fcopy ./00032469001/uvot/image/sw00032469001uw2_lss_sum.img PTF12ena_w2.lss 
+fcopy ./00032469001/uvot/image/sw00032469001uw2_ex_sum.img PTF12ena_w2_ex.img 
+ftappend ./00032469002/uvot/image/sw00032469002uw2_sk_sum.img PTF12ena_w2.img 
+ftappend ./00032469002/uvot/image/sw00032469002uw2_lss_sum.img PTF12ena_w2.lss 
+ftappend ./00032469002/uvot/image/sw00032469002uw2_ex_sum.img PTF12ena_w2_ex.img 
+ftappend ./00032469003/uvot/image/sw00032469003uw2_sk_sum.img PTF12ena_w2.img 
+ftappend ./00032469003/uvot/image/sw00032469003uw2_lss_sum.img PTF12ena_w2.lss 
+ftappend ./00032469003/uvot/image/sw00032469003uw2_ex_sum.img PTF12ena_w2_ex.img 
+ftappend ./00032469004/uvot/image/sw00032469004uw2_sk_sum.img PTF12ena_w2.img 
+ftappend ./00032469004/uvot/image/sw00032469004uw2_lss_sum.img PTF12ena_w2.lss 
+ftappend ./00032469004/uvot/image/sw00032469004uw2_ex_sum.img PTF12ena_w2_ex.img 
+ftappend ./00032469005/uvot/image/sw00032469005uw2_sk_sum.img PTF12ena_w2.img 
+ftappend ./00032469005/uvot/image/sw00032469005uw2_lss_sum.img PTF12ena_w2.lss 
+ftappend ./00032469005/uvot/image/sw00032469005uw2_ex_sum.img PTF12ena_w2_ex.img 
+ftappend ./00032469006/uvot/image/sw00032469006uw2_sk_sum.img PTF12ena_w2.img 
+ftappend ./00032469006/uvot/image/sw00032469006uw2_lss_sum.img PTF12ena_w2.lss 
+ftappend ./00032469006/uvot/image/sw00032469006uw2_ex_sum.img PTF12ena_w2_ex.img 
+uvotimsum infile=PTF12ena_w2.img outfile=PTF12ena_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PTF12ena_w2_ex.img outfile=PTF12ena_w2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PTF12ena_w2.lss outfile=PTF12ena_w2_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+ds9 -rgb -red PTF12ena_vv_tempsum.img -green PTF12ena_uu_tempsum.img -blue PTF12ena_m2_tempsum.img -frame -new -rgb -red PTF12ena_vv_sum.img -green PTF12ena_uu_sum.img -blue PTF12ena_m2_sum.img &
+gzip *.img
+gzip *.lss

@@ -1,0 +1,21 @@
+#summing commands generated on Mon Mar 25 08:25:57 CDT 2013
+
+gzip -f 00032614007/uvot/image/sw00032614007*.img
+gzip -f 00032614009/uvot/image/sw00032614009*.img
+gzip -f 00032614055/uvot/image/sw00032614055*.img
+
+uvotimsum infile=./00032614007/uvot/image/sw00032614007uw1_sk.img.gz outfile=./00032614007/uvot/image/sw00032614007uw1_sk_sum.img clobber=yes exclude=2,6 chatter=0
+uvotimsum infile=./00032614009/uvot/image/sw00032614009uvv_sk.img.gz outfile=./00032614009/uvot/image/sw00032614009uvv_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032614009/uvot/image/sw00032614009ubb_sk.img.gz outfile=./00032614009/uvot/image/sw00032614009ubb_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032614009/uvot/image/sw00032614009uuu_sk.img.gz outfile=./00032614009/uvot/image/sw00032614009uuu_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032614009/uvot/image/sw00032614009uw1_sk.img.gz outfile=./00032614009/uvot/image/sw00032614009uw1_sk_sum.img clobber=yes exclude=2-4 chatter=0
+uvotimsum infile=./00032614009/uvot/image/sw00032614009um2_sk.img.gz outfile=./00032614009/uvot/image/sw00032614009um2_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032614009/uvot/image/sw00032614009uw2_sk.img.gz outfile=./00032614009/uvot/image/sw00032614009uw2_sk_sum.img clobber=yes exclude=3 chatter=0
+uvotimsum infile=./00032614055/uvot/image/sw00032614055uw1_sk.img.gz outfile=./00032614055/uvot/image/sw00032614055uw1_sk_sum.img clobber=yes exclude=1 chatter=0
+is there still a problem with 55 w1?
+
+uvotimsum infile=./00032614007/uvot/image/sw00032614007um2_sk.img.gz outfile=./00032614007/uvot/image/sw00032614007um2_sk_sum.img clobber=yes exclude=5,6 chatter=0
+uvotimsum infile=./00032614007/uvot/image/sw00032614007uw2_sk.img.gz outfile=./00032614007/uvot/image/sw00032614007uw2_sk_sum.img clobber=yes exclude=3,5,6 chatter=0
+
+uvotimsum infile=./00032614018/uvot/image/sw00032614018uw2_sk.img.gz outfile=./00032614018/uvot/image/sw00032614018uw2_sk_sum.img clobber=yes exclude=2,8 chatter=0
+

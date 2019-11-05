@@ -1,0 +1,18 @@
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2006_05//00035470003/uvot/image/sw00035470003um2_sk.img.gz
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2006_04//00035470001/uvot/image/sw00035470001um2_sk.img.gz
+wget -q -nH --cut-dirs=5 -r -l0 -c -N -np -R 'index*' -erobots=off --retr-symlinks http://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2006_05//00035470002/uvot/image/sw00035470002um2_sk.img.gz
+
+
+
+uvotimsum infile=./00035470001/uvot/image/sw00035470001um2_sk.img.gz outfile=./00035470001/uvot/image/sw00035470001um2_sk_sum.img clobber=yes exclude=2,3,5,6 chatter=0
+uvotimsum infile=./00035470001/uvot/image/sw00035470001um2_ex.img.gz outfile=./00035470001/uvot/image/sw00035470001um2_ex_sum.img clobber=yes method=expmap exclude=2,3,5,6  chatter=0
+uvotimsum infile=./00035470002/uvot/image/sw00035470002um2_sk.img.gz outfile=./00035470002/uvot/image/sw00035470002um2_sk_sum.img clobber=yes exclude=2-4 chatter=0
+uvotimsum infile=./00035470002/uvot/image/sw00035470002um2_ex.img.gz outfile=./00035470002/uvot/image/sw00035470002um2_ex_sum.img clobber=yes method=expmap exclude=2-4  chatter=0
+uvotimsum infile=./00035470003/uvot/image/sw00035470003um2_sk.img.gz outfile=./00035470003/uvot/image/sw00035470003um2_sk_sum.img clobber=yes exclude=NONE chatter=0
+uvotimsum infile=./00035470003/uvot/image/sw00035470003um2_ex.img.gz outfile=./00035470003/uvot/image/sw00035470003um2_ex_sum.img clobber=yes method=expmap exclude=NONE  chatter=0
+rm SN2008ec_m2_temp*.img*
+ftcopy 00035470001/uvot/image/sw00035470001um2_sk_sum.img SN2008ec_m2_temp.img
+ftappend 00035470002/uvot/image/sw00035470002um2_sk_sum.img SN2008ec_m2_temp.img
+ftappend 00035470003/uvot/image/sw00035470003um2_sk_sum.img SN2008ec_m2_temp.img
+uvotimsum SN2008ec_m2_temp.img SN2008ec_m2_tempsum.img exclude=none clobber=yes
+

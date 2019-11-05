@@ -1,0 +1,9 @@
+#summing commands generated on Thu Mar 22 14:44:00 CDT 2012
+uvotimsum infile=./00032248001/uvot/image/sw00032248001uw1_sk.img.gz outfile=./00032248001/uvot/image/sw00032248001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032248001/uvot/image/sw00032248001uw1_ex.img.gz outfile=./00032248001/uvot/image/sw00032248001uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00032248001/uvot/image/sw00032248001uw1_sk.img.gz outfile=./00032248001/uvot/image/sw00032248001uw1_sk.lss attfile=./00032248001/auxil/sw00032248001sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00032248001/uvot/image/sw00032248001uw1_sk.lss outfile=./00032248001/uvot/image/sw00032248001uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00032248002/uvot/image/sw00032248002uw1_sk.img.gz outfile=./00032248002/uvot/image/sw00032248002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032248002/uvot/image/sw00032248002uw1_ex.img.gz outfile=./00032248002/uvot/image/sw00032248002uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00032248002/uvot/image/sw00032248002uw1_sk.img.gz outfile=./00032248002/uvot/image/sw00032248002uw1_sk.lss attfile=./00032248002/auxil/sw00032248002sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00032248002/uvot/image/sw00032248002uw1_sk.lss outfile=./00032248002/uvot/image/sw00032248002uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0

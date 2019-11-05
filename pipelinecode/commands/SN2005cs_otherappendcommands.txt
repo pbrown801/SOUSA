@@ -1,0 +1,3 @@
+uvotimsum infile=SN2005cs_vv_temp.img outfile=SN2005cs_vv_tempsum.img clobber=yes exclude=5-8 chatter=0
+uvotimsum infile=SN2005cs_bb_temp.img outfile=SN2005cs_bb_tempsum.img clobber=yes exclude=5-8 chatter=0
+uvotimsum infile=SN2005cs_uu_temp.img outfile=SN2005cs_uu_tempsum.img clobber=yes exclude=5-8 chatter=0

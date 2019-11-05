@@ -1,0 +1,17 @@
+rm *temp*img*
+
+fcopy SN2011fi_w2.img.gz SN2010ko_w2_temp.img.gz 
+fcopy SN2011fi_m2.img.gz SN2010ko_m2_temp.img.gz 
+fcopy SN2011fi_w1.img.gz SN2010ko_w1_temp.img.gz 
+fcopy SN2011fi_uu.img.gz SN2010ko_uu_temp.img.gz 
+fcopy SN2011fi_bb.img.gz SN2010ko_bb_temp.img.gz 
+fcopy SN2011fi_vv.img.gz SN2010ko_vv_temp.img.gz 
+
+fcopy SN2011fi_w2_sum.img.gz SN2010ko_w2_tempsum.img.gz 
+fcopy SN2011fi_m2_sum.img.gz SN2010ko_m2_tempsum.img.gz 
+fcopy SN2011fi_w1_sum.img.gz SN2010ko_w1_tempsum.img.gz 
+fcopy SN2011fi_uu_sum.img.gz SN2010ko_uu_tempsum.img.gz 
+fcopy SN2011fi_bb_sum.img.gz SN2010ko_bb_tempsum.img.gz 
+fcopy SN2011fi_vv_sum.img.gz SN2010ko_vv_tempsum.img.gz 
+
+

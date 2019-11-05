@@ -1,0 +1,13 @@
+#summing commands generated on Fri Sep 4 14:53:44 CDT 2015
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uvv_sk.img.gz outfile=./00035894001/uvot/image/sw00035894001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uvv_ex.img outfile=./00035894001/uvot/image/sw00035894001uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001ubb_sk.img.gz outfile=./00035894001/uvot/image/sw00035894001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001ubb_ex.img outfile=./00035894001/uvot/image/sw00035894001ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uuu_sk.img.gz outfile=./00035894001/uvot/image/sw00035894001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uuu_ex.img outfile=./00035894001/uvot/image/sw00035894001uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uw1_sk.img.gz outfile=./00035894001/uvot/image/sw00035894001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uw1_ex.img outfile=./00035894001/uvot/image/sw00035894001uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001um2_sk.img.gz outfile=./00035894001/uvot/image/sw00035894001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001um2_ex.img outfile=./00035894001/uvot/image/sw00035894001um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uw2_sk.img.gz outfile=./00035894001/uvot/image/sw00035894001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035894001/uvot/image/sw00035894001uw2_ex.img outfile=./00035894001/uvot/image/sw00035894001uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0

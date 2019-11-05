@@ -1,0 +1,261 @@
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_comp1.reg bkgreg=SN2011fe_bkgclear.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_comp1.reg bkgreg=SN2011fe_bkgclearsmall.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_comp1.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+
+
+
+uvotsource SN2011fe_bb_sum.img srcreg=SN2011fe_comp2.reg bkgreg=SN2011fe_bkgclear.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_bb_sum.img srcreg=SN2011fe_comp2.reg bkgreg=SN2011fe_bkgclearsmall.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_bb_sum.img srcreg=SN2011fe_comp2.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_comp2.reg bkgreg=SN2011fe_bkgclear.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_comp2.reg bkgreg=SN2011fe_bkgclearsmall.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_comp2.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+
+uvotmaghist SN2011fe_vv_temp.img srcreg=SN2011fe_3.reg bkgreg=SN2011fe_bkgclear.reg outfile=SN2011fe_vv_3_cleartemp.fits plotfile=none coinfile=caldb zerofile=caldb chatter=0 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none   
+
+
+uvotmaghist SN2011fe_vv_tempsum.img srcreg=SN2011fe_3.reg bkgreg=SN2011fe_bkgclear.reg outfile=SN2011fe_vv_3_cleartempsum.fits plotfile=none coinfile=caldb zerofile=caldb chatter=0 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none   
+
+
+uvotmaghist SN2011fe_vv.img srcreg=SN2011fe_3.reg bkgreg=SN2011fe_bkgclear.reg outfile=SN2011fe_vv_3_clear.fits plotfile=none coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=21,24,26,28,30,32,34,36,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,142,145,148,151,160,166,168,169,172,175,179,182,186,188,192 
+
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_compa.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_compb.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_sum.img srcreg=SN2011fe_compg.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+
+uvotsource SN2011fe_bb_sum.img srcreg=SN2011fe_compa.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_bb_sum.img srcreg=SN2011fe_compb.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_bb_sum.img srcreg=SN2011fe_compg.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+
+uvotsource SN2011fe_vv_tempsum.img srcreg=SN2011fe_compa.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_tempsum.img srcreg=SN2011fe_compb.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_vv_tempsum.img srcreg=SN2011fe_compg.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+
+uvotsource SN2011fe_bb_tempsum.img srcreg=SN2011fe_compa.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_bb_tempsum.img srcreg=SN2011fe_compb.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+uvotsource SN2011fe_bb_tempsum.img srcreg=SN2011fe_compg.reg bkgreg=SN2011fe_bkgclearnew.reg apercor=curveofgrowth sigma=3 outfile=out.fits output=mag
+
+
+uvotmaghist SN2011fe_vv.img srcreg=SN2011fe_compb.reg bkgreg=SN2011fe_bkgclear.reg outfile=SN2011fe_vv_3_clear.fits plotfile=none coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=21,24,26,28,30,32,34,36,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,142,145,148,151,160,166,168,169,172,175,179,182,186,188,192 
+
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp1.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp1.fits plotfile=SN2006jc_bb_comp1.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp1.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp2.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp2.fits plotfile=SN2006jc_bb_comp2.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp2.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp3.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp3.fits plotfile=SN2006jc_bb_comp3.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=no
+open SN2006jc_bb_comp3.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp4.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp4.fits plotfile=SN2006jc_bb_comp4.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=no
+open SN2006jc_bb_comp4.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp5.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp5.fits plotfile=SN2006jc_bb_comp5.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp5.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp6.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp6.fits plotfile=SN2006jc_bb_comp6.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp6.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp7.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp7.fits plotfile=SN2006jc_bb_comp7.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp7.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp8.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp8.fits plotfile=SN2006jc_bb_comp8.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp8.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp9.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp9.fits plotfile=SN2006jc_bb_comp9.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=no
+open SN2006jc_bb_comp9.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp10.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp10.fits plotfile=SN2006jc_bb_comp10.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp10.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp11.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp11.fits plotfile=SN2006jc_bb_comp11.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp11.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp12.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp12.fits plotfile=SN2006jc_bb_comp12.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp12.gif
+
+uvotmaghist SN2006jc_bb.img srcreg=SN2006jc_comp13.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_bb_comp13.fits plotfile=SN2006jc_bb_comp13.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_bb_comp13.gif
+
+
+
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp1.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp1.fits plotfile=SN2006jc_vv_comp1.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp1.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp2.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp2.fits plotfile=SN2006jc_vv_comp2.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp2.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp3.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp3.fits plotfile=SN2006jc_vv_comp3.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=no
+open SN2006jc_vv_comp3.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp4.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp4.fits plotfile=SN2006jc_vv_comp4.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp4.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp5.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp5.fits plotfile=SN2006jc_vv_comp5.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp1.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp6.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp6.fits plotfile=SN2006jc_vv_comp6.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp6.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp7.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp7.fits plotfile=SN2006jc_vv_comp7.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp7.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp8.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp8.fits plotfile=SN2006jc_vv_comp8.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp8.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp9.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp9.fits plotfile=SN2006jc_vv_comp9.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp9.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp10.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp10.fits plotfile=SN2006jc_vv_comp10.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=yes
+open SN2006jc_vv_comp10.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp11.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp11.fits plotfile=SN2006jc_vv_comp11.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=no
+open SN2006jc_vv_comp11.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp12.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp12.fits plotfile=SN2006jc_vv_comp12.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=no
+open SN2006jc_vv_comp12.gif
+
+uvotmaghist SN2006jc_vv.img srcreg=SN2006jc_comp13.reg bkgreg=SN2006jc_bkgclear.reg outfile=SN2006jc_vv_comp13.fits plotfile=SN2006jc_vv_comp13.gif coinfile=caldb zerofile=caldb chatter=3 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth exclude=none centroid=no
+open SN2006jc_vv_comp13.gif
+
+
+
+ftcalc SN2006jc_bb_comp1.fits SN2006jc_bb_comp1.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp1.fits option=t outfile=SN2006jc_bb_comp1_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp1.fits option=t outfile=SN2006jc_bb_comp1_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp2.fits SN2006jc_bb_comp2.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp2.fits option=t outfile=SN2006jc_bb_comp2_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp2.fits option=t outfile=SN2006jc_bb_comp2_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp3.fits SN2006jc_bb_comp3.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp3.fits option=t outfile=SN2006jc_bb_comp3_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp3.fits option=t outfile=SN2006jc_bb_comp3_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp4.fits SN2006jc_bb_comp4.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp4.fits option=t outfile=SN2006jc_bb_comp4_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp4.fits option=t outfile=SN2006jc_bb_comp4_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp5.fits SN2006jc_bb_comp5.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp5.fits option=t outfile=SN2006jc_bb_comp5_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp5.fits option=t outfile=SN2006jc_bb_comp5_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp6.fits SN2006jc_bb_comp6.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp6.fits option=t outfile=SN2006jc_bb_comp6_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp6.fits option=t outfile=SN2006jc_bb_comp6_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp7.fits SN2006jc_bb_comp7.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp7.fits option=t outfile=SN2006jc_bb_comp7_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp7.fits option=t outfile=SN2006jc_bb_comp7_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp8.fits SN2006jc_bb_comp8.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp8.fits option=t outfile=SN2006jc_bb_comp8_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp8.fits option=t outfile=SN2006jc_bb_comp8_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp9.fits SN2006jc_bb_comp9.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp9.fits option=t outfile=SN2006jc_bb_comp9_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp9.fits option=t outfile=SN2006jc_bb_comp9_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp10.fits SN2006jc_bb_comp10.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp10.fits option=t outfile=SN2006jc_bb_comp10_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp10.fits option=t outfile=SN2006jc_bb_comp10_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp11.fits SN2006jc_bb_comp11.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp11.fits option=t outfile=SN2006jc_bb_comp11_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp11.fits option=t outfile=SN2006jc_bb_comp11_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp12.fits SN2006jc_bb_comp12.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp12.fits option=t outfile=SN2006jc_bb_comp12_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp12.fits option=t outfile=SN2006jc_bb_comp12_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_bb_comp13.fits SN2006jc_bb_comp13.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_bb_comp13.fits option=t outfile=SN2006jc_bb_comp13_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_bb_comp13.fits option=t outfile=SN2006jc_bb_comp13_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+
+
+ftcalc SN2006jc_vv_comp1.fits SN2006jc_vv_comp1.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp1.fits option=t outfile=SN2006jc_vv_comp1_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp1.fits option=t outfile=SN2006jc_vv_comp1_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp2.fits SN2006jc_vv_comp2.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp2.fits option=t outfile=SN2006jc_vv_comp2_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp2.fits option=t outfile=SN2006jc_vv_comp2_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp3.fits SN2006jc_vv_comp3.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp3.fits option=t outfile=SN2006jc_vv_comp3_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp3.fits option=t outfile=SN2006jc_vv_comp3_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp4.fits SN2006jc_vv_comp4.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp4.fits option=t outfile=SN2006jc_vv_comp4_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp4.fits option=t outfile=SN2006jc_vv_comp4_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp5.fits SN2006jc_vv_comp5.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp5.fits option=t outfile=SN2006jc_vv_comp5_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp5.fits option=t outfile=SN2006jc_vv_comp5_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp6.fits SN2006jc_vv_comp6.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp6.fits option=t outfile=SN2006jc_vv_comp6_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp6.fits option=t outfile=SN2006jc_vv_comp6_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp7.fits SN2006jc_vv_comp7.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp7.fits option=t outfile=SN2006jc_vv_comp7_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp7.fits option=t outfile=SN2006jc_vv_comp7_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp8.fits SN2006jc_vv_comp8.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp8.fits option=t outfile=SN2006jc_vv_comp8_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp8.fits option=t outfile=SN2006jc_vv_comp8_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp9.fits SN2006jc_vv_comp9.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp9.fits option=t outfile=SN2006jc_vv_comp9_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp9.fits option=t outfile=SN2006jc_vv_comp9_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp10.fits SN2006jc_vv_comp10.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp10.fits option=t outfile=SN2006jc_vv_comp10_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp10.fits option=t outfile=SN2006jc_vv_comp10_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp11.fits SN2006jc_vv_comp11.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp11.fits option=t outfile=SN2006jc_vv_comp11_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp11.fits option=t outfile=SN2006jc_vv_comp11_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp12.fits SN2006jc_vv_comp12.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp12.fits option=t outfile=SN2006jc_vv_comp12_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp12.fits option=t outfile=SN2006jc_vv_comp12_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+ftcalc SN2006jc_vv_comp13.fits SN2006jc_vv_comp13.fits  clobber=yes column="MJD"    tform=2D expression="(((TSTOP-TSTART)/2+TSTART)/60/60/24+51910.0)"
+ftlist SN2006jc_vv_comp13.fits option=t outfile=SN2006jc_vv_comp13_mag.dat columns="MJD, MAG, MAG_ERR" clobber=yes rownum=no colheader=no
+ftlist SN2006jc_vv_comp13.fits option=t outfile=SN2006jc_vv_comp13_rate.dat columns="MJD, SENSCORR_RATE, SENSCORR_RATE_ERR" clobber=yes rownum=no colheader=no
+
+
+
+
+
+

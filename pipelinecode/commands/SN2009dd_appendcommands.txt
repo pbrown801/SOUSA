@@ -1,0 +1,71 @@
+#appending commands generated on Mon Nov 10 16:00:31 CST 2014
+rm SN2009dd*.img*
+fcopy ./00031401001/uvot/image/sw00031401001uvv_sk_sum.img SN2009dd_vv.img 
+ftappend ./00031401002/uvot/image/sw00031401002uvv_sk_sum.img SN2009dd_vv.img 
+ftappend ./00031401003/uvot/image/sw00031401003uvv_sk_sum.img SN2009dd_vv.img 
+ftappend ./00031401004/uvot/image/sw00031401004uvv_sk_sum.img SN2009dd_vv.img 
+ftappend ./00031401005/uvot/image/sw00031401005uvv_sk_sum.img SN2009dd_vv.img 
+ftappend ./00031401006/uvot/image/sw00031401006uvv_sk_sum.img SN2009dd_vv.img 
+ftappend ./00031401008/uvot/image/sw00031401008uvv_sk_sum.img SN2009dd_vv.img 
+uvotimsum infile=SN2009dd_vv.img outfile=SN2009dd_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031401001/uvot/image/sw00031401001ubb_sk_sum.img SN2009dd_bb.img 
+ftappend ./00031401002/uvot/image/sw00031401002ubb_sk_sum.img SN2009dd_bb.img 
+ftappend ./00031401003/uvot/image/sw00031401003ubb_sk_sum.img SN2009dd_bb.img 
+ftappend ./00031401004/uvot/image/sw00031401004ubb_sk_sum.img SN2009dd_bb.img 
+ftappend ./00031401005/uvot/image/sw00031401005ubb_sk_sum.img SN2009dd_bb.img 
+ftappend ./00031401006/uvot/image/sw00031401006ubb_sk_sum.img SN2009dd_bb.img 
+ftappend ./00031401008/uvot/image/sw00031401008ubb_sk_sum.img SN2009dd_bb.img 
+uvotimsum infile=SN2009dd_bb.img outfile=SN2009dd_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031401001/uvot/image/sw00031401001uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401002/uvot/image/sw00031401002uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401003/uvot/image/sw00031401003uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401004/uvot/image/sw00031401004uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401005/uvot/image/sw00031401005uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401006/uvot/image/sw00031401006uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401008/uvot/image/sw00031401008uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401012/uvot/image/sw00031401012uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401014/uvot/image/sw00031401014uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401019/uvot/image/sw00031401019uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401021/uvot/image/sw00031401021uuu_sk_sum.img SN2009dd_uu.img 
+ftappend ./00031401024/uvot/image/sw00031401024uuu_sk_sum.img SN2009dd_uu.img 
+uvotimsum infile=SN2009dd_uu.img outfile=SN2009dd_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031401001/uvot/image/sw00031401001uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401002/uvot/image/sw00031401002uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401003/uvot/image/sw00031401003uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401004/uvot/image/sw00031401004uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401005/uvot/image/sw00031401005uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401006/uvot/image/sw00031401006uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401008/uvot/image/sw00031401008uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401011/uvot/image/sw00031401011uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401013/uvot/image/sw00031401013uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401014/uvot/image/sw00031401014uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401016/uvot/image/sw00031401016uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401020/uvot/image/sw00031401020uw1_sk_sum.img SN2009dd_w1.img 
+ftappend ./00031401024/uvot/image/sw00031401024uw1_sk_sum.img SN2009dd_w1.img 
+uvotimsum infile=SN2009dd_w1.img outfile=SN2009dd_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031401001/uvot/image/sw00031401001um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401003/uvot/image/sw00031401003um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401004/uvot/image/sw00031401004um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401005/uvot/image/sw00031401005um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401007/uvot/image/sw00031401007um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401009/uvot/image/sw00031401009um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401015/uvot/image/sw00031401015um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401017/uvot/image/sw00031401017um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401018/uvot/image/sw00031401018um2_sk_sum.img SN2009dd_m2.img 
+ftappend ./00031401022/uvot/image/sw00031401022um2_sk_sum.img SN2009dd_m2.img 
+uvotimsum infile=SN2009dd_m2.img outfile=SN2009dd_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031401001/uvot/image/sw00031401001uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401002/uvot/image/sw00031401002uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401003/uvot/image/sw00031401003uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401004/uvot/image/sw00031401004uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401005/uvot/image/sw00031401005uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401006/uvot/image/sw00031401006uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401009/uvot/image/sw00031401009uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401014/uvot/image/sw00031401014uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401017/uvot/image/sw00031401017uw2_sk_sum.img SN2009dd_w2.img 
+ftappend ./00031401019/uvot/image/sw00031401019uw2_sk_sum.img SN2009dd_w2.img 
+uvotimsum infile=SN2009dd_w2.img outfile=SN2009dd_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2009dd_vv_tempsum.img -green SN2009dd_uu_tempsum.img -blue SN2009dd_m2_tempsum.img -frame -new -rgb -red SN2009dd_vv_sum.img -green SN2009dd_uu_sum.img -blue SN2009dd_m2_sum.img &
+ds9  -scale log -rgb -red SN2009dd_vv_tempsum.img.gz -green SN2009dd_uu_tempsum.img.gz -blue SN2009dd_m2_tempsum.img.gz -frame -new -rgb -red SN2009dd_vv_sum.img.gz -green SN2009dd_uu_sum.img.gz -blue SN2009dd_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

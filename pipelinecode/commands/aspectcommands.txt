@@ -1,0 +1,8 @@
+gunzip -f  /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001u*.img.gz 
+uaspect.pl /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001uvv_sk.img coo.reg
+uaspect.pl /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001ubb_sk.img coo.reg
+uaspect.pl /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001uuu_sk.img coo.reg
+uaspect.pl /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001uw1_sk.img coo.reg
+uaspect.pl /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001um2_sk.img coo.reg
+uaspect.pl /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001uw2_sk.img coo.reg
+gzip -f    /uufs/astro.utah.edu/common/astro_data1/kdawson/SWIFT_RAWDATA/SN2008ec/00035470001/uvot/image/sw00035470001u*.img 

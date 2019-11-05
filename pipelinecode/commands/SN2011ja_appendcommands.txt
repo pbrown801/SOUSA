@@ -1,0 +1,24 @@
+#appending commands generated on Tue Nov 11 09:42:19 CST 2014
+rm SN2011ja*.img*
+fcopy ./00032227001/uvot/image/sw00032227001uw1_sk_sum.img SN2011ja_w1.img 
+ftappend ./00032227002/uvot/image/sw00032227002uw1_sk_sum.img SN2011ja_w1.img 
+fcopy ./00049859001/uvot/image/sw00049859001uw1_sk_sum.img SN2011ja_w1_temp.img 
+ftappend ./00049859002/uvot/image/sw00049859002uw1_sk_sum.img SN2011ja_w1_temp.img 
+uvotimsum infile=SN2011ja_w1.img outfile=SN2011ja_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011ja_w1_temp.img outfile=SN2011ja_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032227001/uvot/image/sw00032227001um2_sk_sum.img SN2011ja_m2.img 
+ftappend ./00032227002/uvot/image/sw00032227002um2_sk_sum.img SN2011ja_m2.img 
+fcopy ./00049859001/uvot/image/sw00049859001um2_sk_sum.img SN2011ja_m2_temp.img 
+ftappend ./00049859002/uvot/image/sw00049859002um2_sk_sum.img SN2011ja_m2_temp.img 
+uvotimsum infile=SN2011ja_m2.img outfile=SN2011ja_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011ja_m2_temp.img outfile=SN2011ja_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032227001/uvot/image/sw00032227001uw2_sk_sum.img SN2011ja_w2.img 
+ftappend ./00032227002/uvot/image/sw00032227002uw2_sk_sum.img SN2011ja_w2.img 
+fcopy ./00049859001/uvot/image/sw00049859001uw2_sk_sum.img SN2011ja_w2_temp.img 
+ftappend ./00049859002/uvot/image/sw00049859002uw2_sk_sum.img SN2011ja_w2_temp.img 
+uvotimsum infile=SN2011ja_w2.img outfile=SN2011ja_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011ja_w2_temp.img outfile=SN2011ja_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2011ja_vv_tempsum.img -green SN2011ja_uu_tempsum.img -blue SN2011ja_m2_tempsum.img -frame -new -rgb -red SN2011ja_vv_sum.img -green SN2011ja_uu_sum.img -blue SN2011ja_m2_sum.img &
+ds9  -scale log -rgb -red SN2011ja_vv_tempsum.img.gz -green SN2011ja_uu_tempsum.img.gz -blue SN2011ja_m2_tempsum.img.gz -frame -new -rgb -red SN2011ja_vv_sum.img.gz -green SN2011ja_uu_sum.img.gz -blue SN2011ja_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

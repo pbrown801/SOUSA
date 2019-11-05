@@ -1,0 +1,22 @@
+#appending commands generated on Thu Jul 10 16:53:21 CDT 2014
+rm SN2007fo*.img*
+fcopy ./00049816002/uvot/image/sw00049816002uvv_sk_sum.img SN2007fo_vv_temp.img 
+uvotimsum infile=SN2007fo_vv_temp.img outfile=SN2007fo_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00049816002/uvot/image/sw00049816002uuu_sk_sum.img SN2007fo_uu_temp.img 
+uvotimsum infile=SN2007fo_uu_temp.img outfile=SN2007fo_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030971001/uvot/image/sw00030971001uw1_sk_sum.img SN2007fo_w1.img 
+fcopy ./00049816002/uvot/image/sw00049816002uw1_sk_sum.img SN2007fo_w1_temp.img 
+uvotimsum infile=SN2007fo_w1.img outfile=SN2007fo_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007fo_w1_temp.img outfile=SN2007fo_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030971001/uvot/image/sw00030971001um2_sk_sum.img SN2007fo_m2.img 
+fcopy ./00049816002/uvot/image/sw00049816002um2_sk_sum.img SN2007fo_m2_temp.img 
+uvotimsum infile=SN2007fo_m2.img outfile=SN2007fo_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007fo_m2_temp.img outfile=SN2007fo_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030971001/uvot/image/sw00030971001uw2_sk_sum.img SN2007fo_w2.img 
+fcopy ./00049816002/uvot/image/sw00049816002uw2_sk_sum.img SN2007fo_w2_temp.img 
+uvotimsum infile=SN2007fo_w2.img outfile=SN2007fo_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007fo_w2_temp.img outfile=SN2007fo_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2007fo_vv_tempsum.img -green SN2007fo_uu_tempsum.img -blue SN2007fo_m2_tempsum.img -frame -new -rgb -red SN2007fo_vv_sum.img -green SN2007fo_uu_sum.img -blue SN2007fo_m2_sum.img &
+ds9  -scale log -rgb -red SN2007fo_vv_tempsum.img.gz -green SN2007fo_uu_tempsum.img.gz -blue SN2007fo_m2_tempsum.img.gz -frame -new -rgb -red SN2007fo_vv_sum.img.gz -green SN2007fo_uu_sum.img.gz -blue SN2007fo_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

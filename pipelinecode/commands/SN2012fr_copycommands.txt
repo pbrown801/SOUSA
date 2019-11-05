@@ -1,0 +1,13 @@
+rm SN2012fr_vv.img*
+rm SN2012fr_bb.img*
+rm SN2012fr_uu.img*
+#rm SN2012fr_w1.img*
+#rm SN2012fr_m2.img*
+#rm SN2012fr_w2.img*
+cp SN2012fr_vv_all.img SN2012fr_vv.img
+cp SN2012fr_bb_all.img SN2012fr_bb.img
+cp SN2012fr_uu_all.img SN2012fr_uu.img
+#cp SN2012fr_w1_all.img SN2012fr_w1.img
+#cp SN2012fr_m2_all.img SN2012fr_m2.img
+#cp SN2012fr_w2_all.img SN2012fr_w2.img
+

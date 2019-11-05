@@ -1,0 +1,22 @@
+#summing commands generated on Thu Mar 22 14:44:00 CDT 2012
+uvotimsum infile=./00032248001/uvot/image/sw00032248001uw1_sk.img.gz outfile=./00032248001/uvot/image/sw00032248001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032248001/uvot/image/sw00032248001uw1_ex.img.gz outfile=./00032248001/uvot/image/sw00032248001uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00032248001/uvot/image/sw00032248001uw1_sk.img.gz outfile=./00032248001/uvot/image/sw00032248001uw1_sk.lss attfile=./00032248001/auxil/sw00032248001sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00032248001/uvot/image/sw00032248001uw1_sk.lss outfile=./00032248001/uvot/image/sw00032248001uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00032248002/uvot/image/sw00032248002uw1_sk.img.gz outfile=./00032248002/uvot/image/sw00032248002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032248002/uvot/image/sw00032248002uw1_ex.img.gz outfile=./00032248002/uvot/image/sw00032248002uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00032248002/uvot/image/sw00032248002uw1_sk.img.gz outfile=./00032248002/uvot/image/sw00032248002uw1_sk.lss attfile=./00032248002/auxil/sw00032248002sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00032248002/uvot/image/sw00032248002uw1_sk.lss outfile=./00032248002/uvot/image/sw00032248002uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+#appending commands generated on Thu Mar 22 14:44:00 CDT 2012
+rm PSNinABELL59*.img*
+rm PSNinABELL59*.lss*
+fcopy ./00032248001/uvot/image/sw00032248001uw1_sk_sum.img PSNinABELL59_w1.img 
+fcopy ./00032248001/uvot/image/sw00032248001uw1_lss_sum.img PSNinABELL59_w1.lss 
+fcopy ./00032248001/uvot/image/sw00032248001uw1_ex_sum.img PSNinABELL59_w1_ex.img 
+ftappend ./00032248002/uvot/image/sw00032248002uw1_sk_sum.img PSNinABELL59_w1.img 
+ftappend ./00032248002/uvot/image/sw00032248002uw1_lss_sum.img PSNinABELL59_w1.lss 
+ftappend ./00032248002/uvot/image/sw00032248002uw1_ex_sum.img PSNinABELL59_w1_ex.img 
+uvotimsum infile=PSNinABELL59_w1.img outfile=PSNinABELL59_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=PSNinABELL59_w1_ex.img outfile=PSNinABELL59_w1_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=PSNinABELL59_w1.lss outfile=PSNinABELL59_w1_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+ds9 -rgb -red PSNinABELL59_vv_tempsum.img -green PSNinABELL59_uu_tempsum.img -blue PSNinABELL59_m2_tempsum.img -frame -new -rgb -red PSNinABELL59_vv_sum.img -green PSNinABELL59_uu_sum.img -blue PSNinABELL59_m2_sum.img &

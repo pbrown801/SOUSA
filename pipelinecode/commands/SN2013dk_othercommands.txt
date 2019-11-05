@@ -1,0 +1,34 @@
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_w2_sum.img.gz SN2013dk_w2_tempsum.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_m2_sum.img.gz SN2013dk_m2_tempsum.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_w1_sum.img.gz SN2013dk_w1_tempsum.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_uu_sum.img.gz SN2013dk_uu_tempsum.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_bb_sum.img.gz SN2013dk_bb_tempsum.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_vv_sum.img.gz SN2013dk_vv_tempsum.img.gz
+
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_w2.img.gz SN2013dk_w2_temp.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_m2.img.gz SN2013dk_m2_temp.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_w1.img.gz SN2013dk_w1_temp.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_uu.img.gz SN2013dk_uu_temp.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_bb.img.gz SN2013dk_bb_temp.img.gz
+cp ../../SwiftSNarchive/SN2007sr/SN2007sr_vv.img.gz SN2013dk_vv_temp.img.gz
+
+
+#cp 00035161003/uvot/image/sw00035161003uw2_sk.img SN2013dk_w2.img
+##cp 00035161003/uvot/image/sw00035161003um2_sk.img SN2013dk_m2.img
+#cp 00035161003/uvot/image/sw00035161003uw1_sk.img SN2013dk_w1.img
+#cp 00035161003/uvot/image/sw00035161003uuu_sk.img SN2013dk_uu.img
+#cp 00035161003/uvot/image/sw00035161003ubb_sk.img SN2013dk_bb.img
+#cp 00035161003/uvot/image/sw00035161003uvv_sk.img SN2013dk_vv.img
+
+
+gunzip -f *.img
+gunzip -f 00035161009/uvot/image/sw00035161009u*.gz
+
+fappend 00035161009/uvot/image/sw00035161009uuu_sk.img\[1\] SN2013dk_uu.img
+fappend 00035161009/uvot/image/sw00035161009uuu_sk.img\[2\] SN2013dk_uu.img
+fappend 00035161009/uvot/image/sw00035161009ubb_sk.img\[1\] SN2013dk_bb.img
+fappend 00035161009/uvot/image/sw00035161009ubb_sk.img\[2\] SN2013dk_bb.img
+fappend 00035161009/uvot/image/sw00035161009uvv_sk.img\[1\] SN2013dk_vv.img
+fappend 00035161009/uvot/image/sw00035161009uvv_sk.img\[2\] SN2013dk_vv.img
+
+

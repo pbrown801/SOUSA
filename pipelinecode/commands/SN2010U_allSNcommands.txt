@@ -1,0 +1,23 @@
+#summing commands generated on Tue Jul 22 12:52:50 CDT 2014
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uvv_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002ubb_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uuu_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uw1_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002um2_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00035872002/uvot/image/sw00035872002uw2_sk.img.gz outfile=./00035872002/uvot/image/sw00035872002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+#appending commands generated on Tue Jul 22 12:52:50 CDT 2014
+rm SN2010U*.img*
+fcopy ./00035872002/uvot/image/sw00035872002uvv_sk_sum.img SN2010U_vv.img 
+uvotimsum infile=SN2010U_vv.img outfile=SN2010U_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002ubb_sk_sum.img SN2010U_bb.img 
+uvotimsum infile=SN2010U_bb.img outfile=SN2010U_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002uuu_sk_sum.img SN2010U_uu.img 
+uvotimsum infile=SN2010U_uu.img outfile=SN2010U_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002uw1_sk_sum.img SN2010U_w1.img 
+uvotimsum infile=SN2010U_w1.img outfile=SN2010U_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002um2_sk_sum.img SN2010U_m2.img 
+uvotimsum infile=SN2010U_m2.img outfile=SN2010U_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00035872002/uvot/image/sw00035872002uw2_sk_sum.img SN2010U_w2.img 
+uvotimsum infile=SN2010U_w2.img outfile=SN2010U_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2010U_vv_tempsum.img -green SN2010U_uu_tempsum.img -blue SN2010U_m2_tempsum.img -frame -new -rgb -red SN2010U_vv_sum.img -green SN2010U_uu_sum.img -blue SN2010U_m2_sum.img &
+ds9  -scale log -rgb -red SN2010U_vv_tempsum.img.gz -green SN2010U_uu_tempsum.img.gz -blue SN2010U_m2_tempsum.img.gz -frame -new -rgb -red SN2010U_vv_sum.img.gz -green SN2010U_uu_sum.img.gz -blue SN2010U_m2_sum.img.gz &

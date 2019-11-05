@@ -1,0 +1,40 @@
+#appending commands generated on Tue Jul 15 17:48:55 CDT 2014
+rm SN2009hd*.img*
+fcopy ./00036578001/uvot/image/sw00036578001uvv_sk_sum.img SN2009hd_vv_temp.img 
+fcopy ./00036578002/uvot/image/sw00036578002uvv_sk_sum.img SN2009hd_vv.img 
+ftappend ./00036578003/uvot/image/sw00036578003uvv_sk_sum.img SN2009hd_vv.img 
+uvotimsum infile=SN2009hd_vv.img outfile=SN2009hd_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009hd_vv_temp.img outfile=SN2009hd_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036578001/uvot/image/sw00036578001ubb_sk_sum.img SN2009hd_bb_temp.img 
+fcopy ./00036578002/uvot/image/sw00036578002ubb_sk_sum.img SN2009hd_bb.img 
+ftappend ./00036578003/uvot/image/sw00036578003ubb_sk_sum.img SN2009hd_bb.img 
+uvotimsum infile=SN2009hd_bb.img outfile=SN2009hd_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009hd_bb_temp.img outfile=SN2009hd_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036578001/uvot/image/sw00036578001uuu_sk_sum.img SN2009hd_uu_temp.img 
+fcopy ./00036578002/uvot/image/sw00036578002uuu_sk_sum.img SN2009hd_uu.img 
+ftappend ./00036578003/uvot/image/sw00036578003uuu_sk_sum.img SN2009hd_uu.img 
+ftappend ./00049897001/uvot/image/sw00049897001uuu_sk_sum.img SN2009hd_uu.img 
+uvotimsum infile=SN2009hd_uu.img outfile=SN2009hd_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009hd_uu_temp.img outfile=SN2009hd_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036578001/uvot/image/sw00036578001uw1_sk_sum.img SN2009hd_w1_temp.img 
+fcopy ./00036578002/uvot/image/sw00036578002uw1_sk_sum.img SN2009hd_w1.img 
+ftappend ./00036578003/uvot/image/sw00036578003uw1_sk_sum.img SN2009hd_w1.img 
+ftappend ./00049897001/uvot/image/sw00049897001uw1_sk_sum.img SN2009hd_w1.img 
+uvotimsum infile=SN2009hd_w1.img outfile=SN2009hd_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009hd_w1_temp.img outfile=SN2009hd_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036578001/uvot/image/sw00036578001um2_sk_sum.img SN2009hd_m2_temp.img 
+fcopy ./00036578002/uvot/image/sw00036578002um2_sk_sum.img SN2009hd_m2.img 
+ftappend ./00036578003/uvot/image/sw00036578003um2_sk_sum.img SN2009hd_m2.img 
+ftappend ./00049897001/uvot/image/sw00049897001um2_sk_sum.img SN2009hd_m2.img 
+uvotimsum infile=SN2009hd_m2.img outfile=SN2009hd_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009hd_m2_temp.img outfile=SN2009hd_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00036578001/uvot/image/sw00036578001uw2_sk_sum.img SN2009hd_w2_temp.img 
+fcopy ./00036578002/uvot/image/sw00036578002uw2_sk_sum.img SN2009hd_w2.img 
+ftappend ./00036578003/uvot/image/sw00036578003uw2_sk_sum.img SN2009hd_w2.img 
+ftappend ./00049897001/uvot/image/sw00049897001uw2_sk_sum.img SN2009hd_w2.img 
+uvotimsum infile=SN2009hd_w2.img outfile=SN2009hd_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009hd_w2_temp.img outfile=SN2009hd_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2009hd_vv_tempsum.img -green SN2009hd_uu_tempsum.img -blue SN2009hd_m2_tempsum.img -frame -new -rgb -red SN2009hd_vv_sum.img -green SN2009hd_uu_sum.img -blue SN2009hd_m2_sum.img &
+ds9  -scale log -rgb -red SN2009hd_vv_tempsum.img.gz -green SN2009hd_uu_tempsum.img.gz -blue SN2009hd_m2_tempsum.img.gz -frame -new -rgb -red SN2009hd_vv_sum.img.gz -green SN2009hd_uu_sum.img.gz -blue SN2009hd_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

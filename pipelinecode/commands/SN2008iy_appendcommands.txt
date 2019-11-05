@@ -1,0 +1,19 @@
+#appending commands generated on Tue Jul 15 21:46:58 CDT 2014
+rm SN2008iy*.img*
+fcopy ./00031399003/uvot/image/sw00031399003uvv_sk_sum.img SN2008iy_vv.img 
+uvotimsum infile=SN2008iy_vv.img outfile=SN2008iy_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031399003/uvot/image/sw00031399003ubb_sk_sum.img SN2008iy_bb.img 
+uvotimsum infile=SN2008iy_bb.img outfile=SN2008iy_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031399001/uvot/image/sw00031399001uuu_sk_sum.img SN2008iy_uu.img 
+uvotimsum infile=SN2008iy_uu.img outfile=SN2008iy_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031399001/uvot/image/sw00031399001uw1_sk_sum.img SN2008iy_w1.img 
+uvotimsum infile=SN2008iy_w1.img outfile=SN2008iy_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031399001/uvot/image/sw00031399001um2_sk_sum.img SN2008iy_m2.img 
+uvotimsum infile=SN2008iy_m2.img outfile=SN2008iy_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031399001/uvot/image/sw00031399001uw2_sk_sum.img SN2008iy_w2.img 
+ftappend ./00031399002/uvot/image/sw00031399002uw2_sk_sum.img SN2008iy_w2.img 
+uvotimsum infile=SN2008iy_w2.img outfile=SN2008iy_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2008iy_vv_tempsum.img -green SN2008iy_uu_tempsum.img -blue SN2008iy_m2_tempsum.img -frame -new -rgb -red SN2008iy_vv_sum.img -green SN2008iy_uu_sum.img -blue SN2008iy_m2_sum.img &
+ds9  -scale log -rgb -red SN2008iy_vv_tempsum.img.gz -green SN2008iy_uu_tempsum.img.gz -blue SN2008iy_m2_tempsum.img.gz -frame -new -rgb -red SN2008iy_vv_sum.img.gz -green SN2008iy_uu_sum.img.gz -blue SN2008iy_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

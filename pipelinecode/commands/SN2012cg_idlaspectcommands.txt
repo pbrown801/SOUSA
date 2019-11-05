@@ -1,0 +1,18 @@
+perl $SNSCRIPTS/uaspect.pl  00032464003/uvot/image/sw00032464003uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032464004/uvot/image/sw00032464004uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032463009/uvot/image/sw00032463009uuu_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032463011/uvot/image/sw00032463011ubb_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032463009/uvot/image/sw00032463009uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032463011/uvot/image/sw00032463011uvv_sk.img coo.reg
+
+perl $SNSCRIPTS/uaspect.pl  00032463007/uvot/image/sw00032463007uvv_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032463015/uvot/image/sw00032463015uuu_sk.img coo.reg
+
+
+perl $SNSCRIPTS/uaspect.pl  00032463012/uvot/image/sw00032463012uw2_sk.img coo.reg
+
+perl $SNSCRIPTS/uaspect.pl  00032463012/uvot/image/sw00032463012um2_sk.img coo.reg
+
+perl $SNSCRIPTS/uaspect.pl  00032463012/uvot/image/sw00032463012uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032463013/uvot/image/sw00032463013uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00032463031/uvot/image/sw00032463031uw1_sk.img coo.reg

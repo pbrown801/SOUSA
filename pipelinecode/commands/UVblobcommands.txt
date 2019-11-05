@@ -1,0 +1,182 @@
+cd ../SN2005am  
+cp SN2005am_3.reg SN2005am_UVblob.reg 
+ds9 SN2005am_m2_sum.img* -regionfile SN2005am_UVblob.reg
+cd ../SN2005cf  
+cp SN2005cf_3.reg SN2005cf_UVblob.reg 
+ds9 SN2005cf_m2_sum.img* -regionfile SN2005cf_UVblob.reg
+cd ../SN2005df  
+cp SN2005df_3.reg SN2005df_UVblob.reg 
+ds9 SN2005df_m2_sum.img* -regionfile SN2005df_UVblob.reg
+cd ../SN2005hk  
+cp SN2005hk_3.reg SN2005hk_UVblob.reg 
+ds9 SN2005hk_m2_sum.img* -regionfile SN2005hk_UVblob.reg
+cd ../SN2005ke  
+cp SN2005ke_3.reg SN2005ke_UVblob.reg 
+ds9 SN2005ke_m2_sum.img* -regionfile SN2005ke_UVblob.reg
+cd ../SN2006dm  
+cp SN2006dm_3.reg SN2006dm_UVblob.reg 
+ds9 SN2006dm_m2_sum.img* -regionfile SN2006dm_UVblob.reg
+cd ../SN2006ej  
+cp SN2006ej_3.reg SN2006ej_UVblob.reg 
+ds9 SN2006ej_m2_sum.img* -regionfile SN2006ej_UVblob.reg
+cd ../SN2006dd  
+cp SN2006mr_3.reg SN2006mr_UVblob.reg 
+ds9 SN2006mr_m2_sum.img* -regionfile SN2006mr_UVblob.reg
+cd ../SN2006X  
+cp SN2006X_3.reg SN2006X_UVblob.reg 
+ds9 SN2006X_m2_sum.img* -regionfile SN2006X_UVblob.reg
+cd ../SN2007S  
+cp SN2007S_3.reg SN2007S_UVblob.reg 
+ds9 SN2007S_m2_sum.img* -regionfile SN2007S_UVblob.reg
+cd ../SN2007af  
+cp SN2007af_3.reg SN2007af_UVblob.reg 
+ds9 SN2007af_m2_sum.img* -regionfile SN2007af_UVblob.reg
+cd ../SN2007bm  
+cp SN2007bm_3.reg SN2007bm_UVblob.reg 
+ds9 SN2007bm_m2_sum.img* -regionfile SN2007bm_UVblob.reg
+cd ../SN2007co  
+cp SN2007co_3.reg SN2007co_UVblob.reg 
+ds9 SN2007co_m2_sum.img* -regionfile SN2007co_UVblob.reg
+cd ../SN2007cq  
+cp SN2007cq_3.reg SN2007cq_UVblob.reg 
+ds9 SN2007cq_m2_sum.img* -regionfile SN2007cq_UVblob.reg
+cd ../SN2007cv  
+cp SN2007cv_3.reg SN2007cv_UVblob.reg 
+ds9 SN2007cv_m2_sum.img* -regionfile SN2007cv_UVblob.reg
+cd ../SN2007on  
+cp SN2007on_3.reg SN2007on_UVblob.reg 
+ds9 SN2007on_m2_sum.img* -regionfile SN2007on_UVblob.reg
+cd ../SN2008A  
+cp SN2008A_3.reg SN2008A_UVblob.reg 
+ds9 SN2008A_m2_sum.img* -regionfile SN2008A_UVblob.reg
+cd ../SN2008Q  
+cp SN2008Q_3.reg SN2008Q_UVblob.reg 
+ds9 SN2008Q_m2_sum.img* -regionfile SN2008Q_UVblob.reg
+cd ../SN2008hs  
+cp SN2008hs_3.reg SN2008hs_UVblob.reg 
+ds9 SN2008hs_m2_sum.img* -regionfile SN2008hs_UVblob.reg
+cd ../SN2008hv  
+cp SN2008hv_3.reg SN2008hv_UVblob.reg 
+ds9 SN2008hv_m2_sum.img* -regionfile SN2008hv_UVblob.reg
+cd ../SNF20080514002  
+cp SNF20080514002_3.reg SNF20080514002_UVblob.reg 
+ds9 SNF20080514002_m2_sum.img* -regionfile SNF20080514002_UVblob.reg
+cd ../SN2009Y  
+cp SN2009Y_3.reg SN2009Y_UVblob.reg 
+ds9 SN2009Y_m2_sum.img* -regionfile SN2009Y_UVblob.reg
+cd ../SN2009an  
+cp SN2009an_3.reg SN2009an_UVblob.reg 
+ds9 SN2009an_m2_sum.img* -regionfile SN2009an_UVblob.reg
+cd ../SN2009cz  
+cp SN2009cz_3.reg SN2009cz_UVblob.reg 
+ds9 SN2009cz_m2_sum.img* -regionfile SN2009cz_UVblob.reg
+cd ../SN2009dc  
+cp SN2009dc_3.reg SN2009dc_UVblob.reg 
+ds9 SN2009dc_m2_sum.img* -regionfile SN2009dc_UVblob.reg
+cd ../SN2009gf  
+cp SN2009gf_3.reg SN2009gf_UVblob.reg 
+ds9 SN2009gf_m2_sum.img* -regionfile SN2009gf_UVblob.reg
+cd ../SN2009ig  
+cp SN2009ig_3.reg SN2009ig_UVblob.reg 
+ds9 SN2009ig_m2_sum.img* -regionfile SN2009ig_UVblob.reg
+cd ../SN2010Y  
+cp SN2010Y_3.reg SN2010Y_UVblob.reg 
+ds9 SN2010Y_m2_sum.img* -regionfile SN2010Y_UVblob.reg
+cd ../SN2010ko  
+cp SN2010ko_3.reg SN2010ko_UVblob.reg 
+ds9 SN2010ko_m2_sum.img* -regionfile SN2010ko_UVblob.reg
+cd ../SN2011aa  
+cp SN2011aa_3.reg SN2011aa_UVblob.reg 
+ds9 SN2011aa_m2_sum.img* -regionfile SN2011aa_UVblob.reg
+cd ../SN2011ay  
+cp SN2011ay_3.reg SN2011ay_UVblob.reg 
+ds9 SN2011ay_m2_sum.img* -regionfile SN2011ay_UVblob.reg
+cd ../SN2011by  
+cp SN2011by_3.reg SN2011by_UVblob.reg 
+ds9 SN2011by_m2_sum.img* -regionfile SN2011by_UVblob.reg
+cd ../SN2011dn  
+cp SN2011dn_3.reg SN2011dn_UVblob.reg 
+ds9 SN2011dn_m2_sum.img* -regionfile SN2011dn_UVblob.reg
+cd ../SN2011fe  
+cp SN2011fe_3.reg SN2011fe_UVblob.reg 
+ds9 SN2011fe_m2_sum.img* -regionfile SN2011fe_UVblob.reg
+cd ../SN2007on  
+cp SN2011iv_3.reg SN2011iv_UVblob.reg 
+ds9 SN2011iv_m2_sum.img* -regionfile SN2011iv_UVblob.reg
+
+
+
+
+
+cd ../SN2005am  
+ds9 SN2005am_m2_tempsum.img* -regionfile SN2005am_UVblob.reg
+cd ../SN2005cf  
+ds9 SN2005cf_m2_tempsum.img* -regionfile SN2005cf_UVblob.reg
+cd ../SN2005df  
+ds9 SN2005df_m2_tempsum.img* -regionfile SN2005df_UVblob.reg
+cd ../SN2005hk  
+ds9 SN2005hk_m2_tempsum.img* -regionfile SN2005hk_UVblob.reg
+cd ../SN2005ke  
+ds9 SN2005ke_m2_tempsum.img* -regionfile SN2005ke_UVblob.reg
+cd ../SN2006dm  
+ds9 SN2006dm_m2_tempsum.img* -regionfile SN2006dm_UVblob.reg
+cd ../SN2006ej  
+ds9 SN2006ej_m2_tempsum.img* -regionfile SN2006ej_UVblob.reg
+cd ../SN2006dd  
+ds9 SN2006mr_m2_tempsum.img* -regionfile SN2006mr_UVblob.reg
+cd ../SN2006X  
+ds9 SN2006X_m2_tempsum.img* -regionfile SN2006X_UVblob.reg
+cd ../SN2007S  
+ds9 SN2007S_m2_tempsum.img* -regionfile SN2007S_UVblob.reg
+cd ../SN2007af  
+ds9 SN2007af_m2_tempsum.img* -regionfile SN2007af_UVblob.reg
+cd ../SN2007bm  
+ds9 SN2007bm_m2_tempsum.img* -regionfile SN2007bm_UVblob.reg
+cd ../SN2007co  
+ds9 SN2007co_m2_tempsum.img* -regionfile SN2007co_UVblob.reg
+cd ../SN2007cq  
+ds9 SN2007cq_m2_tempsum.img* -regionfile SN2007cq_UVblob.reg
+cd ../SN2007cv  
+ds9 SN2007cv_m2_tempsum.img* -regionfile SN2007cv_UVblob.reg
+cd ../SN2007on  
+ds9 SN2007on_m2_tempsum.img* -regionfile SN2007on_UVblob.reg
+cd ../SN2008A  
+ds9 SN2008A_m2_tempsum.img* -regionfile SN2008A_UVblob.reg
+cd ../SN2008Q  
+ds9 SN2008Q_m2_tempsum.img* -regionfile SN2008Q_UVblob.reg
+cd ../SN2008hs  
+ds9 SN2008hs_m2_tempsum.img* -regionfile SN2008hs_UVblob.reg
+cd ../SN2008hv  
+ds9 SN2008hv_m2_tempsum.img* -regionfile SN2008hv_UVblob.reg
+cd ../SNF20080514002  
+ds9 SNF20080514002_m2_tempsum.img* -regionfile SNF20080514002_UVblob.reg
+cd ../SN2009Y  
+ds9 SN2009Y_m2_tempsum.img* -regionfile SN2009Y_UVblob.reg
+cd ../SN2009an  
+ds9 SN2009an_m2_tempsum.img* -regionfile SN2009an_UVblob.reg
+cd ../SN2009cz  
+ds9 SN2009cz_m2_tempsum.img* -regionfile SN2009cz_UVblob.reg
+cd ../SN2009dc  
+ds9 SN2009dc_m2_tempsum.img* -regionfile SN2009dc_UVblob.reg
+cd ../SN2009gf  
+ds9 SN2009gf_m2_tempsum.img* -regionfile SN2009gf_UVblob.reg
+cd ../SN2009ig  
+ds9 SN2009ig_m2_tempsum.img* -regionfile SN2009ig_UVblob.reg
+cd ../SN2010Y  
+ds9 SN2010Y_m2_tempsum.img* -regionfile SN2010Y_UVblob.reg
+cd ../SN2010ko  
+ds9 SN2010ko_m2_tempsum.img* -regionfile SN2010ko_UVblob.reg
+cd ../SN2011aa  
+ds9 SN2011aa_m2_tempsum.img* -regionfile SN2011aa_UVblob.reg
+cd ../SN2011ay  
+ds9 SN2011ay_m2_tempsum.img* -regionfile SN2011ay_UVblob.reg
+cd ../SN2011by  
+ds9 SN2011by_m2_tempsum.img* -regionfile SN2011by_UVblob.reg
+cd ../SN2011dn  
+ds9 SN2011dn_m2_tempsum.img* -regionfile SN2011dn_UVblob.reg
+cd ../SN2011fe  
+ds9 SN2011fe_m2_tempsum.img* -regionfile SN2011fe_UVblob.reg
+cd ../SN2007on  
+ds9 SN2011iv_m2_tempsum.img* -regionfile SN2011iv_UVblob.reg
+
+

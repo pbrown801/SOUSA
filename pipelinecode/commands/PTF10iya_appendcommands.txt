@@ -1,0 +1,79 @@
+#appending commands generated on Mon Mar 19 12:58:16 CDT 2012
+rm PTF10iya_vv.img
+rm PTF10iya_vv.img*.gz
+fcopy ./00031737001/uvot/image/sw00031737001uvv_sk.img.gz_sum.fits PTF10iya_vv.img 
+fcopy ./00031737001/uvot/image/sw00031737001uvv_sk.img.gz_sum.fits PTF10iya_vv_temp.img 
+rm PTF10iya_bb.img
+rm PTF10iya_bb.img*.gz
+fcopy ./00031737001/uvot/image/sw00031737001ubb_sk.img.gz_sum.fits PTF10iya_bb.img 
+fcopy ./00031737001/uvot/image/sw00031737001ubb_sk.img.gz_sum.fits PTF10iya_bb_temp.img 
+rm PTF10iya_uu.img
+rm PTF10iya_uu.img*.gz
+fcopy ./00031737001/uvot/image/sw00031737001uuu_sk.img.gz_sum.fits PTF10iya_uu.img 
+fcopy ./00031737001/uvot/image/sw00031737001uuu_sk.img.gz_sum.fits PTF10iya_uu_temp.img 
+ftappend ./00031737003/uvot/image/sw00031737003uuu_sk.img.gz_sum.fits PTF10iya_uu.img 
+ftappend ./00031737003/uvot/image/sw00031737003uuu_sk.img.gz_sum.fits PTF10iya_uu_temp.img 
+ftappend ./00031737004/uvot/image/sw00031737004uuu_sk.img.gz_sum.fits PTF10iya_uu.img 
+ftappend ./00031737004/uvot/image/sw00031737004uuu_sk.img.gz_sum.fits PTF10iya_uu_temp.img 
+ftappend ./00031737006/uvot/image/sw00031737006uuu_sk.img.gz_sum.fits PTF10iya_uu.img 
+ftappend ./00031737006/uvot/image/sw00031737006uuu_sk.img.gz_sum.fits PTF10iya_uu_temp.img 
+ftappend ./00031737007/uvot/image/sw00031737007uuu_sk.img.gz_sum.fits PTF10iya_uu.img 
+ftappend ./00031737007/uvot/image/sw00031737007uuu_sk.img.gz_sum.fits PTF10iya_uu_temp.img 
+ftappend ./00031737008/uvot/image/sw00031737008uuu_sk.img.gz_sum.fits PTF10iya_uu.img 
+ftappend ./00031737008/uvot/image/sw00031737008uuu_sk.img.gz_sum.fits PTF10iya_uu_temp.img 
+rm PTF10iya_w1.img
+rm PTF10iya_w1.img*.gz
+fcopy ./00031737001/uvot/image/sw00031737001uw1_sk.img.gz_sum.fits PTF10iya_w1.img 
+fcopy ./00031737001/uvot/image/sw00031737001uw1_sk.img.gz_sum.fits PTF10iya_w1_temp.img 
+ftappend ./00031737003/uvot/image/sw00031737003uw1_sk.img.gz_sum.fits PTF10iya_w1.img 
+ftappend ./00031737003/uvot/image/sw00031737003uw1_sk.img.gz_sum.fits PTF10iya_w1_temp.img 
+ftappend ./00031737004/uvot/image/sw00031737004uw1_sk.img.gz_sum.fits PTF10iya_w1.img 
+ftappend ./00031737004/uvot/image/sw00031737004uw1_sk.img.gz_sum.fits PTF10iya_w1_temp.img 
+ftappend ./00031737006/uvot/image/sw00031737006uw1_sk.img.gz_sum.fits PTF10iya_w1.img 
+ftappend ./00031737006/uvot/image/sw00031737006uw1_sk.img.gz_sum.fits PTF10iya_w1_temp.img 
+ftappend ./00031737007/uvot/image/sw00031737007uw1_sk.img.gz_sum.fits PTF10iya_w1.img 
+ftappend ./00031737007/uvot/image/sw00031737007uw1_sk.img.gz_sum.fits PTF10iya_w1_temp.img 
+ftappend ./00031737008/uvot/image/sw00031737008uw1_sk.img.gz_sum.fits PTF10iya_w1.img 
+ftappend ./00031737008/uvot/image/sw00031737008uw1_sk.img.gz_sum.fits PTF10iya_w1_temp.img 
+rm PTF10iya_m2.img
+rm PTF10iya_m2.img*.gz
+fcopy ./00031737001/uvot/image/sw00031737001um2_sk.img.gz_sum.fits PTF10iya_m2.img 
+fcopy ./00031737001/uvot/image/sw00031737001um2_sk.img.gz_sum.fits PTF10iya_m2_temp.img 
+ftappend ./00031737003/uvot/image/sw00031737003um2_sk.img.gz_sum.fits PTF10iya_m2.img 
+ftappend ./00031737003/uvot/image/sw00031737003um2_sk.img.gz_sum.fits PTF10iya_m2_temp.img 
+ftappend ./00031737004/uvot/image/sw00031737004um2_sk.img.gz_sum.fits PTF10iya_m2.img 
+ftappend ./00031737004/uvot/image/sw00031737004um2_sk.img.gz_sum.fits PTF10iya_m2_temp.img 
+ftappend ./00031737006/uvot/image/sw00031737006um2_sk.img.gz_sum.fits PTF10iya_m2.img 
+ftappend ./00031737006/uvot/image/sw00031737006um2_sk.img.gz_sum.fits PTF10iya_m2_temp.img 
+ftappend ./00031737007/uvot/image/sw00031737007um2_sk.img.gz_sum.fits PTF10iya_m2.img 
+ftappend ./00031737007/uvot/image/sw00031737007um2_sk.img.gz_sum.fits PTF10iya_m2_temp.img 
+ftappend ./00031737008/uvot/image/sw00031737008um2_sk.img.gz_sum.fits PTF10iya_m2.img 
+ftappend ./00031737008/uvot/image/sw00031737008um2_sk.img.gz_sum.fits PTF10iya_m2_temp.img 
+rm PTF10iya_w2.img
+rm PTF10iya_w2.img*.gz
+fcopy ./00031737001/uvot/image/sw00031737001uw2_sk.img.gz_sum.fits PTF10iya_w2.img 
+fcopy ./00031737001/uvot/image/sw00031737001uw2_sk.img.gz_sum.fits PTF10iya_w2_temp.img 
+ftappend ./00031737003/uvot/image/sw00031737003uw2_sk.img.gz_sum.fits PTF10iya_w2.img 
+ftappend ./00031737003/uvot/image/sw00031737003uw2_sk.img.gz_sum.fits PTF10iya_w2_temp.img 
+ftappend ./00031737004/uvot/image/sw00031737004uw2_sk.img.gz_sum.fits PTF10iya_w2.img 
+ftappend ./00031737004/uvot/image/sw00031737004uw2_sk.img.gz_sum.fits PTF10iya_w2_temp.img 
+ftappend ./00031737006/uvot/image/sw00031737006uw2_sk.img.gz_sum.fits PTF10iya_w2.img 
+ftappend ./00031737006/uvot/image/sw00031737006uw2_sk.img.gz_sum.fits PTF10iya_w2_temp.img 
+ftappend ./00031737007/uvot/image/sw00031737007uw2_sk.img.gz_sum.fits PTF10iya_w2.img 
+ftappend ./00031737007/uvot/image/sw00031737007uw2_sk.img.gz_sum.fits PTF10iya_w2_temp.img 
+ftappend ./00031737008/uvot/image/sw00031737008uw2_sk.img.gz_sum.fits PTF10iya_w2.img 
+ftappend ./00031737008/uvot/image/sw00031737008uw2_sk.img.gz_sum.fits PTF10iya_w2_temp.img 
+rm PTF10iya_vv_sum.img
+uvotimsum infile=PTF10iya_vv.img outfile=PTF10iya_vv_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF10iya_bb_sum.img
+uvotimsum infile=PTF10iya_bb.img outfile=PTF10iya_bb_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF10iya_uu_sum.img
+uvotimsum infile=PTF10iya_uu.img outfile=PTF10iya_uu_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF10iya_w1_sum.img
+uvotimsum infile=PTF10iya_w1.img outfile=PTF10iya_w1_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF10iya_m2_sum.img
+uvotimsum infile=PTF10iya_m2.img outfile=PTF10iya_m2_sum.img clobber=yes exclude=NONE chatter=0
+rm PTF10iya_w2_sum.img
+uvotimsum infile=PTF10iya_w2.img outfile=PTF10iya_w2_sum.img clobber=yes exclude=NONE chatter=0
+rm sw*.fits
+ds9 -rgb -red PTF10iya_vv_sum.img -green PTF10iya_uu_sum.img -blue PTF10iya_m2_sum.img &

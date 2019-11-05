@@ -1,0 +1,69 @@
+#appending commands generated on Thu Apr 26 14:14:58 CDT 2012
+uvotimsum infile=SN2006mr_vv.img outfile=SN2006mr_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_vv_ex.img outfile=SN2006mr_vv_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=SN2006mr_vv.lss outfile=SN2006mr_vv_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+uvotimsum infile=SN2006mr_vv_temp.img outfile=SN2006mr_vv_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_vv_temp.lss outfile=SN2006mr_vv_tempsum.lss clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_vv_ex_temp.img outfile=SN2006mr_vv_ex_tempsum.img clobber=no exclude=NONE chatter=0
+
+
+uvotimsum infile=SN2006mr_bb.img outfile=SN2006mr_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_bb_ex.img outfile=SN2006mr_bb_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=SN2006mr_bb.lss outfile=SN2006mr_bb_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+uvotimsum infile=SN2006mr_bb_temp.img outfile=SN2006mr_bb_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_bb_temp.lss outfile=SN2006mr_bb_tempsum.lss clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_bb_ex_temp.img outfile=SN2006mr_bb_ex_tempsum.img clobber=no exclude=NONE chatter=0
+
+uvotimsum infile=SN2006mr_uu.img outfile=SN2006mr_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_uu_ex.img outfile=SN2006mr_uu_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=SN2006mr_uu.lss outfile=SN2006mr_uu_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+uvotimsum infile=SN2006mr_uu_temp.img outfile=SN2006mr_uu_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_uu_temp.lss outfile=SN2006mr_uu_tempsum.lss clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_uu_ex_temp.img outfile=SN2006mr_uu_ex_tempsum.img clobber=no exclude=NONE chatter=0
+
+uvotimsum infile=SN2006mr_w1.img outfile=SN2006mr_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_w1_ex.img outfile=SN2006mr_w1_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=SN2006mr_w1.lss outfile=SN2006mr_w1_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+uvotimsum infile=SN2006mr_w1_temp.img outfile=SN2006mr_w1_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_w1_temp.lss outfile=SN2006mr_w1_tempsum.lss clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_w1_ex_temp.img outfile=SN2006mr_w1_ex_tempsum.img clobber=no exclude=NONE chatter=0
+
+uvotimsum infile=SN2006mr_m2.img outfile=SN2006mr_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_m2_ex.img outfile=SN2006mr_m2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=SN2006mr_m2.lss outfile=SN2006mr_m2_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+uvotimsum infile=SN2006mr_m2_temp.img outfile=SN2006mr_m2_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_m2_temp.lss outfile=SN2006mr_m2_tempsum.lss clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_m2_ex_temp.img outfile=SN2006mr_m2_ex_tempsum.img clobber=no exclude=NONE chatter=0
+
+uvotimsum infile=SN2006mr_w2.img outfile=SN2006mr_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_w2_ex.img outfile=SN2006mr_w2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+uvotimsum infile=SN2006mr_w2.lss outfile=SN2006mr_w2_sum.lss clobber=no exclude=NONE chatter=0 method=lssmap
+uvotimsum infile=SN2006mr_w2_temp.img outfile=SN2006mr_w2_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_w2_temp.lss outfile=SN2006mr_w2_tempsum.lss clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006mr_w2_ex_temp.img outfile=SN2006mr_w2_ex_tempsum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2006mr_vv_tempsum.img -green SN2006mr_uu_tempsum.img -blue SN2006mr_m2_tempsum.img -frame -new -rgb -red SN2006mr_vv_sum.img -green SN2006mr_uu_sum.img -blue SN2006mr_m2_sum.img &
+gzip *.img
+gzip *.lss
+
+
+
+
+uvotimsum infile=SN2006mr_vv.img outfile=SN2006mr_vv_sum.img clobber=yes exclude=3-7 chatter=0
+uvotimsum infile=SN2006mr_bb.img outfile=SN2006mr_bb_sum.img clobber=yes exclude=4-8 chatter=0
+uvotimsum infile=SN2006mr_uu.img outfile=SN2006mr_uu_sum.img clobber=yes exclude=4-7 chatter=0
+uvotimsum infile=SN2006mr_w1.img outfile=SN2006mr_w1_sum.img clobber=yes exclude=4-8 chatter=0
+uvotimsum infile=SN2006mr_m2.img outfile=SN2006mr_m2_sum.img clobber=yes exclude=4-6 chatter=0
+uvotimsum infile=SN2006mr_w2.img outfile=SN2006mr_w2_sum.img clobber=yes exclude=3-7 chatter=0
+
+
+
+
+
+uvotimsum infile=SN2006mr_vv.img outfile=SN2006mr_vv_sum.img clobber=yes exclude=none ignoreframetime=yes chatter=0
+uvotimsum infile=SN2006mr_bb.img outfile=SN2006mr_bb_sum.img clobber=yes exclude=none ignoreframetime=yes chatter=0
+uvotimsum infile=SN2006mr_uu.img outfile=SN2006mr_uu_sum.img clobber=yes exclude=none ignoreframetime=yes chatter=0
+uvotimsum infile=SN2006mr_w1.img outfile=SN2006mr_w1_sum.img clobber=yes exclude=none ignoreframetime=yes chatter=0
+uvotimsum infile=SN2006mr_m2.img outfile=SN2006mr_m2_sum.img clobber=yes exclude=none ignoreframetime=yes chatter=0
+uvotimsum infile=SN2006mr_w2.img outfile=SN2006mr_w2_sum.img clobber=yes exclude=none ignoreframetime=yes chatter=0
+
+

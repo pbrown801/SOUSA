@@ -1,0 +1,2 @@
+uvotimsum infile=./00031909002/uvot/image/sw00031909002uuu_sk.img outfile=./00031909002/uvot/image/sw00031909002uuu_sk_sum.img clobber=yes exclude=1,2,4,6,8 chatter=0
+uvotimsum infile=./00031909002/uvot/image/sw00031909002uw1_sk.img outfile=./00031909002/uvot/image/sw00031909002uw1_sk_sum.img clobber=yes exclude=1,2,4,6,8 chatter=0

@@ -1,0 +1,14 @@
+#summing commands generated on Mon Oct 28 13:03:04 CDT 2013
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uvv_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uvv_sk_suma.img clobber=yes exclude=2-4 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005ubb_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005ubb_sk_suma.img clobber=yes exclude=2-4 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uuu_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uuu_sk_suma.img clobber=yes exclude=2-4 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uw1_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uw1_sk_suma.img clobber=yes exclude=2-4 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005um2_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005um2_sk_suma.img clobber=yes exclude=2-4 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uw2_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uw2_sk_suma.img clobber=yes exclude=2-4 chatter=0
+
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uvv_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uvv_sk_sumb.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005ubb_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005ubb_sk_sumb.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uuu_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uuu_sk_sumb.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uw1_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uw1_sk_sumb.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005um2_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005um2_sk_sumb.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031802005/uvot/image/sw00031802005uw2_sk.img.gz outfile=./00031802005/uvot/image/sw00031802005uw2_sk_sumb.img clobber=yes exclude=1 chatter=0

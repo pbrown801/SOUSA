@@ -1,0 +1,21 @@
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uvv_sk.img.gz outfile=./00030883014/uvot/image/sw00030883014uvv_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uvv_ex.img.gz outfile=./00030883014/uvot/image/sw00030883014uvv_ex_sum.img clobber=yes method=expmap exclude=1  chatter=0
+uvotskylss infile=./00030883014/uvot/image/sw00030883014uvv_sk.img.gz outfile=./00030883014/uvot/image/sw00030883014uvv_sk.lss attfile=./00030883014/auxil/sw00030883014sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uvv_sk.lss outfile=./00030883014/uvot/image/sw00030883014uvv_lss_sum.img clobber=yes method=lssmap exclude=1 chatter=0
+uvotimsum infile=./00030883014/uvot/image/sw00030883014ubb_sk.img.gz outfile=./00030883014/uvot/image/sw00030883014ubb_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00030883014/uvot/image/sw00030883014ubb_ex.img.gz outfile=./00030883014/uvot/image/sw00030883014ubb_ex_sum.img clobber=yes method=expmap exclude=1  chatter=0
+uvotskylss infile=./00030883014/uvot/image/sw00030883014ubb_sk.img.gz outfile=./00030883014/uvot/image/sw00030883014ubb_sk.lss attfile=./00030883014/auxil/sw00030883014sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00030883014/uvot/image/sw00030883014ubb_sk.lss outfile=./00030883014/uvot/image/sw00030883014ubb_lss_sum.img clobber=yes method=lssmap exclude=1 chatter=0
+
+
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uuu_sk.img.gz outfile=./00030883014/uvot/image/sw00030883014uuu_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uuu_ex.img.gz outfile=./00030883014/uvot/image/sw00030883014uuu_ex_sum.img clobber=yes method=expmap exclude=1  chatter=0
+uvotskylss infile=./00030883014/uvot/image/sw00030883014uuu_sk.img.gz outfile=./00030883014/uvot/image/sw00030883014uuu_sk.lss attfile=./00030883014/auxil/sw00030883014sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uuu_sk.lss outfile=./00030883014/uvot/image/sw00030883014uuu_lss_sum.img clobber=yes method=lssmap exclude=1 chatter=0
+
+
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uw1_ex.img.gz outfile=./00030883014/uvot/image/sw00030883014uw1_ex_sum.img clobber=yes method=expmap exclude=1  chatter=0
+uvotskylss infile=./00030883014/uvot/image/sw00030883014uw1_sk.img.gz outfile=./00030883014/uvot/image/sw00030883014uw1_sk.lss attfile=./00030883014/auxil/sw00030883014sat.fits.gz clobber=yes lssfile=caldb
+uvotimsum infile=./00030883014/uvot/image/sw00030883014uw1_sk.lss outfile=./00030883014/uvot/image/sw00030883014uw1_lss_sum.img clobber=yes method=lssmap exclude=1 chatter=0
+
+

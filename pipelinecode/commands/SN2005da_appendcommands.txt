@@ -1,0 +1,46 @@
+#appending commands generated on Thu Feb 27 09:19:35 CST 2014
+rm SN2005da*.img*
+fcopy ./00030267001/uvot/image/sw00030267001uvv_sk_sum.img SN2005da_vv.img 
+fcopy ./00036516001/uvot/image/sw00036516001uvv_sk_sum.img SN2005da_vv_temp.img 
+ftappend ./00036516002/uvot/image/sw00036516002uvv_sk_sum.img SN2005da_vv_temp.img 
+uvotimsum infile=SN2005da_vv.img outfile=SN2005da_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005da_vv_temp.img outfile=SN2005da_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030267001/uvot/image/sw00030267001ubb_sk_sum.img SN2005da_bb.img 
+fcopy ./00036516001/uvot/image/sw00036516001ubb_sk_sum.img SN2005da_bb_temp.img 
+ftappend ./00036516002/uvot/image/sw00036516002ubb_sk_sum.img SN2005da_bb_temp.img 
+uvotimsum infile=SN2005da_bb.img outfile=SN2005da_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005da_bb_temp.img outfile=SN2005da_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030267001/uvot/image/sw00030267001uuu_sk_sum.img SN2005da_uu.img 
+fcopy ./00036516001/uvot/image/sw00036516001uuu_sk_sum.img SN2005da_uu_temp.img 
+ftappend ./00036516002/uvot/image/sw00036516002uuu_sk_sum.img SN2005da_uu_temp.img 
+uvotimsum infile=SN2005da_uu.img outfile=SN2005da_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005da_uu_temp.img outfile=SN2005da_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030267002/uvot/image/sw00030267002uw1_sk_sum.img SN2005da_w1.img 
+fcopy ./00036516001/uvot/image/sw00036516001uw1_sk_sum.img SN2005da_w1_temp.img 
+ftappend ./00036516002/uvot/image/sw00036516002uw1_sk_sum.img SN2005da_w1_temp.img 
+uvotimsum infile=SN2005da_w1.img outfile=SN2005da_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005da_w1_temp.img outfile=SN2005da_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030267002/uvot/image/sw00030267002um2_sk_sum.img SN2005da_m2.img 
+fcopy ./00036516001/uvot/image/sw00036516001um2_sk_sum.img SN2005da_m2_temp.img 
+ftappend ./00036516002/uvot/image/sw00036516002um2_sk_sum.img SN2005da_m2_temp.img 
+uvotimsum infile=SN2005da_m2.img outfile=SN2005da_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005da_m2_temp.img outfile=SN2005da_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030267001/uvot/image/sw00030267001uw2_sk_sum.img SN2005da_w2.img 
+ftappend ./00030267002/uvot/image/sw00030267002uw2_sk_sum.img SN2005da_w2.img 
+fcopy ./00036516001/uvot/image/sw00036516001uw2_sk_sum.img SN2005da_w2_temp.img 
+ftappend ./00036516002/uvot/image/sw00036516002uw2_sk_sum.img SN2005da_w2_temp.img 
+uvotimsum infile=SN2005da_w2.img outfile=SN2005da_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005da_w2_temp.img outfile=SN2005da_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2005da_vv_tempsum.img -green SN2005da_uu_tempsum.img -blue SN2005da_m2_tempsum.img -frame -new -rgb -red SN2005da_vv_sum.img -green SN2005da_uu_sum.img -blue SN2005da_m2_sum.img &
+ds9 -rgb -red SN2005da_vv_tempsum.img.gz -green SN2005da_uu_tempsum.img.gz -blue SN2005da_m2_tempsum.img.gz -frame -new -rgb -red SN2005da_vv_sum.img.gz -green SN2005da_uu_sum.img.gz -blue SN2005da_m2_sum.img.gz &
+gzip *.img
+gzip *.lss
+
+
+ftappend SN2005da_vv_tempsum.img SN2005da_vv.img 
+ftappend SN2005da_bb_tempsum.img SN2005da_bb.img 
+ftappend SN2005da_uu_tempsum.img SN2005da_uu.img 
+ftappend SN2005da_w1_tempsum.img SN2005da_w1.img 
+ftappend SN2005da_m2_tempsum.img SN2005da_m2.img 
+ftappend SN2005da_w2_tempsum.img SN2005da_w2.img 
+

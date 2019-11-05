@@ -1,0 +1,16 @@
+#appending commands generated on Wed Jan 22 11:17:56 CST 2014
+rm SNinM82temp*.img*
+fcopy ./00035482001/uvot/image/sw00035482001uvv_sk_sum.img SNinM82temp_vv.img 
+ftappend ./00035482002/uvot/image/sw00035482002uvv_sk_sum.img SNinM82temp_vv.img 
+uvotimsum infile=SNinM82temp_vv.img outfile=SNinM82temp_vv_sum.img clobber=yes exclude=NONE chatter=0
+fcopy ./00035482001/uvot/image/sw00035482001ubb_sk_sum.img SNinM82temp_bb.img 
+ftappend ./00035482002/uvot/image/sw00035482002ubb_sk_sum.img SNinM82temp_bb.img 
+uvotimsum infile=SNinM82temp_bb.img outfile=SNinM82temp_bb_sum.img clobber=yes exclude=NONE chatter=0
+# I think these were based on position for the before image
+#uvotimsum infile=SNinM82temp_uu.img outfile=SNinM82temp_uu_sum.img clobber=yes exclude=1,2,5,6,8,9,10 chatter=0
+# this is to use the most recent data
+uvotimsum infile=SNinM82temp_uu.img outfile=SNinM82temp_uu_sum.img clobber=yes exclude=13-14 chatter=0
+uvotimsum infile=SNinM82temp_w1.img outfile=SNinM82temp_w1_sum.img clobber=yes exclude=9-10 chatter=0
+uvotimsum infile=SNinM82temp_m2.img outfile=SNinM82temp_m2_sum.img clobber=yes exclude=15-16 chatter=0
+uvotimsum infile=SNinM82temp_w2.img outfile=SNinM82temp_w2_sum.img clobber=yes exclude=10-11 chatter=0
+gzip *.img

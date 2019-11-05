@@ -1,0 +1,785 @@
+#summing commands generated on Tue May 22 08:07:08 CDT 2012
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uvv_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uvv_ex.img.gz outfile=./00031977001/uvot/image/sw00031977001uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977001/uvot/image/sw00031977001uvv_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uvv_sk.lss attfile=./00031977001/auxil/sw00031977001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uvv_sk.lss outfile=./00031977001/uvot/image/sw00031977001uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uvv_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uvv_ex.img.gz outfile=./00031977002/uvot/image/sw00031977002uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977002/uvot/image/sw00031977002uvv_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uvv_sk.lss attfile=./00031977002/auxil/sw00031977002sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uvv_sk.lss outfile=./00031977002/uvot/image/sw00031977002uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uvv_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uvv_ex.img.gz outfile=./00031977003/uvot/image/sw00031977003uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977003/uvot/image/sw00031977003uvv_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uvv_sk.lss attfile=./00031977003/auxil/sw00031977003sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uvv_sk.lss outfile=./00031977003/uvot/image/sw00031977003uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977004/uvot/image/sw00031977004uvv_sk.img.gz outfile=./00031977004/uvot/image/sw00031977004uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977004/uvot/image/sw00031977004uvv_ex.img.gz outfile=./00031977004/uvot/image/sw00031977004uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977004/uvot/image/sw00031977004uvv_sk.img.gz outfile=./00031977004/uvot/image/sw00031977004uvv_sk.lss attfile=./00031977004/auxil/sw00031977004sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977004/uvot/image/sw00031977004uvv_sk.lss outfile=./00031977004/uvot/image/sw00031977004uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uvv_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uvv_ex.img.gz outfile=./00031977008/uvot/image/sw00031977008uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977008/uvot/image/sw00031977008uvv_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uvv_sk.lss attfile=./00031977008/auxil/sw00031977008sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uvv_sk.lss outfile=./00031977008/uvot/image/sw00031977008uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977015/uvot/image/sw00031977015uvv_sk.img.gz outfile=./00031977015/uvot/image/sw00031977015uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977015/uvot/image/sw00031977015uvv_ex.img.gz outfile=./00031977015/uvot/image/sw00031977015uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977015/uvot/image/sw00031977015uvv_sk.img.gz outfile=./00031977015/uvot/image/sw00031977015uvv_sk.lss attfile=./00031977015/auxil/sw00031977015sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977015/uvot/image/sw00031977015uvv_sk.lss outfile=./00031977015/uvot/image/sw00031977015uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977021/uvot/image/sw00031977021uvv_sk.img.gz outfile=./00031977021/uvot/image/sw00031977021uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977021/uvot/image/sw00031977021uvv_ex.img.gz outfile=./00031977021/uvot/image/sw00031977021uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977021/uvot/image/sw00031977021uvv_sk.img.gz outfile=./00031977021/uvot/image/sw00031977021uvv_sk.lss attfile=./00031977021/auxil/sw00031977021sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977021/uvot/image/sw00031977021uvv_sk.lss outfile=./00031977021/uvot/image/sw00031977021uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977026/uvot/image/sw00031977026uvv_sk.img.gz outfile=./00031977026/uvot/image/sw00031977026uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977026/uvot/image/sw00031977026uvv_ex.img.gz outfile=./00031977026/uvot/image/sw00031977026uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977026/uvot/image/sw00031977026uvv_sk.img.gz outfile=./00031977026/uvot/image/sw00031977026uvv_sk.lss attfile=./00031977026/auxil/sw00031977026sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977026/uvot/image/sw00031977026uvv_sk.lss outfile=./00031977026/uvot/image/sw00031977026uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977028/uvot/image/sw00031977028uvv_sk.img.gz outfile=./00031977028/uvot/image/sw00031977028uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977028/uvot/image/sw00031977028uvv_ex.img.gz outfile=./00031977028/uvot/image/sw00031977028uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977028/uvot/image/sw00031977028uvv_sk.img.gz outfile=./00031977028/uvot/image/sw00031977028uvv_sk.lss attfile=./00031977028/auxil/sw00031977028sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977028/uvot/image/sw00031977028uvv_sk.lss outfile=./00031977028/uvot/image/sw00031977028uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977029/uvot/image/sw00031977029uvv_sk.img.gz outfile=./00031977029/uvot/image/sw00031977029uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977029/uvot/image/sw00031977029uvv_ex.img.gz outfile=./00031977029/uvot/image/sw00031977029uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977029/uvot/image/sw00031977029uvv_sk.img.gz outfile=./00031977029/uvot/image/sw00031977029uvv_sk.lss attfile=./00031977029/auxil/sw00031977029sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977029/uvot/image/sw00031977029uvv_sk.lss outfile=./00031977029/uvot/image/sw00031977029uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977032/uvot/image/sw00031977032uvv_sk.img.gz outfile=./00031977032/uvot/image/sw00031977032uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977032/uvot/image/sw00031977032uvv_ex.img.gz outfile=./00031977032/uvot/image/sw00031977032uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977032/uvot/image/sw00031977032uvv_sk.img.gz outfile=./00031977032/uvot/image/sw00031977032uvv_sk.lss attfile=./00031977032/auxil/sw00031977032sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977032/uvot/image/sw00031977032uvv_sk.lss outfile=./00031977032/uvot/image/sw00031977032uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977033/uvot/image/sw00031977033uvv_sk.img.gz outfile=./00031977033/uvot/image/sw00031977033uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977033/uvot/image/sw00031977033uvv_ex.img.gz outfile=./00031977033/uvot/image/sw00031977033uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977033/uvot/image/sw00031977033uvv_sk.img.gz outfile=./00031977033/uvot/image/sw00031977033uvv_sk.lss attfile=./00031977033/auxil/sw00031977033sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977033/uvot/image/sw00031977033uvv_sk.lss outfile=./00031977033/uvot/image/sw00031977033uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977035/uvot/image/sw00031977035uvv_sk.img.gz outfile=./00031977035/uvot/image/sw00031977035uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977035/uvot/image/sw00031977035uvv_ex.img.gz outfile=./00031977035/uvot/image/sw00031977035uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977035/uvot/image/sw00031977035uvv_sk.img.gz outfile=./00031977035/uvot/image/sw00031977035uvv_sk.lss attfile=./00031977035/auxil/sw00031977035sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977035/uvot/image/sw00031977035uvv_sk.lss outfile=./00031977035/uvot/image/sw00031977035uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977037/uvot/image/sw00031977037uvv_sk.img.gz outfile=./00031977037/uvot/image/sw00031977037uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977037/uvot/image/sw00031977037uvv_ex.img.gz outfile=./00031977037/uvot/image/sw00031977037uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977037/uvot/image/sw00031977037uvv_sk.img.gz outfile=./00031977037/uvot/image/sw00031977037uvv_sk.lss attfile=./00031977037/auxil/sw00031977037sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977037/uvot/image/sw00031977037uvv_sk.lss outfile=./00031977037/uvot/image/sw00031977037uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977039/uvot/image/sw00031977039uvv_sk.img.gz outfile=./00031977039/uvot/image/sw00031977039uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977039/uvot/image/sw00031977039uvv_ex.img.gz outfile=./00031977039/uvot/image/sw00031977039uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977039/uvot/image/sw00031977039uvv_sk.img.gz outfile=./00031977039/uvot/image/sw00031977039uvv_sk.lss attfile=./00031977039/auxil/sw00031977039sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977039/uvot/image/sw00031977039uvv_sk.lss outfile=./00031977039/uvot/image/sw00031977039uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977041/uvot/image/sw00031977041uvv_sk.img.gz outfile=./00031977041/uvot/image/sw00031977041uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977041/uvot/image/sw00031977041uvv_ex.img.gz outfile=./00031977041/uvot/image/sw00031977041uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977041/uvot/image/sw00031977041uvv_sk.img.gz outfile=./00031977041/uvot/image/sw00031977041uvv_sk.lss attfile=./00031977041/auxil/sw00031977041sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977041/uvot/image/sw00031977041uvv_sk.lss outfile=./00031977041/uvot/image/sw00031977041uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977043/uvot/image/sw00031977043uvv_sk.img.gz outfile=./00031977043/uvot/image/sw00031977043uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977043/uvot/image/sw00031977043uvv_ex.img.gz outfile=./00031977043/uvot/image/sw00031977043uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977043/uvot/image/sw00031977043uvv_sk.img.gz outfile=./00031977043/uvot/image/sw00031977043uvv_sk.lss attfile=./00031977043/auxil/sw00031977043sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977043/uvot/image/sw00031977043uvv_sk.lss outfile=./00031977043/uvot/image/sw00031977043uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977045/uvot/image/sw00031977045uvv_sk.img.gz outfile=./00031977045/uvot/image/sw00031977045uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977045/uvot/image/sw00031977045uvv_ex.img.gz outfile=./00031977045/uvot/image/sw00031977045uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977045/uvot/image/sw00031977045uvv_sk.img.gz outfile=./00031977045/uvot/image/sw00031977045uvv_sk.lss attfile=./00031977045/auxil/sw00031977045sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977045/uvot/image/sw00031977045uvv_sk.lss outfile=./00031977045/uvot/image/sw00031977045uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977049/uvot/image/sw00031977049uvv_sk.img.gz outfile=./00031977049/uvot/image/sw00031977049uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977049/uvot/image/sw00031977049uvv_ex.img.gz outfile=./00031977049/uvot/image/sw00031977049uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977049/uvot/image/sw00031977049uvv_sk.img.gz outfile=./00031977049/uvot/image/sw00031977049uvv_sk.lss attfile=./00031977049/auxil/sw00031977049sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977049/uvot/image/sw00031977049uvv_sk.lss outfile=./00031977049/uvot/image/sw00031977049uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977051/uvot/image/sw00031977051uvv_sk.img.gz outfile=./00031977051/uvot/image/sw00031977051uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977051/uvot/image/sw00031977051uvv_ex.img.gz outfile=./00031977051/uvot/image/sw00031977051uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977051/uvot/image/sw00031977051uvv_sk.img.gz outfile=./00031977051/uvot/image/sw00031977051uvv_sk.lss attfile=./00031977051/auxil/sw00031977051sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977051/uvot/image/sw00031977051uvv_sk.lss outfile=./00031977051/uvot/image/sw00031977051uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977054/uvot/image/sw00031977054uvv_sk.img.gz outfile=./00031977054/uvot/image/sw00031977054uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977054/uvot/image/sw00031977054uvv_ex.img.gz outfile=./00031977054/uvot/image/sw00031977054uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977054/uvot/image/sw00031977054uvv_sk.img.gz outfile=./00031977054/uvot/image/sw00031977054uvv_sk.lss attfile=./00031977054/auxil/sw00031977054sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977054/uvot/image/sw00031977054uvv_sk.lss outfile=./00031977054/uvot/image/sw00031977054uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977056/uvot/image/sw00031977056uvv_sk.img.gz outfile=./00031977056/uvot/image/sw00031977056uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977056/uvot/image/sw00031977056uvv_ex.img.gz outfile=./00031977056/uvot/image/sw00031977056uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977056/uvot/image/sw00031977056uvv_sk.img.gz outfile=./00031977056/uvot/image/sw00031977056uvv_sk.lss attfile=./00031977056/auxil/sw00031977056sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977056/uvot/image/sw00031977056uvv_sk.lss outfile=./00031977056/uvot/image/sw00031977056uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uvv_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uvv_ex.img.gz outfile=./00031977057/uvot/image/sw00031977057uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977057/uvot/image/sw00031977057uvv_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uvv_sk.lss attfile=./00031977057/auxil/sw00031977057sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uvv_sk.lss outfile=./00031977057/uvot/image/sw00031977057uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uvv_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uvv_ex.img.gz outfile=./00031977058/uvot/image/sw00031977058uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977058/uvot/image/sw00031977058uvv_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uvv_sk.lss attfile=./00031977058/auxil/sw00031977058sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uvv_sk.lss outfile=./00031977058/uvot/image/sw00031977058uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uvv_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uvv_ex.img.gz outfile=./00031977059/uvot/image/sw00031977059uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977059/uvot/image/sw00031977059uvv_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uvv_sk.lss attfile=./00031977059/auxil/sw00031977059sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uvv_sk.lss outfile=./00031977059/uvot/image/sw00031977059uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uvv_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uvv_ex.img.gz outfile=./00031977060/uvot/image/sw00031977060uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977060/uvot/image/sw00031977060uvv_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uvv_sk.lss attfile=./00031977060/auxil/sw00031977060sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uvv_sk.lss outfile=./00031977060/uvot/image/sw00031977060uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uvv_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uvv_ex.img.gz outfile=./00031977061/uvot/image/sw00031977061uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977061/uvot/image/sw00031977061uvv_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uvv_sk.lss attfile=./00031977061/auxil/sw00031977061sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uvv_sk.lss outfile=./00031977061/uvot/image/sw00031977061uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uvv_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uvv_ex.img.gz outfile=./00031977062/uvot/image/sw00031977062uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977062/uvot/image/sw00031977062uvv_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uvv_sk.lss attfile=./00031977062/auxil/sw00031977062sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uvv_sk.lss outfile=./00031977062/uvot/image/sw00031977062uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uvv_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uvv_ex.img.gz outfile=./00031977063/uvot/image/sw00031977063uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977063/uvot/image/sw00031977063uvv_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uvv_sk.lss attfile=./00031977063/auxil/sw00031977063sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uvv_sk.lss outfile=./00031977063/uvot/image/sw00031977063uvv_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001ubb_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001ubb_ex.img.gz outfile=./00031977001/uvot/image/sw00031977001ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977001/uvot/image/sw00031977001ubb_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001ubb_sk.lss attfile=./00031977001/auxil/sw00031977001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977001/uvot/image/sw00031977001ubb_sk.lss outfile=./00031977001/uvot/image/sw00031977001ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002ubb_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002ubb_ex.img.gz outfile=./00031977002/uvot/image/sw00031977002ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977002/uvot/image/sw00031977002ubb_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002ubb_sk.lss attfile=./00031977002/auxil/sw00031977002sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977002/uvot/image/sw00031977002ubb_sk.lss outfile=./00031977002/uvot/image/sw00031977002ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003ubb_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003ubb_ex.img.gz outfile=./00031977003/uvot/image/sw00031977003ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977003/uvot/image/sw00031977003ubb_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003ubb_sk.lss attfile=./00031977003/auxil/sw00031977003sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977003/uvot/image/sw00031977003ubb_sk.lss outfile=./00031977003/uvot/image/sw00031977003ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977004/uvot/image/sw00031977004ubb_sk.img.gz outfile=./00031977004/uvot/image/sw00031977004ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977004/uvot/image/sw00031977004ubb_ex.img.gz outfile=./00031977004/uvot/image/sw00031977004ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977004/uvot/image/sw00031977004ubb_sk.img.gz outfile=./00031977004/uvot/image/sw00031977004ubb_sk.lss attfile=./00031977004/auxil/sw00031977004sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977004/uvot/image/sw00031977004ubb_sk.lss outfile=./00031977004/uvot/image/sw00031977004ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007ubb_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007ubb_ex.img.gz outfile=./00031977007/uvot/image/sw00031977007ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977007/uvot/image/sw00031977007ubb_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007ubb_sk.lss attfile=./00031977007/auxil/sw00031977007sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977007/uvot/image/sw00031977007ubb_sk.lss outfile=./00031977007/uvot/image/sw00031977007ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008ubb_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008ubb_ex.img.gz outfile=./00031977008/uvot/image/sw00031977008ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977008/uvot/image/sw00031977008ubb_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008ubb_sk.lss attfile=./00031977008/auxil/sw00031977008sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977008/uvot/image/sw00031977008ubb_sk.lss outfile=./00031977008/uvot/image/sw00031977008ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977013/uvot/image/sw00031977013ubb_sk.img.gz outfile=./00031977013/uvot/image/sw00031977013ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977013/uvot/image/sw00031977013ubb_ex.img.gz outfile=./00031977013/uvot/image/sw00031977013ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977013/uvot/image/sw00031977013ubb_sk.img.gz outfile=./00031977013/uvot/image/sw00031977013ubb_sk.lss attfile=./00031977013/auxil/sw00031977013sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977013/uvot/image/sw00031977013ubb_sk.lss outfile=./00031977013/uvot/image/sw00031977013ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977015/uvot/image/sw00031977015ubb_sk.img.gz outfile=./00031977015/uvot/image/sw00031977015ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977015/uvot/image/sw00031977015ubb_ex.img.gz outfile=./00031977015/uvot/image/sw00031977015ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977015/uvot/image/sw00031977015ubb_sk.img.gz outfile=./00031977015/uvot/image/sw00031977015ubb_sk.lss attfile=./00031977015/auxil/sw00031977015sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977015/uvot/image/sw00031977015ubb_sk.lss outfile=./00031977015/uvot/image/sw00031977015ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977018/uvot/image/sw00031977018ubb_sk.img.gz outfile=./00031977018/uvot/image/sw00031977018ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977018/uvot/image/sw00031977018ubb_ex.img.gz outfile=./00031977018/uvot/image/sw00031977018ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977018/uvot/image/sw00031977018ubb_sk.img.gz outfile=./00031977018/uvot/image/sw00031977018ubb_sk.lss attfile=./00031977018/auxil/sw00031977018sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977018/uvot/image/sw00031977018ubb_sk.lss outfile=./00031977018/uvot/image/sw00031977018ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977021/uvot/image/sw00031977021ubb_sk.img.gz outfile=./00031977021/uvot/image/sw00031977021ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977021/uvot/image/sw00031977021ubb_ex.img.gz outfile=./00031977021/uvot/image/sw00031977021ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977021/uvot/image/sw00031977021ubb_sk.img.gz outfile=./00031977021/uvot/image/sw00031977021ubb_sk.lss attfile=./00031977021/auxil/sw00031977021sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977021/uvot/image/sw00031977021ubb_sk.lss outfile=./00031977021/uvot/image/sw00031977021ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977022/uvot/image/sw00031977022ubb_sk.img.gz outfile=./00031977022/uvot/image/sw00031977022ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977022/uvot/image/sw00031977022ubb_ex.img.gz outfile=./00031977022/uvot/image/sw00031977022ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977022/uvot/image/sw00031977022ubb_sk.img.gz outfile=./00031977022/uvot/image/sw00031977022ubb_sk.lss attfile=./00031977022/auxil/sw00031977022sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977022/uvot/image/sw00031977022ubb_sk.lss outfile=./00031977022/uvot/image/sw00031977022ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977026/uvot/image/sw00031977026ubb_sk.img.gz outfile=./00031977026/uvot/image/sw00031977026ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977026/uvot/image/sw00031977026ubb_ex.img.gz outfile=./00031977026/uvot/image/sw00031977026ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977026/uvot/image/sw00031977026ubb_sk.img.gz outfile=./00031977026/uvot/image/sw00031977026ubb_sk.lss attfile=./00031977026/auxil/sw00031977026sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977026/uvot/image/sw00031977026ubb_sk.lss outfile=./00031977026/uvot/image/sw00031977026ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977028/uvot/image/sw00031977028ubb_sk.img.gz outfile=./00031977028/uvot/image/sw00031977028ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977028/uvot/image/sw00031977028ubb_ex.img.gz outfile=./00031977028/uvot/image/sw00031977028ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977028/uvot/image/sw00031977028ubb_sk.img.gz outfile=./00031977028/uvot/image/sw00031977028ubb_sk.lss attfile=./00031977028/auxil/sw00031977028sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977028/uvot/image/sw00031977028ubb_sk.lss outfile=./00031977028/uvot/image/sw00031977028ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977029/uvot/image/sw00031977029ubb_sk.img.gz outfile=./00031977029/uvot/image/sw00031977029ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977029/uvot/image/sw00031977029ubb_ex.img.gz outfile=./00031977029/uvot/image/sw00031977029ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977029/uvot/image/sw00031977029ubb_sk.img.gz outfile=./00031977029/uvot/image/sw00031977029ubb_sk.lss attfile=./00031977029/auxil/sw00031977029sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977029/uvot/image/sw00031977029ubb_sk.lss outfile=./00031977029/uvot/image/sw00031977029ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977032/uvot/image/sw00031977032ubb_sk.img.gz outfile=./00031977032/uvot/image/sw00031977032ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977032/uvot/image/sw00031977032ubb_ex.img.gz outfile=./00031977032/uvot/image/sw00031977032ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977032/uvot/image/sw00031977032ubb_sk.img.gz outfile=./00031977032/uvot/image/sw00031977032ubb_sk.lss attfile=./00031977032/auxil/sw00031977032sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977032/uvot/image/sw00031977032ubb_sk.lss outfile=./00031977032/uvot/image/sw00031977032ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977033/uvot/image/sw00031977033ubb_sk.img.gz outfile=./00031977033/uvot/image/sw00031977033ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977033/uvot/image/sw00031977033ubb_ex.img.gz outfile=./00031977033/uvot/image/sw00031977033ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977033/uvot/image/sw00031977033ubb_sk.img.gz outfile=./00031977033/uvot/image/sw00031977033ubb_sk.lss attfile=./00031977033/auxil/sw00031977033sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977033/uvot/image/sw00031977033ubb_sk.lss outfile=./00031977033/uvot/image/sw00031977033ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977035/uvot/image/sw00031977035ubb_sk.img.gz outfile=./00031977035/uvot/image/sw00031977035ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977035/uvot/image/sw00031977035ubb_ex.img.gz outfile=./00031977035/uvot/image/sw00031977035ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977035/uvot/image/sw00031977035ubb_sk.img.gz outfile=./00031977035/uvot/image/sw00031977035ubb_sk.lss attfile=./00031977035/auxil/sw00031977035sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977035/uvot/image/sw00031977035ubb_sk.lss outfile=./00031977035/uvot/image/sw00031977035ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977037/uvot/image/sw00031977037ubb_sk.img.gz outfile=./00031977037/uvot/image/sw00031977037ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977037/uvot/image/sw00031977037ubb_ex.img.gz outfile=./00031977037/uvot/image/sw00031977037ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977037/uvot/image/sw00031977037ubb_sk.img.gz outfile=./00031977037/uvot/image/sw00031977037ubb_sk.lss attfile=./00031977037/auxil/sw00031977037sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977037/uvot/image/sw00031977037ubb_sk.lss outfile=./00031977037/uvot/image/sw00031977037ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977039/uvot/image/sw00031977039ubb_sk.img.gz outfile=./00031977039/uvot/image/sw00031977039ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977039/uvot/image/sw00031977039ubb_ex.img.gz outfile=./00031977039/uvot/image/sw00031977039ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977039/uvot/image/sw00031977039ubb_sk.img.gz outfile=./00031977039/uvot/image/sw00031977039ubb_sk.lss attfile=./00031977039/auxil/sw00031977039sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977039/uvot/image/sw00031977039ubb_sk.lss outfile=./00031977039/uvot/image/sw00031977039ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977041/uvot/image/sw00031977041ubb_sk.img.gz outfile=./00031977041/uvot/image/sw00031977041ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977041/uvot/image/sw00031977041ubb_ex.img.gz outfile=./00031977041/uvot/image/sw00031977041ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977041/uvot/image/sw00031977041ubb_sk.img.gz outfile=./00031977041/uvot/image/sw00031977041ubb_sk.lss attfile=./00031977041/auxil/sw00031977041sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977041/uvot/image/sw00031977041ubb_sk.lss outfile=./00031977041/uvot/image/sw00031977041ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977043/uvot/image/sw00031977043ubb_sk.img.gz outfile=./00031977043/uvot/image/sw00031977043ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977043/uvot/image/sw00031977043ubb_ex.img.gz outfile=./00031977043/uvot/image/sw00031977043ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977043/uvot/image/sw00031977043ubb_sk.img.gz outfile=./00031977043/uvot/image/sw00031977043ubb_sk.lss attfile=./00031977043/auxil/sw00031977043sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977043/uvot/image/sw00031977043ubb_sk.lss outfile=./00031977043/uvot/image/sw00031977043ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977045/uvot/image/sw00031977045ubb_sk.img.gz outfile=./00031977045/uvot/image/sw00031977045ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977045/uvot/image/sw00031977045ubb_ex.img.gz outfile=./00031977045/uvot/image/sw00031977045ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977045/uvot/image/sw00031977045ubb_sk.img.gz outfile=./00031977045/uvot/image/sw00031977045ubb_sk.lss attfile=./00031977045/auxil/sw00031977045sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977045/uvot/image/sw00031977045ubb_sk.lss outfile=./00031977045/uvot/image/sw00031977045ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977049/uvot/image/sw00031977049ubb_sk.img.gz outfile=./00031977049/uvot/image/sw00031977049ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977049/uvot/image/sw00031977049ubb_ex.img.gz outfile=./00031977049/uvot/image/sw00031977049ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977049/uvot/image/sw00031977049ubb_sk.img.gz outfile=./00031977049/uvot/image/sw00031977049ubb_sk.lss attfile=./00031977049/auxil/sw00031977049sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977049/uvot/image/sw00031977049ubb_sk.lss outfile=./00031977049/uvot/image/sw00031977049ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977051/uvot/image/sw00031977051ubb_sk.img.gz outfile=./00031977051/uvot/image/sw00031977051ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977051/uvot/image/sw00031977051ubb_ex.img.gz outfile=./00031977051/uvot/image/sw00031977051ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977051/uvot/image/sw00031977051ubb_sk.img.gz outfile=./00031977051/uvot/image/sw00031977051ubb_sk.lss attfile=./00031977051/auxil/sw00031977051sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977051/uvot/image/sw00031977051ubb_sk.lss outfile=./00031977051/uvot/image/sw00031977051ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977054/uvot/image/sw00031977054ubb_sk.img.gz outfile=./00031977054/uvot/image/sw00031977054ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977054/uvot/image/sw00031977054ubb_ex.img.gz outfile=./00031977054/uvot/image/sw00031977054ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977054/uvot/image/sw00031977054ubb_sk.img.gz outfile=./00031977054/uvot/image/sw00031977054ubb_sk.lss attfile=./00031977054/auxil/sw00031977054sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977054/uvot/image/sw00031977054ubb_sk.lss outfile=./00031977054/uvot/image/sw00031977054ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977056/uvot/image/sw00031977056ubb_sk.img.gz outfile=./00031977056/uvot/image/sw00031977056ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977056/uvot/image/sw00031977056ubb_ex.img.gz outfile=./00031977056/uvot/image/sw00031977056ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977056/uvot/image/sw00031977056ubb_sk.img.gz outfile=./00031977056/uvot/image/sw00031977056ubb_sk.lss attfile=./00031977056/auxil/sw00031977056sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977056/uvot/image/sw00031977056ubb_sk.lss outfile=./00031977056/uvot/image/sw00031977056ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057ubb_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057ubb_ex.img.gz outfile=./00031977057/uvot/image/sw00031977057ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977057/uvot/image/sw00031977057ubb_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057ubb_sk.lss attfile=./00031977057/auxil/sw00031977057sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977057/uvot/image/sw00031977057ubb_sk.lss outfile=./00031977057/uvot/image/sw00031977057ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058ubb_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058ubb_ex.img.gz outfile=./00031977058/uvot/image/sw00031977058ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977058/uvot/image/sw00031977058ubb_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058ubb_sk.lss attfile=./00031977058/auxil/sw00031977058sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977058/uvot/image/sw00031977058ubb_sk.lss outfile=./00031977058/uvot/image/sw00031977058ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059ubb_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059ubb_ex.img.gz outfile=./00031977059/uvot/image/sw00031977059ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977059/uvot/image/sw00031977059ubb_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059ubb_sk.lss attfile=./00031977059/auxil/sw00031977059sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977059/uvot/image/sw00031977059ubb_sk.lss outfile=./00031977059/uvot/image/sw00031977059ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060ubb_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060ubb_ex.img.gz outfile=./00031977060/uvot/image/sw00031977060ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977060/uvot/image/sw00031977060ubb_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060ubb_sk.lss attfile=./00031977060/auxil/sw00031977060sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977060/uvot/image/sw00031977060ubb_sk.lss outfile=./00031977060/uvot/image/sw00031977060ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061ubb_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061ubb_ex.img.gz outfile=./00031977061/uvot/image/sw00031977061ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977061/uvot/image/sw00031977061ubb_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061ubb_sk.lss attfile=./00031977061/auxil/sw00031977061sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977061/uvot/image/sw00031977061ubb_sk.lss outfile=./00031977061/uvot/image/sw00031977061ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062ubb_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062ubb_ex.img.gz outfile=./00031977062/uvot/image/sw00031977062ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977062/uvot/image/sw00031977062ubb_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062ubb_sk.lss attfile=./00031977062/auxil/sw00031977062sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977062/uvot/image/sw00031977062ubb_sk.lss outfile=./00031977062/uvot/image/sw00031977062ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063ubb_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063ubb_ex.img.gz outfile=./00031977063/uvot/image/sw00031977063ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977063/uvot/image/sw00031977063ubb_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063ubb_sk.lss attfile=./00031977063/auxil/sw00031977063sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977063/uvot/image/sw00031977063ubb_sk.lss outfile=./00031977063/uvot/image/sw00031977063ubb_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uuu_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uuu_ex.img.gz outfile=./00031977001/uvot/image/sw00031977001uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977001/uvot/image/sw00031977001uuu_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uuu_sk.lss attfile=./00031977001/auxil/sw00031977001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uuu_sk.lss outfile=./00031977001/uvot/image/sw00031977001uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uuu_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uuu_ex.img.gz outfile=./00031977002/uvot/image/sw00031977002uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977002/uvot/image/sw00031977002uuu_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uuu_sk.lss attfile=./00031977002/auxil/sw00031977002sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uuu_sk.lss outfile=./00031977002/uvot/image/sw00031977002uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uuu_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uuu_ex.img.gz outfile=./00031977003/uvot/image/sw00031977003uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977003/uvot/image/sw00031977003uuu_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uuu_sk.lss attfile=./00031977003/auxil/sw00031977003sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uuu_sk.lss outfile=./00031977003/uvot/image/sw00031977003uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977004/uvot/image/sw00031977004uuu_sk.img.gz outfile=./00031977004/uvot/image/sw00031977004uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977004/uvot/image/sw00031977004uuu_ex.img.gz outfile=./00031977004/uvot/image/sw00031977004uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977004/uvot/image/sw00031977004uuu_sk.img.gz outfile=./00031977004/uvot/image/sw00031977004uuu_sk.lss attfile=./00031977004/auxil/sw00031977004sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977004/uvot/image/sw00031977004uuu_sk.lss outfile=./00031977004/uvot/image/sw00031977004uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uuu_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uuu_ex.img.gz outfile=./00031977007/uvot/image/sw00031977007uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977007/uvot/image/sw00031977007uuu_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007uuu_sk.lss attfile=./00031977007/auxil/sw00031977007sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uuu_sk.lss outfile=./00031977007/uvot/image/sw00031977007uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uuu_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uuu_ex.img.gz outfile=./00031977008/uvot/image/sw00031977008uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977008/uvot/image/sw00031977008uuu_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uuu_sk.lss attfile=./00031977008/auxil/sw00031977008sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uuu_sk.lss outfile=./00031977008/uvot/image/sw00031977008uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977013/uvot/image/sw00031977013uuu_sk.img.gz outfile=./00031977013/uvot/image/sw00031977013uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977013/uvot/image/sw00031977013uuu_ex.img.gz outfile=./00031977013/uvot/image/sw00031977013uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977013/uvot/image/sw00031977013uuu_sk.img.gz outfile=./00031977013/uvot/image/sw00031977013uuu_sk.lss attfile=./00031977013/auxil/sw00031977013sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977013/uvot/image/sw00031977013uuu_sk.lss outfile=./00031977013/uvot/image/sw00031977013uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977015/uvot/image/sw00031977015uuu_sk.img.gz outfile=./00031977015/uvot/image/sw00031977015uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977015/uvot/image/sw00031977015uuu_ex.img.gz outfile=./00031977015/uvot/image/sw00031977015uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977015/uvot/image/sw00031977015uuu_sk.img.gz outfile=./00031977015/uvot/image/sw00031977015uuu_sk.lss attfile=./00031977015/auxil/sw00031977015sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977015/uvot/image/sw00031977015uuu_sk.lss outfile=./00031977015/uvot/image/sw00031977015uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977018/uvot/image/sw00031977018uuu_sk.img.gz outfile=./00031977018/uvot/image/sw00031977018uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977018/uvot/image/sw00031977018uuu_ex.img.gz outfile=./00031977018/uvot/image/sw00031977018uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977018/uvot/image/sw00031977018uuu_sk.img.gz outfile=./00031977018/uvot/image/sw00031977018uuu_sk.lss attfile=./00031977018/auxil/sw00031977018sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977018/uvot/image/sw00031977018uuu_sk.lss outfile=./00031977018/uvot/image/sw00031977018uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977021/uvot/image/sw00031977021uuu_sk.img.gz outfile=./00031977021/uvot/image/sw00031977021uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977021/uvot/image/sw00031977021uuu_ex.img.gz outfile=./00031977021/uvot/image/sw00031977021uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977021/uvot/image/sw00031977021uuu_sk.img.gz outfile=./00031977021/uvot/image/sw00031977021uuu_sk.lss attfile=./00031977021/auxil/sw00031977021sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977021/uvot/image/sw00031977021uuu_sk.lss outfile=./00031977021/uvot/image/sw00031977021uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977022/uvot/image/sw00031977022uuu_sk.img.gz outfile=./00031977022/uvot/image/sw00031977022uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977022/uvot/image/sw00031977022uuu_ex.img.gz outfile=./00031977022/uvot/image/sw00031977022uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977022/uvot/image/sw00031977022uuu_sk.img.gz outfile=./00031977022/uvot/image/sw00031977022uuu_sk.lss attfile=./00031977022/auxil/sw00031977022sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977022/uvot/image/sw00031977022uuu_sk.lss outfile=./00031977022/uvot/image/sw00031977022uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977026/uvot/image/sw00031977026uuu_sk.img.gz outfile=./00031977026/uvot/image/sw00031977026uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977026/uvot/image/sw00031977026uuu_ex.img.gz outfile=./00031977026/uvot/image/sw00031977026uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977026/uvot/image/sw00031977026uuu_sk.img.gz outfile=./00031977026/uvot/image/sw00031977026uuu_sk.lss attfile=./00031977026/auxil/sw00031977026sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977026/uvot/image/sw00031977026uuu_sk.lss outfile=./00031977026/uvot/image/sw00031977026uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977028/uvot/image/sw00031977028uuu_sk.img.gz outfile=./00031977028/uvot/image/sw00031977028uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977028/uvot/image/sw00031977028uuu_ex.img.gz outfile=./00031977028/uvot/image/sw00031977028uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977028/uvot/image/sw00031977028uuu_sk.img.gz outfile=./00031977028/uvot/image/sw00031977028uuu_sk.lss attfile=./00031977028/auxil/sw00031977028sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977028/uvot/image/sw00031977028uuu_sk.lss outfile=./00031977028/uvot/image/sw00031977028uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977029/uvot/image/sw00031977029uuu_sk.img.gz outfile=./00031977029/uvot/image/sw00031977029uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977029/uvot/image/sw00031977029uuu_ex.img.gz outfile=./00031977029/uvot/image/sw00031977029uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977029/uvot/image/sw00031977029uuu_sk.img.gz outfile=./00031977029/uvot/image/sw00031977029uuu_sk.lss attfile=./00031977029/auxil/sw00031977029sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977029/uvot/image/sw00031977029uuu_sk.lss outfile=./00031977029/uvot/image/sw00031977029uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977032/uvot/image/sw00031977032uuu_sk.img.gz outfile=./00031977032/uvot/image/sw00031977032uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977032/uvot/image/sw00031977032uuu_ex.img.gz outfile=./00031977032/uvot/image/sw00031977032uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977032/uvot/image/sw00031977032uuu_sk.img.gz outfile=./00031977032/uvot/image/sw00031977032uuu_sk.lss attfile=./00031977032/auxil/sw00031977032sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977032/uvot/image/sw00031977032uuu_sk.lss outfile=./00031977032/uvot/image/sw00031977032uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977033/uvot/image/sw00031977033uuu_sk.img.gz outfile=./00031977033/uvot/image/sw00031977033uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977033/uvot/image/sw00031977033uuu_ex.img.gz outfile=./00031977033/uvot/image/sw00031977033uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977033/uvot/image/sw00031977033uuu_sk.img.gz outfile=./00031977033/uvot/image/sw00031977033uuu_sk.lss attfile=./00031977033/auxil/sw00031977033sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977033/uvot/image/sw00031977033uuu_sk.lss outfile=./00031977033/uvot/image/sw00031977033uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977035/uvot/image/sw00031977035uuu_sk.img.gz outfile=./00031977035/uvot/image/sw00031977035uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977035/uvot/image/sw00031977035uuu_ex.img.gz outfile=./00031977035/uvot/image/sw00031977035uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977035/uvot/image/sw00031977035uuu_sk.img.gz outfile=./00031977035/uvot/image/sw00031977035uuu_sk.lss attfile=./00031977035/auxil/sw00031977035sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977035/uvot/image/sw00031977035uuu_sk.lss outfile=./00031977035/uvot/image/sw00031977035uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977037/uvot/image/sw00031977037uuu_sk.img.gz outfile=./00031977037/uvot/image/sw00031977037uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977037/uvot/image/sw00031977037uuu_ex.img.gz outfile=./00031977037/uvot/image/sw00031977037uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977037/uvot/image/sw00031977037uuu_sk.img.gz outfile=./00031977037/uvot/image/sw00031977037uuu_sk.lss attfile=./00031977037/auxil/sw00031977037sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977037/uvot/image/sw00031977037uuu_sk.lss outfile=./00031977037/uvot/image/sw00031977037uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977039/uvot/image/sw00031977039uuu_sk.img.gz outfile=./00031977039/uvot/image/sw00031977039uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977039/uvot/image/sw00031977039uuu_ex.img.gz outfile=./00031977039/uvot/image/sw00031977039uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977039/uvot/image/sw00031977039uuu_sk.img.gz outfile=./00031977039/uvot/image/sw00031977039uuu_sk.lss attfile=./00031977039/auxil/sw00031977039sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977039/uvot/image/sw00031977039uuu_sk.lss outfile=./00031977039/uvot/image/sw00031977039uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977041/uvot/image/sw00031977041uuu_sk.img.gz outfile=./00031977041/uvot/image/sw00031977041uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977041/uvot/image/sw00031977041uuu_ex.img.gz outfile=./00031977041/uvot/image/sw00031977041uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977041/uvot/image/sw00031977041uuu_sk.img.gz outfile=./00031977041/uvot/image/sw00031977041uuu_sk.lss attfile=./00031977041/auxil/sw00031977041sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977041/uvot/image/sw00031977041uuu_sk.lss outfile=./00031977041/uvot/image/sw00031977041uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977043/uvot/image/sw00031977043uuu_sk.img.gz outfile=./00031977043/uvot/image/sw00031977043uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977043/uvot/image/sw00031977043uuu_ex.img.gz outfile=./00031977043/uvot/image/sw00031977043uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977043/uvot/image/sw00031977043uuu_sk.img.gz outfile=./00031977043/uvot/image/sw00031977043uuu_sk.lss attfile=./00031977043/auxil/sw00031977043sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977043/uvot/image/sw00031977043uuu_sk.lss outfile=./00031977043/uvot/image/sw00031977043uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977045/uvot/image/sw00031977045uuu_sk.img.gz outfile=./00031977045/uvot/image/sw00031977045uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977045/uvot/image/sw00031977045uuu_ex.img.gz outfile=./00031977045/uvot/image/sw00031977045uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977045/uvot/image/sw00031977045uuu_sk.img.gz outfile=./00031977045/uvot/image/sw00031977045uuu_sk.lss attfile=./00031977045/auxil/sw00031977045sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977045/uvot/image/sw00031977045uuu_sk.lss outfile=./00031977045/uvot/image/sw00031977045uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977049/uvot/image/sw00031977049uuu_sk.img.gz outfile=./00031977049/uvot/image/sw00031977049uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977049/uvot/image/sw00031977049uuu_ex.img.gz outfile=./00031977049/uvot/image/sw00031977049uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977049/uvot/image/sw00031977049uuu_sk.img.gz outfile=./00031977049/uvot/image/sw00031977049uuu_sk.lss attfile=./00031977049/auxil/sw00031977049sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977049/uvot/image/sw00031977049uuu_sk.lss outfile=./00031977049/uvot/image/sw00031977049uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977051/uvot/image/sw00031977051uuu_sk.img.gz outfile=./00031977051/uvot/image/sw00031977051uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977051/uvot/image/sw00031977051uuu_ex.img.gz outfile=./00031977051/uvot/image/sw00031977051uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977051/uvot/image/sw00031977051uuu_sk.img.gz outfile=./00031977051/uvot/image/sw00031977051uuu_sk.lss attfile=./00031977051/auxil/sw00031977051sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977051/uvot/image/sw00031977051uuu_sk.lss outfile=./00031977051/uvot/image/sw00031977051uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977054/uvot/image/sw00031977054uuu_sk.img.gz outfile=./00031977054/uvot/image/sw00031977054uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977054/uvot/image/sw00031977054uuu_ex.img.gz outfile=./00031977054/uvot/image/sw00031977054uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977054/uvot/image/sw00031977054uuu_sk.img.gz outfile=./00031977054/uvot/image/sw00031977054uuu_sk.lss attfile=./00031977054/auxil/sw00031977054sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977054/uvot/image/sw00031977054uuu_sk.lss outfile=./00031977054/uvot/image/sw00031977054uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977056/uvot/image/sw00031977056uuu_sk.img.gz outfile=./00031977056/uvot/image/sw00031977056uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977056/uvot/image/sw00031977056uuu_ex.img.gz outfile=./00031977056/uvot/image/sw00031977056uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977056/uvot/image/sw00031977056uuu_sk.img.gz outfile=./00031977056/uvot/image/sw00031977056uuu_sk.lss attfile=./00031977056/auxil/sw00031977056sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977056/uvot/image/sw00031977056uuu_sk.lss outfile=./00031977056/uvot/image/sw00031977056uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uuu_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uuu_ex.img.gz outfile=./00031977057/uvot/image/sw00031977057uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977057/uvot/image/sw00031977057uuu_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uuu_sk.lss attfile=./00031977057/auxil/sw00031977057sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uuu_sk.lss outfile=./00031977057/uvot/image/sw00031977057uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uuu_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uuu_ex.img.gz outfile=./00031977058/uvot/image/sw00031977058uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977058/uvot/image/sw00031977058uuu_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uuu_sk.lss attfile=./00031977058/auxil/sw00031977058sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uuu_sk.lss outfile=./00031977058/uvot/image/sw00031977058uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uuu_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uuu_ex.img.gz outfile=./00031977059/uvot/image/sw00031977059uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977059/uvot/image/sw00031977059uuu_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uuu_sk.lss attfile=./00031977059/auxil/sw00031977059sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uuu_sk.lss outfile=./00031977059/uvot/image/sw00031977059uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uuu_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uuu_ex.img.gz outfile=./00031977060/uvot/image/sw00031977060uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977060/uvot/image/sw00031977060uuu_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uuu_sk.lss attfile=./00031977060/auxil/sw00031977060sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uuu_sk.lss outfile=./00031977060/uvot/image/sw00031977060uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uuu_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uuu_ex.img.gz outfile=./00031977061/uvot/image/sw00031977061uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977061/uvot/image/sw00031977061uuu_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uuu_sk.lss attfile=./00031977061/auxil/sw00031977061sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uuu_sk.lss outfile=./00031977061/uvot/image/sw00031977061uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uuu_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uuu_ex.img.gz outfile=./00031977062/uvot/image/sw00031977062uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977062/uvot/image/sw00031977062uuu_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uuu_sk.lss attfile=./00031977062/auxil/sw00031977062sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uuu_sk.lss outfile=./00031977062/uvot/image/sw00031977062uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uuu_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uuu_ex.img.gz outfile=./00031977063/uvot/image/sw00031977063uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977063/uvot/image/sw00031977063uuu_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uuu_sk.lss attfile=./00031977063/auxil/sw00031977063sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uuu_sk.lss outfile=./00031977063/uvot/image/sw00031977063uuu_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uw1_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uw1_ex.img.gz outfile=./00031977001/uvot/image/sw00031977001uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977001/uvot/image/sw00031977001uw1_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uw1_sk.lss attfile=./00031977001/auxil/sw00031977001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uw1_sk.lss outfile=./00031977001/uvot/image/sw00031977001uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uw1_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uw1_ex.img.gz outfile=./00031977002/uvot/image/sw00031977002uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977002/uvot/image/sw00031977002uw1_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uw1_sk.lss attfile=./00031977002/auxil/sw00031977002sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uw1_sk.lss outfile=./00031977002/uvot/image/sw00031977002uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uw1_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uw1_ex.img.gz outfile=./00031977003/uvot/image/sw00031977003uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977003/uvot/image/sw00031977003uw1_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uw1_sk.lss attfile=./00031977003/auxil/sw00031977003sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uw1_sk.lss outfile=./00031977003/uvot/image/sw00031977003uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977005/uvot/image/sw00031977005uw1_sk.img.gz outfile=./00031977005/uvot/image/sw00031977005uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977005/uvot/image/sw00031977005uw1_ex.img.gz outfile=./00031977005/uvot/image/sw00031977005uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977005/uvot/image/sw00031977005uw1_sk.img.gz outfile=./00031977005/uvot/image/sw00031977005uw1_sk.lss attfile=./00031977005/auxil/sw00031977005sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977005/uvot/image/sw00031977005uw1_sk.lss outfile=./00031977005/uvot/image/sw00031977005uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uw1_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uw1_ex.img.gz outfile=./00031977007/uvot/image/sw00031977007uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977007/uvot/image/sw00031977007uw1_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007uw1_sk.lss attfile=./00031977007/auxil/sw00031977007sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uw1_sk.lss outfile=./00031977007/uvot/image/sw00031977007uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uw1_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uw1_ex.img.gz outfile=./00031977008/uvot/image/sw00031977008uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977008/uvot/image/sw00031977008uw1_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uw1_sk.lss attfile=./00031977008/auxil/sw00031977008sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uw1_sk.lss outfile=./00031977008/uvot/image/sw00031977008uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977012/uvot/image/sw00031977012uw1_sk.img.gz outfile=./00031977012/uvot/image/sw00031977012uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977012/uvot/image/sw00031977012uw1_ex.img.gz outfile=./00031977012/uvot/image/sw00031977012uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977012/uvot/image/sw00031977012uw1_sk.img.gz outfile=./00031977012/uvot/image/sw00031977012uw1_sk.lss attfile=./00031977012/auxil/sw00031977012sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977012/uvot/image/sw00031977012uw1_sk.lss outfile=./00031977012/uvot/image/sw00031977012uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977016/uvot/image/sw00031977016uw1_sk.img.gz outfile=./00031977016/uvot/image/sw00031977016uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977016/uvot/image/sw00031977016uw1_ex.img.gz outfile=./00031977016/uvot/image/sw00031977016uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977016/uvot/image/sw00031977016uw1_sk.img.gz outfile=./00031977016/uvot/image/sw00031977016uw1_sk.lss attfile=./00031977016/auxil/sw00031977016sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977016/uvot/image/sw00031977016uw1_sk.lss outfile=./00031977016/uvot/image/sw00031977016uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977017/uvot/image/sw00031977017uw1_sk.img.gz outfile=./00031977017/uvot/image/sw00031977017uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977017/uvot/image/sw00031977017uw1_ex.img.gz outfile=./00031977017/uvot/image/sw00031977017uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977017/uvot/image/sw00031977017uw1_sk.img.gz outfile=./00031977017/uvot/image/sw00031977017uw1_sk.lss attfile=./00031977017/auxil/sw00031977017sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977017/uvot/image/sw00031977017uw1_sk.lss outfile=./00031977017/uvot/image/sw00031977017uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977020/uvot/image/sw00031977020uw1_sk.img.gz outfile=./00031977020/uvot/image/sw00031977020uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977020/uvot/image/sw00031977020uw1_ex.img.gz outfile=./00031977020/uvot/image/sw00031977020uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977020/uvot/image/sw00031977020uw1_sk.img.gz outfile=./00031977020/uvot/image/sw00031977020uw1_sk.lss attfile=./00031977020/auxil/sw00031977020sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977020/uvot/image/sw00031977020uw1_sk.lss outfile=./00031977020/uvot/image/sw00031977020uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977023/uvot/image/sw00031977023uw1_sk.img.gz outfile=./00031977023/uvot/image/sw00031977023uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977023/uvot/image/sw00031977023uw1_ex.img.gz outfile=./00031977023/uvot/image/sw00031977023uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977023/uvot/image/sw00031977023uw1_sk.img.gz outfile=./00031977023/uvot/image/sw00031977023uw1_sk.lss attfile=./00031977023/auxil/sw00031977023sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977023/uvot/image/sw00031977023uw1_sk.lss outfile=./00031977023/uvot/image/sw00031977023uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977025/uvot/image/sw00031977025uw1_sk.img.gz outfile=./00031977025/uvot/image/sw00031977025uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977025/uvot/image/sw00031977025uw1_ex.img.gz outfile=./00031977025/uvot/image/sw00031977025uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977025/uvot/image/sw00031977025uw1_sk.img.gz outfile=./00031977025/uvot/image/sw00031977025uw1_sk.lss attfile=./00031977025/auxil/sw00031977025sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977025/uvot/image/sw00031977025uw1_sk.lss outfile=./00031977025/uvot/image/sw00031977025uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977030/uvot/image/sw00031977030uw1_sk.img.gz outfile=./00031977030/uvot/image/sw00031977030uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977030/uvot/image/sw00031977030uw1_ex.img.gz outfile=./00031977030/uvot/image/sw00031977030uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977030/uvot/image/sw00031977030uw1_sk.img.gz outfile=./00031977030/uvot/image/sw00031977030uw1_sk.lss attfile=./00031977030/auxil/sw00031977030sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977030/uvot/image/sw00031977030uw1_sk.lss outfile=./00031977030/uvot/image/sw00031977030uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977031/uvot/image/sw00031977031uw1_sk.img.gz outfile=./00031977031/uvot/image/sw00031977031uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977031/uvot/image/sw00031977031uw1_ex.img.gz outfile=./00031977031/uvot/image/sw00031977031uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977031/uvot/image/sw00031977031uw1_sk.img.gz outfile=./00031977031/uvot/image/sw00031977031uw1_sk.lss attfile=./00031977031/auxil/sw00031977031sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977031/uvot/image/sw00031977031uw1_sk.lss outfile=./00031977031/uvot/image/sw00031977031uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977034/uvot/image/sw00031977034uw1_sk.img.gz outfile=./00031977034/uvot/image/sw00031977034uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977034/uvot/image/sw00031977034uw1_ex.img.gz outfile=./00031977034/uvot/image/sw00031977034uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977034/uvot/image/sw00031977034uw1_sk.img.gz outfile=./00031977034/uvot/image/sw00031977034uw1_sk.lss attfile=./00031977034/auxil/sw00031977034sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977034/uvot/image/sw00031977034uw1_sk.lss outfile=./00031977034/uvot/image/sw00031977034uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977036/uvot/image/sw00031977036uw1_sk.img.gz outfile=./00031977036/uvot/image/sw00031977036uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977036/uvot/image/sw00031977036uw1_ex.img.gz outfile=./00031977036/uvot/image/sw00031977036uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977036/uvot/image/sw00031977036uw1_sk.img.gz outfile=./00031977036/uvot/image/sw00031977036uw1_sk.lss attfile=./00031977036/auxil/sw00031977036sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977036/uvot/image/sw00031977036uw1_sk.lss outfile=./00031977036/uvot/image/sw00031977036uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977038/uvot/image/sw00031977038uw1_sk.img.gz outfile=./00031977038/uvot/image/sw00031977038uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977038/uvot/image/sw00031977038uw1_ex.img.gz outfile=./00031977038/uvot/image/sw00031977038uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977038/uvot/image/sw00031977038uw1_sk.img.gz outfile=./00031977038/uvot/image/sw00031977038uw1_sk.lss attfile=./00031977038/auxil/sw00031977038sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977038/uvot/image/sw00031977038uw1_sk.lss outfile=./00031977038/uvot/image/sw00031977038uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977040/uvot/image/sw00031977040uw1_sk.img.gz outfile=./00031977040/uvot/image/sw00031977040uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977040/uvot/image/sw00031977040uw1_ex.img.gz outfile=./00031977040/uvot/image/sw00031977040uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977040/uvot/image/sw00031977040uw1_sk.img.gz outfile=./00031977040/uvot/image/sw00031977040uw1_sk.lss attfile=./00031977040/auxil/sw00031977040sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977040/uvot/image/sw00031977040uw1_sk.lss outfile=./00031977040/uvot/image/sw00031977040uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977042/uvot/image/sw00031977042uw1_sk.img.gz outfile=./00031977042/uvot/image/sw00031977042uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977042/uvot/image/sw00031977042uw1_ex.img.gz outfile=./00031977042/uvot/image/sw00031977042uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977042/uvot/image/sw00031977042uw1_sk.img.gz outfile=./00031977042/uvot/image/sw00031977042uw1_sk.lss attfile=./00031977042/auxil/sw00031977042sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977042/uvot/image/sw00031977042uw1_sk.lss outfile=./00031977042/uvot/image/sw00031977042uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977044/uvot/image/sw00031977044uw1_sk.img.gz outfile=./00031977044/uvot/image/sw00031977044uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977044/uvot/image/sw00031977044uw1_ex.img.gz outfile=./00031977044/uvot/image/sw00031977044uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977044/uvot/image/sw00031977044uw1_sk.img.gz outfile=./00031977044/uvot/image/sw00031977044uw1_sk.lss attfile=./00031977044/auxil/sw00031977044sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977044/uvot/image/sw00031977044uw1_sk.lss outfile=./00031977044/uvot/image/sw00031977044uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977048/uvot/image/sw00031977048uw1_sk.img.gz outfile=./00031977048/uvot/image/sw00031977048uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977048/uvot/image/sw00031977048uw1_ex.img.gz outfile=./00031977048/uvot/image/sw00031977048uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977048/uvot/image/sw00031977048uw1_sk.img.gz outfile=./00031977048/uvot/image/sw00031977048uw1_sk.lss attfile=./00031977048/auxil/sw00031977048sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977048/uvot/image/sw00031977048uw1_sk.lss outfile=./00031977048/uvot/image/sw00031977048uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977050/uvot/image/sw00031977050uw1_sk.img.gz outfile=./00031977050/uvot/image/sw00031977050uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977050/uvot/image/sw00031977050uw1_ex.img.gz outfile=./00031977050/uvot/image/sw00031977050uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977050/uvot/image/sw00031977050uw1_sk.img.gz outfile=./00031977050/uvot/image/sw00031977050uw1_sk.lss attfile=./00031977050/auxil/sw00031977050sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977050/uvot/image/sw00031977050uw1_sk.lss outfile=./00031977050/uvot/image/sw00031977050uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977052/uvot/image/sw00031977052uw1_sk.img.gz outfile=./00031977052/uvot/image/sw00031977052uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977052/uvot/image/sw00031977052uw1_ex.img.gz outfile=./00031977052/uvot/image/sw00031977052uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977052/uvot/image/sw00031977052uw1_sk.img.gz outfile=./00031977052/uvot/image/sw00031977052uw1_sk.lss attfile=./00031977052/auxil/sw00031977052sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977052/uvot/image/sw00031977052uw1_sk.lss outfile=./00031977052/uvot/image/sw00031977052uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977053/uvot/image/sw00031977053uw1_sk.img.gz outfile=./00031977053/uvot/image/sw00031977053uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977053/uvot/image/sw00031977053uw1_ex.img.gz outfile=./00031977053/uvot/image/sw00031977053uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977053/uvot/image/sw00031977053uw1_sk.img.gz outfile=./00031977053/uvot/image/sw00031977053uw1_sk.lss attfile=./00031977053/auxil/sw00031977053sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977053/uvot/image/sw00031977053uw1_sk.lss outfile=./00031977053/uvot/image/sw00031977053uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977055/uvot/image/sw00031977055uw1_sk.img.gz outfile=./00031977055/uvot/image/sw00031977055uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977055/uvot/image/sw00031977055uw1_ex.img.gz outfile=./00031977055/uvot/image/sw00031977055uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977055/uvot/image/sw00031977055uw1_sk.img.gz outfile=./00031977055/uvot/image/sw00031977055uw1_sk.lss attfile=./00031977055/auxil/sw00031977055sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977055/uvot/image/sw00031977055uw1_sk.lss outfile=./00031977055/uvot/image/sw00031977055uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uw1_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uw1_ex.img.gz outfile=./00031977057/uvot/image/sw00031977057uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977057/uvot/image/sw00031977057uw1_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uw1_sk.lss attfile=./00031977057/auxil/sw00031977057sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uw1_sk.lss outfile=./00031977057/uvot/image/sw00031977057uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uw1_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uw1_ex.img.gz outfile=./00031977058/uvot/image/sw00031977058uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977058/uvot/image/sw00031977058uw1_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uw1_sk.lss attfile=./00031977058/auxil/sw00031977058sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uw1_sk.lss outfile=./00031977058/uvot/image/sw00031977058uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uw1_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uw1_ex.img.gz outfile=./00031977059/uvot/image/sw00031977059uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977059/uvot/image/sw00031977059uw1_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uw1_sk.lss attfile=./00031977059/auxil/sw00031977059sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uw1_sk.lss outfile=./00031977059/uvot/image/sw00031977059uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uw1_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uw1_ex.img.gz outfile=./00031977060/uvot/image/sw00031977060uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977060/uvot/image/sw00031977060uw1_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uw1_sk.lss attfile=./00031977060/auxil/sw00031977060sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uw1_sk.lss outfile=./00031977060/uvot/image/sw00031977060uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uw1_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uw1_ex.img.gz outfile=./00031977061/uvot/image/sw00031977061uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977061/uvot/image/sw00031977061uw1_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uw1_sk.lss attfile=./00031977061/auxil/sw00031977061sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uw1_sk.lss outfile=./00031977061/uvot/image/sw00031977061uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uw1_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uw1_ex.img.gz outfile=./00031977062/uvot/image/sw00031977062uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977062/uvot/image/sw00031977062uw1_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uw1_sk.lss attfile=./00031977062/auxil/sw00031977062sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uw1_sk.lss outfile=./00031977062/uvot/image/sw00031977062uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uw1_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uw1_ex.img.gz outfile=./00031977063/uvot/image/sw00031977063uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977063/uvot/image/sw00031977063uw1_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uw1_sk.lss attfile=./00031977063/auxil/sw00031977063sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uw1_sk.lss outfile=./00031977063/uvot/image/sw00031977063uw1_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001um2_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001um2_ex.img.gz outfile=./00031977001/uvot/image/sw00031977001um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977001/uvot/image/sw00031977001um2_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001um2_sk.lss attfile=./00031977001/auxil/sw00031977001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977001/uvot/image/sw00031977001um2_sk.lss outfile=./00031977001/uvot/image/sw00031977001um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003um2_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003um2_ex.img.gz outfile=./00031977003/uvot/image/sw00031977003um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977003/uvot/image/sw00031977003um2_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003um2_sk.lss attfile=./00031977003/auxil/sw00031977003sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977003/uvot/image/sw00031977003um2_sk.lss outfile=./00031977003/uvot/image/sw00031977003um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977005/uvot/image/sw00031977005um2_sk.img.gz outfile=./00031977005/uvot/image/sw00031977005um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977005/uvot/image/sw00031977005um2_ex.img.gz outfile=./00031977005/uvot/image/sw00031977005um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977005/uvot/image/sw00031977005um2_sk.img.gz outfile=./00031977005/uvot/image/sw00031977005um2_sk.lss attfile=./00031977005/auxil/sw00031977005sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977005/uvot/image/sw00031977005um2_sk.lss outfile=./00031977005/uvot/image/sw00031977005um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008um2_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008um2_ex.img.gz outfile=./00031977008/uvot/image/sw00031977008um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977008/uvot/image/sw00031977008um2_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008um2_sk.lss attfile=./00031977008/auxil/sw00031977008sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977008/uvot/image/sw00031977008um2_sk.lss outfile=./00031977008/uvot/image/sw00031977008um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977012/uvot/image/sw00031977012um2_sk.img.gz outfile=./00031977012/uvot/image/sw00031977012um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977012/uvot/image/sw00031977012um2_ex.img.gz outfile=./00031977012/uvot/image/sw00031977012um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977012/uvot/image/sw00031977012um2_sk.img.gz outfile=./00031977012/uvot/image/sw00031977012um2_sk.lss attfile=./00031977012/auxil/sw00031977012sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977012/uvot/image/sw00031977012um2_sk.lss outfile=./00031977012/uvot/image/sw00031977012um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977016/uvot/image/sw00031977016um2_sk.img.gz outfile=./00031977016/uvot/image/sw00031977016um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977016/uvot/image/sw00031977016um2_ex.img.gz outfile=./00031977016/uvot/image/sw00031977016um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977016/uvot/image/sw00031977016um2_sk.img.gz outfile=./00031977016/uvot/image/sw00031977016um2_sk.lss attfile=./00031977016/auxil/sw00031977016sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977016/uvot/image/sw00031977016um2_sk.lss outfile=./00031977016/uvot/image/sw00031977016um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977017/uvot/image/sw00031977017um2_sk.img.gz outfile=./00031977017/uvot/image/sw00031977017um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977017/uvot/image/sw00031977017um2_ex.img.gz outfile=./00031977017/uvot/image/sw00031977017um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977017/uvot/image/sw00031977017um2_sk.img.gz outfile=./00031977017/uvot/image/sw00031977017um2_sk.lss attfile=./00031977017/auxil/sw00031977017sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977017/uvot/image/sw00031977017um2_sk.lss outfile=./00031977017/uvot/image/sw00031977017um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977020/uvot/image/sw00031977020um2_sk.img.gz outfile=./00031977020/uvot/image/sw00031977020um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977020/uvot/image/sw00031977020um2_ex.img.gz outfile=./00031977020/uvot/image/sw00031977020um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977020/uvot/image/sw00031977020um2_sk.img.gz outfile=./00031977020/uvot/image/sw00031977020um2_sk.lss attfile=./00031977020/auxil/sw00031977020sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977020/uvot/image/sw00031977020um2_sk.lss outfile=./00031977020/uvot/image/sw00031977020um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977023/uvot/image/sw00031977023um2_sk.img.gz outfile=./00031977023/uvot/image/sw00031977023um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977023/uvot/image/sw00031977023um2_ex.img.gz outfile=./00031977023/uvot/image/sw00031977023um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977023/uvot/image/sw00031977023um2_sk.img.gz outfile=./00031977023/uvot/image/sw00031977023um2_sk.lss attfile=./00031977023/auxil/sw00031977023sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977023/uvot/image/sw00031977023um2_sk.lss outfile=./00031977023/uvot/image/sw00031977023um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977025/uvot/image/sw00031977025um2_sk.img.gz outfile=./00031977025/uvot/image/sw00031977025um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977025/uvot/image/sw00031977025um2_ex.img.gz outfile=./00031977025/uvot/image/sw00031977025um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977025/uvot/image/sw00031977025um2_sk.img.gz outfile=./00031977025/uvot/image/sw00031977025um2_sk.lss attfile=./00031977025/auxil/sw00031977025sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977025/uvot/image/sw00031977025um2_sk.lss outfile=./00031977025/uvot/image/sw00031977025um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977027/uvot/image/sw00031977027um2_sk.img.gz outfile=./00031977027/uvot/image/sw00031977027um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977027/uvot/image/sw00031977027um2_ex.img.gz outfile=./00031977027/uvot/image/sw00031977027um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977027/uvot/image/sw00031977027um2_sk.img.gz outfile=./00031977027/uvot/image/sw00031977027um2_sk.lss attfile=./00031977027/auxil/sw00031977027sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977027/uvot/image/sw00031977027um2_sk.lss outfile=./00031977027/uvot/image/sw00031977027um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977030/uvot/image/sw00031977030um2_sk.img.gz outfile=./00031977030/uvot/image/sw00031977030um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977030/uvot/image/sw00031977030um2_ex.img.gz outfile=./00031977030/uvot/image/sw00031977030um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977030/uvot/image/sw00031977030um2_sk.img.gz outfile=./00031977030/uvot/image/sw00031977030um2_sk.lss attfile=./00031977030/auxil/sw00031977030sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977030/uvot/image/sw00031977030um2_sk.lss outfile=./00031977030/uvot/image/sw00031977030um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977031/uvot/image/sw00031977031um2_sk.img.gz outfile=./00031977031/uvot/image/sw00031977031um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977031/uvot/image/sw00031977031um2_ex.img.gz outfile=./00031977031/uvot/image/sw00031977031um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977031/uvot/image/sw00031977031um2_sk.img.gz outfile=./00031977031/uvot/image/sw00031977031um2_sk.lss attfile=./00031977031/auxil/sw00031977031sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977031/uvot/image/sw00031977031um2_sk.lss outfile=./00031977031/uvot/image/sw00031977031um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977034/uvot/image/sw00031977034um2_sk.img.gz outfile=./00031977034/uvot/image/sw00031977034um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977034/uvot/image/sw00031977034um2_ex.img.gz outfile=./00031977034/uvot/image/sw00031977034um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977034/uvot/image/sw00031977034um2_sk.img.gz outfile=./00031977034/uvot/image/sw00031977034um2_sk.lss attfile=./00031977034/auxil/sw00031977034sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977034/uvot/image/sw00031977034um2_sk.lss outfile=./00031977034/uvot/image/sw00031977034um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977036/uvot/image/sw00031977036um2_sk.img.gz outfile=./00031977036/uvot/image/sw00031977036um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977036/uvot/image/sw00031977036um2_ex.img.gz outfile=./00031977036/uvot/image/sw00031977036um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977036/uvot/image/sw00031977036um2_sk.img.gz outfile=./00031977036/uvot/image/sw00031977036um2_sk.lss attfile=./00031977036/auxil/sw00031977036sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977036/uvot/image/sw00031977036um2_sk.lss outfile=./00031977036/uvot/image/sw00031977036um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977038/uvot/image/sw00031977038um2_sk.img.gz outfile=./00031977038/uvot/image/sw00031977038um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977038/uvot/image/sw00031977038um2_ex.img.gz outfile=./00031977038/uvot/image/sw00031977038um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977038/uvot/image/sw00031977038um2_sk.img.gz outfile=./00031977038/uvot/image/sw00031977038um2_sk.lss attfile=./00031977038/auxil/sw00031977038sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977038/uvot/image/sw00031977038um2_sk.lss outfile=./00031977038/uvot/image/sw00031977038um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977040/uvot/image/sw00031977040um2_sk.img.gz outfile=./00031977040/uvot/image/sw00031977040um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977040/uvot/image/sw00031977040um2_ex.img.gz outfile=./00031977040/uvot/image/sw00031977040um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977040/uvot/image/sw00031977040um2_sk.img.gz outfile=./00031977040/uvot/image/sw00031977040um2_sk.lss attfile=./00031977040/auxil/sw00031977040sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977040/uvot/image/sw00031977040um2_sk.lss outfile=./00031977040/uvot/image/sw00031977040um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977042/uvot/image/sw00031977042um2_sk.img.gz outfile=./00031977042/uvot/image/sw00031977042um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977042/uvot/image/sw00031977042um2_ex.img.gz outfile=./00031977042/uvot/image/sw00031977042um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977042/uvot/image/sw00031977042um2_sk.img.gz outfile=./00031977042/uvot/image/sw00031977042um2_sk.lss attfile=./00031977042/auxil/sw00031977042sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977042/uvot/image/sw00031977042um2_sk.lss outfile=./00031977042/uvot/image/sw00031977042um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977044/uvot/image/sw00031977044um2_sk.img.gz outfile=./00031977044/uvot/image/sw00031977044um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977044/uvot/image/sw00031977044um2_ex.img.gz outfile=./00031977044/uvot/image/sw00031977044um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977044/uvot/image/sw00031977044um2_sk.img.gz outfile=./00031977044/uvot/image/sw00031977044um2_sk.lss attfile=./00031977044/auxil/sw00031977044sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977044/uvot/image/sw00031977044um2_sk.lss outfile=./00031977044/uvot/image/sw00031977044um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977048/uvot/image/sw00031977048um2_sk.img.gz outfile=./00031977048/uvot/image/sw00031977048um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977048/uvot/image/sw00031977048um2_ex.img.gz outfile=./00031977048/uvot/image/sw00031977048um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977048/uvot/image/sw00031977048um2_sk.img.gz outfile=./00031977048/uvot/image/sw00031977048um2_sk.lss attfile=./00031977048/auxil/sw00031977048sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977048/uvot/image/sw00031977048um2_sk.lss outfile=./00031977048/uvot/image/sw00031977048um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977050/uvot/image/sw00031977050um2_sk.img.gz outfile=./00031977050/uvot/image/sw00031977050um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977050/uvot/image/sw00031977050um2_ex.img.gz outfile=./00031977050/uvot/image/sw00031977050um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977050/uvot/image/sw00031977050um2_sk.img.gz outfile=./00031977050/uvot/image/sw00031977050um2_sk.lss attfile=./00031977050/auxil/sw00031977050sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977050/uvot/image/sw00031977050um2_sk.lss outfile=./00031977050/uvot/image/sw00031977050um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977052/uvot/image/sw00031977052um2_sk.img.gz outfile=./00031977052/uvot/image/sw00031977052um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977052/uvot/image/sw00031977052um2_ex.img.gz outfile=./00031977052/uvot/image/sw00031977052um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977052/uvot/image/sw00031977052um2_sk.img.gz outfile=./00031977052/uvot/image/sw00031977052um2_sk.lss attfile=./00031977052/auxil/sw00031977052sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977052/uvot/image/sw00031977052um2_sk.lss outfile=./00031977052/uvot/image/sw00031977052um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977053/uvot/image/sw00031977053um2_sk.img.gz outfile=./00031977053/uvot/image/sw00031977053um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977053/uvot/image/sw00031977053um2_ex.img.gz outfile=./00031977053/uvot/image/sw00031977053um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977053/uvot/image/sw00031977053um2_sk.img.gz outfile=./00031977053/uvot/image/sw00031977053um2_sk.lss attfile=./00031977053/auxil/sw00031977053sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977053/uvot/image/sw00031977053um2_sk.lss outfile=./00031977053/uvot/image/sw00031977053um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977055/uvot/image/sw00031977055um2_sk.img.gz outfile=./00031977055/uvot/image/sw00031977055um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977055/uvot/image/sw00031977055um2_ex.img.gz outfile=./00031977055/uvot/image/sw00031977055um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977055/uvot/image/sw00031977055um2_sk.img.gz outfile=./00031977055/uvot/image/sw00031977055um2_sk.lss attfile=./00031977055/auxil/sw00031977055sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977055/uvot/image/sw00031977055um2_sk.lss outfile=./00031977055/uvot/image/sw00031977055um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057um2_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057um2_ex.img.gz outfile=./00031977057/uvot/image/sw00031977057um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977057/uvot/image/sw00031977057um2_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057um2_sk.lss attfile=./00031977057/auxil/sw00031977057sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977057/uvot/image/sw00031977057um2_sk.lss outfile=./00031977057/uvot/image/sw00031977057um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058um2_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058um2_ex.img.gz outfile=./00031977058/uvot/image/sw00031977058um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977058/uvot/image/sw00031977058um2_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058um2_sk.lss attfile=./00031977058/auxil/sw00031977058sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977058/uvot/image/sw00031977058um2_sk.lss outfile=./00031977058/uvot/image/sw00031977058um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059um2_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059um2_ex.img.gz outfile=./00031977059/uvot/image/sw00031977059um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977059/uvot/image/sw00031977059um2_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059um2_sk.lss attfile=./00031977059/auxil/sw00031977059sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977059/uvot/image/sw00031977059um2_sk.lss outfile=./00031977059/uvot/image/sw00031977059um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060um2_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060um2_ex.img.gz outfile=./00031977060/uvot/image/sw00031977060um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977060/uvot/image/sw00031977060um2_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060um2_sk.lss attfile=./00031977060/auxil/sw00031977060sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977060/uvot/image/sw00031977060um2_sk.lss outfile=./00031977060/uvot/image/sw00031977060um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061um2_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061um2_ex.img.gz outfile=./00031977061/uvot/image/sw00031977061um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977061/uvot/image/sw00031977061um2_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061um2_sk.lss attfile=./00031977061/auxil/sw00031977061sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977061/uvot/image/sw00031977061um2_sk.lss outfile=./00031977061/uvot/image/sw00031977061um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062um2_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062um2_ex.img.gz outfile=./00031977062/uvot/image/sw00031977062um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977062/uvot/image/sw00031977062um2_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062um2_sk.lss attfile=./00031977062/auxil/sw00031977062sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977062/uvot/image/sw00031977062um2_sk.lss outfile=./00031977062/uvot/image/sw00031977062um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063um2_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063um2_ex.img.gz outfile=./00031977063/uvot/image/sw00031977063um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977063/uvot/image/sw00031977063um2_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063um2_sk.lss attfile=./00031977063/auxil/sw00031977063sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977063/uvot/image/sw00031977063um2_sk.lss outfile=./00031977063/uvot/image/sw00031977063um2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uw2_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uw2_ex.img.gz outfile=./00031977001/uvot/image/sw00031977001uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977001/uvot/image/sw00031977001uw2_sk.img.gz outfile=./00031977001/uvot/image/sw00031977001uw2_sk.lss attfile=./00031977001/auxil/sw00031977001sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977001/uvot/image/sw00031977001uw2_sk.lss outfile=./00031977001/uvot/image/sw00031977001uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uw2_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uw2_ex.img.gz outfile=./00031977002/uvot/image/sw00031977002uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977002/uvot/image/sw00031977002uw2_sk.img.gz outfile=./00031977002/uvot/image/sw00031977002uw2_sk.lss attfile=./00031977002/auxil/sw00031977002sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977002/uvot/image/sw00031977002uw2_sk.lss outfile=./00031977002/uvot/image/sw00031977002uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uw2_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uw2_ex.img.gz outfile=./00031977003/uvot/image/sw00031977003uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977003/uvot/image/sw00031977003uw2_sk.img.gz outfile=./00031977003/uvot/image/sw00031977003uw2_sk.lss attfile=./00031977003/auxil/sw00031977003sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977003/uvot/image/sw00031977003uw2_sk.lss outfile=./00031977003/uvot/image/sw00031977003uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977005/uvot/image/sw00031977005uw2_sk.img.gz outfile=./00031977005/uvot/image/sw00031977005uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977005/uvot/image/sw00031977005uw2_ex.img.gz outfile=./00031977005/uvot/image/sw00031977005uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977005/uvot/image/sw00031977005uw2_sk.img.gz outfile=./00031977005/uvot/image/sw00031977005uw2_sk.lss attfile=./00031977005/auxil/sw00031977005sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977005/uvot/image/sw00031977005uw2_sk.lss outfile=./00031977005/uvot/image/sw00031977005uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977006/uvot/image/sw00031977006uw2_sk.img.gz outfile=./00031977006/uvot/image/sw00031977006uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977006/uvot/image/sw00031977006uw2_ex.img.gz outfile=./00031977006/uvot/image/sw00031977006uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977006/uvot/image/sw00031977006uw2_sk.img.gz outfile=./00031977006/uvot/image/sw00031977006uw2_sk.lss attfile=./00031977006/auxil/sw00031977006sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977006/uvot/image/sw00031977006uw2_sk.lss outfile=./00031977006/uvot/image/sw00031977006uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uw2_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uw2_ex.img.gz outfile=./00031977007/uvot/image/sw00031977007uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977007/uvot/image/sw00031977007uw2_sk.img.gz outfile=./00031977007/uvot/image/sw00031977007uw2_sk.lss attfile=./00031977007/auxil/sw00031977007sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977007/uvot/image/sw00031977007uw2_sk.lss outfile=./00031977007/uvot/image/sw00031977007uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uw2_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uw2_ex.img.gz outfile=./00031977008/uvot/image/sw00031977008uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977008/uvot/image/sw00031977008uw2_sk.img.gz outfile=./00031977008/uvot/image/sw00031977008uw2_sk.lss attfile=./00031977008/auxil/sw00031977008sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977008/uvot/image/sw00031977008uw2_sk.lss outfile=./00031977008/uvot/image/sw00031977008uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977012/uvot/image/sw00031977012uw2_sk.img.gz outfile=./00031977012/uvot/image/sw00031977012uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977012/uvot/image/sw00031977012uw2_ex.img.gz outfile=./00031977012/uvot/image/sw00031977012uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977012/uvot/image/sw00031977012uw2_sk.img.gz outfile=./00031977012/uvot/image/sw00031977012uw2_sk.lss attfile=./00031977012/auxil/sw00031977012sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977012/uvot/image/sw00031977012uw2_sk.lss outfile=./00031977012/uvot/image/sw00031977012uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977014/uvot/image/sw00031977014uw2_sk.img.gz outfile=./00031977014/uvot/image/sw00031977014uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977014/uvot/image/sw00031977014uw2_ex.img.gz outfile=./00031977014/uvot/image/sw00031977014uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977014/uvot/image/sw00031977014uw2_sk.img.gz outfile=./00031977014/uvot/image/sw00031977014uw2_sk.lss attfile=./00031977014/auxil/sw00031977014sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977014/uvot/image/sw00031977014uw2_sk.lss outfile=./00031977014/uvot/image/sw00031977014uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977016/uvot/image/sw00031977016uw2_sk.img.gz outfile=./00031977016/uvot/image/sw00031977016uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977016/uvot/image/sw00031977016uw2_ex.img.gz outfile=./00031977016/uvot/image/sw00031977016uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977016/uvot/image/sw00031977016uw2_sk.img.gz outfile=./00031977016/uvot/image/sw00031977016uw2_sk.lss attfile=./00031977016/auxil/sw00031977016sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977016/uvot/image/sw00031977016uw2_sk.lss outfile=./00031977016/uvot/image/sw00031977016uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977017/uvot/image/sw00031977017uw2_sk.img.gz outfile=./00031977017/uvot/image/sw00031977017uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977017/uvot/image/sw00031977017uw2_ex.img.gz outfile=./00031977017/uvot/image/sw00031977017uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977017/uvot/image/sw00031977017uw2_sk.img.gz outfile=./00031977017/uvot/image/sw00031977017uw2_sk.lss attfile=./00031977017/auxil/sw00031977017sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977017/uvot/image/sw00031977017uw2_sk.lss outfile=./00031977017/uvot/image/sw00031977017uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977019/uvot/image/sw00031977019uw2_sk.img.gz outfile=./00031977019/uvot/image/sw00031977019uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977019/uvot/image/sw00031977019uw2_ex.img.gz outfile=./00031977019/uvot/image/sw00031977019uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977019/uvot/image/sw00031977019uw2_sk.img.gz outfile=./00031977019/uvot/image/sw00031977019uw2_sk.lss attfile=./00031977019/auxil/sw00031977019sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977019/uvot/image/sw00031977019uw2_sk.lss outfile=./00031977019/uvot/image/sw00031977019uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977020/uvot/image/sw00031977020uw2_sk.img.gz outfile=./00031977020/uvot/image/sw00031977020uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977020/uvot/image/sw00031977020uw2_ex.img.gz outfile=./00031977020/uvot/image/sw00031977020uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977020/uvot/image/sw00031977020uw2_sk.img.gz outfile=./00031977020/uvot/image/sw00031977020uw2_sk.lss attfile=./00031977020/auxil/sw00031977020sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977020/uvot/image/sw00031977020uw2_sk.lss outfile=./00031977020/uvot/image/sw00031977020uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977023/uvot/image/sw00031977023uw2_sk.img.gz outfile=./00031977023/uvot/image/sw00031977023uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977023/uvot/image/sw00031977023uw2_ex.img.gz outfile=./00031977023/uvot/image/sw00031977023uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977023/uvot/image/sw00031977023uw2_sk.img.gz outfile=./00031977023/uvot/image/sw00031977023uw2_sk.lss attfile=./00031977023/auxil/sw00031977023sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977023/uvot/image/sw00031977023uw2_sk.lss outfile=./00031977023/uvot/image/sw00031977023uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977024/uvot/image/sw00031977024uw2_sk.img.gz outfile=./00031977024/uvot/image/sw00031977024uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977024/uvot/image/sw00031977024uw2_ex.img.gz outfile=./00031977024/uvot/image/sw00031977024uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977024/uvot/image/sw00031977024uw2_sk.img.gz outfile=./00031977024/uvot/image/sw00031977024uw2_sk.lss attfile=./00031977024/auxil/sw00031977024sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977024/uvot/image/sw00031977024uw2_sk.lss outfile=./00031977024/uvot/image/sw00031977024uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977025/uvot/image/sw00031977025uw2_sk.img.gz outfile=./00031977025/uvot/image/sw00031977025uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977025/uvot/image/sw00031977025uw2_ex.img.gz outfile=./00031977025/uvot/image/sw00031977025uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977025/uvot/image/sw00031977025uw2_sk.img.gz outfile=./00031977025/uvot/image/sw00031977025uw2_sk.lss attfile=./00031977025/auxil/sw00031977025sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977025/uvot/image/sw00031977025uw2_sk.lss outfile=./00031977025/uvot/image/sw00031977025uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977027/uvot/image/sw00031977027uw2_sk.img.gz outfile=./00031977027/uvot/image/sw00031977027uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977027/uvot/image/sw00031977027uw2_ex.img.gz outfile=./00031977027/uvot/image/sw00031977027uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977027/uvot/image/sw00031977027uw2_sk.img.gz outfile=./00031977027/uvot/image/sw00031977027uw2_sk.lss attfile=./00031977027/auxil/sw00031977027sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977027/uvot/image/sw00031977027uw2_sk.lss outfile=./00031977027/uvot/image/sw00031977027uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977030/uvot/image/sw00031977030uw2_sk.img.gz outfile=./00031977030/uvot/image/sw00031977030uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977030/uvot/image/sw00031977030uw2_ex.img.gz outfile=./00031977030/uvot/image/sw00031977030uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977030/uvot/image/sw00031977030uw2_sk.img.gz outfile=./00031977030/uvot/image/sw00031977030uw2_sk.lss attfile=./00031977030/auxil/sw00031977030sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977030/uvot/image/sw00031977030uw2_sk.lss outfile=./00031977030/uvot/image/sw00031977030uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977031/uvot/image/sw00031977031uw2_sk.img.gz outfile=./00031977031/uvot/image/sw00031977031uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977031/uvot/image/sw00031977031uw2_ex.img.gz outfile=./00031977031/uvot/image/sw00031977031uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977031/uvot/image/sw00031977031uw2_sk.img.gz outfile=./00031977031/uvot/image/sw00031977031uw2_sk.lss attfile=./00031977031/auxil/sw00031977031sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977031/uvot/image/sw00031977031uw2_sk.lss outfile=./00031977031/uvot/image/sw00031977031uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977034/uvot/image/sw00031977034uw2_sk.img.gz outfile=./00031977034/uvot/image/sw00031977034uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977034/uvot/image/sw00031977034uw2_ex.img.gz outfile=./00031977034/uvot/image/sw00031977034uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977034/uvot/image/sw00031977034uw2_sk.img.gz outfile=./00031977034/uvot/image/sw00031977034uw2_sk.lss attfile=./00031977034/auxil/sw00031977034sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977034/uvot/image/sw00031977034uw2_sk.lss outfile=./00031977034/uvot/image/sw00031977034uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977036/uvot/image/sw00031977036uw2_sk.img.gz outfile=./00031977036/uvot/image/sw00031977036uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977036/uvot/image/sw00031977036uw2_ex.img.gz outfile=./00031977036/uvot/image/sw00031977036uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977036/uvot/image/sw00031977036uw2_sk.img.gz outfile=./00031977036/uvot/image/sw00031977036uw2_sk.lss attfile=./00031977036/auxil/sw00031977036sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977036/uvot/image/sw00031977036uw2_sk.lss outfile=./00031977036/uvot/image/sw00031977036uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977038/uvot/image/sw00031977038uw2_sk.img.gz outfile=./00031977038/uvot/image/sw00031977038uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977038/uvot/image/sw00031977038uw2_ex.img.gz outfile=./00031977038/uvot/image/sw00031977038uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977038/uvot/image/sw00031977038uw2_sk.img.gz outfile=./00031977038/uvot/image/sw00031977038uw2_sk.lss attfile=./00031977038/auxil/sw00031977038sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977038/uvot/image/sw00031977038uw2_sk.lss outfile=./00031977038/uvot/image/sw00031977038uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977040/uvot/image/sw00031977040uw2_sk.img.gz outfile=./00031977040/uvot/image/sw00031977040uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977040/uvot/image/sw00031977040uw2_ex.img.gz outfile=./00031977040/uvot/image/sw00031977040uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977040/uvot/image/sw00031977040uw2_sk.img.gz outfile=./00031977040/uvot/image/sw00031977040uw2_sk.lss attfile=./00031977040/auxil/sw00031977040sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977040/uvot/image/sw00031977040uw2_sk.lss outfile=./00031977040/uvot/image/sw00031977040uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977042/uvot/image/sw00031977042uw2_sk.img.gz outfile=./00031977042/uvot/image/sw00031977042uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977042/uvot/image/sw00031977042uw2_ex.img.gz outfile=./00031977042/uvot/image/sw00031977042uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977042/uvot/image/sw00031977042uw2_sk.img.gz outfile=./00031977042/uvot/image/sw00031977042uw2_sk.lss attfile=./00031977042/auxil/sw00031977042sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977042/uvot/image/sw00031977042uw2_sk.lss outfile=./00031977042/uvot/image/sw00031977042uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977044/uvot/image/sw00031977044uw2_sk.img.gz outfile=./00031977044/uvot/image/sw00031977044uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977044/uvot/image/sw00031977044uw2_ex.img.gz outfile=./00031977044/uvot/image/sw00031977044uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977044/uvot/image/sw00031977044uw2_sk.img.gz outfile=./00031977044/uvot/image/sw00031977044uw2_sk.lss attfile=./00031977044/auxil/sw00031977044sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977044/uvot/image/sw00031977044uw2_sk.lss outfile=./00031977044/uvot/image/sw00031977044uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977046/uvot/image/sw00031977046uw2_sk.img.gz outfile=./00031977046/uvot/image/sw00031977046uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977046/uvot/image/sw00031977046uw2_ex.img.gz outfile=./00031977046/uvot/image/sw00031977046uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977046/uvot/image/sw00031977046uw2_sk.img.gz outfile=./00031977046/uvot/image/sw00031977046uw2_sk.lss attfile=./00031977046/auxil/sw00031977046sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977046/uvot/image/sw00031977046uw2_sk.lss outfile=./00031977046/uvot/image/sw00031977046uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977048/uvot/image/sw00031977048uw2_sk.img.gz outfile=./00031977048/uvot/image/sw00031977048uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977048/uvot/image/sw00031977048uw2_ex.img.gz outfile=./00031977048/uvot/image/sw00031977048uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977048/uvot/image/sw00031977048uw2_sk.img.gz outfile=./00031977048/uvot/image/sw00031977048uw2_sk.lss attfile=./00031977048/auxil/sw00031977048sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977048/uvot/image/sw00031977048uw2_sk.lss outfile=./00031977048/uvot/image/sw00031977048uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977050/uvot/image/sw00031977050uw2_sk.img.gz outfile=./00031977050/uvot/image/sw00031977050uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977050/uvot/image/sw00031977050uw2_ex.img.gz outfile=./00031977050/uvot/image/sw00031977050uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977050/uvot/image/sw00031977050uw2_sk.img.gz outfile=./00031977050/uvot/image/sw00031977050uw2_sk.lss attfile=./00031977050/auxil/sw00031977050sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977050/uvot/image/sw00031977050uw2_sk.lss outfile=./00031977050/uvot/image/sw00031977050uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977052/uvot/image/sw00031977052uw2_sk.img.gz outfile=./00031977052/uvot/image/sw00031977052uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977052/uvot/image/sw00031977052uw2_ex.img.gz outfile=./00031977052/uvot/image/sw00031977052uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977052/uvot/image/sw00031977052uw2_sk.img.gz outfile=./00031977052/uvot/image/sw00031977052uw2_sk.lss attfile=./00031977052/auxil/sw00031977052sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977052/uvot/image/sw00031977052uw2_sk.lss outfile=./00031977052/uvot/image/sw00031977052uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977053/uvot/image/sw00031977053uw2_sk.img.gz outfile=./00031977053/uvot/image/sw00031977053uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977053/uvot/image/sw00031977053uw2_ex.img.gz outfile=./00031977053/uvot/image/sw00031977053uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977053/uvot/image/sw00031977053uw2_sk.img.gz outfile=./00031977053/uvot/image/sw00031977053uw2_sk.lss attfile=./00031977053/auxil/sw00031977053sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977053/uvot/image/sw00031977053uw2_sk.lss outfile=./00031977053/uvot/image/sw00031977053uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977055/uvot/image/sw00031977055uw2_sk.img.gz outfile=./00031977055/uvot/image/sw00031977055uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977055/uvot/image/sw00031977055uw2_ex.img.gz outfile=./00031977055/uvot/image/sw00031977055uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977055/uvot/image/sw00031977055uw2_sk.img.gz outfile=./00031977055/uvot/image/sw00031977055uw2_sk.lss attfile=./00031977055/auxil/sw00031977055sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977055/uvot/image/sw00031977055uw2_sk.lss outfile=./00031977055/uvot/image/sw00031977055uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uw2_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uw2_ex.img.gz outfile=./00031977057/uvot/image/sw00031977057uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977057/uvot/image/sw00031977057uw2_sk.img.gz outfile=./00031977057/uvot/image/sw00031977057uw2_sk.lss attfile=./00031977057/auxil/sw00031977057sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977057/uvot/image/sw00031977057uw2_sk.lss outfile=./00031977057/uvot/image/sw00031977057uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uw2_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uw2_ex.img.gz outfile=./00031977058/uvot/image/sw00031977058uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977058/uvot/image/sw00031977058uw2_sk.img.gz outfile=./00031977058/uvot/image/sw00031977058uw2_sk.lss attfile=./00031977058/auxil/sw00031977058sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977058/uvot/image/sw00031977058uw2_sk.lss outfile=./00031977058/uvot/image/sw00031977058uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uw2_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uw2_ex.img.gz outfile=./00031977059/uvot/image/sw00031977059uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977059/uvot/image/sw00031977059uw2_sk.img.gz outfile=./00031977059/uvot/image/sw00031977059uw2_sk.lss attfile=./00031977059/auxil/sw00031977059sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977059/uvot/image/sw00031977059uw2_sk.lss outfile=./00031977059/uvot/image/sw00031977059uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uw2_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uw2_ex.img.gz outfile=./00031977060/uvot/image/sw00031977060uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977060/uvot/image/sw00031977060uw2_sk.img.gz outfile=./00031977060/uvot/image/sw00031977060uw2_sk.lss attfile=./00031977060/auxil/sw00031977060sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977060/uvot/image/sw00031977060uw2_sk.lss outfile=./00031977060/uvot/image/sw00031977060uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uw2_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uw2_ex.img.gz outfile=./00031977061/uvot/image/sw00031977061uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977061/uvot/image/sw00031977061uw2_sk.img.gz outfile=./00031977061/uvot/image/sw00031977061uw2_sk.lss attfile=./00031977061/auxil/sw00031977061sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977061/uvot/image/sw00031977061uw2_sk.lss outfile=./00031977061/uvot/image/sw00031977061uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uw2_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uw2_ex.img.gz outfile=./00031977062/uvot/image/sw00031977062uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977062/uvot/image/sw00031977062uw2_sk.img.gz outfile=./00031977062/uvot/image/sw00031977062uw2_sk.lss attfile=./00031977062/auxil/sw00031977062sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977062/uvot/image/sw00031977062uw2_sk.lss outfile=./00031977062/uvot/image/sw00031977062uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uw2_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uw2_ex.img.gz outfile=./00031977063/uvot/image/sw00031977063uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotskylss infile=./00031977063/uvot/image/sw00031977063uw2_sk.img.gz outfile=./00031977063/uvot/image/sw00031977063uw2_sk.lss attfile=./00031977063/auxil/sw00031977063sat.fits.gz clobber=no lssfile=caldb
+uvotimsum infile=./00031977063/uvot/image/sw00031977063uw2_sk.lss outfile=./00031977063/uvot/image/sw00031977063uw2_lss_sum.img clobber=no method=lssmap exclude=NONE chatter=0

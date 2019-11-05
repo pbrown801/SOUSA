@@ -1,0 +1,8 @@
+# streaks
+uvotimsum infile=./00032864003/uvot/image/sw00032864003uvv_sk.img.gz outfile=./00032864003/uvot/image/sw00032864003uvv_sk_sum.img clobber=yes exclude=4 chatter=0
+
+uvotimsum infile=./00032864003/uvot/image/sw00032864003ubb_sk.img.gz outfile=./00032864003/uvot/image/sw00032864003ubb_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032864003/uvot/image/sw00032864003uuu_sk.img.gz outfile=./00032864003/uvot/image/sw00032864003uuu_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032864003/uvot/image/sw00032864003uw1_sk.img.gz outfile=./00032864003/uvot/image/sw00032864003uw1_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032864003/uvot/image/sw00032864003um2_sk.img.gz outfile=./00032864003/uvot/image/sw00032864003um2_sk_sum.img clobber=yes exclude=4 chatter=0
+uvotimsum infile=./00032864003/uvot/image/sw00032864003uw2_sk.img.gz outfile=./00032864003/uvot/image/sw00032864003uw2_sk_sum.img clobber=yes exclude=4 chatter=0

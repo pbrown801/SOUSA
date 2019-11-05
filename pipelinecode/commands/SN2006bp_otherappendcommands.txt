@@ -1,0 +1,29 @@
+
+
+fcopy ./00035902002/uvot/image/sw00035902002uvv_sk_sum.img SN2006bp_vv_temp.img 
+ftappend ./00035902003/uvot/image/sw00035902003uvv_sk_sum.img SN2006bp_vv_temp.img 
+uvotimsum infile=SN2006bp_vv.img outfile=SN2006bp_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006bp_vv_temp.img outfile=SN2006bp_vv_tempsum.img clobber=no exclude=NONE chatter=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+uvotimsum infile=SN2006bp_vv_temp.img outfile=SN2006bp_vv_tempsum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=SN2006bp_bb_temp.img outfile=SN2006bp_bb_tempsum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=SN2006bp_uu_temp.img outfile=SN2006bp_uu_tempsum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=SN2006bp_w1_temp.img outfile=SN2006bp_w1_tempsum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=SN2006bp_m2_temp.img outfile=SN2006bp_m2_tempsum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=SN2006bp_w2_temp.img outfile=SN2006bp_w2_tempsum.img clobber=yes exclude=1 chatter=0

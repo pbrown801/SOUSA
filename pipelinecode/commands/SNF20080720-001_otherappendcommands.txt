@@ -1,0 +1,20 @@
+#appending commands generated on Wed Oct 1 13:34:32 CDT 2014
+rm SNF20080720-001*.img*
+fcopy ./00031248001/uvot/image/sw00031248001um2_sk_sum.img SNF20080720-001_m2.img 
+ftappend ./00031248002/uvot/image/sw00031248002um2_sk_sum.img SNF20080720-001_m2.img 
+fcopy ./00031248003/uvot/image/sw00031248003um2_sk_sum.img SNF20080720-001_m2_temp.img 
+ftappend ./00031248004/uvot/image/sw00031248004um2_sk_sum.img SNF20080720-001_m2_temp.img 
+uvotimsum infile=SNF20080720-001_m2.img outfile=SNF20080720-001_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SNF20080720-001_m2_temp.img outfile=SNF20080720-001_m2_tempsum.img clobber=no exclude=NONE chatter=0
+
+
+fcopy ./00031248001/uvot/image/sw00031248001um2_sk_sum.img SNF20080720001_m2.img 
+ftappend ./00031248002/uvot/image/sw00031248002um2_sk_sum.img SNF20080720001_m2.img 
+fcopy ./00031248003/uvot/image/sw00031248003um2_sk_sum.img SNF20080720001_m2_temp.img 
+ftappend ./00031248004/uvot/image/sw00031248004um2_sk_sum.img SNF20080720001_m2_temp.img 
+uvotimsum infile=SNF20080720001_m2.img outfile=SNF20080720001_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SNF20080720001_m2_temp.img outfile=SNF20080720001_m2_tempsum.img clobber=no exclude=NONE chatter=0
+
+cp SNF20080720-001_3.reg SNF20080720001_3.reg
+cp SNF20080720-001_bkg.reg SNF20080720001_bkg.reg
+cp SNF20080720-001_bkgclear.reg SNF20080720001_bkgclear.reg

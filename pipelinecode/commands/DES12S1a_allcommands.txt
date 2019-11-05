@@ -1,0 +1,40 @@
+#summing commands generated on Wed Jan 30 09:47:48 CST 2013
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uvv_sk.img.gz outfile=./00032688001/uvot/image/sw00032688001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uvv_ex.img.gz outfile=./00032688001/uvot/image/sw00032688001uvv_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001ubb_sk.img.gz outfile=./00032688001/uvot/image/sw00032688001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001ubb_ex.img.gz outfile=./00032688001/uvot/image/sw00032688001ubb_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uuu_sk.img.gz outfile=./00032688001/uvot/image/sw00032688001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uuu_ex.img.gz outfile=./00032688001/uvot/image/sw00032688001uuu_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uw1_sk.img.gz outfile=./00032688001/uvot/image/sw00032688001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uw1_ex.img.gz outfile=./00032688001/uvot/image/sw00032688001uw1_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001um2_sk.img.gz outfile=./00032688001/uvot/image/sw00032688001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001um2_ex.img.gz outfile=./00032688001/uvot/image/sw00032688001um2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uw2_sk.img.gz outfile=./00032688001/uvot/image/sw00032688001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032688001/uvot/image/sw00032688001uw2_ex.img.gz outfile=./00032688001/uvot/image/sw00032688001uw2_ex_sum.img clobber=no method=expmap exclude=NONE  chatter=0
+#appending commands generated on Wed Jan 30 09:47:48 CST 2013
+rm DES12S1a*.img*
+fcopy ./00032688001/uvot/image/sw00032688001uvv_sk_sum.img DES12S1a_vv.img 
+fcopy ./00032688001/uvot/image/sw00032688001uvv_ex_sum.img DES12S1a_vv_ex.img 
+uvotimsum infile=DES12S1a_vv.img outfile=DES12S1a_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=DES12S1a_vv_ex.img outfile=DES12S1a_vv_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00032688001/uvot/image/sw00032688001ubb_sk_sum.img DES12S1a_bb.img 
+fcopy ./00032688001/uvot/image/sw00032688001ubb_ex_sum.img DES12S1a_bb_ex.img 
+uvotimsum infile=DES12S1a_bb.img outfile=DES12S1a_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=DES12S1a_bb_ex.img outfile=DES12S1a_bb_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00032688001/uvot/image/sw00032688001uuu_sk_sum.img DES12S1a_uu.img 
+fcopy ./00032688001/uvot/image/sw00032688001uuu_ex_sum.img DES12S1a_uu_ex.img 
+uvotimsum infile=DES12S1a_uu.img outfile=DES12S1a_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=DES12S1a_uu_ex.img outfile=DES12S1a_uu_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00032688001/uvot/image/sw00032688001uw1_sk_sum.img DES12S1a_w1.img 
+fcopy ./00032688001/uvot/image/sw00032688001uw1_ex_sum.img DES12S1a_w1_ex.img 
+uvotimsum infile=DES12S1a_w1.img outfile=DES12S1a_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=DES12S1a_w1_ex.img outfile=DES12S1a_w1_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00032688001/uvot/image/sw00032688001um2_sk_sum.img DES12S1a_m2.img 
+fcopy ./00032688001/uvot/image/sw00032688001um2_ex_sum.img DES12S1a_m2_ex.img 
+uvotimsum infile=DES12S1a_m2.img outfile=DES12S1a_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=DES12S1a_m2_ex.img outfile=DES12S1a_m2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00032688001/uvot/image/sw00032688001uw2_sk_sum.img DES12S1a_w2.img 
+fcopy ./00032688001/uvot/image/sw00032688001uw2_ex_sum.img DES12S1a_w2_ex.img 
+uvotimsum infile=DES12S1a_w2.img outfile=DES12S1a_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=DES12S1a_w2_ex.img outfile=DES12S1a_w2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+ds9 -rgb -red DES12S1a_vv_tempsum.img -green DES12S1a_uu_tempsum.img -blue DES12S1a_m2_tempsum.img -frame -new -rgb -red DES12S1a_vv_sum.img -green DES12S1a_uu_sum.img -blue DES12S1a_m2_sum.img &

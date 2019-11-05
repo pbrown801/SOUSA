@@ -1,0 +1,3 @@
+uvotimsum infile=./00031946006/uvot/image/sw00031946006uuu_sk.img.gz outfile=./00031946006/uvot/image/sw00031946006uuu_sk_sum.fits clobber=yes exclude=2 
+uvotimsum infile=./00031946006/uvot/image/sw00031946006ubb_sk.img.gz outfile=./00031946006/uvot/image/sw00031946006ubb_sk_sum.fits clobber=yes exclude=2 
+uvotimsum infile=./00031946006/uvot/image/sw00031946006uw1_sk.img.gz outfile=./00031946006/uvot/image/sw00031946006uw1_sk_sum.fits clobber=yes exclude=2 

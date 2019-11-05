@@ -1,0 +1,19 @@
+#summing commands generated on Tue Nov 24 14:04:48 CST 2015
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uvv_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uvv_sk_sum.img clobber=yes exclude=2-7 chatter=0
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uvv_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uvv_sk_sumb.img clobber=yes exclude=1 chatter=0
+
+uvotimsum infile=./00033208001/uvot/image/sw00033208001ubb_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001ubb_sk_sum.img clobber=yes exclude=2-7 chatter=0
+uvotimsum infile=./00033208001/uvot/image/sw00033208001ubb_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001ubb_sk_sumb.img clobber=yes exclude=1 chatter=0
+
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uuu_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uuu_sk_sum.img clobber=yes exclude=3-8 chatter=0
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uuu_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uuu_sk_sumb.img clobber=yes exclude=1-2 chatter=0
+
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uw1_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uw1_sk_sum.img clobber=yes exclude=3-8 chatter=0
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uw1_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uw1_sk_sumb.img clobber=yes exclude=1-2 chatter=0
+
+uvotimsum infile=./00033208001/uvot/image/sw00033208001um2_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001um2_sk_sum.img clobber=yes exclude=2-7 chatter=0
+uvotimsum infile=./00033208001/uvot/image/sw00033208001um2_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001um2_sk_sumb.img clobber=yes exclude=1 chatter=0
+
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uw2_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uw2_sk_sum.img clobber=yes exclude=2-7 chatter=0
+uvotimsum infile=./00033208001/uvot/image/sw00033208001uw2_sk.img.gz outfile=./00033208001/uvot/image/sw00033208001uw2_sk_sumb.img clobber=yes exclude=1 chatter=0
+

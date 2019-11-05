@@ -1,0 +1,14 @@
+#summing commands generated on Thu Jul 10 11:40:43 CDT 2014
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uvv_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uvv_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001ubb_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002ubb_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uuu_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uuu_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uw1_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uw1_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866003/uvot/image/sw00030866003uw1_sk.img.gz outfile=./00030866003/uvot/image/sw00030866003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001um2_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002um2_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uw2_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uw2_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uw2_sk_sum.img clobber=no exclude=NONE chatter=0

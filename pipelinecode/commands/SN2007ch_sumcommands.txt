@@ -1,0 +1,7 @@
+#summing commands generated on Thu Jul 10 16:58:49 CDT 2014
+uvotimsum infile=./00030941001/uvot/image/sw00030941001uvv_sk.img.gz outfile=./00030941001/uvot/image/sw00030941001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030941001/uvot/image/sw00030941001ubb_sk.img.gz outfile=./00030941001/uvot/image/sw00030941001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030941001/uvot/image/sw00030941001uuu_sk.img.gz outfile=./00030941001/uvot/image/sw00030941001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030941001/uvot/image/sw00030941001uw1_sk.img.gz outfile=./00030941001/uvot/image/sw00030941001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030941001/uvot/image/sw00030941001um2_sk.img.gz outfile=./00030941001/uvot/image/sw00030941001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030941001/uvot/image/sw00030941001uw2_sk.img.gz outfile=./00030941001/uvot/image/sw00030941001uw2_sk_sum.img clobber=no exclude=NONE chatter=0

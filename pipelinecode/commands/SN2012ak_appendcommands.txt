@@ -1,0 +1,34 @@
+#appending commands generated on Thu Oct 24 21:04:34 CDT 2013
+rm SN2012ak*.img*
+fcopy ./00032292005/uvot/image/sw00032292005uvv_sk_sum.img SN2012ak_vv.img 
+ftappend ./00032292014/uvot/image/sw00032292014uvv_sk_sum.img SN2012ak_vv.img 
+ftappend ./00032292017/uvot/image/sw00032292017uvv_sk_sum.img SN2012ak_vv.img 
+uvotimsum infile=SN2012ak_vv.img outfile=SN2012ak_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032292001/uvot/image/sw00032292001ubb_sk_sum.img SN2012ak_bb.img 
+ftappend ./00032292005/uvot/image/sw00032292005ubb_sk_sum.img SN2012ak_bb.img 
+ftappend ./00032292014/uvot/image/sw00032292014ubb_sk_sum.img SN2012ak_bb.img 
+ftappend ./00032292017/uvot/image/sw00032292017ubb_sk_sum.img SN2012ak_bb.img 
+uvotimsum infile=SN2012ak_bb.img outfile=SN2012ak_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032292001/uvot/image/sw00032292001uuu_sk_sum.img SN2012ak_uu.img 
+ftappend ./00032292005/uvot/image/sw00032292005uuu_sk_sum.img SN2012ak_uu.img 
+ftappend ./00032292014/uvot/image/sw00032292014uuu_sk_sum.img SN2012ak_uu.img 
+ftappend ./00032292017/uvot/image/sw00032292017uuu_sk_sum.img SN2012ak_uu.img 
+uvotimsum infile=SN2012ak_uu.img outfile=SN2012ak_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032292001/uvot/image/sw00032292001uw1_sk_sum.img SN2012ak_w1.img 
+ftappend ./00032292005/uvot/image/sw00032292005uw1_sk_sum.img SN2012ak_w1.img 
+ftappend ./00032292014/uvot/image/sw00032292014uw1_sk_sum.img SN2012ak_w1.img 
+ftappend ./00032292017/uvot/image/sw00032292017uw1_sk_sum.img SN2012ak_w1.img 
+uvotimsum infile=SN2012ak_w1.img outfile=SN2012ak_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032292005/uvot/image/sw00032292005um2_sk_sum.img SN2012ak_m2.img 
+ftappend ./00032292014/uvot/image/sw00032292014um2_sk_sum.img SN2012ak_m2.img 
+ftappend ./00032292017/uvot/image/sw00032292017um2_sk_sum.img SN2012ak_m2.img 
+uvotimsum infile=SN2012ak_m2.img outfile=SN2012ak_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032292001/uvot/image/sw00032292001uw2_sk_sum.img SN2012ak_w2.img 
+ftappend ./00032292005/uvot/image/sw00032292005uw2_sk_sum.img SN2012ak_w2.img 
+ftappend ./00032292014/uvot/image/sw00032292014uw2_sk_sum.img SN2012ak_w2.img 
+ftappend ./00032292017/uvot/image/sw00032292017uw2_sk_sum.img SN2012ak_w2.img 
+uvotimsum infile=SN2012ak_w2.img outfile=SN2012ak_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2012ak_vv_tempsum.img -green SN2012ak_uu_tempsum.img -blue SN2012ak_m2_tempsum.img -frame -new -rgb -red SN2012ak_vv_sum.img -green SN2012ak_uu_sum.img -blue SN2012ak_m2_sum.img &
+ds9 -rgb -red SN2012ak_vv_tempsum.img.gz -green SN2012ak_uu_tempsum.img.gz -blue SN2012ak_m2_tempsum.img.gz -frame -new -rgb -red SN2012ak_vv_sum.img.gz -green SN2012ak_uu_sum.img.gz -blue SN2012ak_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

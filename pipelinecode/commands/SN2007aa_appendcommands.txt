@@ -1,0 +1,49 @@
+#appending commands generated on Thu Jul 10 13:55:54 CDT 2014
+rm SN2007aa*.img*
+fcopy ./00030892050/uvot/image/sw00030892050uvv_sk_sum.img SN2007aa_vv.img 
+ftappend ./00030892055/uvot/image/sw00030892055uvv_sk_sum.img SN2007aa_vv.img 
+fcopy ./00036522001/uvot/image/sw00036522001uvv_sk_sum.img SN2007aa_vv_temp.img 
+ftappend ./00036522002/uvot/image/sw00036522002uvv_sk_sum.img SN2007aa_vv_temp.img 
+ftappend ./00036522003/uvot/image/sw00036522003uvv_sk_sum.img SN2007aa_vv_temp.img 
+uvotimsum infile=SN2007aa_vv.img outfile=SN2007aa_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007aa_vv_temp.img outfile=SN2007aa_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030892050/uvot/image/sw00030892050ubb_sk_sum.img SN2007aa_bb.img 
+ftappend ./00030892055/uvot/image/sw00030892055ubb_sk_sum.img SN2007aa_bb.img 
+fcopy ./00036522001/uvot/image/sw00036522001ubb_sk_sum.img SN2007aa_bb_temp.img 
+ftappend ./00036522002/uvot/image/sw00036522002ubb_sk_sum.img SN2007aa_bb_temp.img 
+ftappend ./00036522003/uvot/image/sw00036522003ubb_sk_sum.img SN2007aa_bb_temp.img 
+uvotimsum infile=SN2007aa_bb.img outfile=SN2007aa_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007aa_bb_temp.img outfile=SN2007aa_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030892050/uvot/image/sw00030892050uuu_sk_sum.img SN2007aa_uu.img 
+ftappend ./00030892055/uvot/image/sw00030892055uuu_sk_sum.img SN2007aa_uu.img 
+fcopy ./00036522001/uvot/image/sw00036522001uuu_sk_sum.img SN2007aa_uu_temp.img 
+ftappend ./00036522002/uvot/image/sw00036522002uuu_sk_sum.img SN2007aa_uu_temp.img 
+ftappend ./00036522003/uvot/image/sw00036522003uuu_sk_sum.img SN2007aa_uu_temp.img 
+uvotimsum infile=SN2007aa_uu.img outfile=SN2007aa_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007aa_uu_temp.img outfile=SN2007aa_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030892050/uvot/image/sw00030892050uw1_sk_sum.img SN2007aa_w1.img 
+ftappend ./00030892051/uvot/image/sw00030892051uw1_sk_sum.img SN2007aa_w1.img 
+ftappend ./00030892052/uvot/image/sw00030892052uw1_sk_sum.img SN2007aa_w1.img 
+ftappend ./00030892055/uvot/image/sw00030892055uw1_sk_sum.img SN2007aa_w1.img 
+fcopy ./00036522001/uvot/image/sw00036522001uw1_sk_sum.img SN2007aa_w1_temp.img 
+ftappend ./00036522002/uvot/image/sw00036522002uw1_sk_sum.img SN2007aa_w1_temp.img 
+ftappend ./00036522003/uvot/image/sw00036522003uw1_sk_sum.img SN2007aa_w1_temp.img 
+uvotimsum infile=SN2007aa_w1.img outfile=SN2007aa_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007aa_w1_temp.img outfile=SN2007aa_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030892050/uvot/image/sw00030892050um2_sk_sum.img SN2007aa_m2.img 
+fcopy ./00036522001/uvot/image/sw00036522001um2_sk_sum.img SN2007aa_m2_temp.img 
+ftappend ./00036522002/uvot/image/sw00036522002um2_sk_sum.img SN2007aa_m2_temp.img 
+ftappend ./00036522003/uvot/image/sw00036522003um2_sk_sum.img SN2007aa_m2_temp.img 
+uvotimsum infile=SN2007aa_m2.img outfile=SN2007aa_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007aa_m2_temp.img outfile=SN2007aa_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030892050/uvot/image/sw00030892050uw2_sk_sum.img SN2007aa_w2.img 
+ftappend ./00030892052/uvot/image/sw00030892052uw2_sk_sum.img SN2007aa_w2.img 
+fcopy ./00036522001/uvot/image/sw00036522001uw2_sk_sum.img SN2007aa_w2_temp.img 
+ftappend ./00036522002/uvot/image/sw00036522002uw2_sk_sum.img SN2007aa_w2_temp.img 
+ftappend ./00036522003/uvot/image/sw00036522003uw2_sk_sum.img SN2007aa_w2_temp.img 
+uvotimsum infile=SN2007aa_w2.img outfile=SN2007aa_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2007aa_w2_temp.img outfile=SN2007aa_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2007aa_vv_tempsum.img -green SN2007aa_uu_tempsum.img -blue SN2007aa_m2_tempsum.img -frame -new -rgb -red SN2007aa_vv_sum.img -green SN2007aa_uu_sum.img -blue SN2007aa_m2_sum.img &
+ds9  -scale log -rgb -red SN2007aa_vv_tempsum.img.gz -green SN2007aa_uu_tempsum.img.gz -blue SN2007aa_m2_tempsum.img.gz -frame -new -rgb -red SN2007aa_vv_sum.img.gz -green SN2007aa_uu_sum.img.gz -blue SN2007aa_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

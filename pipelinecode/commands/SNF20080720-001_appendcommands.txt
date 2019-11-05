@@ -1,0 +1,12 @@
+#appending commands generated on Wed Oct 1 13:34:32 CDT 2014
+rm SNF20080720-001*.img*
+fcopy ./00031248001/uvot/image/sw00031248001um2_sk_sum.img SNF20080720-001_m2.img 
+ftappend ./00031248002/uvot/image/sw00031248002um2_sk_sum.img SNF20080720-001_m2.img 
+fcopy ./00031248003/uvot/image/sw00031248003um2_sk_sum.img SNF20080720-001_m2_temp.img 
+ftappend ./00031248004/uvot/image/sw00031248004um2_sk_sum.img SNF20080720-001_m2.img 
+uvotimsum infile=SNF20080720-001_m2.img outfile=SNF20080720-001_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SNF20080720-001_m2_temp.img outfile=SNF20080720-001_m2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SNF20080720-001_vv_tempsum.img -green SNF20080720-001_uu_tempsum.img -blue SNF20080720-001_m2_tempsum.img -frame -new -rgb -red SNF20080720-001_vv_sum.img -green SNF20080720-001_uu_sum.img -blue SNF20080720-001_m2_sum.img &
+ds9  -scale log -rgb -red SNF20080720-001_vv_tempsum.img.gz -green SNF20080720-001_uu_tempsum.img.gz -blue SNF20080720-001_m2_tempsum.img.gz -frame -new -rgb -red SNF20080720-001_vv_sum.img.gz -green SNF20080720-001_uu_sum.img.gz -blue SNF20080720-001_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

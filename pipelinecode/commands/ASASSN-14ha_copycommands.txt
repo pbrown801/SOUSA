@@ -1,0 +1,82 @@
+#perl $SNSCRIPTS/uaspect.pl 00033411001/uvot/image/sw00033411001uw2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411001/uvot/image/sw00033411001um2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411001/uvot/image/sw00033411001uw1_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411001/uvot/image/sw00033411001uuu_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411001/uvot/image/sw00033411001ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411001/uvot/image/sw00033411001uvv_sk.img coo.reg
+
+#perl $SNSCRIPTS/uaspect.pl 00033411002/uvot/image/sw00033411002uw2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411002/uvot/image/sw00033411002um2_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411002/uvot/image/sw00033411002uw1_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411002/uvot/image/sw00033411002uuu_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411002/uvot/image/sw00033411002ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl 00033411002/uvot/image/sw00033411002uvv_sk.img coo.reg
+
+rm *img*
+fextract 00033411001/uvot/image/sw00033411001uw2_sk.img ASASSN-14ha_w2.img
+fextract 00033411001/uvot/image/sw00033411001um2_sk.img ASASSN-14ha_m2.img
+fextract 00033411001/uvot/image/sw00033411001uw1_sk.img ASASSN-14ha_w1.img
+fextract 00033411001/uvot/image/sw00033411001uuu_sk.img\[2\] ASASSN-14ha_uu.img
+fextract 00033411001/uvot/image/sw00033411001ubb_sk.img\[2\] ASASSN-14ha_bb.img
+fextract 00033411001/uvot/image/sw00033411001uvv_sk.img\[2\] ASASSN-14ha_vv.img
+ftappend 00033411002/uvot/image/sw00033411002uw1_sk.img\[1\] ASASSN-14ha_w1.img
+ftappend 00033411002/uvot/image/sw00033411002uw1_sk.img\[2\] ASASSN-14ha_w1.img
+ftappend 00033411002/uvot/image/sw00033411002uw1_sk.img\[3\] ASASSN-14ha_w1.img
+ftappend 00033411002/uvot/image/sw00033411002uw1_sk.img\[4\] ASASSN-14ha_w1.img
+ftappend 00033411002/uvot/image/sw00033411002uw1_sk.img\[5\] ASASSN-14ha_w1.img
+ftappend 00033411002/uvot/image/sw00033411002uw1_sk.img\[6\] ASASSN-14ha_w1.img
+#ftappend 00033411002/uvot/image/sw00033411002uw2_sk.img\[1\] ASASSN-14ha_w2.img
+ftappend 00033411002/uvot/image/sw00033411002uw2_sk.img\[2\] ASASSN-14ha_w2.img
+ftappend 00033411002/uvot/image/sw00033411002uw2_sk.img\[3\] ASASSN-14ha_w2.img
+
+ftappend 00033411002/uvot/image/sw00033411002um2_sk.img\[1\] ASASSN-14ha_m2.img
+ftappend 00033411002/uvot/image/sw00033411002um2_sk.img\[2\] ASASSN-14ha_m2.img
+ftappend 00033411002/uvot/image/sw00033411002um2_sk.img\[3\] ASASSN-14ha_m2.img
+
+#ftappend 00033411002/uvot/image/sw00033411002uuu_sk.img\[1\] ASASSN-14ha_uu.img
+ftappend 00033411002/uvot/image/sw00033411002uuu_sk.img\[2\] ASASSN-14ha_uu.img
+#ftappend 00033411002/uvot/image/sw00033411002uuu_sk.img\[3\] ASASSN-14ha_uu.img
+ftappend 00033411002/uvot/image/sw00033411002uuu_sk.img\[4\] ASASSN-14ha_uu.img
+
+#ftappend 00033411002/uvot/image/sw00033411002ubb_sk.img\[1\] ASASSN-14ha_bb.img
+ftappend 00033411002/uvot/image/sw00033411002ubb_sk.img\[2\] ASASSN-14ha_bb.img
+#ftappend 00033411002/uvot/image/sw00033411002ubb_sk.img\[3\] ASASSN-14ha_bb.img
+ftappend 00033411002/uvot/image/sw00033411002ubb_sk.img\[4\] ASASSN-14ha_bb.img
+
+#ftappend 00033411002/uvot/image/sw00033411002uvv_sk.img\[1\] ASASSN-14ha_vv.img
+ftappend 00033411002/uvot/image/sw00033411002uvv_sk.img\[2\] ASASSN-14ha_vv.img
+
+
+
+
+cp ASASSN-14ha_w2_all.img ASASSN-14ha_w2.img
+cp ASASSN-14ha_m2_all.img ASASSN-14ha_m2.img
+cp ASASSN-14ha_w1_all.img ASASSN-14ha_w1.img
+cp ASASSN-14ha_uu_h5.img ASASSN-14ha_uu.img
+cp ASASSN-14ha_bb_h5.img ASASSN-14ha_bb.img
+cp ASASSN-14ha_vv_h5.img ASASSN-14ha_vv.img
+
+
+
+
+
+
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_w2.img.gz ASASSN-14ha_w2_temp.img.gz
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_w2_sum.img.gz ASASSN-14ha_w2_tempsum.img.gz
+
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_m2.img.gz ASASSN-14ha_m2_temp.img.gz
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_m2_sum.img.gz ASASSN-14ha_m2_tempsum.img.gz
+
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_w1.img.gz ASASSN-14ha_w1_temp.img.gz
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_w1_sum.img.gz ASASSN-14ha_w1_tempsum.img.gz
+
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_uu.img.gz ASASSN-14ha_uu_temp.img.gz
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_uu_sum.img.gz ASASSN-14ha_uu_tempsum.img.gz
+
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_bb.img.gz ASASSN-14ha_bb_temp.img.gz
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_bb_sum.img.gz ASASSN-14ha_bb_tempsum.img.gz
+
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_vv.img.gz ASASSN-14ha_vv_temp.img.gz
+cp $SNFOLDER/SwiftSNarchive/SN2010el/SN2010el_vv_sum.img.gz ASASSN-14ha_vv_tempsum.img.gz
+
+

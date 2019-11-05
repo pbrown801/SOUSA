@@ -1,0 +1,28 @@
+#appending commands generated on Wed Sep 18 10:27:41 CDT 2013
+rm SN2009bw*.img*
+fcopy ./00031389001/uvot/image/sw00031389001uw1_sk_sum.img SN2009bw_w1.img 
+fcopy ./00046689002/uvot/image/sw00046689002uw1_sk_sum.img SN2009bw_w1_temp.img 
+ftappend ./00046689003/uvot/image/sw00046689003uw1_sk_sum.img SN2009bw_w1_temp.img 
+ftappend ./00046689004/uvot/image/sw00046689004uw1_sk_sum.img SN2009bw_w1_temp.img 
+uvotimsum infile=SN2009bw_w1.img outfile=SN2009bw_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009bw_w1_temp.img outfile=SN2009bw_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031389001/uvot/image/sw00031389001um2_sk_sum.img SN2009bw_m2.img 
+ftappend ./00031389003/uvot/image/sw00031389003um2_sk_sum.img SN2009bw_m2.img 
+ftappend ./00031389005/uvot/image/sw00031389005um2_sk_sum.img SN2009bw_m2.img 
+fcopy ./00046689002/uvot/image/sw00046689002um2_sk_sum.img SN2009bw_m2_temp.img 
+ftappend ./00046689003/uvot/image/sw00046689003um2_sk_sum.img SN2009bw_m2_temp.img 
+ftappend ./00046689004/uvot/image/sw00046689004um2_sk_sum.img SN2009bw_m2_temp.img 
+uvotimsum infile=SN2009bw_m2.img outfile=SN2009bw_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009bw_m2_temp.img outfile=SN2009bw_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031389002/uvot/image/sw00031389002uw2_sk_sum.img SN2009bw_w2.img 
+ftappend ./00031389004/uvot/image/sw00031389004uw2_sk_sum.img SN2009bw_w2.img 
+ftappend ./00031389006/uvot/image/sw00031389006uw2_sk_sum.img SN2009bw_w2.img 
+fcopy ./00046689002/uvot/image/sw00046689002uw2_sk_sum.img SN2009bw_w2_temp.img 
+ftappend ./00046689003/uvot/image/sw00046689003uw2_sk_sum.img SN2009bw_w2_temp.img 
+ftappend ./00046689004/uvot/image/sw00046689004uw2_sk_sum.img SN2009bw_w2_temp.img 
+uvotimsum infile=SN2009bw_w2.img outfile=SN2009bw_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2009bw_w2_temp.img outfile=SN2009bw_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2009bw_vv_tempsum.img -green SN2009bw_uu_tempsum.img -blue SN2009bw_m2_tempsum.img -frame -new -rgb -red SN2009bw_vv_sum.img -green SN2009bw_uu_sum.img -blue SN2009bw_m2_sum.img &
+ds9 -rgb -red SN2009bw_vv_tempsum.img.gz -green SN2009bw_uu_tempsum.img.gz -blue SN2009bw_m2_tempsum.img.gz -frame -new -rgb -red SN2009bw_vv_sum.img.gz -green SN2009bw_uu_sum.img.gz -blue SN2009bw_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

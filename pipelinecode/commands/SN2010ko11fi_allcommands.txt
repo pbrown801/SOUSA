@@ -1,0 +1,128 @@
+rm *.img
+fcopy /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893001uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893002uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893003uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893004uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893005uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893006uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893007uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893008uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893009uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893010uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893011uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893012uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893013uvv_sk_sum.fits SN2010ko_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893014uvv_sk_sum.fits SN2010ko_vv.img 
+fcopy   /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893015uvv_sk_sum.fits SN2011fi_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893016uvv_sk_sum.fits SN2011fi_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893017uvv_sk_sum.fits SN2011fi_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893018uvv_sk_sum.fits SN2011fi_vv.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893019uvv_sk_sum.fits SN2011fi_vv.img 
+fcopy /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893001ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893002ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893003ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893004ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893005ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893006ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893007ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893008ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893009ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893010ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893011ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893012ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893013ubb_sk_sum.fits SN2010ko_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893014ubb_sk_sum.fits SN2010ko_bb.img 
+fcopy   /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893015ubb_sk_sum.fits SN2011fi_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893016ubb_sk_sum.fits SN2011fi_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893017ubb_sk_sum.fits SN2011fi_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893018ubb_sk_sum.fits SN2011fi_bb.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893019ubb_sk_sum.fits SN2011fi_bb.img 
+fcopy /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893001uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893002uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893003uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893004uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893005uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893006uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893007uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893008uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893009uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893010uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893011uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893012uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893013uuu_sk_sum.fits SN2010ko_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893014uuu_sk_sum.fits SN2010ko_uu.img 
+fcopy  /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893015uuu_sk_sum.fits SN2011fi_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893016uuu_sk_sum.fits SN2011fi_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893017uuu_sk_sum.fits SN2011fi_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893018uuu_sk_sum.fits SN2011fi_uu.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893019uuu_sk_sum.fits SN2011fi_uu.img 
+fcopy /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893001uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893002uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893003uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893004uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893005uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893006uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893007uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893008uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893009uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893010uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893011uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893012uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893013uw1_sk_sum.fits SN2010ko_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893014uw1_sk_sum.fits SN2010ko_w1.img 
+fcopy   /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893015uw1_sk_sum.fits SN2011fi_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893016uw1_sk_sum.fits SN2011fi_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893017uw1_sk_sum.fits SN2011fi_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893018uw1_sk_sum.fits SN2011fi_w1.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893019uw1_sk_sum.fits SN2011fi_w1.img 
+fcopy /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893001um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893002um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893003um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893004um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893005um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893006um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893007um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893008um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893009um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893010um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893011um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893012um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893013um2_sk_sum.fits SN2010ko_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893014um2_sk_sum.fits SN2010ko_m2.img 
+fcopy   /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893015um2_sk_sum.fits SN2011fi_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893016um2_sk_sum.fits SN2011fi_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893017um2_sk_sum.fits SN2011fi_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893018um2_sk_sum.fits SN2011fi_m2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893019um2_sk_sum.fits SN2011fi_m2.img 
+fcopy   /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893001uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893002uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893003uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893004uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893005uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893006uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893007uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893008uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893009uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893010uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893011uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893012uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893013uw2_sk_sum.fits SN2010ko_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893014uw2_sk_sum.fits SN2010ko_w2.img 
+fcopy   /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893015uw2_sk_sum.fits SN2011fi_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893016uw2_sk_sum.fits SN2011fi_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893017uw2_sk_sum.fits SN2011fi_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893018uw2_sk_sum.fits SN2011fi_w2.img 
+fappend /uufs/astro.utah.edu/common/astro_data/kdawson/pbrown/SWIFT_METADATA/SN2010ko/sw00031893019uw2_sk_sum.fits SN2011fi_w2.img 
+uvotimsum infile=SN2010ko_vv.img outfile=SN2011fi_vv_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010ko_bb.img outfile=SN2011fi_bb_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010ko_uu.img outfile=SN2011fi_uu_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010ko_w1.img outfile=SN2011fi_w1_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010ko_m2.img outfile=SN2011fi_m2_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010ko_w2.img outfile=SN2011fi_w2_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011fi_vv.img outfile=SN2010ko_vv_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011fi_bb.img outfile=SN2010ko_bb_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011fi_uu.img outfile=SN2010ko_uu_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011fi_w1.img outfile=SN2010ko_w1_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011fi_m2.img outfile=SN2010ko_m2_tempsum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2011fi_w2.img outfile=SN2010ko_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2010ko_vv_tempsum.img -green SN2010ko_uu_tempsum.img -blue SN2010ko_m2_tempsum.img &

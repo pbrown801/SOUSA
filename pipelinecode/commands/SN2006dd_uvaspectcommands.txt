@@ -1,0 +1,160 @@
+# aspect correcting commands
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737001/uvot/image/sw00030737001u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737001/uvot/image/sw00030737001um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737001/uvot/image/sw00030737001uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737001/uvot/image/sw00030737001u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737002/uvot/image/sw00030737002u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737002/uvot/image/sw00030737002um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737002/uvot/image/sw00030737002uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737002/uvot/image/sw00030737002u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737003/uvot/image/sw00030737003u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737003/uvot/image/sw00030737003um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737003/uvot/image/sw00030737003uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737003/uvot/image/sw00030737003u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737004/uvot/image/sw00030737004u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737004/uvot/image/sw00030737004um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737004/uvot/image/sw00030737004uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737004/uvot/image/sw00030737004u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737005/uvot/image/sw00030737005u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737005/uvot/image/sw00030737005um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737005/uvot/image/sw00030737005uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737005/uvot/image/sw00030737005u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737006/uvot/image/sw00030737006u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737006/uvot/image/sw00030737006um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737006/uvot/image/sw00030737006uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737006/uvot/image/sw00030737006u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737007/uvot/image/sw00030737007u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737007/uvot/image/sw00030737007um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737007/uvot/image/sw00030737007uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737007/uvot/image/sw00030737007u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737008/uvot/image/sw00030737008u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737008/uvot/image/sw00030737008um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737008/uvot/image/sw00030737008uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737008/uvot/image/sw00030737008u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737009/uvot/image/sw00030737009u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737009/uvot/image/sw00030737009um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737009/uvot/image/sw00030737009uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737009/uvot/image/sw00030737009u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737010/uvot/image/sw00030737010u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737010/uvot/image/sw00030737010um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737010/uvot/image/sw00030737010uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737010/uvot/image/sw00030737010u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737011/uvot/image/sw00030737011u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737011/uvot/image/sw00030737011um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737011/uvot/image/sw00030737011uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737011/uvot/image/sw00030737011u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737012/uvot/image/sw00030737012u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737012/uvot/image/sw00030737012um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737012/uvot/image/sw00030737012uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737012/uvot/image/sw00030737012u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737013/uvot/image/sw00030737013u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737013/uvot/image/sw00030737013um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737013/uvot/image/sw00030737013uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737013/uvot/image/sw00030737013u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737014/uvot/image/sw00030737014u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737014/uvot/image/sw00030737014um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737014/uvot/image/sw00030737014uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737014/uvot/image/sw00030737014u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737015/uvot/image/sw00030737015u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737015/uvot/image/sw00030737015um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737015/uvot/image/sw00030737015uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737015/uvot/image/sw00030737015u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737016/uvot/image/sw00030737016u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737016/uvot/image/sw00030737016um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737016/uvot/image/sw00030737016uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737016/uvot/image/sw00030737016u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737017/uvot/image/sw00030737017u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737017/uvot/image/sw00030737017um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737017/uvot/image/sw00030737017uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737017/uvot/image/sw00030737017u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737018/uvot/image/sw00030737018u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737018/uvot/image/sw00030737018um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737018/uvot/image/sw00030737018uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737018/uvot/image/sw00030737018u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737019/uvot/image/sw00030737019u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737019/uvot/image/sw00030737019um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737019/uvot/image/sw00030737019uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030737019/uvot/image/sw00030737019u*.img 
+
+# aspect correcting commands
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828001/uvot/image/sw00030828001u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828001/uvot/image/sw00030828001um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828001/uvot/image/sw00030828001uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828001/uvot/image/sw00030828001u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828002/uvot/image/sw00030828002u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828002/uvot/image/sw00030828002um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828002/uvot/image/sw00030828002uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828002/uvot/image/sw00030828002u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828003/uvot/image/sw00030828003u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828003/uvot/image/sw00030828003um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828003/uvot/image/sw00030828003uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828003/uvot/image/sw00030828003u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828004/uvot/image/sw00030828004u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828004/uvot/image/sw00030828004um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828004/uvot/image/sw00030828004uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828004/uvot/image/sw00030828004u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828005/uvot/image/sw00030828005u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828005/uvot/image/sw00030828005um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828005/uvot/image/sw00030828005uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828005/uvot/image/sw00030828005u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828006/uvot/image/sw00030828006u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828006/uvot/image/sw00030828006um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828006/uvot/image/sw00030828006uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828006/uvot/image/sw00030828006u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828007/uvot/image/sw00030828007u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828007/uvot/image/sw00030828007um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828007/uvot/image/sw00030828007uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828007/uvot/image/sw00030828007u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828008/uvot/image/sw00030828008u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828008/uvot/image/sw00030828008um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828008/uvot/image/sw00030828008uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828008/uvot/image/sw00030828008u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828009/uvot/image/sw00030828009u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828009/uvot/image/sw00030828009um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828009/uvot/image/sw00030828009uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828009/uvot/image/sw00030828009u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828010/uvot/image/sw00030828010u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828010/uvot/image/sw00030828010um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828010/uvot/image/sw00030828010uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828010/uvot/image/sw00030828010u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828011/uvot/image/sw00030828011u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828011/uvot/image/sw00030828011um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828011/uvot/image/sw00030828011uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828011/uvot/image/sw00030828011u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828012/uvot/image/sw00030828012u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828012/uvot/image/sw00030828012um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828012/uvot/image/sw00030828012uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828012/uvot/image/sw00030828012u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828013/uvot/image/sw00030828013u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828013/uvot/image/sw00030828013um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828013/uvot/image/sw00030828013uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828013/uvot/image/sw00030828013u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828014/uvot/image/sw00030828014u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828014/uvot/image/sw00030828014um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828014/uvot/image/sw00030828014uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828014/uvot/image/sw00030828014u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828015/uvot/image/sw00030828015u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828015/uvot/image/sw00030828015um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828015/uvot/image/sw00030828015uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828015/uvot/image/sw00030828015u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828016/uvot/image/sw00030828016u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828016/uvot/image/sw00030828016um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828016/uvot/image/sw00030828016uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828016/uvot/image/sw00030828016u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828017/uvot/image/sw00030828017u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828017/uvot/image/sw00030828017um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828017/uvot/image/sw00030828017uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00030828017/uvot/image/sw00030828017u*.img 
+# aspect correcting commands
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891001/uvot/image/sw00035891001u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891001/uvot/image/sw00035891001um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891001/uvot/image/sw00035891001uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891001/uvot/image/sw00035891001u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891002/uvot/image/sw00035891002u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891002/uvot/image/sw00035891002um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891002/uvot/image/sw00035891002uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891002/uvot/image/sw00035891002u*.img 
+gunzip -f  /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891003/uvot/image/sw00035891003u*.img.gz 
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891003/uvot/image/sw00035891003um2_sk.img coouv.reg
+perl /Users/pbrown/Desktop/SN/snscripts//uaspect.pl /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891003/uvot/image/sw00035891003uw2_sk.img coouv.reg
+gzip -f    /Users/pbrown/Desktop/SN/SwiftSNarchive//SN2006dd/00035891003/uvot/image/sw00035891003u*.img 

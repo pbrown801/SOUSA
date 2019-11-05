@@ -1,0 +1,15 @@
+#appending commands generated on Thu Jul 10 13:02:10 CDT 2014
+rm SN2007D*.img*
+fcopy ./00030872001/uvot/image/sw00030872001uvv_sk_sum.img SN2007D_vv.img 
+ftappend ./00030872003/uvot/image/sw00030872003uvv_sk_sum.img SN2007D_vv.img 
+uvotimsum infile=SN2007D_vv.img outfile=SN2007D_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030872001/uvot/image/sw00030872001ubb_sk_sum.img SN2007D_bb.img 
+ftappend ./00030872003/uvot/image/sw00030872003ubb_sk_sum.img SN2007D_bb.img 
+uvotimsum infile=SN2007D_bb.img outfile=SN2007D_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030872002/uvot/image/sw00030872002uw1_sk_sum.img SN2007D_w1.img 
+ftappend ./00030872004/uvot/image/sw00030872004uw1_sk_sum.img SN2007D_w1.img 
+uvotimsum infile=SN2007D_w1.img outfile=SN2007D_w1_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2007D_vv_tempsum.img -green SN2007D_uu_tempsum.img -blue SN2007D_m2_tempsum.img -frame -new -rgb -red SN2007D_vv_sum.img -green SN2007D_uu_sum.img -blue SN2007D_m2_sum.img &
+ds9  -scale log -rgb -red SN2007D_vv_tempsum.img.gz -green SN2007D_uu_tempsum.img.gz -blue SN2007D_m2_tempsum.img.gz -frame -new -rgb -red SN2007D_vv_sum.img.gz -green SN2007D_uu_sum.img.gz -blue SN2007D_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

@@ -1,0 +1,5 @@
+#summing commands generated on Fri Nov 14 11:01:26 CST 2014
+uvotimsum infile=./00031089009/uvot/image/sw00031089009uvv_sk.img.gz outfile=./00031089009/uvot/image/sw00031089009uvv_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031089009/uvot/image/sw00031089009ubb_sk.img.gz outfile=./00031089009/uvot/image/sw00031089009ubb_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031089009/uvot/image/sw00031089009uuu_sk.img.gz outfile=./00031089009/uvot/image/sw00031089009uuu_sk_sum.img clobber=yes exclude=1 chatter=0
+uvotimsum infile=./00031089009/uvot/image/sw00031089009uw1_sk.img.gz outfile=./00031089009/uvot/image/sw00031089009uw1_sk_sum.img clobber=yes exclude=1 chatter=0

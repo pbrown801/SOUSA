@@ -1,0 +1,178 @@
+cp 00031016002/uvot/image/sw00031016002uvv_sk_sum.img SN2006jd_epoch2_vv.img
+fappend 00031016003/uvot/image/sw00031016003uvv_sk_sum.img SN2006jd_epoch2_vv.img
+fappend 00031016004/uvot/image/sw00031016004uvv_sk_sum.img SN2006jd_epoch2_vv.img
+uvotimsum SN2006jd_epoch2_vv.img outfile=SN2006jd_epoch2_vv_sum.img exclude=none clobber=yes
+
+cp 00031016008/uvot/image/sw00031016008uvv_sk_sum.img SN2006jd_epoch5_vv.img
+fappend 00031016009/uvot/image/sw00031016009uvv_sk_sum.img SN2006jd_epoch5_vv.img
+uvotimsum SN2006jd_epoch5_vv.img outfile=SN2006jd_epoch5_vv_sum.img exclude=none clobber=yes
+
+cp 00031016011/uvot/image/sw00031016011uvv_sk_sum.img SN2006jd_epoch6_vv.img
+fappend 00031016012/uvot/image/sw00031016012uvv_sk_sum.img SN2006jd_epoch6_vv.img
+uvotimsum SN2006jd_epoch6_vv.img outfile=SN2006jd_epoch6_vv_sum.img  exclude=none clobber=yes
+
+cp 00031016002/uvot/image/sw00031016002ubb_sk_sum.img SN2006jd_epoch2_bb.img
+fappend 00031016003/uvot/image/sw00031016003ubb_sk_sum.img SN2006jd_epoch2_bb.img
+fappend 00031016004/uvot/image/sw00031016004ubb_sk_sum.img SN2006jd_epoch2_bb.img
+uvotimsum SN2006jd_epoch2_bb.img outfile=SN2006jd_epoch2_bb_sum.img  exclude=none clobber=yes
+
+cp 00031016008/uvot/image/sw00031016008ubb_sk_sum.img SN2006jd_epoch5_bb.img
+fappend 00031016009/uvot/image/sw00031016009ubb_sk_sum.img SN2006jd_epoch5_bb.img
+uvotimsum SN2006jd_epoch5_bb.img outfile=SN2006jd_epoch5_bb_sum.img  exclude=none clobber=yes
+
+cp 00031016011/uvot/image/sw00031016011ubb_sk_sum.img SN2006jd_epoch6_bb.img
+fappend 00031016012/uvot/image/sw00031016012ubb_sk_sum.img SN2006jd_epoch6_bb.img
+uvotimsum SN2006jd_epoch6_bb.img outfile=SN2006jd_epoch6_bb_sum.img  exclude=none clobber=yes
+
+cp 00031016002/uvot/image/sw00031016002uuu_sk_sum.img SN2006jd_epoch2_uu.img
+fappend 00031016003/uvot/image/sw00031016003uuu_sk_sum.img SN2006jd_epoch2_uu.img
+fappend 00031016004/uvot/image/sw00031016004uuu_sk_sum.img SN2006jd_epoch2_uu.img
+uvotimsum SN2006jd_epoch2_uu.img outfile=SN2006jd_epoch2_uu_sum.img  exclude=none clobber=yes
+
+cp 00031016008/uvot/image/sw00031016008uuu_sk_sum.img SN2006jd_epoch5_uu.img
+fappend 00031016009/uvot/image/sw00031016009uuu_sk_sum.img SN2006jd_epoch5_uu.img
+uvotimsum SN2006jd_epoch5_uu.img outfile=SN2006jd_epoch5_uu_sum.img  exclude=none clobber=yes
+
+cp 00031016011/uvot/image/sw00031016011uuu_sk_sum.img SN2006jd_epoch6_uu.img
+fappend 00031016012/uvot/image/sw00031016012uuu_sk_sum.img SN2006jd_epoch6_uu.img
+uvotimsum SN2006jd_epoch6_uu.img outfile=SN2006jd_epoch6_uu_sum.img  exclude=none clobber=yes
+
+cp 00031016002/uvot/image/sw00031016002uw1_sk_sum.img SN2006jd_epoch2_w1.img
+fappend 00031016003/uvot/image/sw00031016003uw1_sk_sum.img SN2006jd_epoch2_w1.img
+fappend 00031016004/uvot/image/sw00031016004uw1_sk_sum.img SN2006jd_epoch2_w1.img
+uvotimsum SN2006jd_epoch2_w1.img outfile=SN2006jd_epoch2_w1_sum.img  exclude=none clobber=yes
+
+cp 00031016008/uvot/image/sw00031016008uw1_sk_sum.img SN2006jd_epoch5_w1.img
+fappend 00031016009/uvot/image/sw00031016009uw1_sk_sum.img SN2006jd_epoch5_w1.img
+uvotimsum SN2006jd_epoch5_w1.img outfile=SN2006jd_epoch5_w1_sum.img  exclude=none clobber=yes
+
+cp 00031016011/uvot/image/sw00031016011uw1_sk_sum.img SN2006jd_epoch6_w1.img
+fappend 00031016012/uvot/image/sw00031016012uw1_sk_sum.img SN2006jd_epoch6_w1.img
+uvotimsum SN2006jd_epoch6_w1.img outfile=SN2006jd_epoch6_w1_sum.img  exclude=none clobber=yes
+
+cp 00031016002/uvot/image/sw00031016002um2_sk_sum.img SN2006jd_epoch2_m2.img
+fappend 00031016003/uvot/image/sw00031016003um2_sk_sum.img SN2006jd_epoch2_m2.img
+fappend 00031016004/uvot/image/sw00031016004um2_sk_sum.img SN2006jd_epoch2_m2.img
+uvotimsum SN2006jd_epoch2_m2.img outfile=SN2006jd_epoch2_m2_sum.img  exclude=none clobber=yes
+
+cp 00031016008/uvot/image/sw00031016008um2_sk_sum.img SN2006jd_epoch5_m2.img
+fappend 00031016009/uvot/image/sw00031016009um2_sk_sum.img SN2006jd_epoch5_m2.img
+uvotimsum SN2006jd_epoch5_m2.img outfile=SN2006jd_epoch5_m2_sum.img  exclude=none clobber=yes
+
+cp 00031016002/uvot/image/sw00031016002uw2_sk_sum.img SN2006jd_epoch2_w2.img
+fappend 00031016003/uvot/image/sw00031016003uw2_sk_sum.img SN2006jd_epoch2_w2.img
+fappend 00031016004/uvot/image/sw00031016004uw2_sk_sum.img SN2006jd_epoch2_w2.img
+uvotimsum SN2006jd_epoch2_w2.img outfile=SN2006jd_epoch2_w2_sum.img  exclude=none clobber=yes
+
+cp 00031016008/uvot/image/sw00031016008uw2_sk_sum.img SN2006jd_epoch5_w2.img
+fappend 00031016009/uvot/image/sw00031016009uw2_sk_sum.img SN2006jd_epoch5_w2.img
+uvotimsum SN2006jd_epoch5_w2.img outfile=SN2006jd_epoch5_w2_sum.img  exclude=none clobber=yes
+
+cp 00031016011/uvot/image/sw00031016011uw2_sk_sum.img SN2006jd_epoch6_w2.img
+fappend 00031016012/uvot/image/sw00031016012uw2_sk_sum.img SN2006jd_epoch6_w2.img
+uvotimsum SN2006jd_epoch6_w2.img outfile=SN2006jd_epoch6_w2_sum.img  exclude=none clobber=yes
+
+
+rm SN2006jd_epochs_vv.img
+rm SN2006jd_epochs_bb.img
+rm SN2006jd_epochs_uu.img
+rm SN2006jd_epochs_w1.img
+rm SN2006jd_epochs_m2.img
+rm SN2006jd_epochs_w2.img
+fcopy 00031016001/uvot/image/sw00031016001uvv_sk_sum.img SN2006jd_epochs_vv.img 
+fappend SN2006jd_epoch2_vv_sum.img SN2006jd_epochs_vv.img 
+fappend 00031016006/uvot/image/sw00031016006uvv_sk_sum.img SN2006jd_epochs_vv.img 
+fappend 00031016007/uvot/image/sw00031016007uvv_sk_sum.img SN2006jd_epochs_vv.img 
+fappend SN2006jd_epoch5_vv_sum.img SN2006jd_epochs_vv.img 
+fappend SN2006jd_epoch6_vv_sum.img SN2006jd_epochs_vv.img 
+fappend 00037767001/uvot/image/sw00037767001uvv_sk_sum.img SN2006jd_epochs_vv.img 
+fappend 00037767002/uvot/image/sw00037767002uvv_sk_sum.img SN2006jd_epochs_vv.img 
+fappend 00037767003/uvot/image/sw00037767003uvv_sk_sum.img SN2006jd_epochs_vv.img 
+
+fcopy 00031016001/uvot/image/sw00031016001ubb_sk_sum.img SN2006jd_epochs_bb.img 
+fappend SN2006jd_epoch2_bb_sum.img SN2006jd_epochs_bb.img 
+fappend 00031016006/uvot/image/sw00031016006ubb_sk_sum.img SN2006jd_epochs_bb.img 
+fappend 00031016007/uvot/image/sw00031016007ubb_sk_sum.img SN2006jd_epochs_bb.img 
+fappend SN2006jd_epoch5_bb_sum.img SN2006jd_epochs_bb.img 
+fappend SN2006jd_epoch6_bb_sum.img SN2006jd_epochs_bb.img 
+fappend 00037767001/uvot/image/sw00037767001ubb_sk_sum.img SN2006jd_epochs_bb.img 
+fappend 00037767002/uvot/image/sw00037767002ubb_sk_sum.img SN2006jd_epochs_bb.img 
+fappend 00037767003/uvot/image/sw00037767003ubb_sk_sum.img SN2006jd_epochs_bb.img 
+
+fcopy 00031016001/uvot/image/sw00031016001uuu_sk_sum.img SN2006jd_epochs_uu.img 
+fappend SN2006jd_epoch2_uu_sum.img SN2006jd_epochs_uu.img 
+fappend 00031016006/uvot/image/sw00031016006uuu_sk_sum.img SN2006jd_epochs_uu.img 
+fappend 00031016007/uvot/image/sw00031016007uuu_sk_sum.img SN2006jd_epochs_uu.img 
+fappend SN2006jd_epoch5_uu_sum.img SN2006jd_epochs_uu.img 
+fappend SN2006jd_epoch6_uu_sum.img SN2006jd_epochs_uu.img 
+fappend 00037767001/uvot/image/sw00037767001uuu_sk_sum.img SN2006jd_epochs_uu.img 
+fappend 00037767002/uvot/image/sw00037767002uuu_sk_sum.img SN2006jd_epochs_uu.img 
+fappend 00037767003/uvot/image/sw00037767003uuu_sk_sum.img SN2006jd_epochs_uu.img 
+
+fcopy 00031016001/uvot/image/sw00031016001uw1_sk_sum.img SN2006jd_epochs_w1.img 
+fappend SN2006jd_epoch2_w1_sum.img SN2006jd_epochs_w1.img 
+fappend 00031016006/uvot/image/sw00031016006uw1_sk_sum.img SN2006jd_epochs_w1.img 
+fappend 00031016007/uvot/image/sw00031016007uw1_sk_sum.img SN2006jd_epochs_w1.img 
+fappend SN2006jd_epoch5_w1_sum.img SN2006jd_epochs_w1.img 
+fappend SN2006jd_epoch6_w1_sum.img SN2006jd_epochs_w1.img 
+fappend 00037767001/uvot/image/sw00037767001uw1_sk_sum.img SN2006jd_epochs_w1.img 
+fappend 00037767002/uvot/image/sw00037767002uw1_sk_sum.img SN2006jd_epochs_w1.img 
+fappend 00037767003/uvot/image/sw00037767003uw1_sk_sum.img SN2006jd_epochs_w1.img 
+
+fcopy 00031016001/uvot/image/sw00031016001um2_sk_sum.img SN2006jd_epochs_m2.img 
+fappend SN2006jd_epoch2_m2_sum.img SN2006jd_epochs_m2.img 
+fappend 00031016006/uvot/image/sw00031016006um2_sk_sum.img SN2006jd_epochs_m2.img 
+fappend 00031016007/uvot/image/sw00031016007um2_sk_sum.img SN2006jd_epochs_m2.img 
+fappend SN2006jd_epoch5_m2_sum.img SN2006jd_epochs_m2.img 
+fappend 00031016010/uvot/image/sw00031016010um2_sk_sum.img SN2006jd_epochs_m2.img 
+fappend 00037767001/uvot/image/sw00037767001um2_sk_sum.img SN2006jd_epochs_m2.img 
+fappend 00037767002/uvot/image/sw00037767002um2_sk_sum.img SN2006jd_epochs_m2.img 
+fappend 00037767003/uvot/image/sw00037767003um2_sk_sum.img SN2006jd_epochs_m2.img 
+
+fcopy 00031016001/uvot/image/sw00031016001uw2_sk_sum.img SN2006jd_epochs_w2.img 
+fappend SN2006jd_epoch2_w2_sum.img SN2006jd_epochs_w2.img 
+fappend 00031016006/uvot/image/sw00031016006uw2_sk_sum.img SN2006jd_epochs_w2.img 
+fappend 00031016007/uvot/image/sw00031016007uw2_sk_sum.img SN2006jd_epochs_w2.img 
+fappend SN2006jd_epoch5_w2_sum.img SN2006jd_epochs_w2.img 
+fappend SN2006jd_epoch6_w2_sum.img SN2006jd_epochs_w2.img 
+fappend 00037767001/uvot/image/sw00037767001uw2_sk_sum.img SN2006jd_epochs_w2.img 
+fappend 00037767002/uvot/image/sw00037767002uw2_sk_sum.img SN2006jd_epochs_w2.img 
+fappend 00037767003/uvot/image/sw00037767003uw2_sk_sum.img SN2006jd_epochs_w2.img 
+
+fappend 00037767006/uvot/image/sw00037767006uvv_sk_sum.img SN2006jd_epochs_vv.img 
+fappend 00037767005/uvot/image/sw00037767005ubb_sk_sum.img SN2006jd_epochs_bb.img 
+fappend 00037767004/uvot/image/sw00037767004uuu_sk_sum.img SN2006jd_epochs_uu.img 
+fappend 00037767009/uvot/image/sw00037767009uw1_sk_sum.img SN2006jd_epochs_w1.img 
+fappend 00037767008/uvot/image/sw00037767008um2_sk_sum.img SN2006jd_epochs_m2.img 
+fappend 00037767007/uvot/image/sw00037767007uw2_sk_sum.img SN2006jd_epochs_w2.img 
+
+
+
+
+mv SN2006jd_vv.img SN2006jd_vv.img.orig
+mv SN2006jd_bb.img SN2006jd_bb.img.orig
+mv SN2006jd_uu.img SN2006jd_uu.img.orig
+mv SN2006jd_w1.img SN2006jd_w1.img.orig
+mv SN2006jd_m2.img SN2006jd_m2.img.orig
+mv SN2006jd_w2.img SN2006jd_w2.img.orig
+
+
+mv SN2006jd_epochs_vv.img SN2006jd_vv.img
+mv SN2006jd_epochs_bb.img SN2006jd_bb.img
+mv SN2006jd_epochs_uu.img SN2006jd_uu.img
+mv SN2006jd_epochs_w1.img SN2006jd_w1.img
+mv SN2006jd_epochs_m2.img SN2006jd_m2.img
+mv SN2006jd_epochs_w2.img SN2006jd_w2.img
+
+uvotimsum infile=SN2006jd_vv.img outfile=SN2006jd_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006jd_bb.img outfile=SN2006jd_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006jd_uu.img outfile=SN2006jd_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006jd_w1.img outfile=SN2006jd_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006jd_m2.img outfile=SN2006jd_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2006jd_w2.img outfile=SN2006jd_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2006jd_vv_sum.img -green SN2006jd_uu_sum.img -blue SN2006jd_m2_sum.img &
+
+
+
+
+

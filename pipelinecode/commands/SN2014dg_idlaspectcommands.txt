@@ -1,0 +1,23 @@
+gunzip -f */uvot/image/*2_sk.img.gz
+gunzip -f */uvot/image/*1_sk.img.gz
+perl $SNSCRIPTS/uaspect.pl  00033421002/uvot/image/sw00033421002uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421003/uvot/image/sw00033421003uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421004/uvot/image/sw00033421004uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421002/uvot/image/sw00033421002um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421003/uvot/image/sw00033421003um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421004/uvot/image/sw00033421004um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421002/uvot/image/sw00033421002uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421003/uvot/image/sw00033421003uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421004/uvot/image/sw00033421004uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421005/uvot/image/sw00033421005uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421006/uvot/image/sw00033421006uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421005/uvot/image/sw00033421005uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421006/uvot/image/sw00033421006uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421005/uvot/image/sw00033421005um2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421006/uvot/image/sw00033421006um2_sk.img coo.reg
+
+perl $SNSCRIPTS/uaspect.pl  00033421001/uvot/image/sw00033421001uw1_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421001/uvot/image/sw00033421001uw2_sk.img coo.reg
+perl $SNSCRIPTS/uaspect.pl  00033421001/uvot/image/sw00033421001um2_sk.img coo.reg
+
+gzip -f */uvot/image/*sk.img

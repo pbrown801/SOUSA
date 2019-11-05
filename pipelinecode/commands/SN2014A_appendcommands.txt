@@ -1,0 +1,25 @@
+#appending commands generated on Tue Jan 13 10:52:51 CST 2015
+rm SN2014A*.img*
+fcopy ./00033075002/uvot/image/sw00033075002uvv_sk_sum.img SN2014A_vv.img 
+ftappend ./00033075003/uvot/image/sw00033075003uvv_sk_sum.img SN2014A_vv.img 
+uvotimsum infile=SN2014A_vv.img outfile=SN2014A_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033075002/uvot/image/sw00033075002ubb_sk_sum.img SN2014A_bb.img 
+ftappend ./00033075003/uvot/image/sw00033075003ubb_sk_sum.img SN2014A_bb.img 
+uvotimsum infile=SN2014A_bb.img outfile=SN2014A_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033075002/uvot/image/sw00033075002uuu_sk_sum.img SN2014A_uu.img 
+ftappend ./00033075003/uvot/image/sw00033075003uuu_sk_sum.img SN2014A_uu.img 
+uvotimsum infile=SN2014A_uu.img outfile=SN2014A_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033075002/uvot/image/sw00033075002uw1_sk_sum.img SN2014A_w1.img 
+ftappend ./00033075003/uvot/image/sw00033075003uw1_sk_sum.img SN2014A_w1.img 
+uvotimsum infile=SN2014A_w1.img outfile=SN2014A_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033075002/uvot/image/sw00033075002um2_sk_sum.img SN2014A_m2.img 
+ftappend ./00033075003/uvot/image/sw00033075003um2_sk_sum.img SN2014A_m2.img 
+uvotimsum infile=SN2014A_m2.img outfile=SN2014A_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033075002/uvot/image/sw00033075002uw2_sk_sum.img SN2014A_w2.img 
+ftappend ./00033075003/uvot/image/sw00033075003uw2_sk_sum.img SN2014A_w2.img 
+uvotimsum infile=SN2014A_w2.img outfile=SN2014A_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2014A_vv_tempsum.img -green SN2014A_uu_tempsum.img -blue SN2014A_m2_tempsum.img -frame -new -rgb -red SN2014A_vv_sum.img -green SN2014A_uu_sum.img -blue SN2014A_m2_sum.img &
+ds9  -scale log -rgb -red SN2014A_vv_tempsum.img.gz -green SN2014A_uu_tempsum.img.gz -blue SN2014A_m2_tempsum.img.gz -frame -new -rgb -red SN2014A_vv_sum.img.gz -green SN2014A_uu_sum.img.gz -blue SN2014A_m2_sum.img.gz &
+rm */uvot/image/*lss*
+rm */uvot/image/*rw*
+rm */uvot/image/*ex*

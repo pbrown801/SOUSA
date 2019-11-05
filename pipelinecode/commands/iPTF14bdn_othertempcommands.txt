@@ -1,0 +1,27 @@
+#summing commands generated on Wed Mar 4 09:51:57 CST 2015
+rm iPTF14bdn*temp*img*
+#appending commands generated on Wed Mar 4 09:51:57 CST 2015
+fcopy  ./00033311042/uvot/image/sw00033311042uvv_sk_sum.img iPTF14bdn_vv_temp.img 
+ftappend  ./00033311043/uvot/image/sw00033311043uvv_sk_sum.img iPTF14bdn_vv_temp.img 
+ftappend  ./00033311290/uvot/image/sw00033311290uvv_sk_sum.img iPTF14bdn_vv_temp.img 
+uvotimsum infile=iPTF14bdn_vv_temp.img outfile=iPTF14bdn_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy  ./00033311042/uvot/image/sw00033311042ubb_sk_sum.img iPTF14bdn_bb_temp.img 
+ftappend  ./00033311043/uvot/image/sw00033311043ubb_sk_sum.img iPTF14bdn_bb_temp.img 
+ftappend  ./00033311290/uvot/image/sw00033311290ubb_sk_sum.img iPTF14bdn_bb_temp.img 
+uvotimsum infile=iPTF14bdn_bb_temp.img outfile=iPTF14bdn_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy  ./00033311042/uvot/image/sw00033311042uuu_sk_sum.img iPTF14bdn_uu_temp.img 
+ftappend  ./00033311043/uvot/image/sw00033311043uuu_sk_sum.img iPTF14bdn_uu_temp.img 
+ftappend  ./00033311290/uvot/image/sw00033311290uuu_sk_sum.img iPTF14bdn_uu_temp.img 
+uvotimsum infile=iPTF14bdn_uu_temp.img outfile=iPTF14bdn_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy  ./00033311042/uvot/image/sw00033311042uw1_sk_sum.img iPTF14bdn_w1_temp.img 
+ftappend  ./00033311043/uvot/image/sw00033311043uw1_sk_sum.img iPTF14bdn_w1_temp.img 
+ftappend  ./00033311290/uvot/image/sw00033311290uw1_sk_sum.img iPTF14bdn_w1_temp.img 
+uvotimsum infile=iPTF14bdn_w1_temp.img outfile=iPTF14bdn_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy  ./00033311042/uvot/image/sw00033311042um2_sk_sum.img iPTF14bdn_m2_temp.img 
+ftappend  ./00033311043/uvot/image/sw00033311043um2_sk_sum.img iPTF14bdn_m2_temp.img 
+ftappend  ./00033311290/uvot/image/sw00033311290um2_sk_sum.img iPTF14bdn_m2_temp.img 
+uvotimsum infile=iPTF14bdn_m2_temp.img outfile=iPTF14bdn_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy  ./00033311042/uvot/image/sw00033311042uw2_sk_sum.img iPTF14bdn_w2_temp.img 
+ftappend  ./00033311043/uvot/image/sw00033311043uw2_sk_sum.img iPTF14bdn_w2_temp.img 
+ftappend  ./00033311290/uvot/image/sw00033311290uw2_sk_sum.img iPTF14bdn_w2_temp.img 
+uvotimsum infile=iPTF14bdn_w2_temp.img outfile=iPTF14bdn_w2_tempsum.img clobber=no exclude=NONE chatter=0

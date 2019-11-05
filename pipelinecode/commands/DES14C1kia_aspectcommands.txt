@@ -1,0 +1,41 @@
+
+rm 00033565002/uvot/image/sw0003356500*sum.img
+gunzip 00033565002/uvot/image/sw0003356500*.gz
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565002/uvot/image/sw00033565002uw1_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565002/uvot/image/sw00033565002um2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565002/uvot/image/sw00033565002uw2_sk.img coo.reg
+gzip -f 00033565002/uvot/image/*sk.img
+
+
+
+
+
+rm 00033565007/uvot/image/sw0003356500*sum.img
+gunzip 00033565007/uvot/image/sw0003356500*.gz
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565007/uvot/image/sw00033565007um2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565007/uvot/image/sw00033565007uw2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565007/uvot/image/sw00033565007uw1_sk.img coo.reg
+gzip -f 00033565007/uvot/image/*sk.img
+
+
+rm 00033565005/uvot/image/sw0003356500*sum.img
+gunzip 00033565005/uvot/image/sw0003356500*.gz
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565005/uvot/image/sw00033565005um2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565005/uvot/image/sw00033565005uw2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565005/uvot/image/sw00033565005uw1_sk.img coo.reg
+gzip -f 00033565005/uvot/image/*sk.img
+
+
+rm 00033565006/uvot/image/sw0003356500*sum.img
+gunzip 00033565006/uvot/image/sw0003356500*.gz
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565006/uvot/image/sw00033565006um2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565006/uvot/image/sw00033565006uw2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565006/uvot/image/sw00033565006uw1_sk.img coo.reg
+gzip -f 00033565006/uvot/image/*sk.img
+
+
+
+gunzip 00033565003/uvot/image/sw0003356500*.gz
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565003/uvot/image/sw00033565003um2_sk.img coo.reg
+perl /Users/pbrown/Desktop/Dropbox/SN/snscripts/uaspect.pl 00033565003/uvot/image/sw00033565003uw2_sk.img coo.reg
+gzip -f 00033565003/uvot/image/*sk.img

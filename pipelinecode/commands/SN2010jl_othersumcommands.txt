@@ -1,0 +1,25 @@
+
+uvotimsum infile=./00032585005/uvot/image/sw00032585005uw2_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005uw2_sk_sum.img clobber=yes exclude=10,11,12 chatter=0
+
+uvotimsum infile=./00032585005/uvot/image/sw00032585005um2_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005um2_sk_sum.img clobber=yes exclude=10,11 chatter=0
+
+uvotimsum infile=./00032585005/uvot/image/sw00032585005uw1_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005uw1_sk_sum.img clobber=yes exclude=3,10 chatter=0
+
+uvotimsum infile=00031858024/uvot/image/sw00031858024uw1_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024uw1_sk_sum.img clobber=yes exclude=2 chatter=0
+
+uvotimsum infile=00031858024/uvot/image/sw00031858024um2_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024um2_sk_sum.img clobber=yes exclude=1 chatter=0
+
+
+gunzip 00031858009/uvot/image/sw00031858009u*_sk.img.gz
+
+#perl $SNSCRIPTS/uaspect.pl  00031858009/uvot/image/sw00031858009uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl  00031858009/uvot/image/sw00031858009ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl  00031858009/uvot/image/sw00031858009uuu_sk.img coo.reg
+
+
+
+ftappend 00031858009/uvot/image/sw00031858009uvv_sk.img\[2\] SN2010jl_vv.img
+ftappend 00031858009/uvot/image/sw00031858009ubb_sk.img\[2\] SN2010jl_bb.img
+ftappend 00031858009/uvot/image/sw00031858009uuu_sk.img\[2\] SN2010jl_uu.img
+
+

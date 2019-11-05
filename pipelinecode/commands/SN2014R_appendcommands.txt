@@ -1,0 +1,41 @@
+#appending commands generated on Tue Apr 1 14:31:20 CDT 2014
+rm SN2014R_vv.img 
+fcopy ./00033150001/uvot/image/sw00033150001uvv_sk_sum.img SN2014R_vv.img 
+ftappend ./00033150002/uvot/image/sw00033150002uvv_sk_sum.img SN2014R_vv.img 
+ftappend ./00033150006/uvot/image/sw00033150006uvv_sk_sum.img SN2014R_vv.img 
+uvotimsum infile=SN2014R_vv.img outfile=SN2014R_vv_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2014R_bb.img 
+fcopy ./00033150001/uvot/image/sw00033150001ubb_sk_sum.img SN2014R_bb.img 
+ftappend ./00033150002/uvot/image/sw00033150002ubb_sk_sum.img SN2014R_bb.img 
+ftappend ./00033150006/uvot/image/sw00033150006ubb_sk_sum.img SN2014R_bb.img 
+uvotimsum infile=SN2014R_bb.img outfile=SN2014R_bb_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2014R_uu.img 
+fcopy ./00033150001/uvot/image/sw00033150001uuu_sk_sum.img SN2014R_uu.img 
+ftappend ./00033150002/uvot/image/sw00033150002uuu_sk_sum.img SN2014R_uu.img 
+ftappend ./00033150006/uvot/image/sw00033150006uuu_sk_sum.img SN2014R_uu.img 
+uvotimsum infile=SN2014R_uu.img outfile=SN2014R_uu_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2014R_w1.img 
+fcopy ./00033150001/uvot/image/sw00033150001uw1_sk_sum.img SN2014R_w1.img 
+ftappend ./00033150003/uvot/image/sw00033150003uw1_sk_sum.img SN2014R_w1.img 
+ftappend ./00033150004/uvot/image/sw00033150004uw1_sk_sum.img SN2014R_w1.img 
+ftappend ./00033150005/uvot/image/sw00033150005uw1_sk_sum.img SN2014R_w1.img 
+ftappend ./00033150007/uvot/image/sw00033150007uw1_sk_sum.img SN2014R_w1.img 
+uvotimsum infile=SN2014R_w1.img outfile=SN2014R_w1_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2014R_m2.img 
+fcopy ./00033150001/uvot/image/sw00033150001um2_sk_sum.img SN2014R_m2.img 
+ftappend ./00033150003/uvot/image/sw00033150003um2_sk_sum.img SN2014R_m2.img 
+ftappend ./00033150004/uvot/image/sw00033150004um2_sk_sum.img SN2014R_m2.img 
+ftappend ./00033150005/uvot/image/sw00033150005um2_sk_sum.img SN2014R_m2.img 
+ftappend ./00033150007/uvot/image/sw00033150007um2_sk_sum.img SN2014R_m2.img 
+uvotimsum infile=SN2014R_m2.img outfile=SN2014R_m2_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2014R_w2.img 
+fcopy ./00033150001/uvot/image/sw00033150001uw2_sk_sum.img SN2014R_w2.img 
+ftappend ./00033150003/uvot/image/sw00033150003uw2_sk_sum.img SN2014R_w2.img 
+ftappend ./00033150004/uvot/image/sw00033150004uw2_sk_sum.img SN2014R_w2.img 
+ftappend ./00033150005/uvot/image/sw00033150005uw2_sk_sum.img SN2014R_w2.img 
+ftappend ./00033150007/uvot/image/sw00033150007uw2_sk_sum.img SN2014R_w2.img 
+uvotimsum infile=SN2014R_w2.img outfile=SN2014R_w2_sum.img clobber=yes exclude=NONE chatter=0
+ds9 -rgb -red SN2014R_vv_tempsum.img -green SN2014R_uu_tempsum.img -blue SN2014R_m2_tempsum.img -frame -new -rgb -red SN2014R_vv_sum.img -green SN2014R_uu_sum.img -blue SN2014R_m2_sum.img &
+ds9 -rgb -red SN2014R_vv_tempsum.img.gz -green SN2014R_uu_tempsum.img.gz -blue SN2014R_m2_tempsum.img.gz -frame -new -rgb -red SN2014R_vv_sum.img.gz -green SN2014R_uu_sum.img.gz -blue SN2014R_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

@@ -1,0 +1,43 @@
+#appending commands generated on Wed Nov 25 13:33:44 CST 2015
+rm ASASSN-14ad*.img*
+fcopy ./00033131001/uvot/image/sw00033131001uvv_sk_sum.img ASASSN-14ad_vv.img 
+ftappend ./00033131002/uvot/image/sw00033131002uvv_sk_sum.img ASASSN-14ad_vv.img 
+ftappend ./00033131003/uvot/image/sw00033131003uvv_sk_sum.img ASASSN-14ad_vv.img 
+ftappend ./00033131004/uvot/image/sw00033131004uvv_sk_sum.img ASASSN-14ad_vv.img 
+ftappend ./00033131005/uvot/image/sw00033131005uvv_sk_sum.img ASASSN-14ad_vv.img 
+uvotimsum infile=ASASSN-14ad_vv.img outfile=ASASSN-14ad_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033131001/uvot/image/sw00033131001ubb_sk_sum.img ASASSN-14ad_bb.img 
+ftappend ./00033131002/uvot/image/sw00033131002ubb_sk_sum.img ASASSN-14ad_bb.img 
+ftappend ./00033131003/uvot/image/sw00033131003ubb_sk_sum.img ASASSN-14ad_bb.img 
+ftappend ./00033131004/uvot/image/sw00033131004ubb_sk_sum.img ASASSN-14ad_bb.img 
+ftappend ./00033131005/uvot/image/sw00033131005ubb_sk_sum.img ASASSN-14ad_bb.img 
+uvotimsum infile=ASASSN-14ad_bb.img outfile=ASASSN-14ad_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033131001/uvot/image/sw00033131001uuu_sk_sum.img ASASSN-14ad_uu.img 
+ftappend ./00033131002/uvot/image/sw00033131002uuu_sk_sum.img ASASSN-14ad_uu.img 
+ftappend ./00033131003/uvot/image/sw00033131003uuu_sk_sum.img ASASSN-14ad_uu.img 
+ftappend ./00033131004/uvot/image/sw00033131004uuu_sk_sum.img ASASSN-14ad_uu.img 
+ftappend ./00033131005/uvot/image/sw00033131005uuu_sk_sum.img ASASSN-14ad_uu.img 
+uvotimsum infile=ASASSN-14ad_uu.img outfile=ASASSN-14ad_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033131001/uvot/image/sw00033131001uw1_sk_sum.img ASASSN-14ad_w1.img 
+ftappend ./00033131002/uvot/image/sw00033131002uw1_sk_sum.img ASASSN-14ad_w1.img 
+ftappend ./00033131003/uvot/image/sw00033131003uw1_sk_sum.img ASASSN-14ad_w1.img 
+ftappend ./00033131004/uvot/image/sw00033131004uw1_sk_sum.img ASASSN-14ad_w1.img 
+ftappend ./00033131005/uvot/image/sw00033131005uw1_sk_sum.img ASASSN-14ad_w1.img 
+uvotimsum infile=ASASSN-14ad_w1.img outfile=ASASSN-14ad_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033131001/uvot/image/sw00033131001um2_sk_sum.img ASASSN-14ad_m2.img 
+ftappend ./00033131002/uvot/image/sw00033131002um2_sk_sum.img ASASSN-14ad_m2.img 
+ftappend ./00033131003/uvot/image/sw00033131003um2_sk_sum.img ASASSN-14ad_m2.img 
+ftappend ./00033131004/uvot/image/sw00033131004um2_sk_sum.img ASASSN-14ad_m2.img 
+ftappend ./00033131005/uvot/image/sw00033131005um2_sk_sum.img ASASSN-14ad_m2.img 
+uvotimsum infile=ASASSN-14ad_m2.img outfile=ASASSN-14ad_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033131001/uvot/image/sw00033131001uw2_sk_sum.img ASASSN-14ad_w2.img 
+ftappend ./00033131002/uvot/image/sw00033131002uw2_sk_sum.img ASASSN-14ad_w2.img 
+ftappend ./00033131003/uvot/image/sw00033131003uw2_sk_sum.img ASASSN-14ad_w2.img 
+ftappend ./00033131004/uvot/image/sw00033131004uw2_sk_sum.img ASASSN-14ad_w2.img 
+ftappend ./00033131005/uvot/image/sw00033131005uw2_sk_sum.img ASASSN-14ad_w2.img 
+uvotimsum infile=ASASSN-14ad_w2.img outfile=ASASSN-14ad_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red ASASSN-14ad_vv_tempsum.img -green ASASSN-14ad_uu_tempsum.img -blue ASASSN-14ad_m2_tempsum.img -frame -new -rgb -red ASASSN-14ad_vv_sum.img -green ASASSN-14ad_uu_sum.img -blue ASASSN-14ad_m2_sum.img &
+ds9  -scale log -rgb -red ASASSN-14ad_vv_tempsum.img.gz -green ASASSN-14ad_uu_tempsum.img.gz -blue ASASSN-14ad_m2_tempsum.img.gz -frame -new -rgb -red ASASSN-14ad_vv_sum.img.gz -green ASASSN-14ad_uu_sum.img.gz -blue ASASSN-14ad_m2_sum.img.gz &
+rm */uvot/image/*lss*
+rm */uvot/image/*rw*
+rm */uvot/image/*ex*

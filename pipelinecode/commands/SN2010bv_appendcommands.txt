@@ -1,0 +1,17 @@
+#appending commands generated on Thu Mar 20 09:31:20 CDT 2014
+rm SN2010bv_bb.img 
+fcopy ./00031704001/uvot/image/sw00031704001ubb_sk_sum.img SN2010bv_bb.img 
+uvotimsum infile=SN2010bv_bb.img outfile=SN2010bv_bb_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2010bv_uu.img 
+fcopy ./00031704001/uvot/image/sw00031704001uuu_sk_sum.img SN2010bv_uu.img 
+uvotimsum infile=SN2010bv_uu.img outfile=SN2010bv_uu_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2010bv_w1.img 
+fcopy ./00031704001/uvot/image/sw00031704001uw1_sk_sum.img SN2010bv_w1.img 
+uvotimsum infile=SN2010bv_w1.img outfile=SN2010bv_w1_sum.img clobber=yes exclude=NONE chatter=0
+rm SN2010bv_w2.img 
+fcopy ./00031704001/uvot/image/sw00031704001uw2_sk_sum.img SN2010bv_w2.img 
+uvotimsum infile=SN2010bv_w2.img outfile=SN2010bv_w2_sum.img clobber=yes exclude=NONE chatter=0
+ds9 -rgb -red SN2010bv_vv_tempsum.img -green SN2010bv_uu_tempsum.img -blue SN2010bv_m2_tempsum.img -frame -new -rgb -red SN2010bv_vv_sum.img -green SN2010bv_uu_sum.img -blue SN2010bv_m2_sum.img &
+ds9 -rgb -red SN2010bv_vv_tempsum.img.gz -green SN2010bv_uu_tempsum.img.gz -blue SN2010bv_m2_tempsum.img.gz -frame -new -rgb -red SN2010bv_vv_sum.img.gz -green SN2010bv_uu_sum.img.gz -blue SN2010bv_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

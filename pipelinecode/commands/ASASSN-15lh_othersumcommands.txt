@@ -1,0 +1,7 @@
+uvotimsum infile=./00033886003/uvot/image/sw00033886003um2_sk.img.gz outfile=./00033886003/uvot/image/sw00033886003um2_sk_sum.img clobber=yes exclude=1 chatter=0
+rm 00033830045/uvot/image/sw00033830045uw1*.img*
+
+
+uvotimsum infile=./00034112009/uvot/image/sw00034112009um2_sk.img.gz outfile=./00034112009/uvot/image/sw00034112009um2_sk_sum.img clobber=yes exclude=1 chatter=0
+
+uvotimsum infile=./00033830049/uvot/image/sw00033830049um2_sk.img.gz outfile=./00033830049/uvot/image/sw00033830049um2_sk_sum.img clobber=yes exclude=1 chatter=0

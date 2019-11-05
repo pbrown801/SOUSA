@@ -1,0 +1,52 @@
+#appending commands generated on Fri Jan 9 17:09:30 CST 2015
+rm SN2013fv*.img*
+fcopy ./00032987001/uvot/image/sw00032987001uvv_sk_sum.img SN2013fv_vv.img 
+ftappend ./00032987003/uvot/image/sw00032987003uvv_sk_sum.img SN2013fv_vv.img 
+ftappend ./00032987004/uvot/image/sw00032987004uvv_sk_sum.img SN2013fv_vv.img 
+ftappend ./00032987005/uvot/image/sw00032987005uvv_sk_sum.img SN2013fv_vv.img 
+ftappend ./00032987006/uvot/image/sw00032987006uvv_sk_sum.img SN2013fv_vv.img 
+ftappend ./00032987007/uvot/image/sw00032987007uvv_sk_sum.img SN2013fv_vv.img 
+ftappend ./00032987008/uvot/image/sw00032987008uvv_sk_sum.img SN2013fv_vv.img 
+uvotimsum infile=SN2013fv_vv.img outfile=SN2013fv_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032987001/uvot/image/sw00032987001ubb_sk_sum.img SN2013fv_bb.img 
+ftappend ./00032987003/uvot/image/sw00032987003ubb_sk_sum.img SN2013fv_bb.img 
+ftappend ./00032987004/uvot/image/sw00032987004ubb_sk_sum.img SN2013fv_bb.img 
+ftappend ./00032987005/uvot/image/sw00032987005ubb_sk_sum.img SN2013fv_bb.img 
+ftappend ./00032987006/uvot/image/sw00032987006ubb_sk_sum.img SN2013fv_bb.img 
+ftappend ./00032987007/uvot/image/sw00032987007ubb_sk_sum.img SN2013fv_bb.img 
+ftappend ./00032987008/uvot/image/sw00032987008ubb_sk_sum.img SN2013fv_bb.img 
+uvotimsum infile=SN2013fv_bb.img outfile=SN2013fv_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032987001/uvot/image/sw00032987001uuu_sk_sum.img SN2013fv_uu.img 
+ftappend ./00032987003/uvot/image/sw00032987003uuu_sk_sum.img SN2013fv_uu.img 
+ftappend ./00032987004/uvot/image/sw00032987004uuu_sk_sum.img SN2013fv_uu.img 
+ftappend ./00032987005/uvot/image/sw00032987005uuu_sk_sum.img SN2013fv_uu.img 
+ftappend ./00032987006/uvot/image/sw00032987006uuu_sk_sum.img SN2013fv_uu.img 
+ftappend ./00032987007/uvot/image/sw00032987007uuu_sk_sum.img SN2013fv_uu.img 
+ftappend ./00032987008/uvot/image/sw00032987008uuu_sk_sum.img SN2013fv_uu.img 
+uvotimsum infile=SN2013fv_uu.img outfile=SN2013fv_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032987001/uvot/image/sw00032987001uw1_sk_sum.img SN2013fv_w1.img 
+ftappend ./00032987003/uvot/image/sw00032987003uw1_sk_sum.img SN2013fv_w1.img 
+ftappend ./00032987004/uvot/image/sw00032987004uw1_sk_sum.img SN2013fv_w1.img 
+ftappend ./00032987005/uvot/image/sw00032987005uw1_sk_sum.img SN2013fv_w1.img 
+ftappend ./00032987006/uvot/image/sw00032987006uw1_sk_sum.img SN2013fv_w1.img 
+ftappend ./00032987007/uvot/image/sw00032987007uw1_sk_sum.img SN2013fv_w1.img 
+uvotimsum infile=SN2013fv_w1.img outfile=SN2013fv_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032987001/uvot/image/sw00032987001um2_sk_sum.img SN2013fv_m2.img 
+ftappend ./00032987003/uvot/image/sw00032987003um2_sk_sum.img SN2013fv_m2.img 
+ftappend ./00032987004/uvot/image/sw00032987004um2_sk_sum.img SN2013fv_m2.img 
+ftappend ./00032987005/uvot/image/sw00032987005um2_sk_sum.img SN2013fv_m2.img 
+ftappend ./00032987006/uvot/image/sw00032987006um2_sk_sum.img SN2013fv_m2.img 
+ftappend ./00032987007/uvot/image/sw00032987007um2_sk_sum.img SN2013fv_m2.img 
+uvotimsum infile=SN2013fv_m2.img outfile=SN2013fv_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00032987001/uvot/image/sw00032987001uw2_sk_sum.img SN2013fv_w2.img 
+ftappend ./00032987003/uvot/image/sw00032987003uw2_sk_sum.img SN2013fv_w2.img 
+ftappend ./00032987004/uvot/image/sw00032987004uw2_sk_sum.img SN2013fv_w2.img 
+ftappend ./00032987005/uvot/image/sw00032987005uw2_sk_sum.img SN2013fv_w2.img 
+ftappend ./00032987006/uvot/image/sw00032987006uw2_sk_sum.img SN2013fv_w2.img 
+ftappend ./00032987007/uvot/image/sw00032987007uw2_sk_sum.img SN2013fv_w2.img 
+uvotimsum infile=SN2013fv_w2.img outfile=SN2013fv_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2013fv_vv_tempsum.img -green SN2013fv_uu_tempsum.img -blue SN2013fv_m2_tempsum.img -frame -new -rgb -red SN2013fv_vv_sum.img -green SN2013fv_uu_sum.img -blue SN2013fv_m2_sum.img &
+ds9  -scale log -rgb -red SN2013fv_vv_tempsum.img.gz -green SN2013fv_uu_tempsum.img.gz -blue SN2013fv_m2_tempsum.img.gz -frame -new -rgb -red SN2013fv_vv_sum.img.gz -green SN2013fv_uu_sum.img.gz -blue SN2013fv_m2_sum.img.gz &
+rm */uvot/image/*lss*
+rm */uvot/image/*rw*
+rm */uvot/image/*ex*

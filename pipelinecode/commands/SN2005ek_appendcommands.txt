@@ -1,0 +1,41 @@
+#appending commands generated on Sat Jun 1 21:31:05 CDT 2013
+rm SN2005ek*.img*
+fcopy ./00030328001/uvot/image/sw00030328001uvv_sk_sum.img SN2005ek_vv.img 
+ftappend ./00030328003/uvot/image/sw00030328003uvv_sk_sum.img SN2005ek_vv.img 
+ftappend ./00030328004/uvot/image/sw00030328004uvv_sk_sum.img SN2005ek_vv.img 
+ftappend ./00030328007/uvot/image/sw00030328007uvv_sk_sum.img SN2005ek_vv.img 
+ftappend ./00030328008/uvot/image/sw00030328008uvv_sk_sum.img SN2005ek_vv.img 
+ftappend ./00030328009/uvot/image/sw00030328009uvv_sk_sum.img SN2005ek_vv.img 
+uvotimsum infile=SN2005ek_vv.img outfile=SN2005ek_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030328003/uvot/image/sw00030328003ubb_sk_sum.img SN2005ek_bb.img 
+ftappend ./00030328004/uvot/image/sw00030328004ubb_sk_sum.img SN2005ek_bb.img 
+ftappend ./00030328008/uvot/image/sw00030328008ubb_sk_sum.img SN2005ek_bb.img 
+uvotimsum infile=SN2005ek_bb.img outfile=SN2005ek_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030328003/uvot/image/sw00030328003uuu_sk_sum.img SN2005ek_uu.img 
+ftappend ./00030328004/uvot/image/sw00030328004uuu_sk_sum.img SN2005ek_uu.img 
+ftappend ./00030328008/uvot/image/sw00030328008uuu_sk_sum.img SN2005ek_uu.img 
+uvotimsum infile=SN2005ek_uu.img outfile=SN2005ek_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030328001/uvot/image/sw00030328001uw1_sk_sum.img SN2005ek_w1.img 
+ftappend ./00030328002/uvot/image/sw00030328002uw1_sk_sum.img SN2005ek_w1.img 
+ftappend ./00030328004/uvot/image/sw00030328004uw1_sk_sum.img SN2005ek_w1.img 
+ftappend ./00030328007/uvot/image/sw00030328007uw1_sk_sum.img SN2005ek_w1.img 
+ftappend ./00030328008/uvot/image/sw00030328008uw1_sk_sum.img SN2005ek_w1.img 
+uvotimsum infile=SN2005ek_w1.img outfile=SN2005ek_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030328001/uvot/image/sw00030328001um2_sk_sum.img SN2005ek_m2.img 
+ftappend ./00030328002/uvot/image/sw00030328002um2_sk_sum.img SN2005ek_m2.img 
+ftappend ./00030328004/uvot/image/sw00030328004um2_sk_sum.img SN2005ek_m2.img 
+ftappend ./00030328008/uvot/image/sw00030328008um2_sk_sum.img SN2005ek_m2.img 
+ftappend ./00030328009/uvot/image/sw00030328009um2_sk_sum.img SN2005ek_m2.img 
+uvotimsum infile=SN2005ek_m2.img outfile=SN2005ek_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030328001/uvot/image/sw00030328001uw2_sk_sum.img SN2005ek_w2.img 
+ftappend ./00030328002/uvot/image/sw00030328002uw2_sk_sum.img SN2005ek_w2.img 
+ftappend ./00030328003/uvot/image/sw00030328003uw2_sk_sum.img SN2005ek_w2.img 
+ftappend ./00030328004/uvot/image/sw00030328004uw2_sk_sum.img SN2005ek_w2.img 
+ftappend ./00030328007/uvot/image/sw00030328007uw2_sk_sum.img SN2005ek_w2.img 
+ftappend ./00030328008/uvot/image/sw00030328008uw2_sk_sum.img SN2005ek_w2.img 
+ftappend ./00030328009/uvot/image/sw00030328009uw2_sk_sum.img SN2005ek_w2.img 
+uvotimsum infile=SN2005ek_w2.img outfile=SN2005ek_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2005ek_vv_tempsum.img -green SN2005ek_uu_tempsum.img -blue SN2005ek_m2_tempsum.img -frame -new -rgb -red SN2005ek_vv_sum.img -green SN2005ek_uu_sum.img -blue SN2005ek_m2_sum.img &
+ds9 -rgb -red SN2005ek_vv_tempsum.img.gz -green SN2005ek_uu_tempsum.img.gz -blue SN2005ek_m2_tempsum.img.gz -frame -new -rgb -red SN2005ek_vv_sum.img.gz -green SN2005ek_uu_sum.img.gz -blue SN2005ek_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

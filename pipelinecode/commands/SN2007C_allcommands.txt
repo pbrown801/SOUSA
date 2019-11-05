@@ -1,0 +1,37 @@
+#summing commands generated on Thu Jul 10 11:40:43 CDT 2014
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uvv_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uvv_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001ubb_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002ubb_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uuu_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uuu_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uw1_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uw1_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866003/uvot/image/sw00030866003uw1_sk.img.gz outfile=./00030866003/uvot/image/sw00030866003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001um2_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002um2_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866001/uvot/image/sw00030866001uw2_sk.img.gz outfile=./00030866001/uvot/image/sw00030866001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00030866002/uvot/image/sw00030866002uw2_sk.img.gz outfile=./00030866002/uvot/image/sw00030866002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+#appending commands generated on Thu Jul 10 11:40:43 CDT 2014
+rm SN2007C*.img*
+fcopy ./00030866001/uvot/image/sw00030866001uvv_sk_sum.img SN2007C_vv.img 
+ftappend ./00030866002/uvot/image/sw00030866002uvv_sk_sum.img SN2007C_vv.img 
+uvotimsum infile=SN2007C_vv.img outfile=SN2007C_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030866001/uvot/image/sw00030866001ubb_sk_sum.img SN2007C_bb.img 
+ftappend ./00030866002/uvot/image/sw00030866002ubb_sk_sum.img SN2007C_bb.img 
+uvotimsum infile=SN2007C_bb.img outfile=SN2007C_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030866001/uvot/image/sw00030866001uuu_sk_sum.img SN2007C_uu.img 
+ftappend ./00030866002/uvot/image/sw00030866002uuu_sk_sum.img SN2007C_uu.img 
+uvotimsum infile=SN2007C_uu.img outfile=SN2007C_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030866001/uvot/image/sw00030866001uw1_sk_sum.img SN2007C_w1.img 
+ftappend ./00030866002/uvot/image/sw00030866002uw1_sk_sum.img SN2007C_w1.img 
+ftappend ./00030866003/uvot/image/sw00030866003uw1_sk_sum.img SN2007C_w1.img 
+uvotimsum infile=SN2007C_w1.img outfile=SN2007C_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030866001/uvot/image/sw00030866001um2_sk_sum.img SN2007C_m2.img 
+ftappend ./00030866002/uvot/image/sw00030866002um2_sk_sum.img SN2007C_m2.img 
+uvotimsum infile=SN2007C_m2.img outfile=SN2007C_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030866001/uvot/image/sw00030866001uw2_sk_sum.img SN2007C_w2.img 
+ftappend ./00030866002/uvot/image/sw00030866002uw2_sk_sum.img SN2007C_w2.img 
+uvotimsum infile=SN2007C_w2.img outfile=SN2007C_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2007C_vv_tempsum.img -green SN2007C_uu_tempsum.img -blue SN2007C_m2_tempsum.img -frame -new -rgb -red SN2007C_vv_sum.img -green SN2007C_uu_sum.img -blue SN2007C_m2_sum.img &
+ds9  -scale log -rgb -red SN2007C_vv_tempsum.img.gz -green SN2007C_uu_tempsum.img.gz -blue SN2007C_m2_tempsum.img.gz -frame -new -rgb -red SN2007C_vv_sum.img.gz -green SN2007C_uu_sum.img.gz -blue SN2007C_m2_sum.img.gz &

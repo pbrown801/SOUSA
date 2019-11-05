@@ -1,0 +1,44 @@
+#appending commands generated on Fri Oct 16 12:21:02 CDT 2015
+rm CSS140914*.img*
+fcopy ./00033422001/uvot/image/sw00033422001uvv_sk_sum.img CSS140914_vv.img 
+ftappend ./00033422002/uvot/image/sw00033422002uvv_sk_sum.img CSS140914_vv.img 
+ftappend ./00033422003/uvot/image/sw00033422003uvv_sk_sum.img CSS140914_vv.img 
+ftappend ./00033422004/uvot/image/sw00033422004uvv_sk_sum.img CSS140914_vv.img 
+ftappend ./00033422005/uvot/image/sw00033422005uvv_sk_sum.img CSS140914_vv.img 
+ftappend ./00033422007/uvot/image/sw00033422007uvv_sk_sum.img CSS140914_vv.img 
+ftappend ./00033422008/uvot/image/sw00033422008uvv_sk_sum.img CSS140914_vv.img 
+uvotimsum infile=CSS140914_vv.img outfile=CSS140914_vv_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033422001/uvot/image/sw00033422001ubb_sk_sum.img CSS140914_bb.img 
+ftappend ./00033422002/uvot/image/sw00033422002ubb_sk_sum.img CSS140914_bb.img 
+ftappend ./00033422003/uvot/image/sw00033422003ubb_sk_sum.img CSS140914_bb.img 
+ftappend ./00033422004/uvot/image/sw00033422004ubb_sk_sum.img CSS140914_bb.img 
+ftappend ./00033422005/uvot/image/sw00033422005ubb_sk_sum.img CSS140914_bb.img 
+ftappend ./00033422007/uvot/image/sw00033422007ubb_sk_sum.img CSS140914_bb.img 
+ftappend ./00033422008/uvot/image/sw00033422008ubb_sk_sum.img CSS140914_bb.img 
+uvotimsum infile=CSS140914_bb.img outfile=CSS140914_bb_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033422001/uvot/image/sw00033422001uuu_sk_sum.img CSS140914_uu.img 
+ftappend ./00033422002/uvot/image/sw00033422002uuu_sk_sum.img CSS140914_uu.img 
+ftappend ./00033422003/uvot/image/sw00033422003uuu_sk_sum.img CSS140914_uu.img 
+ftappend ./00033422004/uvot/image/sw00033422004uuu_sk_sum.img CSS140914_uu.img 
+ftappend ./00033422005/uvot/image/sw00033422005uuu_sk_sum.img CSS140914_uu.img 
+ftappend ./00033422007/uvot/image/sw00033422007uuu_sk_sum.img CSS140914_uu.img 
+ftappend ./00033422008/uvot/image/sw00033422008uuu_sk_sum.img CSS140914_uu.img 
+uvotimsum infile=CSS140914_uu.img outfile=CSS140914_uu_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033422001/uvot/image/sw00033422001uw1_sk_sum.img CSS140914_w1.img 
+ftappend ./00033422002/uvot/image/sw00033422002uw1_sk_sum.img CSS140914_w1.img 
+ftappend ./00033422003/uvot/image/sw00033422003uw1_sk_sum.img CSS140914_w1.img 
+ftappend ./00033422004/uvot/image/sw00033422004uw1_sk_sum.img CSS140914_w1.img 
+ftappend ./00033422005/uvot/image/sw00033422005uw1_sk_sum.img CSS140914_w1.img 
+ftappend ./00033422006/uvot/image/sw00033422006uw1_sk_sum.img CSS140914_w1.img 
+ftappend ./00033422007/uvot/image/sw00033422007uw1_sk_sum.img CSS140914_w1.img 
+ftappend ./00033422008/uvot/image/sw00033422008uw1_sk_sum.img CSS140914_w1.img 
+uvotimsum infile=CSS140914_w1.img outfile=CSS140914_w1_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033422001/uvot/image/sw00033422001um2_sk_sum.img CSS140914_m2.img 
+uvotimsum infile=CSS140914_m2.img outfile=CSS140914_m2_sum.img clobber=no exclude=NONE chatter=0
+fcopy ./00033422001/uvot/image/sw00033422001uw2_sk_sum.img CSS140914_w2.img 
+uvotimsum infile=CSS140914_w2.img outfile=CSS140914_w2_sum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red CSS140914_vv_tempsum.img -green CSS140914_uu_tempsum.img -blue CSS140914_m2_tempsum.img -frame -new -rgb -red CSS140914_vv_sum.img -green CSS140914_uu_sum.img -blue CSS140914_m2_sum.img &
+ds9  -scale log -rgb -red CSS140914_vv_tempsum.img.gz -green CSS140914_uu_tempsum.img.gz -blue CSS140914_m2_tempsum.img.gz -frame -new -rgb -red CSS140914_vv_sum.img.gz -green CSS140914_uu_sum.img.gz -blue CSS140914_m2_sum.img.gz &
+rm */uvot/image/*lss*
+rm */uvot/image/*rw*
+rm */uvot/image/*ex*

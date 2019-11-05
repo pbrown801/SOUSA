@@ -1,0 +1,14 @@
+#summing commands generated on Wed Jun 25 10:00:52 CDT 2014
+#appending commands generated on Wed Jun 25 10:00:52 CDT 2014
+rm SN2011fe*.img*
+fextract ./00032081150/uvot/image/sw00032081150uvv_sk.img.gz\[2\] SN2011fe_vv_temp.img 
+fappend ./00032081153/uvot/image/sw00032081153uvv_sk.img.gz\[2\] SN2011fe_vv_temp.img 
+uvotimsum infile=SN2011fe_vv_temp.img outfile=SN2011fe_vv_tempsum.img clobber=no exclude=NONE chatter=0
+
+fextract ./00032081150/uvot/image/sw00032081150ubb_sk.img.gz\[2\] SN2011fe_bb_temp.img 
+fappend ./00032081153/uvot/image/sw00032081153ubb_sk.img.gz\[2\] SN2011fe_bb_temp.img 
+uvotimsum infile=SN2011fe_bb_temp.img outfile=SN2011fe_bb_tempsum.img clobber=no exclude=NONE chatter=0
+
+fextract ./00032081150/uvot/image/sw00032081150uuu_sk.img.gz\[2\] SN2011fe_uu_temp.img 
+fappend ./00032081153/uvot/image/sw00032081153uuu_sk.img.gz\[2\] SN2011fe_uu_temp.img 
+uvotimsum infile=SN2011fe_uu_temp.img outfile=SN2011fe_uu_tempsum.img clobber=no exclude=NONE chatter=0

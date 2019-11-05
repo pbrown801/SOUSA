@@ -1,0 +1,8 @@
+rm SN2011B_uu.img.gz
+rm SN2011B_bb.img.gz
+rm SN2011B_vv.img.gz
+cp SN2011B_uu_all.img SN2011B_uu.img
+cp SN2011B_bb_all.img SN2011B_bb.img
+cp SN2011B_vv_all.img SN2011B_vv.img
+
+

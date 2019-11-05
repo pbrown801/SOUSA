@@ -1,0 +1,516 @@
+#summing commands generated on Wed Aug 31 15:56:51 CDT 2016
+uvotimsum infile=./00031858003/uvot/image/sw00031858003uvv_sk.img.gz outfile=./00031858003/uvot/image/sw00031858003uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858005/uvot/image/sw00031858005uvv_sk.img.gz outfile=./00031858005/uvot/image/sw00031858005uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858010/uvot/image/sw00031858010uvv_sk.img.gz outfile=./00031858010/uvot/image/sw00031858010uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858011/uvot/image/sw00031858011uvv_sk.img.gz outfile=./00031858011/uvot/image/sw00031858011uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858012/uvot/image/sw00031858012uvv_sk.img.gz outfile=./00031858012/uvot/image/sw00031858012uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858015/uvot/image/sw00031858015uvv_sk.img.gz outfile=./00031858015/uvot/image/sw00031858015uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858016/uvot/image/sw00031858016uvv_sk.img.gz outfile=./00031858016/uvot/image/sw00031858016uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858017/uvot/image/sw00031858017uvv_sk.img.gz outfile=./00031858017/uvot/image/sw00031858017uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858018/uvot/image/sw00031858018uvv_sk.img.gz outfile=./00031858018/uvot/image/sw00031858018uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858019/uvot/image/sw00031858019uvv_sk.img.gz outfile=./00031858019/uvot/image/sw00031858019uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858020/uvot/image/sw00031858020uvv_sk.img.gz outfile=./00031858020/uvot/image/sw00031858020uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858021/uvot/image/sw00031858021uvv_sk.img.gz outfile=./00031858021/uvot/image/sw00031858021uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858022/uvot/image/sw00031858022uvv_sk.img.gz outfile=./00031858022/uvot/image/sw00031858022uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858023/uvot/image/sw00031858023uvv_sk.img.gz outfile=./00031858023/uvot/image/sw00031858023uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858024/uvot/image/sw00031858024uvv_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858025/uvot/image/sw00031858025uvv_sk.img.gz outfile=./00031858025/uvot/image/sw00031858025uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858026/uvot/image/sw00031858026uvv_sk.img.gz outfile=./00031858026/uvot/image/sw00031858026uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858027/uvot/image/sw00031858027uvv_sk.img.gz outfile=./00031858027/uvot/image/sw00031858027uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585006/uvot/image/sw00032585006uvv_sk.img.gz outfile=./00032585006/uvot/image/sw00032585006uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585007/uvot/image/sw00032585007uvv_sk.img.gz outfile=./00032585007/uvot/image/sw00032585007uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585008/uvot/image/sw00032585008uvv_sk.img.gz outfile=./00032585008/uvot/image/sw00032585008uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585009/uvot/image/sw00032585009uvv_sk.img.gz outfile=./00032585009/uvot/image/sw00032585009uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585010/uvot/image/sw00032585010uvv_sk.img.gz outfile=./00032585010/uvot/image/sw00032585010uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690001/uvot/image/sw00046690001uvv_sk.img.gz outfile=./00046690001/uvot/image/sw00046690001uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690002/uvot/image/sw00046690002uvv_sk.img.gz outfile=./00046690002/uvot/image/sw00046690002uvv_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858005/uvot/image/sw00031858005ubb_sk.img.gz outfile=./00031858005/uvot/image/sw00031858005ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858010/uvot/image/sw00031858010ubb_sk.img.gz outfile=./00031858010/uvot/image/sw00031858010ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858011/uvot/image/sw00031858011ubb_sk.img.gz outfile=./00031858011/uvot/image/sw00031858011ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858012/uvot/image/sw00031858012ubb_sk.img.gz outfile=./00031858012/uvot/image/sw00031858012ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858015/uvot/image/sw00031858015ubb_sk.img.gz outfile=./00031858015/uvot/image/sw00031858015ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858016/uvot/image/sw00031858016ubb_sk.img.gz outfile=./00031858016/uvot/image/sw00031858016ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858017/uvot/image/sw00031858017ubb_sk.img.gz outfile=./00031858017/uvot/image/sw00031858017ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858018/uvot/image/sw00031858018ubb_sk.img.gz outfile=./00031858018/uvot/image/sw00031858018ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858019/uvot/image/sw00031858019ubb_sk.img.gz outfile=./00031858019/uvot/image/sw00031858019ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858020/uvot/image/sw00031858020ubb_sk.img.gz outfile=./00031858020/uvot/image/sw00031858020ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858021/uvot/image/sw00031858021ubb_sk.img.gz outfile=./00031858021/uvot/image/sw00031858021ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858022/uvot/image/sw00031858022ubb_sk.img.gz outfile=./00031858022/uvot/image/sw00031858022ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858023/uvot/image/sw00031858023ubb_sk.img.gz outfile=./00031858023/uvot/image/sw00031858023ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858024/uvot/image/sw00031858024ubb_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858025/uvot/image/sw00031858025ubb_sk.img.gz outfile=./00031858025/uvot/image/sw00031858025ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858026/uvot/image/sw00031858026ubb_sk.img.gz outfile=./00031858026/uvot/image/sw00031858026ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858027/uvot/image/sw00031858027ubb_sk.img.gz outfile=./00031858027/uvot/image/sw00031858027ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585006/uvot/image/sw00032585006ubb_sk.img.gz outfile=./00032585006/uvot/image/sw00032585006ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585007/uvot/image/sw00032585007ubb_sk.img.gz outfile=./00032585007/uvot/image/sw00032585007ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585008/uvot/image/sw00032585008ubb_sk.img.gz outfile=./00032585008/uvot/image/sw00032585008ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585009/uvot/image/sw00032585009ubb_sk.img.gz outfile=./00032585009/uvot/image/sw00032585009ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585010/uvot/image/sw00032585010ubb_sk.img.gz outfile=./00032585010/uvot/image/sw00032585010ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690001/uvot/image/sw00046690001ubb_sk.img.gz outfile=./00046690001/uvot/image/sw00046690001ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690002/uvot/image/sw00046690002ubb_sk.img.gz outfile=./00046690002/uvot/image/sw00046690002ubb_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858001/uvot/image/sw00031858001uuu_sk.img.gz outfile=./00031858001/uvot/image/sw00031858001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858005/uvot/image/sw00031858005uuu_sk.img.gz outfile=./00031858005/uvot/image/sw00031858005uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858006/uvot/image/sw00031858006uuu_sk.img.gz outfile=./00031858006/uvot/image/sw00031858006uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858007/uvot/image/sw00031858007uuu_sk.img.gz outfile=./00031858007/uvot/image/sw00031858007uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858010/uvot/image/sw00031858010uuu_sk.img.gz outfile=./00031858010/uvot/image/sw00031858010uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858011/uvot/image/sw00031858011uuu_sk.img.gz outfile=./00031858011/uvot/image/sw00031858011uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858012/uvot/image/sw00031858012uuu_sk.img.gz outfile=./00031858012/uvot/image/sw00031858012uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858015/uvot/image/sw00031858015uuu_sk.img.gz outfile=./00031858015/uvot/image/sw00031858015uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858016/uvot/image/sw00031858016uuu_sk.img.gz outfile=./00031858016/uvot/image/sw00031858016uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858017/uvot/image/sw00031858017uuu_sk.img.gz outfile=./00031858017/uvot/image/sw00031858017uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858018/uvot/image/sw00031858018uuu_sk.img.gz outfile=./00031858018/uvot/image/sw00031858018uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858019/uvot/image/sw00031858019uuu_sk.img.gz outfile=./00031858019/uvot/image/sw00031858019uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858020/uvot/image/sw00031858020uuu_sk.img.gz outfile=./00031858020/uvot/image/sw00031858020uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858021/uvot/image/sw00031858021uuu_sk.img.gz outfile=./00031858021/uvot/image/sw00031858021uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858022/uvot/image/sw00031858022uuu_sk.img.gz outfile=./00031858022/uvot/image/sw00031858022uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858023/uvot/image/sw00031858023uuu_sk.img.gz outfile=./00031858023/uvot/image/sw00031858023uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858024/uvot/image/sw00031858024uuu_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858025/uvot/image/sw00031858025uuu_sk.img.gz outfile=./00031858025/uvot/image/sw00031858025uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858026/uvot/image/sw00031858026uuu_sk.img.gz outfile=./00031858026/uvot/image/sw00031858026uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858027/uvot/image/sw00031858027uuu_sk.img.gz outfile=./00031858027/uvot/image/sw00031858027uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585006/uvot/image/sw00032585006uuu_sk.img.gz outfile=./00032585006/uvot/image/sw00032585006uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585007/uvot/image/sw00032585007uuu_sk.img.gz outfile=./00032585007/uvot/image/sw00032585007uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585008/uvot/image/sw00032585008uuu_sk.img.gz outfile=./00032585008/uvot/image/sw00032585008uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585009/uvot/image/sw00032585009uuu_sk.img.gz outfile=./00032585009/uvot/image/sw00032585009uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585010/uvot/image/sw00032585010uuu_sk.img.gz outfile=./00032585010/uvot/image/sw00032585010uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690001/uvot/image/sw00046690001uuu_sk.img.gz outfile=./00046690001/uvot/image/sw00046690001uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690002/uvot/image/sw00046690002uuu_sk.img.gz outfile=./00046690002/uvot/image/sw00046690002uuu_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858001/uvot/image/sw00031858001uw1_sk.img.gz outfile=./00031858001/uvot/image/sw00031858001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858002/uvot/image/sw00031858002uw1_sk.img.gz outfile=./00031858002/uvot/image/sw00031858002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858003/uvot/image/sw00031858003uw1_sk.img.gz outfile=./00031858003/uvot/image/sw00031858003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858004/uvot/image/sw00031858004uw1_sk.img.gz outfile=./00031858004/uvot/image/sw00031858004uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858005/uvot/image/sw00031858005uw1_sk.img.gz outfile=./00031858005/uvot/image/sw00031858005uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858006/uvot/image/sw00031858006uw1_sk.img.gz outfile=./00031858006/uvot/image/sw00031858006uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858007/uvot/image/sw00031858007uw1_sk.img.gz outfile=./00031858007/uvot/image/sw00031858007uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858010/uvot/image/sw00031858010uw1_sk.img.gz outfile=./00031858010/uvot/image/sw00031858010uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858011/uvot/image/sw00031858011uw1_sk.img.gz outfile=./00031858011/uvot/image/sw00031858011uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858013/uvot/image/sw00031858013uw1_sk.img.gz outfile=./00031858013/uvot/image/sw00031858013uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858014/uvot/image/sw00031858014uw1_sk.img.gz outfile=./00031858014/uvot/image/sw00031858014uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858015/uvot/image/sw00031858015uw1_sk.img.gz outfile=./00031858015/uvot/image/sw00031858015uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858016/uvot/image/sw00031858016uw1_sk.img.gz outfile=./00031858016/uvot/image/sw00031858016uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858017/uvot/image/sw00031858017uw1_sk.img.gz outfile=./00031858017/uvot/image/sw00031858017uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858018/uvot/image/sw00031858018uw1_sk.img.gz outfile=./00031858018/uvot/image/sw00031858018uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858019/uvot/image/sw00031858019uw1_sk.img.gz outfile=./00031858019/uvot/image/sw00031858019uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858020/uvot/image/sw00031858020uw1_sk.img.gz outfile=./00031858020/uvot/image/sw00031858020uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858021/uvot/image/sw00031858021uw1_sk.img.gz outfile=./00031858021/uvot/image/sw00031858021uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858022/uvot/image/sw00031858022uw1_sk.img.gz outfile=./00031858022/uvot/image/sw00031858022uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858023/uvot/image/sw00031858023uw1_sk.img.gz outfile=./00031858023/uvot/image/sw00031858023uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858024/uvot/image/sw00031858024uw1_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858025/uvot/image/sw00031858025uw1_sk.img.gz outfile=./00031858025/uvot/image/sw00031858025uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858026/uvot/image/sw00031858026uw1_sk.img.gz outfile=./00031858026/uvot/image/sw00031858026uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858027/uvot/image/sw00031858027uw1_sk.img.gz outfile=./00031858027/uvot/image/sw00031858027uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585002/uvot/image/sw00032585002uw1_sk.img.gz outfile=./00032585002/uvot/image/sw00032585002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585003/uvot/image/sw00032585003uw1_sk.img.gz outfile=./00032585003/uvot/image/sw00032585003uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585004/uvot/image/sw00032585004uw1_sk.img.gz outfile=./00032585004/uvot/image/sw00032585004uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585005/uvot/image/sw00032585005uw1_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585006/uvot/image/sw00032585006uw1_sk.img.gz outfile=./00032585006/uvot/image/sw00032585006uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585007/uvot/image/sw00032585007uw1_sk.img.gz outfile=./00032585007/uvot/image/sw00032585007uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585008/uvot/image/sw00032585008uw1_sk.img.gz outfile=./00032585008/uvot/image/sw00032585008uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585009/uvot/image/sw00032585009uw1_sk.img.gz outfile=./00032585009/uvot/image/sw00032585009uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585010/uvot/image/sw00032585010uw1_sk.img.gz outfile=./00032585010/uvot/image/sw00032585010uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585011/uvot/image/sw00032585011uw1_sk.img.gz outfile=./00032585011/uvot/image/sw00032585011uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585012/uvot/image/sw00032585012uw1_sk.img.gz outfile=./00032585012/uvot/image/sw00032585012uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585013/uvot/image/sw00032585013uw1_sk.img.gz outfile=./00032585013/uvot/image/sw00032585013uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585014/uvot/image/sw00032585014uw1_sk.img.gz outfile=./00032585014/uvot/image/sw00032585014uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585015/uvot/image/sw00032585015uw1_sk.img.gz outfile=./00032585015/uvot/image/sw00032585015uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585016/uvot/image/sw00032585016uw1_sk.img.gz outfile=./00032585016/uvot/image/sw00032585016uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585017/uvot/image/sw00032585017uw1_sk.img.gz outfile=./00032585017/uvot/image/sw00032585017uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585018/uvot/image/sw00032585018uw1_sk.img.gz outfile=./00032585018/uvot/image/sw00032585018uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585019/uvot/image/sw00032585019uw1_sk.img.gz outfile=./00032585019/uvot/image/sw00032585019uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585020/uvot/image/sw00032585020uw1_sk.img.gz outfile=./00032585020/uvot/image/sw00032585020uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585021/uvot/image/sw00032585021uw1_sk.img.gz outfile=./00032585021/uvot/image/sw00032585021uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585022/uvot/image/sw00032585022uw1_sk.img.gz outfile=./00032585022/uvot/image/sw00032585022uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585024/uvot/image/sw00032585024uw1_sk.img.gz outfile=./00032585024/uvot/image/sw00032585024uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585026/uvot/image/sw00032585026uw1_sk.img.gz outfile=./00032585026/uvot/image/sw00032585026uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585027/uvot/image/sw00032585027uw1_sk.img.gz outfile=./00032585027/uvot/image/sw00032585027uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585028/uvot/image/sw00032585028uw1_sk.img.gz outfile=./00032585028/uvot/image/sw00032585028uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585029/uvot/image/sw00032585029uw1_sk.img.gz outfile=./00032585029/uvot/image/sw00032585029uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585031/uvot/image/sw00032585031uw1_sk.img.gz outfile=./00032585031/uvot/image/sw00032585031uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585032/uvot/image/sw00032585032uw1_sk.img.gz outfile=./00032585032/uvot/image/sw00032585032uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585033/uvot/image/sw00032585033uw1_sk.img.gz outfile=./00032585033/uvot/image/sw00032585033uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690001/uvot/image/sw00046690001uw1_sk.img.gz outfile=./00046690001/uvot/image/sw00046690001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690002/uvot/image/sw00046690002uw1_sk.img.gz outfile=./00046690002/uvot/image/sw00046690002uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00080420001/uvot/image/sw00080420001uw1_sk.img.gz outfile=./00080420001/uvot/image/sw00080420001uw1_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858001/uvot/image/sw00031858001um2_sk.img.gz outfile=./00031858001/uvot/image/sw00031858001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858005/uvot/image/sw00031858005um2_sk.img.gz outfile=./00031858005/uvot/image/sw00031858005um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858006/uvot/image/sw00031858006um2_sk.img.gz outfile=./00031858006/uvot/image/sw00031858006um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858007/uvot/image/sw00031858007um2_sk.img.gz outfile=./00031858007/uvot/image/sw00031858007um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858010/uvot/image/sw00031858010um2_sk.img.gz outfile=./00031858010/uvot/image/sw00031858010um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858011/uvot/image/sw00031858011um2_sk.img.gz outfile=./00031858011/uvot/image/sw00031858011um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858013/uvot/image/sw00031858013um2_sk.img.gz outfile=./00031858013/uvot/image/sw00031858013um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858015/uvot/image/sw00031858015um2_sk.img.gz outfile=./00031858015/uvot/image/sw00031858015um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858016/uvot/image/sw00031858016um2_sk.img.gz outfile=./00031858016/uvot/image/sw00031858016um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858017/uvot/image/sw00031858017um2_sk.img.gz outfile=./00031858017/uvot/image/sw00031858017um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858018/uvot/image/sw00031858018um2_sk.img.gz outfile=./00031858018/uvot/image/sw00031858018um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858019/uvot/image/sw00031858019um2_sk.img.gz outfile=./00031858019/uvot/image/sw00031858019um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858020/uvot/image/sw00031858020um2_sk.img.gz outfile=./00031858020/uvot/image/sw00031858020um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858021/uvot/image/sw00031858021um2_sk.img.gz outfile=./00031858021/uvot/image/sw00031858021um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858022/uvot/image/sw00031858022um2_sk.img.gz outfile=./00031858022/uvot/image/sw00031858022um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858023/uvot/image/sw00031858023um2_sk.img.gz outfile=./00031858023/uvot/image/sw00031858023um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858024/uvot/image/sw00031858024um2_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858025/uvot/image/sw00031858025um2_sk.img.gz outfile=./00031858025/uvot/image/sw00031858025um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858026/uvot/image/sw00031858026um2_sk.img.gz outfile=./00031858026/uvot/image/sw00031858026um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858027/uvot/image/sw00031858027um2_sk.img.gz outfile=./00031858027/uvot/image/sw00031858027um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585002/uvot/image/sw00032585002um2_sk.img.gz outfile=./00032585002/uvot/image/sw00032585002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585003/uvot/image/sw00032585003um2_sk.img.gz outfile=./00032585003/uvot/image/sw00032585003um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585004/uvot/image/sw00032585004um2_sk.img.gz outfile=./00032585004/uvot/image/sw00032585004um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585005/uvot/image/sw00032585005um2_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585006/uvot/image/sw00032585006um2_sk.img.gz outfile=./00032585006/uvot/image/sw00032585006um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585007/uvot/image/sw00032585007um2_sk.img.gz outfile=./00032585007/uvot/image/sw00032585007um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585008/uvot/image/sw00032585008um2_sk.img.gz outfile=./00032585008/uvot/image/sw00032585008um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585009/uvot/image/sw00032585009um2_sk.img.gz outfile=./00032585009/uvot/image/sw00032585009um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585010/uvot/image/sw00032585010um2_sk.img.gz outfile=./00032585010/uvot/image/sw00032585010um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585012/uvot/image/sw00032585012um2_sk.img.gz outfile=./00032585012/uvot/image/sw00032585012um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585013/uvot/image/sw00032585013um2_sk.img.gz outfile=./00032585013/uvot/image/sw00032585013um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585014/uvot/image/sw00032585014um2_sk.img.gz outfile=./00032585014/uvot/image/sw00032585014um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585015/uvot/image/sw00032585015um2_sk.img.gz outfile=./00032585015/uvot/image/sw00032585015um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585016/uvot/image/sw00032585016um2_sk.img.gz outfile=./00032585016/uvot/image/sw00032585016um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585017/uvot/image/sw00032585017um2_sk.img.gz outfile=./00032585017/uvot/image/sw00032585017um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585018/uvot/image/sw00032585018um2_sk.img.gz outfile=./00032585018/uvot/image/sw00032585018um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585019/uvot/image/sw00032585019um2_sk.img.gz outfile=./00032585019/uvot/image/sw00032585019um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585020/uvot/image/sw00032585020um2_sk.img.gz outfile=./00032585020/uvot/image/sw00032585020um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585021/uvot/image/sw00032585021um2_sk.img.gz outfile=./00032585021/uvot/image/sw00032585021um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585022/uvot/image/sw00032585022um2_sk.img.gz outfile=./00032585022/uvot/image/sw00032585022um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585024/uvot/image/sw00032585024um2_sk.img.gz outfile=./00032585024/uvot/image/sw00032585024um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585026/uvot/image/sw00032585026um2_sk.img.gz outfile=./00032585026/uvot/image/sw00032585026um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585027/uvot/image/sw00032585027um2_sk.img.gz outfile=./00032585027/uvot/image/sw00032585027um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585028/uvot/image/sw00032585028um2_sk.img.gz outfile=./00032585028/uvot/image/sw00032585028um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585029/uvot/image/sw00032585029um2_sk.img.gz outfile=./00032585029/uvot/image/sw00032585029um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585031/uvot/image/sw00032585031um2_sk.img.gz outfile=./00032585031/uvot/image/sw00032585031um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585032/uvot/image/sw00032585032um2_sk.img.gz outfile=./00032585032/uvot/image/sw00032585032um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585033/uvot/image/sw00032585033um2_sk.img.gz outfile=./00032585033/uvot/image/sw00032585033um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690001/uvot/image/sw00046690001um2_sk.img.gz outfile=./00046690001/uvot/image/sw00046690001um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690002/uvot/image/sw00046690002um2_sk.img.gz outfile=./00046690002/uvot/image/sw00046690002um2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858001/uvot/image/sw00031858001uw2_sk.img.gz outfile=./00031858001/uvot/image/sw00031858001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858002/uvot/image/sw00031858002uw2_sk.img.gz outfile=./00031858002/uvot/image/sw00031858002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858004/uvot/image/sw00031858004uw2_sk.img.gz outfile=./00031858004/uvot/image/sw00031858004uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858005/uvot/image/sw00031858005uw2_sk.img.gz outfile=./00031858005/uvot/image/sw00031858005uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858006/uvot/image/sw00031858006uw2_sk.img.gz outfile=./00031858006/uvot/image/sw00031858006uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858007/uvot/image/sw00031858007uw2_sk.img.gz outfile=./00031858007/uvot/image/sw00031858007uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858008/uvot/image/sw00031858008uw2_sk.img.gz outfile=./00031858008/uvot/image/sw00031858008uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858010/uvot/image/sw00031858010uw2_sk.img.gz outfile=./00031858010/uvot/image/sw00031858010uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858011/uvot/image/sw00031858011uw2_sk.img.gz outfile=./00031858011/uvot/image/sw00031858011uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858013/uvot/image/sw00031858013uw2_sk.img.gz outfile=./00031858013/uvot/image/sw00031858013uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858014/uvot/image/sw00031858014uw2_sk.img.gz outfile=./00031858014/uvot/image/sw00031858014uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858015/uvot/image/sw00031858015uw2_sk.img.gz outfile=./00031858015/uvot/image/sw00031858015uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858016/uvot/image/sw00031858016uw2_sk.img.gz outfile=./00031858016/uvot/image/sw00031858016uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858017/uvot/image/sw00031858017uw2_sk.img.gz outfile=./00031858017/uvot/image/sw00031858017uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858018/uvot/image/sw00031858018uw2_sk.img.gz outfile=./00031858018/uvot/image/sw00031858018uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858019/uvot/image/sw00031858019uw2_sk.img.gz outfile=./00031858019/uvot/image/sw00031858019uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858020/uvot/image/sw00031858020uw2_sk.img.gz outfile=./00031858020/uvot/image/sw00031858020uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858021/uvot/image/sw00031858021uw2_sk.img.gz outfile=./00031858021/uvot/image/sw00031858021uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858022/uvot/image/sw00031858022uw2_sk.img.gz outfile=./00031858022/uvot/image/sw00031858022uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858023/uvot/image/sw00031858023uw2_sk.img.gz outfile=./00031858023/uvot/image/sw00031858023uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858024/uvot/image/sw00031858024uw2_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858025/uvot/image/sw00031858025uw2_sk.img.gz outfile=./00031858025/uvot/image/sw00031858025uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858026/uvot/image/sw00031858026uw2_sk.img.gz outfile=./00031858026/uvot/image/sw00031858026uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00031858027/uvot/image/sw00031858027uw2_sk.img.gz outfile=./00031858027/uvot/image/sw00031858027uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585001/uvot/image/sw00032585001uw2_sk.img.gz outfile=./00032585001/uvot/image/sw00032585001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585002/uvot/image/sw00032585002uw2_sk.img.gz outfile=./00032585002/uvot/image/sw00032585002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585003/uvot/image/sw00032585003uw2_sk.img.gz outfile=./00032585003/uvot/image/sw00032585003uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585004/uvot/image/sw00032585004uw2_sk.img.gz outfile=./00032585004/uvot/image/sw00032585004uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585005/uvot/image/sw00032585005uw2_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585006/uvot/image/sw00032585006uw2_sk.img.gz outfile=./00032585006/uvot/image/sw00032585006uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585007/uvot/image/sw00032585007uw2_sk.img.gz outfile=./00032585007/uvot/image/sw00032585007uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585008/uvot/image/sw00032585008uw2_sk.img.gz outfile=./00032585008/uvot/image/sw00032585008uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585009/uvot/image/sw00032585009uw2_sk.img.gz outfile=./00032585009/uvot/image/sw00032585009uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585010/uvot/image/sw00032585010uw2_sk.img.gz outfile=./00032585010/uvot/image/sw00032585010uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585012/uvot/image/sw00032585012uw2_sk.img.gz outfile=./00032585012/uvot/image/sw00032585012uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585013/uvot/image/sw00032585013uw2_sk.img.gz outfile=./00032585013/uvot/image/sw00032585013uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585014/uvot/image/sw00032585014uw2_sk.img.gz outfile=./00032585014/uvot/image/sw00032585014uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585015/uvot/image/sw00032585015uw2_sk.img.gz outfile=./00032585015/uvot/image/sw00032585015uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585016/uvot/image/sw00032585016uw2_sk.img.gz outfile=./00032585016/uvot/image/sw00032585016uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585017/uvot/image/sw00032585017uw2_sk.img.gz outfile=./00032585017/uvot/image/sw00032585017uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585018/uvot/image/sw00032585018uw2_sk.img.gz outfile=./00032585018/uvot/image/sw00032585018uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585019/uvot/image/sw00032585019uw2_sk.img.gz outfile=./00032585019/uvot/image/sw00032585019uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585020/uvot/image/sw00032585020uw2_sk.img.gz outfile=./00032585020/uvot/image/sw00032585020uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585021/uvot/image/sw00032585021uw2_sk.img.gz outfile=./00032585021/uvot/image/sw00032585021uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585022/uvot/image/sw00032585022uw2_sk.img.gz outfile=./00032585022/uvot/image/sw00032585022uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585024/uvot/image/sw00032585024uw2_sk.img.gz outfile=./00032585024/uvot/image/sw00032585024uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585026/uvot/image/sw00032585026uw2_sk.img.gz outfile=./00032585026/uvot/image/sw00032585026uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585027/uvot/image/sw00032585027uw2_sk.img.gz outfile=./00032585027/uvot/image/sw00032585027uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585028/uvot/image/sw00032585028uw2_sk.img.gz outfile=./00032585028/uvot/image/sw00032585028uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585029/uvot/image/sw00032585029uw2_sk.img.gz outfile=./00032585029/uvot/image/sw00032585029uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585031/uvot/image/sw00032585031uw2_sk.img.gz outfile=./00032585031/uvot/image/sw00032585031uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585032/uvot/image/sw00032585032uw2_sk.img.gz outfile=./00032585032/uvot/image/sw00032585032uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00032585033/uvot/image/sw00032585033uw2_sk.img.gz outfile=./00032585033/uvot/image/sw00032585033uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690001/uvot/image/sw00046690001uw2_sk.img.gz outfile=./00046690001/uvot/image/sw00046690001uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=./00046690002/uvot/image/sw00046690002uw2_sk.img.gz outfile=./00046690002/uvot/image/sw00046690002uw2_sk_sum.img clobber=no exclude=NONE chatter=0
+
+uvotimsum infile=./00032585005/uvot/image/sw00032585005uw2_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005uw2_sk_sum.img clobber=yes exclude=10,11,12 chatter=0
+
+uvotimsum infile=./00032585005/uvot/image/sw00032585005um2_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005um2_sk_sum.img clobber=yes exclude=10,11 chatter=0
+
+uvotimsum infile=./00032585005/uvot/image/sw00032585005uw1_sk.img.gz outfile=./00032585005/uvot/image/sw00032585005uw1_sk_sum.img clobber=yes exclude=3,10 chatter=0
+
+uvotimsum infile=00031858024/uvot/image/sw00031858024uw1_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024uw1_sk_sum.img clobber=yes exclude=2 chatter=0
+
+uvotimsum infile=00031858024/uvot/image/sw00031858024um2_sk.img.gz outfile=./00031858024/uvot/image/sw00031858024um2_sk_sum.img clobber=yes exclude=1 chatter=0
+
+
+gunzip 00031858009/uvot/image/sw00031858009u*_sk.img.gz
+
+#perl $SNSCRIPTS/uaspect.pl  00031858009/uvot/image/sw00031858009uvv_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl  00031858009/uvot/image/sw00031858009ubb_sk.img coo.reg
+#perl $SNSCRIPTS/uaspect.pl  00031858009/uvot/image/sw00031858009uuu_sk.img coo.reg
+
+
+
+ftappend 00031858009/uvot/image/sw00031858009uvv_sk.img\[2\] SN2010jl_vv.img
+ftappend 00031858009/uvot/image/sw00031858009ubb_sk.img\[2\] SN2010jl_bb.img
+ftappend 00031858009/uvot/image/sw00031858009uuu_sk.img\[2\] SN2010jl_uu.img
+
+
+#appending commands generated on Wed Aug 31 15:56:51 CDT 2016
+rm SN2010jl*.img*
+fcopy ./00031858003/uvot/image/sw00031858003uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858005/uvot/image/sw00031858005uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858010/uvot/image/sw00031858010uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858011/uvot/image/sw00031858011uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858012/uvot/image/sw00031858012uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858015/uvot/image/sw00031858015uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858016/uvot/image/sw00031858016uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858017/uvot/image/sw00031858017uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858018/uvot/image/sw00031858018uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858019/uvot/image/sw00031858019uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858020/uvot/image/sw00031858020uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858021/uvot/image/sw00031858021uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858022/uvot/image/sw00031858022uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858023/uvot/image/sw00031858023uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858024/uvot/image/sw00031858024uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858025/uvot/image/sw00031858025uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858026/uvot/image/sw00031858026uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00031858027/uvot/image/sw00031858027uvv_sk_sum.img SN2010jl_vv.img 
+fcopy ./00032585006/uvot/image/sw00032585006uvv_sk_sum.img SN2010jl_vv_temp.img 
+ftappend ./00032585007/uvot/image/sw00032585007uvv_sk_sum.img SN2010jl_vv_temp.img 
+ftappend ./00032585008/uvot/image/sw00032585008uvv_sk_sum.img SN2010jl_vv_temp.img 
+ftappend ./00032585009/uvot/image/sw00032585009uvv_sk_sum.img SN2010jl_vv_temp.img 
+ftappend ./00032585010/uvot/image/sw00032585010uvv_sk_sum.img SN2010jl_vv_temp.img 
+ftappend ./00046690001/uvot/image/sw00046690001uvv_sk_sum.img SN2010jl_vv.img 
+ftappend ./00046690002/uvot/image/sw00046690002uvv_sk_sum.img SN2010jl_vv.img 
+uvotimsum infile=SN2010jl_vv.img outfile=SN2010jl_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010jl_vv_temp.img outfile=SN2010jl_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031858005/uvot/image/sw00031858005ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858010/uvot/image/sw00031858010ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858011/uvot/image/sw00031858011ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858012/uvot/image/sw00031858012ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858015/uvot/image/sw00031858015ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858016/uvot/image/sw00031858016ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858017/uvot/image/sw00031858017ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858018/uvot/image/sw00031858018ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858019/uvot/image/sw00031858019ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858020/uvot/image/sw00031858020ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858021/uvot/image/sw00031858021ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858022/uvot/image/sw00031858022ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858023/uvot/image/sw00031858023ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858024/uvot/image/sw00031858024ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858025/uvot/image/sw00031858025ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858026/uvot/image/sw00031858026ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00031858027/uvot/image/sw00031858027ubb_sk_sum.img SN2010jl_bb.img 
+fcopy ./00032585006/uvot/image/sw00032585006ubb_sk_sum.img SN2010jl_bb_temp.img 
+ftappend ./00032585007/uvot/image/sw00032585007ubb_sk_sum.img SN2010jl_bb_temp.img 
+ftappend ./00032585008/uvot/image/sw00032585008ubb_sk_sum.img SN2010jl_bb_temp.img 
+ftappend ./00032585009/uvot/image/sw00032585009ubb_sk_sum.img SN2010jl_bb_temp.img 
+ftappend ./00032585010/uvot/image/sw00032585010ubb_sk_sum.img SN2010jl_bb_temp.img 
+ftappend ./00046690001/uvot/image/sw00046690001ubb_sk_sum.img SN2010jl_bb.img 
+ftappend ./00046690002/uvot/image/sw00046690002ubb_sk_sum.img SN2010jl_bb.img 
+uvotimsum infile=SN2010jl_bb.img outfile=SN2010jl_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010jl_bb_temp.img outfile=SN2010jl_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031858001/uvot/image/sw00031858001uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858005/uvot/image/sw00031858005uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858006/uvot/image/sw00031858006uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858007/uvot/image/sw00031858007uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858010/uvot/image/sw00031858010uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858011/uvot/image/sw00031858011uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858012/uvot/image/sw00031858012uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858015/uvot/image/sw00031858015uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858016/uvot/image/sw00031858016uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858017/uvot/image/sw00031858017uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858018/uvot/image/sw00031858018uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858019/uvot/image/sw00031858019uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858020/uvot/image/sw00031858020uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858021/uvot/image/sw00031858021uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858022/uvot/image/sw00031858022uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858023/uvot/image/sw00031858023uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858024/uvot/image/sw00031858024uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858025/uvot/image/sw00031858025uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858026/uvot/image/sw00031858026uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00031858027/uvot/image/sw00031858027uuu_sk_sum.img SN2010jl_uu.img 
+fcopy ./00032585006/uvot/image/sw00032585006uuu_sk_sum.img SN2010jl_uu_temp.img 
+ftappend ./00032585007/uvot/image/sw00032585007uuu_sk_sum.img SN2010jl_uu_temp.img 
+ftappend ./00032585008/uvot/image/sw00032585008uuu_sk_sum.img SN2010jl_uu_temp.img 
+ftappend ./00032585009/uvot/image/sw00032585009uuu_sk_sum.img SN2010jl_uu_temp.img 
+ftappend ./00032585010/uvot/image/sw00032585010uuu_sk_sum.img SN2010jl_uu_temp.img 
+ftappend ./00046690001/uvot/image/sw00046690001uuu_sk_sum.img SN2010jl_uu.img 
+ftappend ./00046690002/uvot/image/sw00046690002uuu_sk_sum.img SN2010jl_uu.img 
+uvotimsum infile=SN2010jl_uu.img outfile=SN2010jl_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010jl_uu_temp.img outfile=SN2010jl_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031858001/uvot/image/sw00031858001uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858002/uvot/image/sw00031858002uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858003/uvot/image/sw00031858003uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858004/uvot/image/sw00031858004uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858005/uvot/image/sw00031858005uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858006/uvot/image/sw00031858006uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858007/uvot/image/sw00031858007uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858010/uvot/image/sw00031858010uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858011/uvot/image/sw00031858011uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858013/uvot/image/sw00031858013uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858014/uvot/image/sw00031858014uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858015/uvot/image/sw00031858015uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858016/uvot/image/sw00031858016uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858017/uvot/image/sw00031858017uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858018/uvot/image/sw00031858018uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858019/uvot/image/sw00031858019uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858020/uvot/image/sw00031858020uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858021/uvot/image/sw00031858021uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858022/uvot/image/sw00031858022uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858023/uvot/image/sw00031858023uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858024/uvot/image/sw00031858024uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858025/uvot/image/sw00031858025uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858026/uvot/image/sw00031858026uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00031858027/uvot/image/sw00031858027uw1_sk_sum.img SN2010jl_w1.img 
+fcopy ./00032585002/uvot/image/sw00032585002uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585003/uvot/image/sw00032585003uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585004/uvot/image/sw00032585004uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585005/uvot/image/sw00032585005uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585006/uvot/image/sw00032585006uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585007/uvot/image/sw00032585007uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585008/uvot/image/sw00032585008uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585009/uvot/image/sw00032585009uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585010/uvot/image/sw00032585010uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585011/uvot/image/sw00032585011uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585012/uvot/image/sw00032585012uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585013/uvot/image/sw00032585013uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585014/uvot/image/sw00032585014uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585015/uvot/image/sw00032585015uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585016/uvot/image/sw00032585016uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585017/uvot/image/sw00032585017uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585018/uvot/image/sw00032585018uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585019/uvot/image/sw00032585019uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585020/uvot/image/sw00032585020uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585021/uvot/image/sw00032585021uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585022/uvot/image/sw00032585022uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585024/uvot/image/sw00032585024uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585026/uvot/image/sw00032585026uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585027/uvot/image/sw00032585027uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585028/uvot/image/sw00032585028uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585029/uvot/image/sw00032585029uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585031/uvot/image/sw00032585031uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585032/uvot/image/sw00032585032uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00032585033/uvot/image/sw00032585033uw1_sk_sum.img SN2010jl_w1_temp.img 
+ftappend ./00046690001/uvot/image/sw00046690001uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00046690002/uvot/image/sw00046690002uw1_sk_sum.img SN2010jl_w1.img 
+ftappend ./00080420001/uvot/image/sw00080420001uw1_sk_sum.img SN2010jl_w1.img 
+uvotimsum infile=SN2010jl_w1.img outfile=SN2010jl_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010jl_w1_temp.img outfile=SN2010jl_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031858001/uvot/image/sw00031858001um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858005/uvot/image/sw00031858005um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858006/uvot/image/sw00031858006um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858007/uvot/image/sw00031858007um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858010/uvot/image/sw00031858010um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858011/uvot/image/sw00031858011um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858013/uvot/image/sw00031858013um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858015/uvot/image/sw00031858015um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858016/uvot/image/sw00031858016um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858017/uvot/image/sw00031858017um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858018/uvot/image/sw00031858018um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858019/uvot/image/sw00031858019um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858020/uvot/image/sw00031858020um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858021/uvot/image/sw00031858021um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858022/uvot/image/sw00031858022um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858023/uvot/image/sw00031858023um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858024/uvot/image/sw00031858024um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858025/uvot/image/sw00031858025um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858026/uvot/image/sw00031858026um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00031858027/uvot/image/sw00031858027um2_sk_sum.img SN2010jl_m2.img 
+fcopy ./00032585002/uvot/image/sw00032585002um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585003/uvot/image/sw00032585003um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585004/uvot/image/sw00032585004um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585005/uvot/image/sw00032585005um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585006/uvot/image/sw00032585006um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585007/uvot/image/sw00032585007um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585008/uvot/image/sw00032585008um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585009/uvot/image/sw00032585009um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585010/uvot/image/sw00032585010um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585012/uvot/image/sw00032585012um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585013/uvot/image/sw00032585013um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585014/uvot/image/sw00032585014um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585015/uvot/image/sw00032585015um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585016/uvot/image/sw00032585016um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585017/uvot/image/sw00032585017um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585018/uvot/image/sw00032585018um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585019/uvot/image/sw00032585019um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585020/uvot/image/sw00032585020um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585021/uvot/image/sw00032585021um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585022/uvot/image/sw00032585022um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585024/uvot/image/sw00032585024um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585026/uvot/image/sw00032585026um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585027/uvot/image/sw00032585027um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585028/uvot/image/sw00032585028um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585029/uvot/image/sw00032585029um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585031/uvot/image/sw00032585031um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585032/uvot/image/sw00032585032um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00032585033/uvot/image/sw00032585033um2_sk_sum.img SN2010jl_m2_temp.img 
+ftappend ./00046690001/uvot/image/sw00046690001um2_sk_sum.img SN2010jl_m2.img 
+ftappend ./00046690002/uvot/image/sw00046690002um2_sk_sum.img SN2010jl_m2.img 
+uvotimsum infile=SN2010jl_m2.img outfile=SN2010jl_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010jl_m2_temp.img outfile=SN2010jl_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00031858001/uvot/image/sw00031858001uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858002/uvot/image/sw00031858002uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858004/uvot/image/sw00031858004uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858005/uvot/image/sw00031858005uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858006/uvot/image/sw00031858006uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858007/uvot/image/sw00031858007uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858008/uvot/image/sw00031858008uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858010/uvot/image/sw00031858010uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858011/uvot/image/sw00031858011uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858013/uvot/image/sw00031858013uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858014/uvot/image/sw00031858014uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858015/uvot/image/sw00031858015uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858016/uvot/image/sw00031858016uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858017/uvot/image/sw00031858017uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858018/uvot/image/sw00031858018uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858019/uvot/image/sw00031858019uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858020/uvot/image/sw00031858020uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858021/uvot/image/sw00031858021uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858022/uvot/image/sw00031858022uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858023/uvot/image/sw00031858023uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858024/uvot/image/sw00031858024uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858025/uvot/image/sw00031858025uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858026/uvot/image/sw00031858026uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00031858027/uvot/image/sw00031858027uw2_sk_sum.img SN2010jl_w2.img 
+fcopy ./00032585001/uvot/image/sw00032585001uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585002/uvot/image/sw00032585002uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585003/uvot/image/sw00032585003uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585004/uvot/image/sw00032585004uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585005/uvot/image/sw00032585005uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585006/uvot/image/sw00032585006uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585007/uvot/image/sw00032585007uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585008/uvot/image/sw00032585008uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585009/uvot/image/sw00032585009uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585010/uvot/image/sw00032585010uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585012/uvot/image/sw00032585012uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585013/uvot/image/sw00032585013uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585014/uvot/image/sw00032585014uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585015/uvot/image/sw00032585015uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585016/uvot/image/sw00032585016uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585017/uvot/image/sw00032585017uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585018/uvot/image/sw00032585018uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585019/uvot/image/sw00032585019uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585020/uvot/image/sw00032585020uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585021/uvot/image/sw00032585021uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585022/uvot/image/sw00032585022uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585024/uvot/image/sw00032585024uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585026/uvot/image/sw00032585026uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585027/uvot/image/sw00032585027uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585028/uvot/image/sw00032585028uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585029/uvot/image/sw00032585029uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585031/uvot/image/sw00032585031uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585032/uvot/image/sw00032585032uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00032585033/uvot/image/sw00032585033uw2_sk_sum.img SN2010jl_w2_temp.img 
+ftappend ./00046690001/uvot/image/sw00046690001uw2_sk_sum.img SN2010jl_w2.img 
+ftappend ./00046690002/uvot/image/sw00046690002uw2_sk_sum.img SN2010jl_w2.img 
+uvotimsum infile=SN2010jl_w2.img outfile=SN2010jl_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2010jl_w2_temp.img outfile=SN2010jl_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9  -scale log -rgb -red SN2010jl_vv_tempsum.img -green SN2010jl_uu_tempsum.img -blue SN2010jl_m2_tempsum.img -frame -new -rgb -red SN2010jl_vv_sum.img -green SN2010jl_uu_sum.img -blue SN2010jl_m2_sum.img &
+ds9  -scale log -rgb -red SN2010jl_vv_tempsum.img.gz -green SN2010jl_uu_tempsum.img.gz -blue SN2010jl_m2_tempsum.img.gz -frame -new -rgb -red SN2010jl_vv_sum.img.gz -green SN2010jl_uu_sum.img.gz -blue SN2010jl_m2_sum.img.gz &

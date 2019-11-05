@@ -1,0 +1,23 @@
+cp SN2013gh_vv.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh_vv_v1.0_img.fits.gz
+cp SN2013gh_vv.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh_vv_v1.0_img.fits.gz
+cp SN2013gh_vv.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh_vv_v1.0_img.fits.gz
+cp SN2013gh_vv.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh_vv_v1.0_img.fits.gz
+cp SN2013gh_vv.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh_vv_v1.0_img.fits.gz
+cp SN2013gh_vv.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh_vv_v1.0_img.fits.gz
+
+
+cp SN2013gh_vv_tempsum.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh-tempsum_vv_v1.0_img.fits.gz
+cp SN2013gh_vv_tempsum.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh-tempsum_vv_v1.0_img.fits.gz
+cp SN2013gh_vv_tempsum.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh-tempsum_vv_v1.0_img.fits.gz
+cp SN2013gh_vv_tempsum.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh-tempsum_vv_v1.0_img.fits.gz
+cp SN2013gh_vv_tempsum.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh-tempsum_vv_v1.0_img.fits.gz
+cp SN2013gh_vv_tempsum.img.gz hlsp_SOUSA_Swift_UVOT_SN2013gh-tempsum_vv_v1.0_img.fits.gz
+
+set Galrate5err=`pget fstatistic mean`
+
+
+
+
+		fparkey $ZPT   $SNname"_"$band"_phot.fits" ZPT add=yes
+		fparkey $ZPTab $SNname"_"$band"_phot.fits" ZPTab add=yes
+		fparkey $ZPTe  $SNname"_"$band"_phot.fits" ZPTe add=yes

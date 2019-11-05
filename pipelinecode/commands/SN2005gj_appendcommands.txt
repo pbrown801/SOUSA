@@ -1,0 +1,29 @@
+#appending commands generated on Thu Apr 4 08:36:53 CDT 2013
+rm SN2005gj*.img*
+fcopy ./00030345001/uvot/image/sw00030345001uvv_sk_sum.img SN2005gj_vv.img 
+fcopy ./00037763002/uvot/image/sw00037763002uvv_sk_sum.img SN2005gj_vv_temp.img 
+uvotimsum infile=SN2005gj_vv.img outfile=SN2005gj_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005gj_vv_temp.img outfile=SN2005gj_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00037763001/uvot/image/sw00037763001ubb_sk_sum.img SN2005gj_bb_temp.img 
+ftappend ./00037763002/uvot/image/sw00037763002ubb_sk_sum.img SN2005gj_bb_temp.img 
+uvotimsum infile=SN2005gj_bb_temp.img outfile=SN2005gj_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00037763001/uvot/image/sw00037763001uuu_sk_sum.img SN2005gj_uu_temp.img 
+ftappend ./00037763002/uvot/image/sw00037763002uuu_sk_sum.img SN2005gj_uu_temp.img 
+uvotimsum infile=SN2005gj_uu_temp.img outfile=SN2005gj_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030345001/uvot/image/sw00030345001uw1_sk_sum.img SN2005gj_w1.img 
+fcopy ./00037763001/uvot/image/sw00037763001uw1_sk_sum.img SN2005gj_w1_temp.img 
+ftappend ./00037763002/uvot/image/sw00037763002uw1_sk_sum.img SN2005gj_w1_temp.img 
+uvotimsum infile=SN2005gj_w1.img outfile=SN2005gj_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005gj_w1_temp.img outfile=SN2005gj_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030345001/uvot/image/sw00030345001um2_sk_sum.img SN2005gj_m2.img 
+fcopy ./00037763002/uvot/image/sw00037763002um2_sk_sum.img SN2005gj_m2_temp.img 
+uvotimsum infile=SN2005gj_m2.img outfile=SN2005gj_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005gj_m2_temp.img outfile=SN2005gj_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00030345001/uvot/image/sw00030345001uw2_sk_sum.img SN2005gj_w2.img 
+fcopy ./00037763002/uvot/image/sw00037763002uw2_sk_sum.img SN2005gj_w2_temp.img 
+uvotimsum infile=SN2005gj_w2.img outfile=SN2005gj_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005gj_w2_temp.img outfile=SN2005gj_w2_tempsum.img clobber=no exclude=NONE chatter=0
+ds9 -rgb -red SN2005gj_vv_tempsum.img -green SN2005gj_uu_tempsum.img -blue SN2005gj_m2_tempsum.img -frame -new -rgb -red SN2005gj_vv_sum.img -green SN2005gj_uu_sum.img -blue SN2005gj_m2_sum.img &
+ds9 -rgb -red SN2005gj_vv_tempsum.img.gz -green SN2005gj_uu_tempsum.img.gz -blue SN2005gj_m2_tempsum.img.gz -frame -new -rgb -red SN2005gj_vv_sum.img.gz -green SN2005gj_uu_sum.img.gz -blue SN2005gj_m2_sum.img.gz &
+gzip *.img
+gzip *.lss

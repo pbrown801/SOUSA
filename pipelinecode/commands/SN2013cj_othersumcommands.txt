@@ -1,0 +1,5 @@
+uvotimsum infile=./00032822004/uvot/image/sw00032822004uw2_sk.img.gz outfile=./00032822004/uvot/image/sw00032822004uw2_sk_sum.img clobber=yes exclude=2,3 chatter=0
+
+uvotimsum infile=./00032822004/uvot/image/sw00032822004um2_sk.img.gz outfile=./00032822004/uvot/image/sw00032822004um2_sk_sum.img clobber=yes exclude=2,3 chatter=0
+
+uvotimsum infile=./00032822004/uvot/image/sw00032822004uw1_sk.img.gz outfile=./00032822004/uvot/image/sw00032822004uw1_sk_sum.img clobber=yes exclude=2,3 chatter=0

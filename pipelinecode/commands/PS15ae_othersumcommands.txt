@@ -1,0 +1,15 @@
+#uvotimsum infile=./00033723006/uvot/image/sw00033723006uw2_sk.img.gz outfile=./00033723006/uvot/image/sw00033723006uw2_sk_sum.img clobber=yes exclude=2 chatter=0
+#uvotimsum infile=./00033723006/uvot/image/sw00033723006um2_sk.img.gz outfile=./00033723006/uvot/image/sw00033723006um2_sk_sum.img clobber=yes exclude=2 chatter=0
+#uvotimsum infile=./00033723006/uvot/image/sw00033723006uuu_sk.img.gz outfile=./00033723006/uvot/image/sw00033723006uuu_sk_sum.img clobber=yes exclude=2 chatter=0
+
+uvotimsum infile=./00033647006/uvot/image/sw00033647006uw2_sk.img.gz outfile=./00033647006/uvot/image/sw00033647006uw2_sk_sum.img clobber=yes exclude=2 chatter=0
+uvotimsum infile=./00033647006/uvot/image/sw00033647006um2_sk.img.gz outfile=./00033647006/uvot/image/sw00033647006um2_sk_sum.img clobber=yes exclude=2 chatter=0
+uvotimsum infile=./00033647006/uvot/image/sw00033647006uuu_sk.img.gz outfile=./00033647006/uvot/image/sw00033647006uuu_sk_sum.img clobber=yes exclude=2 chatter=0
+
+#smeared
+rm -r 00033647003/uvot/image/sw00033647003uw1*
+rm -r 00033647013/uvot/image/sw00033647013uw1*
+rm -r 00033723005/uvot/image/sw00033723005uw1*
+
+
+uvotimsum infile=./00033723012/uvot/image/sw00033723012uw2_sk.img.gz outfile=./00033723012/uvot/image/sw00033723012uw2_sk_sum.img clobber=yes exclude=9 chatter=0

@@ -1,0 +1,25 @@
+#appending commands generated on Fri Sep 4 14:53:44 CDT 2015
+rm SN2005cf*.img*
+fcopy ./00035894001/uvot/image/sw00035894001uvv_sk_sum.img SN2005cf_vv.img 
+uvotimsum infile=SN2005cf_vv.img outfile=SN2005cf_vv_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005cf_vv_ex.img outfile=SN2005cf_vv_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00035894001/uvot/image/sw00035894001ubb_sk_sum.img SN2005cf_bb.img 
+uvotimsum infile=SN2005cf_bb.img outfile=SN2005cf_bb_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005cf_bb_ex.img outfile=SN2005cf_bb_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00035894001/uvot/image/sw00035894001uuu_sk_sum.img SN2005cf_uu.img 
+uvotimsum infile=SN2005cf_uu.img outfile=SN2005cf_uu_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005cf_uu_ex.img outfile=SN2005cf_uu_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00035894001/uvot/image/sw00035894001uw1_sk_sum.img SN2005cf_w1.img 
+uvotimsum infile=SN2005cf_w1.img outfile=SN2005cf_w1_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005cf_w1_ex.img outfile=SN2005cf_w1_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00035894001/uvot/image/sw00035894001um2_sk_sum.img SN2005cf_m2.img 
+uvotimsum infile=SN2005cf_m2.img outfile=SN2005cf_m2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005cf_m2_ex.img outfile=SN2005cf_m2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+fcopy ./00035894001/uvot/image/sw00035894001uw2_sk_sum.img SN2005cf_w2.img 
+uvotimsum infile=SN2005cf_w2.img outfile=SN2005cf_w2_sum.img clobber=no exclude=NONE chatter=0
+uvotimsum infile=SN2005cf_w2_ex.img outfile=SN2005cf_w2_ex_sum.img clobber=no exclude=NONE chatter=0 method=expmap
+ds9  -scale log -rgb -red SN2005cf_vv_tempsum.img -green SN2005cf_uu_tempsum.img -blue SN2005cf_m2_tempsum.img -frame -new -rgb -red SN2005cf_vv_sum.img -green SN2005cf_uu_sum.img -blue SN2005cf_m2_sum.img &
+ds9  -scale log -rgb -red SN2005cf_vv_tempsum.img.gz -green SN2005cf_uu_tempsum.img.gz -blue SN2005cf_m2_tempsum.img.gz -frame -new -rgb -red SN2005cf_vv_sum.img.gz -green SN2005cf_uu_sum.img.gz -blue SN2005cf_m2_sum.img.gz &
+rm */uvot/image/*lss*
+rm */uvot/image/*rw*
+rm */uvot/image/*ex*

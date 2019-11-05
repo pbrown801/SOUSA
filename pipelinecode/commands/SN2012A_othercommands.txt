@@ -1,0 +1,26 @@
+gunzip -f *.gz
+
+gunzip -f 00032247003/uvot/image/*.gz
+
+ftappend 00032247003/uvot/image/sw00032247003uvv_sk.img\[1\] SN2012A_vv.img
+ftappend 00032247003/uvot/image/sw00032247003uvv_sk.img\[2\] SN2012A_vv.img
+ftappend 00032247003/uvot/image/sw00032247003ubb_sk.img\[1\] SN2012A_bb.img
+ftappend 00032247003/uvot/image/sw00032247003ubb_sk.img\[2\] SN2012A_bb.img
+ftappend 00032247003/uvot/image/sw00032247003uuu_sk.img\[1\] SN2012A_uu.img
+ftappend 00032247003/uvot/image/sw00032247003uuu_sk.img\[2\] SN2012A_uu.img
+
+
+gunzip -f 00032247016/uvot/image/*.gz
+
+ftappend 00032247016/uvot/image/sw00032247016uvv_sk.img\[1\] SN2012A_vv.img
+ftappend 00032247016/uvot/image/sw00032247016uvv_sk.img\[2\] SN2012A_vv.img
+ftappend 00032247016/uvot/image/sw00032247016ubb_sk.img\[1\] SN2012A_bb.img
+# smeared ftappend 00032247016/uvot/image/sw00032247016ubb_sk.img\[2\] SN2012A_bb.img
+# these are sort of smeared but okay
+ftappend 00032247016/uvot/image/sw00032247016uuu_sk.img\[1\] SN2012A_uu.img
+ftappend 00032247016/uvot/image/sw00032247016uuu_sk.img\[2\] SN2012A_uu.img
+
+
+uvotimsum infile=./00032247007/uvot/image/sw00032247007uw2_sk.img.gz outfile=./00032247007/uvot/image/sw00032247007uw2_sk_sum.img clobber=yes exclude=NONE chatter=0
+
+

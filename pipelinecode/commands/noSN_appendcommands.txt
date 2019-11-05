@@ -1,0 +1,26 @@
+#appending commands generated on Thu Jul 10 11:23:56 CDT 2014
+rm noSN*.img*
+fcopy ./00049874001/uvot/image/sw00049874001uvv_sk_sum.img noSN_vv_temp.img 
+ftappend ./00049874002/uvot/image/sw00049874002uvv_sk_sum.img noSN_vv_temp.img 
+ftappend ./00049874003/uvot/image/sw00049874003uvv_sk_sum.img noSN_vv_temp.img 
+uvotimsum infile=noSN_vv_temp.img outfile=noSN_vv_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00049874001/uvot/image/sw00049874001ubb_sk_sum.img noSN_bb_temp.img 
+ftappend ./00049874002/uvot/image/sw00049874002ubb_sk_sum.img noSN_bb_temp.img 
+ftappend ./00049874003/uvot/image/sw00049874003ubb_sk_sum.img noSN_bb_temp.img 
+uvotimsum infile=noSN_bb_temp.img outfile=noSN_bb_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00049874001/uvot/image/sw00049874001uuu_sk_sum.img noSN_uu_temp.img 
+ftappend ./00049874002/uvot/image/sw00049874002uuu_sk_sum.img noSN_uu_temp.img 
+ftappend ./00049874003/uvot/image/sw00049874003uuu_sk_sum.img noSN_uu_temp.img 
+uvotimsum infile=noSN_uu_temp.img outfile=noSN_uu_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00049874001/uvot/image/sw00049874001uw1_sk_sum.img noSN_w1_temp.img 
+ftappend ./00049874002/uvot/image/sw00049874002uw1_sk_sum.img noSN_w1_temp.img 
+ftappend ./00049874003/uvot/image/sw00049874003uw1_sk_sum.img noSN_w1_temp.img 
+uvotimsum infile=noSN_w1_temp.img outfile=noSN_w1_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00049874001/uvot/image/sw00049874001um2_sk_sum.img noSN_m2_temp.img 
+ftappend ./00049874002/uvot/image/sw00049874002um2_sk_sum.img noSN_m2_temp.img 
+ftappend ./00049874003/uvot/image/sw00049874003um2_sk_sum.img noSN_m2_temp.img 
+uvotimsum infile=noSN_m2_temp.img outfile=noSN_m2_tempsum.img clobber=no exclude=NONE chatter=0
+fcopy ./00049874001/uvot/image/sw00049874001uw2_sk_sum.img noSN_w2_temp.img 
+ftappend ./00049874002/uvot/image/sw00049874002uw2_sk_sum.img noSN_w2_temp.img 
+ftappend ./00049874003/uvot/image/sw00049874003uw2_sk_sum.img noSN_w2_temp.img 
+uvotimsum infile=noSN_w2_temp.img outfile=noSN_w2_tempsum.img clobber=no exclude=NONE chatter=0
