@@ -1,0 +1,16 @@
+readcol, '$SOUSA/grounddata/SN2012ht_bb_ground.dat', event,time,magnitude,e_magnitude,upperlimit,band,instrument,telescope, format='A,A,A,A,A,A,A,A',  delimiter=',', /silent
+
+
+rows=where(band eq 'B' and telescope ne 'Swift')
+
+;spaces need to be added between commas
+
+
+e_magnitude[where(e_magnitude eq 0.0)]=0.03
+
+for i=0,n_elements(rows)-1 do print, time[rows[i]], ' ', magnitude[rows[i]], ' ', e_magnitude[rows[i]] 
+
+
+
+rows=where(strmatch(band,'*V*') eq 1 and telescope ne 'Swift')
+for i=0,n_elements(rows)-1 do print, time[rows[i]], ' ', magnitude[rows[i]], ' ', e_magnitude[rows[i]] 
