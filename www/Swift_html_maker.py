@@ -205,6 +205,7 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
 #-----------------data,images, and lcplots relative paths --------------------------------------------------------------------
 
     data_path= "data/"+SNnamen+"_uvotB15.1.dat"
+    data_path2= "data/"+SNnamen+"_uvotB20.0.dat"
     
     images_path= "images/"+SNnamen+"_uvot.png"
 
@@ -241,12 +242,19 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
         text+= textlc
                     
     #datafilenmesousa html section:
-    if os.path.exists(data_path) == True:
-        textdata= """href="data/{SNnamen}_uvotB15.1.dat"><img \n
+    if os.path.exists(data_path2) == True:
+        textdata= """href="data/{SNnamen}_uvotB20.0.dat"><img \n
                       src="www/sousa_galaxy_small.png" alt="Swift UVOT data" \n
                        style="border: 0px solid; border: 0px solid; width: \n
                         52px; height: 89px;" border="0" height="89" width="52"></a></td> \n""".format(**locals())
         text+= textdata
+        if os.path.exists(data_path) == True and os.path.exists(data_path2)== False:
+            textdata= """href="data/{SNnamen}_uvotB15.1.dat"><img \n
+                          src="www/sousa_galaxy_small.png" alt="Swift UVOT data" \n
+                           style="border: 0px solid; border: 0px solid; width: \n
+                            52px; height: 89px;" border="0" height="89" width="52"></a></td> \n""".format(**locals())
+            text+= textdata
+
 
                    
     textend= """<td align="center" valign="top"><br> \n
