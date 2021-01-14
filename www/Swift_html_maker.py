@@ -15,6 +15,7 @@ import webbrowser
 
 
 swift= pd.read_csv('NewSwiftSNweblist.csv')
+#swift= pd.read_csv('SwiftSNweblist.csv')
 swift= swift.drop(swift.index[0]) #delete header row
 swift.dropna(subset=["SNname"], inplace= True) #drops all nan in SNname column
 swift= swift.reset_index(drop=True) #reset the index from 0
@@ -141,7 +142,8 @@ If you want older versions of the data that were used in specific publications, 
             
           <th style="background-color: rgb(51, 51, 51); vertical-align:
             top; text-align: center;" align="center"><span style="color:
-              rgb(255, 255, 255);">Image&nbsp; |&nbsp; Plot&nbsp;          |&nbsp; Data</span><br></th>  
+              rgb(255, 255, 255);">Image&nbsp; |&nbsp; Plot&nbsp;
+             |&nbsp; Data</span><br></th>  
         </tr>  
         <tr class="header">
           <td vertical-align: top; text-align: center;" align="center"><br></td>  
@@ -202,11 +204,11 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
     os.chdir('..')
 #-----------------data,images, and lcplots relative paths --------------------------------------------------------------------
 
-    data_path= "../data/"+SNnamen+"_uvotB15.1.dat"
+    data_path= "data/"+SNnamen+"_uvotB15.1.dat"
     
-    images_path= "../images/"+SNnamen+"_uvot.png"
+    images_path= "images/"+SNnamen+"_uvot.png"
 
-    lcplots_path= "../lcplots/"+SNnamen+"_lightcurve.jpg"
+    lcplots_path= "lcplots/"+SNnamen+"_lightcurve.jpg"
     
 #-----------------------------------------------------HTML text---------------------------------------------------------------
 
@@ -223,16 +225,16 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
                          <td align="center" valign="top"><a \n""".format(**locals())
 
     #imagefile html section:
+#        textimage= """href="images/{SNnamen}_uvot.png"><img \n
     if os.path.exists(images_path)== True:
-#        textimage= """href="https://github.com/pbrown801/SOUSA/blob/master/images/{SNnamen}_uvot.png"><img \n
-        textimage= """href="images/{SNnamen}_uvot.png"><img \n
+        textimage= """href="images/{SNnamen}_uvot.png"><img \n        
                          src="www/pic.jpg" alt="Swift image" style="border: 0px solid; border: 0px solid; width: 52px; height: 55px;" \n
                           border="0" height="55" width="52"></a><a \n""".format(**locals())
         text+= textimage
 
     #lcfilename html section:
     if os.path.exists(lcplots_path) == True:
-        textlc= """href="https://github.com/pbrown801/SOUSA/blob/master/lcplots/{SNnamen}_lightcurve.jpg"><img \n
+        textlc= """href="lcplots/{SNnamen}_lightcurve.jpg"><img \n
                     src="www/light.jpg" alt="Swift UVOT lightcurve" \n
                      style="border: 0px solid; border: 0px solid; width: \n
                       52px; height: 55px;" border="0" height="55" width="52"></a><a \n""".format(**locals())
@@ -240,7 +242,7 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
                     
     #datafilenmesousa html section:
     if os.path.exists(data_path) == True:
-        textdata= """href="https://github.com/pbrown801/SOUSA/blob/master/data/{SNnamen}_uvotB15.1.dat"><img \n
+        textdata= """href="data/{SNnamen}_uvotB15.1.dat"><img \n
                       src="www/sousa_galaxy_small.png" alt="Swift UVOT data" \n
                        style="border: 0px solid; border: 0px solid; width: \n
                         52px; height: 89px;" border="0" height="89" width="52"></a></td> \n""".format(**locals())
