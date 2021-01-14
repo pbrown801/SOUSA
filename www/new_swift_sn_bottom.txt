@@ -1,0 +1,113 @@
+
+        <tr align="center">
+          <td colspan="7" rowspan="1" style="vertical-align: top;">
+            <hr style="width: 100%; height: 2px;"></td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;"><br>
+          </td>
+          <td style="vertical-align: top; width: 50px; text-align:
+            left;"><span style="font-weight: bold;">&nbsp; Links:</span><br>
+          </td>
+          <td colspan="5" rowspan="1" style="vertical-align: top;"><a
+              href="http://www.cbat.eps.harvard.edu/lists/Supernovae.html">IAU
+List
+
+              of Supernovae</a><br>
+            <a href="http://www.rochesterastronomy.org/supernova.html">Latest
+SNe
+
+              from Rochester Astronomy</a><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--#include virtual="/docs/swift/swift_footer.html"--><!--#include virtual="/docs/corpfooter.html"-->
+    
+    <script>
+
+function SNFunction() {
+  // Declare variables
+  var filter, table, tr, td, i;
+
+  filter = document.querySelector('#SNInput').value.toUpperCase();
+  tr = document.querySelectorAll('#SNTable tr:not(.header)');
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+          
+function HostFunction() {
+  // Declare variables
+  var filter, table, tr, td, i;
+
+  filter = document.querySelector('#HostInput').value.toUpperCase();
+  tr = document.querySelectorAll('#SNTable tr:not(.header)');
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function RedshiftFunction() {
+  // Declare variables
+  var filter, table, tr, td, i;
+
+  filter = document.querySelector('#RedshiftInput').value.toUpperCase();
+  tr = document.querySelectorAll('#SNTable tr:not(.header)');
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+    if (td) {
+      if (td.innerHTML.indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+          
+function TypeFunction() {
+  // Declare variables
+  var filter, table, tr, td, i;
+
+  filter = document.querySelector('#TypeInput').value.toUpperCase();
+
+  tr = document.querySelectorAll('#SNTable tr:not(.header)');
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[4];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+  </script>
+  
+  </body>
+</html> 

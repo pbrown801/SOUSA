@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title>Swift Supernovae</title>
+    <meta name="keywords" content="Swift, supernova, supernovae, SNe, gamma-ray, gamma ray, burst, BAT, UVOT, XRT, astronomy, satellite,
+      observatory, GRB">
+    <!--#include virtual="/docs/swiftheader.html"-->
+    <meta content="Swift Supernova Team" name="author"> <meta content="Swift Supernova (SN) Team, NASA GSFC PSU" name="description">
+  </head>
+  <body>
+    <h1 style="text-align: center;">Swift Supernovae<span style="font-style: italic;"></span><br>
+    </h1> <table style="width: 800px; text-align: left; margin-left: auto;
+      margin-right: auto;" border="0" cellpadding="1" cellspacing="0"> <tbody>  <tr> <td style="vertical-align: top;"> <br> <br>
+          </td> <td colspan="6" rowspan="1" style="vertical-align: top;"> <br>
+          </td> </tr> <tr> <td colspan="7" rowspan="1" style="vertical-align: top;"> <div style="text-align: justify;"><a href="SN100_Swift.png"><img src="SN100_Swift.png" alt="Swift SN Mosaic by Peter Brown, Swift rendering by NASA/Sonoma State University/Aurore Simonnet" style="border: 0px solid ; width: 800px; " align="center" hspace="5"> <br>
+<br></a>Below is a list of young supernovae (SNe) observed by <a href="http://heasarc.gsfc.nasa.gov/docs/swift/">Swift</a>, along with Swift <a href="http://heasarc.gsfc.nasa.gov/docs/swift/about_swift/uvot_desc.html">Ultraviolet/Optical Telescope (UVOT)</a>, light curves and data (where available).  The Swift SN Mosaic above is by Peter Brown using actual observations and a Swift rendering by NASA/Sonoma State University/Aurore Simonnet.  A working list of publications is posted at:  
+                <a href="http://ultravioletsupernova.blogspot.com/2013/10/swift-supernova-publications.html"> Swift Supernova Publications</a>.<br> <br>
+
+</tr>  <tr>  <td colspan="7" rowspan="1" style="vertical-align: top;"> <div style="text-align: justify;"><a href="sousa_galaxy.png"><img src="sousa_galaxy.png" alt="Swift Optical/Ultraviolet Supernova Archive" style="border: 0px solid ; width: 146px; height: 250px;" align="right" hspace="5"></a>
+
+
+Swift's Optical/Ultraviolet Supernova Archive (SOUSA) is an effort to reprocess and rereduce all of the Swift supernova data  using the Breeveld et al. 2011 zeropoints and time-dependent sensitivity correction to be on the same system.  Available data is linked from the sousaphone icons.  We are beginning with the already published supernovae which need to be updated to the new photometric zeropoints and those with host galaxy template observations, so most of those with data are at the bottom of the list.  The paper describing SOUSA has been published in the special UV issue of Astrophysics & Space Science. <a href="http://adsabs.harvard.edu/abs/2014Ap%26SS.354...89B"> ADS link</a>.  This link discusses  <a href="http://ultravioletsupernova.blogspot.com/2015/03/sousa-data-use.html">how to cite</a>  SOUSA.  The <a href="https://archive.stsci.edu/prepds/sousa/">Mikulski Archive for Space Telescopes</a> is hosting the (large) image sets if you want to do your own photometry on the supernovae or other objects in the field or the host galaxy.  If you just want the final light curves, click on the sousaphone links below for individual objects or download a tar file of 270+ supernovae  <a href="http://people.physics.tamu.edu/pbrown/SwiftSN/SOUSA160823.tar">here</a>.  To encourage the proper use of Swift data, especially in the case of converting to flux for use in creating spectral energy distributions or bolometric light curves, I wrote a <a href="http://ultravioletsupernova.blogspot.com/2016/08/interpreting-flux-from-broadband.html">paper</a> describing some of the complications.
+<br>
+<br>
+Much of the data linked from this website is under construction and will be available at a later time.  If you would like to be added to an e-mail list to find out when significant chunks of data have been added, report SNe missing from this list, or have any questions about Swift SNe, data, etc, please email uv dot supernova at gmail dot com  If you want older versions of the data that were used in specific publications, please contact me via e-mail.-- Peter J. Brown <br>
+
+              <div align="left"><br>
+ 	<tr>  <td style="vertical-align: top;"><br>
+          </td>  <td colspan="6" rowspan="1" style="vertical-align: top; width:
+            30px;"><br>
+          </td>  <tr> <td style="background-color: rgb(51, 51, 51); vertical-align:
+            top; text-align: center;" align="center"><span style="color:
+              rgb(255, 255, 255);">No.</span><br>
+          </td>  <td style="vertical-align: top; color: rgb(255, 255, 255);
+            background-color: rgb(51, 51, 51); text-align: center;"
+            align="center"><span style="font-weight: bold;">Supernova</span><br>
+          </td> <td style="vertical-align: top; background-color: rgb(51, 51,
+            51); text-align: center; font-weight: bold;" align="center"><span
+              style="color: rgb(255, 255, 255); font-weight: normal;">Host
+              Galaxy</span><br>
+          </td> <td style="vertical-align: top; background-color: rgb(51, 51,
+            51); text-align: center; font-weight: bold;" align="center"><span
+              style="color: rgb(255, 255, 255); font-weight: normal;">Redshift</span><br>
+          </td> <td style="vertical-align: top; color: rgb(255, 255, 255);
+            background-color: rgb(51, 51, 51); text-align: center;"
+            align="center">Type&nbsp; <br>
+          </td>   <td style="vertical-align: top; color: rgb(255, 255, 255);
+            background-color: rgb(51, 51, 51); width: 105px; text-align:
+            center;" align="center">Image&nbsp; |&nbsp; Plot&nbsp;
+            |&nbsp; Data <br>
+          </td>  </tr>  <td valign="top"><br>
+          </td>  <td valign="top"><br>
+          </td> <td valign="top"><br>
+          </td> <td valign="top"><br>
+          </td> <td valign="top"><br>
+          </td> <td valign="top"><br>
+ </td>  <td valign="top"><br> </td>  </tr>
+
+
+<!-- copy template entry and replace values
+<tr>
+<td align="center" valign="top"> #.<br> </td>
+<td align="center" valign="top"><b>SNname</b><br> &nbsp;PSN # <br>
+</td> <td align="center" valign="top"><a href=" NED address "> Host Galaxy </a><br>
+</td> <td align="center" valign="top"> redshift <br>
+</td> <td align="center" valign="top"><a href=" CBET address "> type </a><br> </td>
+<td align="center" valign="top"><a href="http://people.physics.tamu.edu/pbrown/SwiftSN/SNname_uvot.png"><img
+src="pic.jpg" alt="Swift image" style="border: 0px
+solid; border: 0px solid; width: 52px; height: 55px;"
+border="0" height="55" width="52"></a><a
+href="http://people.physics.tamu.edu/pbrown/SwiftSN/SNname_lightcurve.jpg"><img
+src="light.jpg" alt="Swift UVOT lightcurve"
+style="border: 0px solid; border: 0px solid; width:
+52px; height: 55px;" border="0" height="55" width="52"></a><a
+href="http://people.physics.tamu.edu/pbrown/SwiftSN/SNname_uvotB13.dat"><img
+src="light.jpg" alt="Swift UVOT data"
+style="border: 0px solid; border: 0px solid; width:
+52px; height: 55px;" border="0" height="55" width="52"></a></td>
+<td align="center" valign="top"><br> </td>
+end of template entry --> <tr>

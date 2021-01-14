@@ -6,10 +6,10 @@ pro readSNlist
 ;spawn, "  sed 's/,,/, ,/g' Swiftnew.csv > SwiftSNweblist.csv"
 
 ; final column 'editor' needs to be filled in to work
+;  2020 Oct 15 -- mast status added
+readcol, 'SwiftSNweblist.csv', SNnames, HostNames, PSNnames, SNtypes,  Redshifts, SNnames2, Nobs, TargetIDs, SNra, SNdec, template_status, mast_status, max_exptime, filters, notes, sibling_SNe, RAhost, DEChost, gal_lat_host, gal_long_host, AV_schlafly, Host_morphology,  redshift_ref, host_vel, host_vel_err, host_vel_corr, host_vel_corr_err, dm_cepheid, dm_cepheid_err, dm_cepheid_ref, dm_SBF, dm_sbf_err, dm_sbf_ref, dm_pnlf, dm_pnlf_err, dm_pnlf_ref, dm_other, dm_other_err,dm_other_ref,dm_tf, dm_tf_err,dm_tf_ref,editor,delimiter=',', format='(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)', /nan, comment='#'
 
-readcol, 'SwiftSNweblist.csv', SNnames, HostNames, PSNnames, SNtypes,  Redshifts, SNnames2, Nobs, TargetIDs, SNra, SNdec, template_status, max_exptime, filters, notes, sibling_SNe, RAhost, DEChost, gal_lat_host, gal_long_host, AV_schlafly, Host_morphology,  redshift_ref, host_vel, host_vel_err, host_vel_corr, host_vel_corr_err, dm_cepheid, dm_cepheid_err, dm_cepheid_ref, dm_SBF, dm_sbf_err, dm_sbf_ref, dm_pnlf, dm_pnlf_err, dm_pnlf_ref, dm_other, dm_other_err,dm_other_ref,dm_tf, dm_tf_err,dm_tf_ref,editor,delimiter=',', format='(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)', /nan, comment='#'
-
-nobs=uint(nobs)
+nobs=uint(Nobs)
 nSNe=n_elements(SNnames)
 
 
@@ -36,6 +36,7 @@ host = CREATE_STRUCT( $
 'SNra_array', make_array(nSNe,/string, value=' '), $
 'SNdec_array', make_array(nSNe,/string, value=' '), $
 'template_status_array', make_array(nSNe,/string, value=' '), $
+'mast_status_array', make_array(nSNe,/string, value=' '), $
 'max_exptime_array', make_array(nSNe,/string, value=' '), $
 'filters_array', make_array(nSNe,/string, value=' '), $
 'notes_array', make_array(nSNe,/string, value=' '), $
@@ -333,8 +334,8 @@ SNname=host.SNname_array[n]
 
 	endif
 
-; old version	fitfile='$SOUSA/fitting/'+SNname+'_6fitsB15.sav'
-	fitfile='$SOUSA/fitting/'+SNname+'_6fits16.sav'
+; old version	fitfile='$DROPSN/SOUSA/fitting/'+SNname+'_6fitsB15.sav'
+	fitfile='$DROPSN/SOUSA/fitting/'+SNname+'_6fits16.sav'
 	fittest=file_test(fitfile)
 	if datatest eq 1 and fittest eq 0 and host.SNtype2_array[n] eq 'Ia' then print, '# no fits for ', SNname
 

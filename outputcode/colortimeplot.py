@@ -24,6 +24,7 @@ filter1 ='UVW1'
 filter2 = 'UVW2'
 
 
+
 mjds = []
 for j in mjdsorted:
 	mjds.append(j[1])
@@ -35,6 +36,8 @@ groups = []
 for i in range(len(grouped)):
 	groups.append(grouped[i])
 '''
+
+
 
 for i in range(len(mjdsorted)):
 	if i ==0:
@@ -126,15 +129,12 @@ def epochseries(unavg, checkfilter1, checkfilter2):
 				
 		del temp[:]
 		
-		
 		if num != 0:
 			avgt = sum/num
 			avgepoch.append(avgt)
 		
 	return avgepoch
 timeseries = epochseries(mjdgrouped,filter1, filter2)
-
-
 
 
 
@@ -149,9 +149,6 @@ plt.title(snname)
 plt.gca().get_xaxis().get_major_formatter().set_useOffset(False)
 
 plt.show()
-
-
-
 
 
 data.close()

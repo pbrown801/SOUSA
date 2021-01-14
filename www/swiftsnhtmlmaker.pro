@@ -102,6 +102,10 @@ spawn, 'cp swift_sn_html.txt swift_sn.html'
 ;;;;;;;;;;;;;;;;
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;   ALEXANDER -- skip everything below here
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 htmlfile='swift_sn_close.txt'
 openw,lun,htmlfile,/get_lun
 
