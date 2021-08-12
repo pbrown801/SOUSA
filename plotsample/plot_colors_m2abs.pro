@@ -11,7 +11,6 @@ SNlegend=['SN2011by - Ia-blue','SN2007af - Ia-red', 'SN2005ke - Ia-91bg', 'SN200
 SNexplosiondates=[55672.0,54157.12, 53685.77, 53685.1-15.0,56114,54163.3-20.0,  54018,  53784.1,  55712.5, 56002.0, 54526.5,   55470, 54590]
 SNexplosionrefs=['Nugent_etal_2011','Brown_etal_2012a','Brown_etal_2012a', 'Phillips_etal_2007','Brown et al. 2013 peak -20','Stritzinger_etal_2009 B peak - 20', 'Nakana_etal_2006 a few days before discovery',   'Campana_etal_2006 GRB trigger time',  'Arcavi_etal_2011', 'Fraser_etal_2012', 'discover - 1.5 days',   'ten days before first observation Stoll et al. 2011', 'ten days before first observation']
 
-colors=['red','maroon', 'orange', 'orange red','magenta','dark green', 'lawn green',  'black', 'turquoise', 'blue', 'royal blue',   'purple', 'grey']
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;; set values of constants
@@ -24,6 +23,7 @@ vel_thermal=200.0     ; uncertainty in velocity of galaxies due to thermal/gravi
 
 nSNe=n_elements(SNlist)
 
+colors=['red','maroon', 'orange', 'orange red','magenta','dark green', 'lawn green',  'black', 'turquoise', 'blue', 'royal blue',   'purple', 'grey']
 
 symnum=[4,5,6,9,7,11,23,25,27,29,35,37,41,4,5,6,9,7,11,23,25,27,29,35,37,41]
 symnum=symnum[0:nSNe-1]
@@ -115,25 +115,22 @@ for n=0,nSNe-1 do begin
 	SNname=SNlist[n]
 	print, SNname
 
-	filename='$SWIFT_FINALDATA/ParArchive/StructParArchive/'+SNname+'_gal.sav'
+	filename='$SOUSA/www/host.sav'
 	restore, filename
 	;;;;;; compute extinction magnitudes
-	EBV_MW_SCHLAFLY=gal.AV_MW_SCHLAFLY/3.1
+	
+	index=where(host.snname_array eq SNname)
+
+	EBV_MW_SCHLAFLY=host.AV_SCHLAFLY_array[index]/3.1
 	R_MW_92A=[6.44, 8.06, 5.45, 4.91, 4.16, 3.16]
-	A_lambda=EBV_MW_SCHLAFLY*R_MW_92A
+	A_lambda=EBV_MW_SCHLAFLY[0]*R_MW_92A
 
-	pjb_phot_array_B132, '$SNFOLDER/SwiftSNarchive/PhotArchive/'+SNname+'_uvotB13.2.dat',   dt=dt, delta_t=0.4
+	pjb_phot_array_B141, '$SOUSA/data/'+SNname+'_uvotB15.1.dat',   dt=dt, delta_t=0.4
 
-	mu_z=5.0*alog10(gal.host_vel_cor/H_0)+25.0
 
-	mu_z_err=sqrt(  ((5.0*gal.host_vel_cor_err)/(gal.host_vel_cor*alog(10.0)))^2.0 + ((5.0*vel_thermal)/(gal.host_vel_cor*alog(10.0)))^2 + ( (5.0*H_0_err)/(H_0*alog(10.0)) )^2.0 )
-
-	mu_best=mu_z
-	mu_best_err=mu_z_err
-	mu_best_ref='z'
-	if ( finite(gal.d_i) eq 1 and gal.d_i_err lt mu_z_err) then mu_best_ref=gal.d_i_ref
-	if ( finite(gal.d_i) eq 1 and gal.d_i_err lt mu_z_err) then mu_best=gal.d_i
-	if ( finite(gal.d_i) eq 1 and gal.d_i_err lt mu_z_err) then mu_best_err=gal.d_i_err
+	mu_best=host.dm_best_array[index]
+	mu_best_err=host.dm_best_err_array[index]
+	mu_best_ref=host.dm_best_ref_array[index]
 
 vvgood=where( finite(dt.mag_array[5,*]) eq 1 and dt.time_array-SNexplosiondates[n] lt epochlimit)
 uugood=where( finite(dt.mag_array[3,*]) eq 1  and dt.time_array-SNexplosiondates[n] lt epochlimit)

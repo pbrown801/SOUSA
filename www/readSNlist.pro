@@ -9,6 +9,8 @@ pro readSNlist
 ;  2020 Oct 15 -- mast status added
 readcol, 'SwiftSNweblist.csv', SNnames, HostNames, PSNnames, SNtypes,  Redshifts, SNnames2, Nobs, TargetIDs, SNra, SNdec, template_status, mast_status, max_exptime, filters, notes, sibling_SNe, RAhost, DEChost, gal_lat_host, gal_long_host, AV_schlafly, Host_morphology,  redshift_ref, host_vel, host_vel_err, host_vel_corr, host_vel_corr_err, dm_cepheid, dm_cepheid_err, dm_cepheid_ref, dm_SBF, dm_sbf_err, dm_sbf_ref, dm_pnlf, dm_pnlf_err, dm_pnlf_ref, dm_other, dm_other_err,dm_other_ref,dm_tf, dm_tf_err,dm_tf_ref,editor,delimiter=',', format='(A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A,A)', /nan, comment='#'
 
+
+; after template status  mast_status, 
 nobs=uint(Nobs)
 nSNe=n_elements(SNnames)
 
