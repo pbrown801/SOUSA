@@ -248,12 +248,12 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
                        style="border: 0px solid; border: 0px solid; width: \n
                         52px; height: 89px;" border="0" height="89" width="52"></a></td> \n""".format(**locals())
         text+= textdata
-        if os.path.exists(data_path) == True and os.path.exists(data_path2)== False:
-            textdata= """href="data/{SNnamen}_uvotB15.1.dat"><img \n
+    if os.path.exists(data_path) == True and os.path.exists(data_path2)== False:
+        textdata= """href="data/{SNnamen}_uvotB15.1.dat"><img \n
                           src="www/sousa_galaxy_small.png" alt="Swift UVOT data" \n
                            style="border: 0px solid; border: 0px solid; width: \n
                             52px; height: 89px;" border="0" height="89" width="52"></a></td> \n""".format(**locals())
-            text+= textdata
+        text+= textdata
 
 
                    
