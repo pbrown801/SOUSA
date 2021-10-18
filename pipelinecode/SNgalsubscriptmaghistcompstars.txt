@@ -1,0 +1,36 @@
+#!/bin/tcsh -f
+##### 
+##################################################################################
+# by Peter Brown                                                                 #
+# 				                                 	         #
+                                                                                 #
+##################################################################################
+### 
+set	SNname=$argv[1] 
+
+set bandlist = (vv bb uu w1 m2 w2)
+
+
+echo "unzip files and remove old outputs"
+gunzip -f *.img.gz
+set bkgreg = $SNname'_bkgclear.reg'
+
+foreach band ($bandlist)
+
+#	foreach comp (14 15 16 17 18 19 20 21 22 23 24 25 26)
+	foreach comp (1 2 3 4 5 6 7 8 9 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26)
+	set compreg = $SNname'_comp'$comp'.reg'
+
+	if (-e $compreg) then
+		if (-e $SNname"_"$band".img") then
+			echo "running uvotmaghist for the comparison star on the SN images" 
+			uvotmaghist $SNname"_"$band".img" srcreg=$compreg bkgreg=$bkgreg outfile=$SNname"_"$band"_3_comp"$comp".fits" plotfile=$SNname"_"$band"_3_comp"$comp".gif" coinfile=caldb zerofile=caldb exclude=none chatter=0 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth centroid=no
+			if (-e $SNname"_"$band"_3_comp"$comp".gif") open $SNname"_"$band"_3_comp"$comp".gif" &
+		endif
+		echo "check comparison light curves for suspicious frames"
+	endif
+
+	end
+end
+
+exit 0
