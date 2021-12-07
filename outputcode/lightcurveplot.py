@@ -4,7 +4,7 @@ import math
 import os
 import sys
 
-os.chdir(os.path.expanduser('~/Dropbox/SN/SOUSA/data'))
+#os.chdir(os.path.expanduser('~/Dropbox/SN/SOUSA/data'))
 
 snname = sys.argv[1]
 filename =  snname + '_uvotB15.1.dat'
@@ -38,10 +38,11 @@ for line in data:
 	if not line[0] == "#":
 		continue
 	lines= np.genfromtxt(data, dtype=[('filter','S20'),('mjd',float),('mag',None),('magerr',None)], usecols = (0,1,2,3), unpack=True)
-filters1 = lines['filter']
+print(lines)
 mjd1 = lines['mjd']
 mag1 = lines['mag']
 magerr1 = lines['magerr']
+filters1 = lines['filter']
 
 #I needed to get rid of the NULL values in the ...15.1.dat files, so the next several lines are to make sure the 
 #program doesn't shut down because of them

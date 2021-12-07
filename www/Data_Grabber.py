@@ -435,8 +435,8 @@ def Dist_mod():
         return distance_mod_cor, distance_mod_cor_err
     def Distance_mod_cor(hv, hv_err):
         '''
-            Takes host_velocity and host_vel_err data and returns distance modulous
-            and distance modulous err in a series
+            Takes host_velocity and host_vel_err data and returns distance modulus
+            and distance modulus err in a series
         '''
         h0 = 72.0
         h0err = 5.0
@@ -450,7 +450,7 @@ def Dist_mod():
         return  distance_mod_cor, distance_mod_cor_err
 
     dist= pd.Series(swift.apply(lambda row: Distance_mod_cor(row['host_velocity'], row['host_vel_err']) if pd.notna(row['host_velocity']) else Dist_mod_empty(row['host_velocity'], row['host_vel_err']), axis=1))
-    dist= pd.DataFrame(dist.tolist(), columns=['Dist_mod_cor', 'Dist_mod_cor_err'], index=dist.index)
+    dist= pd.DataFrame(dist.tolist(), columns=['Hubble_dm', 'Hubble_dm_err'], index=dist.index)
     dist= dist.replace({r'^\s*$'}, np.nan, regex=True)
     return dist
 
@@ -587,7 +587,7 @@ def main():
         swift= swift.fillna(AllHostData())
 
         '''
-            Executes function that calculates distance modulous data on supernovae
+            Executes function that calculates distance modulus data on supernovae
         '''
         swift= swift.fillna(Dist_mod())
 
