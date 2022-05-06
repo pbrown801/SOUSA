@@ -5,7 +5,7 @@ import numpy as np
 
 #with open('SwiftSNlist.txt') as f:
 #    swift_list= f.readlines()
-with open('SwiftSNweblist.csv') as f:
+with open('NewSwiftSNweblist.csv') as f:
     swift_list=[line.split(',', 1)[0] for line in f]
 
 with open('nonSwiftSNlist.txt') as g:
@@ -25,14 +25,14 @@ for x in swift_list:
         swift_list.remove(x)
 
 for x in swift_list:
-        if "inPGC" in x:
-                swift_list.remove(x)
+    if "inPGC" in x:
+        swift_list.remove(x)
 
 
 swift_year_dict = {}
 swift_graph=[]
 
-for year in ['05','06','07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']:
+for year in ['05','06','07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2020', '21']:
     swift_year_dict[year] = sum(1 for line in swift_list if year in line)
     for x in range(swift_year_dict[year]):
         if len(year) < 3:
@@ -54,7 +54,7 @@ xmm_graph=[]
 galex_graph=[]
 astrosat_graph=[]
 
-non_swift_year_list=['1972', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005','2006','2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019','2020']
+non_swift_year_list=['1972', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005','2006','2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019','2020','2021']
 
 
 for x in non_swift_list:
@@ -136,13 +136,13 @@ for year in non_swift_year_list:
 
 
 swift_graph = list(map(int, swift_graph))
-hst_graph = list(map(int, hst_graph))
-oao_graph = list(map(int, oao_graph))
-iue_graph = list(map(int, iue_graph))
-xmm_graph = list(map(int, xmm_graph))
+hst_graph   = list(map(int, hst_graph))
+oao_graph   = list(map(int, oao_graph))
+iue_graph   = list(map(int, iue_graph))
+xmm_graph   = list(map(int, xmm_graph))
 galex_graph = list(map(int, galex_graph))
 
-b = np.arange(1971,2021, 1)
+b = np.arange(1971,2026, 1)
 
 bg_color = 'black'
 fg_color = 'white'
@@ -159,11 +159,11 @@ plt.rcParams.update({'font.size': 16})
 font={'fontname': 'Arial', 'weight':'bold', 'size':'22'}
 axis_font={'fontname': 'Arial', 'size':'15'}
 plt.hist(swift_graph,b, histtype='bar', rwidth=0.8, axes=axes, label="SWIFT")
-plt.hist(hst_graph,b, histtype='bar', rwidth=0.8, axes=axes, label="HST")
+plt.hist(hst_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="HST")
 plt.hist(galex_graph,b, histtype='bar', rwidth=0.8, axes=axes, label="GALEX")
-plt.hist(oao_graph,b, histtype='bar', rwidth=0.8, axes=axes, label="OAO-2")
-plt.hist(iue_graph,b, histtype='bar', rwidth=0.8, axes=axes, label="IUE")
-plt.hist(xmm_graph,b, histtype='bar', rwidth=0.8, axes=axes, label="XMM-OM")
+plt.hist(oao_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="OAO-2")
+plt.hist(iue_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="IUE")
+plt.hist(xmm_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="XMM-OM")
 plt.legend(loc='upper left')
 plt.xlabel("Year", color=fg_color, **font)
 plt.xlim(left=1970)
@@ -173,6 +173,6 @@ plt.xticks(np.arange(1970,2025,3), **axis_font)
 plt.yticks(**axis_font)
 plt.ylabel("Supernovae Observed in the Ultraviolet", color=fg_color, **font)
 
-print(swift_list)
+print(swift_graph)
 
 plt.show() 

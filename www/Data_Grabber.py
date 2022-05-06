@@ -25,8 +25,8 @@ from bs4 import BeautifulSoup
 
 def getLink(name):
     '''
-        Grabs the link from this site for the Host name of supernovae in CSV,
-        returns the parsed page
+    Grabs the link from this site for the Host name of supernovae in CSV,
+    returns the parsed page
     '''
     try:
         link = "http://ned.ipac.caltech.edu/cgi-bin/nph-objsearch?"
@@ -51,8 +51,8 @@ def getLink(name):
         return soup
 
 '''
-    Takes parsed page from getlink and searches for all velocites listed below
-    then returns the data.
+Takes parsed page from getlink and searches for all velocites listed below
+then returns the data.
 '''
 def scrapeValues(soup):
 	
@@ -73,12 +73,12 @@ def scrapeValues(soup):
 
 def get_coords(gals):
     """
-        Takes list of galaxies and looks up their coordinates by name.
-        If no name found: warn, skip, remove galaxy from list
+    Takes list of galaxies and looks up their coordinates by name.
+    If no name found: warn, skip, remove galaxy from list
 
-        Returns:
-            gals: list of galaxies minus those that weren't found
-            start_coord: list of coordinates corresponding to center of galaxies in 'gals'
+    Returns:
+        gals: list of galaxies minus those that weren't found
+        start_coord: list of coordinates corresponding to center of galaxies in 'gals'
     """
     start_coord = []
     #bar = FillingCirclesBar('Loading galaxies', max = len(gals))
@@ -97,7 +97,7 @@ def get_coords(gals):
 
 def coord_breakup(coord):
     """
-        Breaks up a coordinate into its components
+    Breaks up a coordinate into its components
     """
     if pd.isna(coord) == True:
         ra = np.nan
@@ -111,7 +111,7 @@ def coord_breakup(coord):
 
 def Redshift(soup):
     '''
-        Takes parsed page from getlink and searches for redshift then returns that data
+    Takes parsed page from getlink and searches for redshift then returns that data
     '''
     try:
         soup = soup.find("a", attrs={'name':'BasicData_0'})
@@ -130,7 +130,7 @@ def Redshift(soup):
 
 def Morphology(soup):
     '''
-        Takes parsed page from getlink and searches for morphology then returns the data
+    Takes parsed page from getlink and searches for morphology then returns the data
     '''
     try:
         soup = soup.find("a", attrs={'name':'BasicData_0'})
@@ -176,8 +176,8 @@ def SN_host_ra_dec():
 
     def SNHost(SNname):
         ''' 
-            Checks if any CSV Supernova names are in astrocats catalog
-            If yes returns Host Name data, If no returns nan value
+        Checks if any CSV Supernova names are in astrocats catalog
+        If yes returns Host Name data, If no returns nan value
         '''
         
         if SNname in sn_catalog:
@@ -192,8 +192,8 @@ def SN_host_ra_dec():
 
     def SNRa(SNname):
         ''' 
-            Checks if any CSV Supernova names are in astrocats catalog
-            If yes returns Ra data, If no returns nan value
+        Checks if any CSV Supernova names are in astrocats catalog
+        If yes returns Ra data, If no returns nan value
         '''
         
         if SNname in sn_catalog:
@@ -207,8 +207,8 @@ def SN_host_ra_dec():
 
     def SNDec(SNname):
         ''' 
-            Checks if any CSV Supernova names are in astrocats catalog
-            If yes returns Dec data, If no returns nan value
+        Checks if any CSV Supernova names are in astrocats catalog
+        If yes returns Dec data, If no returns nan value
         '''
         
         if SNname in sn_catalog:
@@ -221,9 +221,9 @@ def SN_host_ra_dec():
         return sndec
         
     '''
-        The next 3 lines uses pandas apply function and lambda function to quickly
-        parse supernovae names into the 3 above functions and saves data to
-        relavent columns in CSV
+    The next 3 lines uses pandas apply function and lambda function to quickly
+    parse supernovae names into the 3 above functions and saves data to
+    relavent columns in CSV
     '''
 
     swift["HostName"]= swift.apply(lambda row: SNHost(row['SNname']), axis=1)
@@ -233,8 +233,8 @@ def SN_host_ra_dec():
 def GrabSNtypes():
     def SNtype(SNname):
         '''
-            Takes Supernovae names from CSV and looks them up in the URL below
-            Then parses the page for the supernovae type and returns it
+        Takes Supernovae names from CSV and looks them up in the URL below
+        Then parses the page for the supernovae type and returns it
         '''
         url = "https://www.wis-tns.org/object/"+SNname
 
@@ -265,7 +265,7 @@ def GrabSNtypes():
 
     def SNtype_empty(SNname):
             ''' 
-                Returns empty nan series if condition is met
+            Returns empty nan series if condition is met
             '''
             sn_type, sn_host= np.nan, np.nan
             return sn_host, sn_type
@@ -327,15 +327,15 @@ def getAVbest(inputcoordinates):
 def AV_best():
     def AV_empty(Ra, Dec):
         ''' 
-            Returns empty nan values if condition is met
+        Returns empty nan values if condition is met
         '''
         AV, AVerr, AVsour= np.nan, np.nan, np.nan
         return AV, AVerr, AVsour
     def GrabAVbest(Ra,Dec):
         '''
-            Takes Supernovae Ra,Dec data and puts in in the right format before
-            runing it through the getAVbest function, if there is an Exception
-            returns nan values
+        Takes Supernovae Ra,Dec data and puts in in the right format before
+        runing it through the getAVbest function, if there is an Exception
+        returns nan values
         '''
         ra_fix, dec_fix = Ra, Dec
         ra_fix= ra_fix.replace("'", "")
@@ -356,8 +356,8 @@ def AV_best():
 
 def AllHostData():
     '''
-        Collects all data on Host names by running appropriate data through related 
-        function or empty function.
+    Collects all data on Host names by running appropriate data through related 
+    function or empty function.
     '''
     def host_coords(HostName):
         ra,dec= coord_breakup(get_coords(HostName))
@@ -399,9 +399,9 @@ def AllHostData():
         return vels
     
     '''
-        All 5 lines uses pandas apply and the lambda function with an if else staments inside. Checks if HostName cell is not empty
-        and checks specfic cell is empty for all cases. If so runs them through their corresponding functions if not runs them
-        through their corresponding empty functions
+    All 5 lines uses pandas apply and the lambda function with an if else staments inside. Checks if HostName cell is not empty
+    and checks specfic cell is empty for all cases. If so runs them through their corresponding functions if not runs them
+    through their corresponding empty functions
     '''
     coord= pd.Series(swift.apply(lambda row: host_coords(row['HostName']) if (pd.notna(row['HostName']) and pd.isna(row['HostRa'])) else host_coords_empty(row['HostName']), axis=1))
     coord= pd.DataFrame(coord.tolist(), columns=['HostRa','HostDec'], index=coord.index)
@@ -429,14 +429,14 @@ def AllHostData():
 def Dist_mod():
     def Dist_mod_empty(hv, hv_err):
         ''' 
-            Returns empty nan series if condition is met
+        Returns empty nan series if condition is met
         '''
         distance_mod_cor, distance_mod_cor_err = np.nan, np.nan
         return distance_mod_cor, distance_mod_cor_err
     def Distance_mod_cor(hv, hv_err):
         '''
-            Takes host_velocity and host_vel_err data and returns distance modulus
-            and distance modulus err in a series
+        Takes host_velocity and host_vel_err data and returns distance modulus
+        and distance modulus err in a series
         '''
         h0 = 72.0
         h0err = 5.0
@@ -456,9 +456,9 @@ def Dist_mod():
 
 def SNdates(SNname):
     '''
-        Takes Supernovae names from CSV and looks them up in the URL below
-        Then parses the page for relevant information to Supernova Discovery,
-        Last non-detection, and recieved date.
+    Takes Supernovae names from CSV and looks them up in the URL below
+    Then parses the page for relevant information to Supernova Discovery,
+    Last non-detection, and recieved date.
     '''
     url = "https://www.wis-tns.org/object/"+SNname+"/discovery-cert"
 
@@ -491,14 +491,14 @@ def SNdates(SNname):
 def GrabDates():
     def GrabSNdates_empty(SNname):
         ''' 
-            Returns empty nan series if condition is met
+        Returns empty nan series if condition is met
         '''
         disc,lnd= np.nan,np.nan
         return disc,lnd
     def GrabSNdates(SNname):
         '''
-            Takes supernovae names and runs them through SNdates and returns a
-            series with dates data
+        Takes supernovae names and runs them through SNdates and returns a
+        series with dates data
         '''
         try:
             disc,lnd= SNdates(SNname)
@@ -521,6 +521,49 @@ def GrabDates():
 
     return dates
 
+def Best_Distances():
+    def Distances_empty(host_vel, dist_mod, dist_mod_err, ref, sbf_dist, sbf_dist_err, sbf_ref, cep_dist, cep_dist_err, cep_ref):
+        '''
+        returns nans to series if there is no host_velocity value available
+        '''
+        dist_best, dist_err_best, meth_best, ref_best= np.nan, np.nan, np.nan, np.nan
+        return dist_best, dist_err_best, meth_best, ref_best
+
+    def Distances(host_vel, dist_mod, dist_mod_err, ref, sbf_dist, sbf_dist_err, sbf_ref, cep_dist, cep_dist_err, cep_ref):
+        '''
+        If there is a host_velocity value, checks if there are values for sbf_dist and cep_dist.
+        If none for both returns dist_mod as Hubble flow distance.
+        If SBF, returns sbf_dist as SBF.
+        If Cepheid, returns cep_dist as Cepheid.
+        '''
+        try:
+            if pd.isnull(cep_dist)==True and pd.isnull(sbf_dist)==True:
+                dist_best= dist_mod
+                dist_err_best= dist_mod_err
+                meth_best= "HF"
+                ref_best= ref
+            elif pd.isnull(cep_dist)==True and pd.isnull(sbf_dist)==False:
+                dist_best= sbf_dist
+                dist_err_best= sbf_dist_err
+                meth_best= "SBF"
+                ref_best= sbf_ref
+            else:
+                dist_best= cep_dist
+                dist_err_best= cep_dist_err
+                meth_best= "Cepheid"
+                ref_best= cep_ref
+        
+        except Exception:
+            dist_best, dist_err_best, meth_best, ref_best= np.nan, np.nan, np.nan, np.nan
+
+        return dist_best, dist_err_best, meth_best, ref_best
+        
+    best_dist= pd.Series(swift.apply(lambda row: Distances(row['host_velocity'], row['Hubble_dm'], row['Hubble_dm_err'], row['Reference'], row['SBF_dm'], row['SBF_dm_err'], row['SBF_dm_ref'], row['Cep_dm'], row['Cep_dm_err'], row['Cep_dm_ref']) if pd.notna(row['host_velocity']) else Distances_empty(row['host_velocity'], row['Hubble_dm'], row['Hubble_dm_err'], row['Reference'], row['SBF_dm'], row['SBF_dm_err'], row['SBF_dm_ref'], row['Cep_dm'], row['Cep_dm_err'], row['Cep_dm_ref']), axis=1))
+    best_dist= pd.DataFrame(best_dist.to_list(), columns=['Distance_best', 'Distance_err_best', 'Method_best', 'Refer_best'], index= best_dist.index)
+    best_dist= best_dist.replace({r'^\s*$'},np.nan, regex=True)
+
+    return best_dist
+
 
 def main():
    
@@ -538,7 +581,7 @@ def main():
     global swift
 
     '''
-        This if-else statment asks if you want to update or add new supernovae values to CSV file
+    This if-else statment asks if you want to update or add new supernovae values to CSV file
     '''
     choice_1= input("Would you like to add new supernovae names or just update current CSV? (Type: SN or U):")
     if choice_1 == str('U'):
@@ -549,7 +592,7 @@ def main():
         '''
 
         '''
-            Next 4 lines are important to animate function
+        Next 4 lines are important to animate function
         '''
         done = False
         print(chr(27) + "[2J")
@@ -561,47 +604,74 @@ def main():
         '''
         swift= pd.read_csv('NewSwiftSNweblist.csv')
 
+  
         '''
-            Replaces all anon, Anon, AnonHost, and blanks with nan values
+        Replaces all anon, Anon, AnonHost, and blanks with nan values
         '''
         swift= swift.replace({r'anon',r'Anon',r'AnonHost', r'^\s*$'},np.nan, regex=True)
 
         '''
-            Executes function that grabs host, ra, and dec data on supernovae
+        Executes function that grabs host, ra, and dec data on supernovae
         '''
+        
+        print('retrieve coordinates')
         SN_host_ra_dec()
 
         '''
-            Executes function that grabs host and type data on supernovae
+        Executes function that grabs host and type data on supernovae
         '''
+        print('retrieve type and host')
         swift= swift.fillna(GrabSNtypes())
 
         '''
-            Executes function that grabs AV, AVerr, and source data on supernovae
+        Executes function that grabs AV, AVerr, and source data on supernovae
         '''
+        print('Find the best Av')
         swift= swift.fillna(AV_best())
 
         '''
-            Executes function that grabs lots of data on host galaxy of supernovae
+        Executes function that grabs lots of data on host galaxy of supernovae
         '''
+        print('retrieve lots of host information')
         swift= swift.fillna(AllHostData())
 
         '''
-            Executes function that calculates distance modulus data on supernovae
+        Executes function that calculates distance modulus data on supernovae
         '''
-        swift= swift.fillna(Dist_mod())
+        print('calculate distances')
+        swift_hubble= Dist_mod()
+        swift= swift.drop(swift.columns.intersection(swift_hubble.columns), axis=1).join(swift_hubble)
+
+        #reorders the Hubble_dm and Hubble_dm_err columns
+        col_list=swift.columns.to_list()
+        col_list[41:41]=col_list[-2:]
+        col_list= col_list[:-2]
+        swift= swift.reindex(columns=col_list)
 
         '''
-            Executes function that grabs detection and last non detection dates on supernovae
+        Executes function that grabs detection and last non detection dates on supernovae
         '''
         swift= swift.fillna(GrabDates())
 
-
         '''
-            Fills nan values back with blanks then saves csv to either same file or 
-            your pick of file name
+        Executes function that finds the best distances available for supernovae (HF, SBF, or Cepheid)
+        '''
+        swift_dist= Best_Distances()
+        swift= swift.drop(swift.columns.intersection(swift_dist.columns), axis=1).join(swift_dist)
+
+        #reorders the columns to put the best columns in front of the Hubble_dm and Hubble_dm_err columns
+        col_list=swift.columns.to_list()
+        col_list[41:41]=col_list[-4:]
+        col_list= col_list[:-4]
+        swift= swift.reindex(columns=col_list)
+        
+        '''
+        Fills nan values back with blanks then saves csv to either same file or 
+        your pick of file name
         '''
         swift=swift.fillna('')
+
+        print('Save the csv file')
 
         swift.to_csv('NewSwiftSNweblist.csv', index= False)
 
@@ -630,7 +700,7 @@ def main():
         print("Updating CSV now!")
 
         '''
-            Next 4 lines are important to animate function
+        Next 4 lines are important to animate function
         '''
         done = False
         print(chr(27) + "[2J")
@@ -638,46 +708,69 @@ def main():
         threader.start()
 
         '''
-            Executes function that grabs host, ra, and dec data on supernovae
+        Executes function that grabs host, ra, and dec data on supernovae
         '''
         SN_host_ra_dec()
 
         '''
-            Executes function that grabs host and type data on supernovae
+        Executes function that grabs host and type data on supernovae
         '''
         swift= swift.fillna(GrabSNtypes())
 
         '''
-            Executes function that grabs AV, AVerr, and source data on supernovae
+        Executes function that grabs AV, AVerr, and source data on supernovae
         '''
         swift= swift.fillna(AV_best())
 
         '''
-            Executes function that grabs lots of data on host galaxy of supernovae
+        Executes function that grabs lots of data on host galaxy of supernovae
         '''
         swift= swift.fillna(AllHostData())
 
         '''
-            Executes function that calculates distance modulous data on supernovae
+        Executes function that calculates distance modulus data on supernovae
         '''
-        swift= swift.fillna(Dist_mod())
+        swift_hubble= Dist_mod()
+        swift= swift.drop(swift.columns.intersection(swift_hubble.columns), axis=1).join(swift_hubble)
+
+        #reorders the Hubble_dm and Hubble_dm_err columns
+        col_list=swift.columns.to_list()
+        col_list[41:41]=col_list[-2:]
+        col_list= col_list[:-2]
+        swift= swift.reindex(columns=col_list)
 
         '''
-            Executes function that grabs detection and last non detection dates on supernovae
+        Executes function that grabs detection and last non detection dates on supernovae
         '''
         swift= swift.fillna(GrabDates())
 
+        '''
+        Executes function that finds the best distances available for supernovae (HF, SBF, or Cepheid)
+        '''
+        swift_dist= Best_Distances()
+        swift= swift.drop(swift.columns.intersection(swift_dist.columns), axis=1).join(swift_dist)
 
+        #reorders the columns to put the best columns in front of the Hubble_dm and Hubble_dm_err columns
+        col_list=swift.columns.to_list()
+        col_list[41:41]=col_list[-4:]
+        col_list= col_list[:-4]
+        swift= swift.reindex(columns=col_list)
+
+        ''' 
+        Flips the order of the swift dataframe to ensure SN names given first appear at the top.
         '''
-            Fills nan values back with blanks then saves csv to either same file or 
-            your pick of file name
-        '''
+
+        swift= swift.reindex(index=swift.index[::-1])
 
         ''' 
         Merges the updated new SNe name info with the rest of the swift data
         '''
         swift= pd.concat([swift, swift_merge], sort=False).reset_index(drop = True)
 
+        '''
+        Fills nan values back with blanks then saves csv to either same file or 
+        your pick of file name
+        '''
         swift=swift.fillna('')
 
         swift.to_csv('NewSwiftSNweblist.csv', index= False)
