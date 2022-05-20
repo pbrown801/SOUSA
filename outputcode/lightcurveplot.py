@@ -7,7 +7,7 @@ import sys
 #os.chdir(os.path.expanduser('~/Dropbox/SN/SOUSA/data'))
 
 snname = sys.argv[1]
-filename =  snname + '_uvotB15.1.dat'
+filename =  '/Users/supernova/Desktop/SN/github/SOUSA/data/'+snname + '_uvotB15.1.dat'
 savename = snname + '_pylightcurve.jpg'
 data = open(filename, 'r')
 
@@ -34,11 +34,9 @@ vmagerr = []
 
 
 #Reading the data in from the file
-for line in data:
-	if not line[0] == "#":
-		continue
-	lines= np.genfromtxt(data, dtype=[('filter','S20'),('mjd',float),('mag',None),('magerr',None)], usecols = (0,1,2,3), unpack=True)
+lines= np.genfromtxt(data, dtype=[('filter','S4'),('mjd',float),('mag',float),('magerr',float)], usecols = (0,1,2,3), unpack=True, autostrip=True)
 print(lines)
+print(lines['mjd'])
 mjd1 = lines['mjd']
 mag1 = lines['mag']
 magerr1 = lines['magerr']
