@@ -1,5 +1,5 @@
-# PTF10qaf magnitudes from Swift UVOT                                                        
-# generated Thu Jan 12 15:34:56 CST 2023 using version 2015.1                                         
+# SN2009au magnitudes from Swift UVOT                                                        
+# generated Wed Jan 11 13:39:27 CST 2023 using version 2015.1                                         
 # of Peter Brown's photometry pipeline                                                      
 # and version Swift_Rel5.5(Bld44)_15Jul2021 of HEASOFT                                                      
 #                                                                                         
@@ -26,22 +26,26 @@
 # in a 5 arcsec aperture at the source position  
 # (missing filters list 0 but used a background region similar to the SN ):                 
 # Galaxy count rates in 5" aperture
+# V               5.63702       0.266060
+# B               10.0002       0.450917
+# U               7.71691       0.326412
+# UVW1            2.00887      0.0874600
+# UVM2           0.715516      0.0352055
+# UVW2           0.876758      0.0396220
 #                                                                                           
-# No real galaxy template as this 2010 supernova wasn't observed until 2014                                         
+# B and U count rates too high                                        
 #                                                                                           
 # Filter MJD[days] Mag MagErr 3SigMagLim 0.98SatLim[mag] Rate[c/s] RateErr[c/s] Ap[arcsec] Frametime[s] Exp[s] Telapse[s]
 #                                                                                           
-#UVW2     57029.0986  20.874   0.312  21.102  11.085   0.040   0.011   3.000  0.0110    1115.99    6476.95
-UVW2     57035.0550    NULL    NULL  20.802  11.086   0.035   0.014   3.000  0.0110     811.35     824.35
-UVW2     57040.7824    NULL    NULL  20.383  11.086   0.020   0.017   3.000  0.0110     401.48     407.91
-UVW2     57147.7026    NULL    NULL  21.052  11.086   0.029   0.011   3.000  0.0110    1225.30   18760.25
-UVW2     57148.4073    NULL    NULL  19.616  11.086   0.035   0.032   3.000  0.0110     174.31     177.10
-UVW2     57152.7885    NULL    NULL  20.389  11.086   0.036   0.019   3.000  0.0110     426.92     433.76
+UVW2     56993.3494    NULL    NULL  19.172  11.096  -0.653   0.037   3.000  0.0110     627.50   11554.69
 #                                                                                           
+UVM2     56993.3534    NULL    NULL  18.641  10.564  -0.580   0.034   3.000  0.0110     461.47   11770.42
 #                                                                                           
+UVW1     56993.3442    NULL    NULL  18.429  11.172  -1.562   0.080   3.000  0.0110     313.51   11067.02
 #                                                                                           
-U        57000.4321    NULL    NULL  20.469  12.071   0.087   0.046   3.000  0.0110     647.40   11739.68
-U        57032.7294    NULL    NULL  21.131  12.065   0.019   0.025   3.000  0.0110    1648.68   24446.16
+#U        56993.3454    NULL    NULL  18.156  12.165  -5.661   0.279   3.000  0.0110     156.04   11085.45
 #                                                                                           
+#B        56993.3464    NULL    NULL  18.787  13.000  -5.324   0.346   3.000  0.0110     156.05   11150.66
 #                                                                                           
+V        56993.3511    NULL    NULL  17.988  11.700  -2.033   0.234   3.000  0.0110     156.05   11478.54
 #                                                                                           

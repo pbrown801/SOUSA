@@ -1,5 +1,5 @@
-# PTF10qaf magnitudes from Swift UVOT                                                        
-# generated Thu Jan 12 15:34:56 CST 2023 using version 2015.1                                         
+# PTF11qcj magnitudes from Swift UVOT                                                        
+# generated Thu Jan 12 09:42:40 CST 2023 using version 2015.1                                         
 # of Peter Brown's photometry pipeline                                                      
 # and version Swift_Rel5.5(Bld44)_15Jul2021 of HEASOFT                                                      
 #                                                                                         
@@ -26,22 +26,33 @@
 # in a 5 arcsec aperture at the source position  
 # (missing filters list 0 but used a background region similar to the SN ):                 
 # Galaxy count rates in 5" aperture
+# V               2.13966       0.266115
+# B               4.53112       0.388001
+# U               3.86541       0.319149
+# UVW1            2.24350       0.150911
+# UVM2            1.35937      0.0773738
+# UVW2            2.14498       0.124451
 #                                                                                           
-# No real galaxy template as this 2010 supernova wasn't observed until 2014                                         
+# There are no known issues with this photometry.                                           
 #                                                                                           
 # Filter MJD[days] Mag MagErr 3SigMagLim 0.98SatLim[mag] Rate[c/s] RateErr[c/s] Ap[arcsec] Frametime[s] Exp[s] Telapse[s]
 #                                                                                           
-#UVW2     57029.0986  20.874   0.312  21.102  11.085   0.040   0.011   3.000  0.0110    1115.99    6476.95
-UVW2     57035.0550    NULL    NULL  20.802  11.086   0.035   0.014   3.000  0.0110     811.35     824.35
-UVW2     57040.7824    NULL    NULL  20.383  11.086   0.020   0.017   3.000  0.0110     401.48     407.91
-UVW2     57147.7026    NULL    NULL  21.052  11.086   0.029   0.011   3.000  0.0110    1225.30   18760.25
-UVW2     57148.4073    NULL    NULL  19.616  11.086   0.035   0.032   3.000  0.0110     174.31     177.10
-UVW2     57152.7885    NULL    NULL  20.389  11.086   0.036   0.019   3.000  0.0110     426.92     433.76
+UVW2     55883.0483    NULL    NULL  18.507  11.112   0.036   0.141   3.000  0.0110    1259.37    6513.41
+UVW2     55937.7745    NULL    NULL  18.562  11.111   0.116   0.141   3.000  0.0110    4680.94   24685.46
+UVW2     55949.5128    NULL    NULL  18.573  11.111   0.122   0.140   3.000  0.0110    9240.28   76024.08
+UVW2     55957.3625    NULL    NULL  18.540  11.111   0.067   0.140   3.000  0.0110    2437.50   47042.34
 #                                                                                           
+UVM2     55883.0602    NULL    NULL  18.515  10.572   0.068   0.084   3.000  0.0110    1571.23    6624.25
+UVM2     55930.3219    NULL    NULL  18.523  10.571  -0.061   0.079   3.000  0.0110    1714.64   52499.75
 #                                                                                           
+UVW1     55883.0712    NULL    NULL  18.351  11.175  -0.151   0.149   3.000  0.0110     763.44   11788.71
+UVW1     55923.6321    NULL    NULL  18.389  11.174  -0.287   0.142   3.000  0.0110    1295.96    7292.72
 #                                                                                           
-U        57000.4321    NULL    NULL  20.469  12.071   0.087   0.046   3.000  0.0110     647.40   11739.68
-U        57032.7294    NULL    NULL  21.131  12.065   0.019   0.025   3.000  0.0110    1648.68   24446.16
+U        55883.0417    NULL    NULL  18.495  12.117   0.324   0.292   3.000  0.0110     314.50    6033.71
+U        55916.8479    NULL    NULL  18.611  12.108   0.252   0.266   3.000  0.0110    4983.65   24601.39
+U        55956.4858    NULL    NULL  18.618  12.106  -0.546   0.249   3.000  0.0110    4024.56   80341.56
 #                                                                                           
+B        55883.0436    NULL    NULL  19.044  12.923  -0.034   0.344   3.000  0.0110     314.51    6033.37
 #                                                                                           
+V        55883.0539    NULL    NULL  18.289  11.648   0.290   0.214   3.000  0.0110     629.57    6193.01
 #                                                                                           
