@@ -1,5 +1,7 @@
 pro readSNlist
 
+savename='host230426.sav'
+
 ; this only works on computer to which it has been downloaded
 ;spawn, "  cp ~/Downloads/SwiftSNweblist\ -\ FullSNList.csv SwiftSNweblist.csv"
 ;spawn, "  sed 's/,,/, ,/g' SwiftSNweblist.csv > Swiftnew.csv"
@@ -561,7 +563,7 @@ print, SNnames[ia3notemp]
 
 ;pie_chart, [n_elements(ia),n_elements(ibc),n_elements(ii),nSNe-(n_elements(ia)+n_elements(ibc)+n_elements(ii))], pienames=['Ia ','Ibc ','II ','?']
 
-save, filename='host.sav', host
+save, filename=savename, host
 print, 'saved, continue to update plots'
 ;print, 'sav file not created, continue to update plots'
 stop

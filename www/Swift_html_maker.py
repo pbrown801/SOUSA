@@ -14,7 +14,7 @@ import webbrowser
 
 
 
-swift= pd.read_csv('NewSwiftSNweblist.csv')
+swift=pd.read_csv('NewSwiftSNweblist.txt',on_bad_lines='warn',delimiter='\t')
 #swift= pd.read_csv('SwiftSNweblist.csv')
 swift= swift.drop(swift.index[0]) #delete header row
 swift.dropna(subset=["SNname"], inplace= True) #drops all nan in SNname column
