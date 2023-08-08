@@ -30,7 +30,7 @@ def getLink(name):
         link = "http://ned.ipac.caltech.edu/cgi-bin/nph-objsearch?"
         inputs = {'objname': name,
 				'extend': 'no',
-				'hconst': '73',
+				'hconst': '73.04',
 				'omegam': '0.27',
 				'omegav': '0.73',
 				'corr_z': '1',
@@ -436,8 +436,9 @@ def Dist_mod():
         Takes host_velocity and host_vel_err data and returns distance modulus
         and distance modulus err in a series
         '''
-        h0 = 72.0
-        h0err = 5.0
+        h0 = 73.04
+	h0err = 1.04
+	# From Riess et al 2022 SH0ES result
 
         try:
             distance_mod_cor = 5*math.log(float(hv)/h0,10)+25 #hubble flow
