@@ -7,10 +7,23 @@ import sys
 #os.chdir(os.path.expanduser('~/Dropbox/SN/SOUSA/data'))
 
 snname = sys.argv[1]
-path = sys.argv[2]
-filename =  path+snname + '_uvotB15.1.dat'
+#path = sys.argv[2]
+path = '$SOUSA/data/'
+
+filename =  os.path.expandvars(path+snname + '_uvotB15.1.dat')
+filename2 = os.path.expandvars(path+snname + '_uvotB23.1.dat')
+print(filename2)
 savename = snname + '_pylightcurve.jpg'
-data = open(filename, 'r')
+
+
+if os.path.exists(filename2):
+	data = open(filename2, 'r')
+elif os.path.exists(filename):
+	data = open(filename, 'r')
+else:
+	print("Couldn't find the 15.1 or 23.1 file in $SOUSA/data/")
+	print(filename2)
+	exit()
 
 
 #Initializing lists needed to plot the different filters separately
