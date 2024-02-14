@@ -55,4 +55,3 @@ print('Writing to newdatabase.csv...')
 df.to_csv('newdatabase.csv', index=False)
 
 print('All done!')
-
