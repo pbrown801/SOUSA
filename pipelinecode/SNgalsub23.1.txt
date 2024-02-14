@@ -1,0 +1,987 @@
+#!/bin/tcsh -f
+##### 
+
+set	SNname=$argv[1] 
+
+
+set datfile = $SNname'_uvotB23.1.dat'
+set  myversion='2023.1'
+set texfile = $SNname'_texuvotB23.1.tex'
+set swiftversion=`swiftversion`
+
+
+#############
+# Copyright 2017 Peter Johnson Brown <peterbrown@byu.net>
+# Licensed under the MIT License.
+#
+## note a few previously separate programs are concatenated together
+##################################################################################
+# by Peter Brown                                                                 #
+# 				                                 	         #
+# last updated 21 Oct 2021                                                      #
+# updated sensitivity correction is hacked in rather than downloading new CALDB  #
+# 				                                 	         #
+# this section of the program just runs uvotmaghist                              #
+# on the source and template images                                              #
+# using the given source region  SN20XXYY_3.reg and                   	         #
+# a galaxy-matched background region SN20XXYY_bkg.reg if there is no template    #
+# or a galaxy-free background region if there is a template.                     #
+# The output files like $SNname"_"$band"_3_clear.fits are used by                #
+# SNgalsubscriptnomaghistup.txt to correct the photometry, subtract the galaxy   #
+# and output the data.                                                           #
+# 				                                 	         #
+# calling sequence:   source SNgalsubscriptmaghist.txt SNname                    #
+#                                                                                #
+# required files (in directory):                                                 #
+# $SNname_3.reg   -- ds9 region file with 3" radius circle centered on SN        #
+# $SNname_bkg.reg -- ds9 region file with background region similar to the       #
+#                    amount of galaxy light underneath the SN position.          #
+#                    This is only used if there are no template images.          #
+# $SNname_bkgclear.reg -- ds9 region file for area free of galaxy and stars      #
+# $SNname_$filter.img[.gz] -- image stacks made from uvotimsum and fappend       #
+#                                                                                #
+# outputs:				                                         #
+# $SNname"_"$band"_3_clear.fits	-- uvotmaghist output from the SN images         #
+# $SNname"_"$band"_3_cleartemp.fits -- output from the template images           #
+# $SNname"_"$band"_3_cleartempsum.fits -- output from the summed template        #
+# 				                                 	         #
+# 				                                 	         #
+# 				                                 	         #
+# 				                                 	         #
+# 				                                 	         #
+# 				                                 	         #
+##################################################################################
+
+
+
+
+set bandlist = (vv bb uu w1 m2 w2)
+#set bandlist = (w2)
+#echo ' '
+#echo ' testing phase with u band ' 
+#echo ' '
+
+set SNreg = $SNname'_3.reg'
+
+
+echo "unzip files "
+gunzip -f *.img.gz
+
+
+foreach band ($bandlist)
+rm $SNname"_"$band"_3_clear*.fits"
+rm $SNname"_"$band"_3_clear.gif"
+
+	echo $SNname
+	echo " runs uvotmaghist once and computes photometry using the 3 arcsec aperture and the standard 5 arcsec aperture"
+	echo " for both the SN and host galaxy template images (stacked and summed)"
+
+	#   use the background region of similar galaxy count rate as the default if no template is available
+	set bkgreg = $SNname'_bkg.reg'
+
+
+	if (-e $SNname"_"$band"_tempsum.img")  then
+		echo " Processing " $band " template images"
+		set bkgreg = $SNname'_bkgclear.reg'
+
+		echo "running uvotmaghist on the template images" 
+
+		uvotmaghist $SNname"_"$band"_tempsum.img" srcreg=$SNreg bkgreg=$bkgreg outfile=$SNname"_"$band"_3_cleartempsum.fits"  plotfile=NONE coinfile=caldb zerofile=caldb exclude=none chatter=0 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth centroid=no sensfile=caldb
+
+	endif
+
+	if (-e $SNname"_"$band".img")  then
+		echo "running uvotmaghist on the SN images" 
+			uvotmaghist $SNname"_"$band".img" srcreg=$SNreg bkgreg=$bkgreg outfile=$SNname"_"$band"_3_clear.fits" plotfile=$SNname"_"$band"_3_clear.gif" coinfile=caldb zerofile=caldb exclude=none chatter=0 clobber=yes logtime=no psffile=caldb apercorr=curveofgrowth centroid=no sensfile=caldb
+		endif
+		if (-e $SNname"_"$band"_3_clear.gif") open $SNname"_"$band"_3_clear.gif" &
+	else 
+		echo "no files for $band"
+	endif
+end
+
+gzip -f *.img
+
+###########
+
+
+###################################################################################
+# by Peter Brown                                                                  #
+# 				                                 	          #
+#                                                        #
+# 				                                 	          #
+# this program takes the uvotmaghist outputs from SNgalsubscriptmaghist.txt,      #
+# applies corrections to the count rates and applies the Breeveld 2011 zeropoints #
+# to convert to magnitudes in the UVOT and AB systems.                            #
+# Measurements are made for both 3" and 5" apertures and the results from the     #
+# aperture with the lowest magnitude error is output as bestmag, bestrate, etc    # 
+#			                                 	                  #
+#                                                                                 #
+# calling sequence:   source SNgalsubscriptnomaghistup.txt SNname                 #
+#                                                                                 #
+# required files (in directory):                                                  #
+# $SNname"_"$band"_3_clear.fits	-- uvotmaghist output from the SN images          #
+# $SNname"_"$band"_3_cleartemp.fits -- output from the template images            #
+# $SNname"_"$band"_3_cleartempsum.fits -- output from the summed template         #
+# 				                                 	          #
+# outputs:				                                          #
+# $SNname"_"$band"_phot.fits -- uvotmaghist output with corrected rates and mags  #
+# $SNname"_"$band"_vv_mags.dat -- and such are the final magnitudes               #
+# 				                                 	          #
+# major changes since Brown et al. 2009:                                          #
+# UV zeropoints updated in accordance with Breeveld et al. 2011                   # 
+# time dependent sensitivity correction from Breeveld et al. 2011 added           #
+# large scale sensitivity correction made for non-summed images                   #
+# 3 sigma upper limits corrected                                                  #
+# output data file now includes count rates and magnitude limits as new columns   #
+# 				                                 	          #
+###################################################################################
+
+
+set swiftversion=`swiftversion`
+
+###### This code takes the outputs from uvotmaghist and computes photometry 
+###### using the user-given 3" aperture and the standard 5" aperture
+###### and manipulates them to subtract the galaxy count rates from the template image.
+###### 
+###### uvotmaghist is a wrapper around uvotsource to do the photometry on multiple uvot fits images
+###### and I will sometimes use the names interchangeably.
+
+###### Most of the original uvotsource columns are explained in the documentation
+###### http://heasarc.nasa.gov/ftools/caldb/help/uvotsource.html
+###### Some are further explained within the comments here.
+###### 
+
+if (-e $SNname"_galaxyrates.txt")  then 
+	rm $SNname"_galaxyrates.txt"
+endif
+
+echo '# Beware of galaxy count rates > ~ 6 for full frame modes' >> $SNname"_galaxyrates.txt"
+echo '# Galaxy count rates in 5" aperture' > $SNname"_galaxyrates.txt"
+###### this quasi limit is based on the comparison of SNe with ground-based SN obs
+
+foreach band ($bandlist)
+
+	echo "processing $band data for $SNname"
+
+	if (-e $SNname"_"$band"_phottempsum.fits")  then 
+		rm $SNname"_"$band"_phottempsum.fits"
+	endif
+
+	if (-e $SNname"_"$band"_3_cleartempsum.fits")  then 
+		fcopy $SNname"_"$band"_3_cleartempsum.fits" $SNname"_"$band"_phottempsum.fits"
+
+		### The column names are intended to encode some of the corrections applied, 
+		### i.e. *G*alaxy *3*arcsec aperture *B*ackground corrected *C*oi-corrected *R*ate = G3BCR
+		### and  *S*ource *3*arcsec aperture *B*ackground corrected *C*oi-corrected 
+		### *G*alaxy subtracted *M*agnitude (AB) = S3BCGAMab
+
+		### correct the co-i corrected source rate for the lss_factor and sensitivity degradation
+		### The rate is corrected by dividing by the LSS_FACTOR and multiplying by the SENSCORR_FACTOR
+		### The LSS_FACTOR is currently just set to 1.0 for summed images due to lack of unique detector position
+
+		### do is for both the summed template and the individual frames
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="G3BCR" tform=1E  expression="COI_SRC_RATE*SENSCORR_FACTOR/LSS_FACTOR"
+
+
+		###### overall photometric error is 0.033 mag (0.024 with the LSS correction) 
+		###### Breeveld et al. 2010 section 5, 
+		###### consistent with Poole et al. 2008 Section 8 for the central region.
+		###### If the LSS_FACTOR is not equal to 1 (ie determined) 
+		###### add a systematic error of 2.6% of the flux  (0.024*2.5/ln(10) ).
+		###### If the LSS_FACTOR is equal to 1 (ie not determined for summed images) 
+		###### add an err of 3.6%
+
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="LSS_SYSERR"     tform=1E  expression=" (LSS_FACTOR==1.0)?0.036:0.026 "
+
+		###### A systematic uncertainty of 1.6% of the flux is recommended for the 3" photometry
+		###### to account for variations in the PSF ( 0.015 * 2.5/ln(10) ) in Breeveld et al. 2010 section 2.2.
+		###### However, a larger, filter-dependent error is already associated with the 3" aperture correction,
+		###### so I am setting this to zero for now
+
+		#ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="PSF_SYSERR"     tform=1E  expression=" 0.016 "
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="PSF_SYSERR"     tform=1E  expression=" 0.0 "
+
+
+		###### echo " scale the photometric error by the correction factors and increase error on count rate by systematic errors"
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="G3BCRe" tform=1E  expression="sqrt( (COI_SRC_RATE_ERR*SENSCORR_FACTOR/LSS_FACTOR)^2+(G3BCR*LSS_SYSERR)^2+(G3BCR*PSF_SYSERR)^2 )"
+		###### 
+
+		###### uvotsource is designed to do the photometry for the given aperture,
+		###### but it also measures the counts in the standard 5" aperture
+		###### in order to compute the coincidence loss correction.
+		###### Here we hack those count rates to give us the photometry in the standard 5" aperture.
+		###### Later we will compare the two and take the one with the smallest error.
+		###### 5" is good for bright sources, while the 3" has higher S/N for faint sources 
+		###### but introduces an uncertainty from the aperture correction
+
+		###### echo "now measure the count rates for 5 arcsec apertures"
+
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="G5CR"   tform=1E  expression="(RAW_STD_RATE*    COI_STD_FACTOR*SENSCORR_FACTOR/LSS_FACTOR)"
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="G5CRe"  tform=1E  expression="sqrt((RAW_STD_RATE_ERR*COI_STD_FACTOR*SENSCORR_FACTOR/LSS_FACTOR)^2+(G5CR*LSS_SYSERR)^2)"
+
+		###### Subtract the background from the 5 arcsec aperture
+ 		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="G5BCR"  tform=1E  expression="(G5CR-(COI_BKG_RATE*STD_AREA*SENSCORR_FACTOR/LSS_FACTOR))"
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="G5BCRe" tform=1E  expression="sqrt((G5CRe)^2+(COI_BKG_RATE_ERR*STD_AREA*SENSCORR_FACTOR/LSS_FACTOR)^2)"
+
+		###### Better format the columns I use
+		fthedit $SNname"_"$band"_phottempsum.fits" TDISP118 add f7.3
+		fthedit $SNname"_"$band"_phottempsum.fits" TDISP119 add f7.3
+		fthedit $SNname"_"$band"_phottempsum.fits" TDISP120 add f7.3
+		fthedit $SNname"_"$band"_phottempsum.fits" TDISP121 add f7.3
+		fthedit $SNname"_"$band"_phottempsum.fits" TDISP122 add f7.3
+		fthedit $SNname"_"$band"_phottempsum.fits" TDISP123 add f7.3
+
+		###### 
+		ftcalc $SNname"_"$band"_phottempsum.fits" $SNname"_"$band"_phottempsum.fits" clobber=yes column="pound"   tform=1A  expression="'#'"
+
+		###### echo " pull out the count rates from the template images"
+		###### echo " use the count rate and error from the summed image "
+
+		###### Save these as variables so they can be picked up for the next part
+
+		###### 
+		fstatistic $SNname"_"$band"_phottempsum.fits" colname=G3BCR rows=1 outfile=/tmp/junk.txt clobber=yes
+		set Galrate3=`pget fstatistic mean`
+		fstatistic $SNname"_"$band"_phottempsum.fits" colname=G3BCRe rows=1 outfile=/tmp/junk.txt clobber=yes
+		set Galrate3err=`pget fstatistic mean`
+		fstatistic $SNname"_"$band"_phottempsum.fits" colname=EXPOSURE rows=1 outfile=/tmp/junk.txt clobber=yes
+		set TEMPEXP=`pget fstatistic mean`
+		###### 
+
+		fstatistic $SNname"_"$band"_phottempsum.fits" colname=G5BCR rows=1 outfile=/tmp/junk.txt clobber=yes
+		set Galrate5=`pget fstatistic mean`
+		fstatistic $SNname"_"$band"_phottempsum.fits" colname=G5BCRe rows=1 outfile=/tmp/junk.txt clobber=yes
+		set Galrate5err=`pget fstatistic mean`
+
+		###### Dump galaxy rates to a file to include with the photometry
+
+		ftlist $SNname"_"$band"_phottempsum.fits" option=t columns="pound, FILTER, G5BCR, G5BCRe" rows=1 clobber=yes rownum=no colheader=no >> $SNname"_galaxyrates.txt"
+
+		echo '# Beware of galaxy count rates > ~ 6 '
+		echo "$band count rate is $Galrate5"
+	else
+
+		echo "No template image found -- proceeding without it."
+		set Galrate3=0
+		set Galrate3err=0
+		set Galrate5=0
+		set Galrate5err=0
+		set TEMPEXP=0
+	endif
+
+###################### NOW PROCEEDING TO THE SUPERNOVA IMAGE STACK  ###########
+
+	if (-e $SNname"_"$band"_3_clear.fits")  then
+
+		rm $SNname"_"$band"_phot.fits"
+		rm $SNname"_"$band"_mags3B11.dat"   
+		rm $SNname"_"$band"_mags5B11.dat" 
+		rm $SNname"_"$band"_bestmags.dat" 
+		rm $SNname"_"$band"_bestrates.dat" 
+		rm $SNname"_"$band"_all.dat"      
+
+		######  
+		######  echo "copy fits files so if they get deleted by an error you don't have to rerun uvotmaghist"
+		######  
+		fcopy $SNname"_"$band"_3_clear.fits" $SNname"_"$band"_phot.fits" 
+
+		######  Column numbers likely need to be updated as the uvotsource columns change with new releases.
+		######  In 2021 version amp is column 121
+		######  echo " add some other stuff for dumping out latex tables and such"
+		######  some latex symbols are harder to do (like \\ ) 
+		######  so they are given a name that can be searched for and replaced. 
+		######  They are put here so that most of the computed columns have the same type and form.
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="amp"     tform=1A  expression="'&'"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="pm"      tform=9A  expression="'plusminus'"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="pound"   tform=1A  expression="'#'"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="end"     tform=7A  expression="'endline'"
+
+		######   
+		######   echo "  add convenient time columns"    ### Jan 1 2005 is MJD53371
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="TMID"     tform=1D expression="(TSTOP-TSTART)/2+TSTART"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="JD"       tform=1D expression="TMID/60/60/24+2451910.5"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="JDshort"  tform=1D expression="JD-2450000"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="MJD"      tform=1D expression="JD-2400000.5"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="MJDstart" tform=1D expression="TSTART/60/60/24+51910.0"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="MJDstop"  tform=1D expression="TSTOP/60/60/24+51910.0"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="TJD"      tform=1D expression="JD-2440000.5"
+
+# exit in header but not fits table		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="date-obs" expression="date-obs"
+#		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="date-end" expression="date-end"
+
+		######   dates TMID JD JDshort MJD TJD
+		######   put in easier format
+
+		fthedit $SNname"_"$band"_phot.fits" TDISP5   add F10.2  # Exposure
+		fthedit $SNname"_"$band"_phot.fits" TDISP6   add F10.2  # Telapse
+		fthedit $SNname"_"$band"_phot.fits" TDISP132 add F10.4  # TMID
+		fthedit $SNname"_"$band"_phot.fits" TDISP133 add F10.4  # JD
+		fthedit $SNname"_"$band"_phot.fits" TDISP134 add F10.4  # JDshort
+		fthedit $SNname"_"$band"_phot.fits" TDISP135 add F10.4  # MJD
+		fthedit $SNname"_"$band"_phot.fits" TDISP136 add F10.4  # MJDstart
+		fthedit $SNname"_"$band"_phot.fits" TDISP137 add F10.4  # MJDstop
+		fthedit $SNname"_"$band"_phot.fits" TDISP138 add F10.4  # TJD
+
+	        ###### UV zeropoints ane errors including AB.  
+		###### New Breeveld et al. 2011 zeropoints are the default.
+		###### 
+		switch ($band)
+
+		case w2:
+		set ZPT=17.38
+		set ZPTab=19.11
+		set ZPTe=0.03
+		set APCOR=1.225
+		breaksw
+		case m2:
+		set ZPT=16.85
+		set ZPTab=18.54
+		set ZPTe=0.03
+		set APCOR=1.253
+		breaksw
+		case w1:
+		set ZPT=17.44
+		set ZPTab=18.95
+		set ZPTe=0.03
+		set APCOR=1.202
+		breaksw
+		case uu:
+		set ZPT=18.34
+		set ZPTab=19.36
+		set ZPTe=0.02
+		set APCOR=1.174
+		
+		breaksw
+		case bb:
+		set ZPT=19.11
+		set ZPTab=18.98
+		set ZPTe=0.016
+		set APCOR=1.140
+		
+		breaksw
+		case vv:
+		set ZPT=17.89
+		set ZPTab=17.88
+		set ZPTe=0.013
+		set APCOR=1.151
+		
+		breaksw
+		echo "ZPT is $ZPT"
+		endsw
+
+
+		fparkey $ZPT   $SNname"_"$band"_phot.fits" ZPT add=yes
+		fparkey $ZPTab $SNname"_"$band"_phot.fits" ZPTab add=yes
+		fparkey $ZPTe  $SNname"_"$band"_phot.fits" ZPTe add=yes
+		fparkey $APCOR $SNname"_"$band"_phot.fits" APCOR add=yes
+
+
+
+		fparkey $SNname  $SNname"_"$band"_phot.fits" name add=yes
+		ftcalc  $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column='SNname'      tform=15A  expression="name"
+
+		fthedit $SNname"_"$band"_phot.fits" TDISP138 add A  # SNname
+
+		###### Add the exposure time that was in the template image.
+		###### and the galaxy rates that were saved as script variables.
+
+		fparkey $TEMPEXP $SNname"_"$band"_phot.fits" tempexp add=yes
+
+		fthedit $SNname"_"$band"_phot.fits" Galrate3    operation=add value=$Galrate3
+		fthedit $SNname"_"$band"_phot.fits" Galrate3err operation=add value=$Galrate3err
+
+		fthedit $SNname"_"$band"_phot.fits" Galrate5    operation=add value=$Galrate5
+		fthedit $SNname"_"$band"_phot.fits" Galrate5err operation=add value=$Galrate5err
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="G3BCR"  tform=1E  expression="Galrate3"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="G3BCRe" tform=1E  expression="Galrate3err"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="G5BCR"  tform=1E  expression="Galrate5"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="G5BCRe" tform=1E  expression="Galrate5err"
+
+		###### overall photometric error is 0.033 mag (0.024 with the LSS correction) 
+		###### Breeveld et al. 2010 section 5, 
+		###### consistent with Poole et al. 2008 Section 8 for the central region
+		###### if the LSS_FACTOR is equal to 1 (ie not determined for summed images) 
+		###### add a systematic error of 2.6% of the flux  (0.024*2.5/ln(10) )
+		###### and if not add an err of 3.6%
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="LSS_SYSERR"     tform=1E  expression=" (LSS_FACTOR==1.0)?0.036:0.026 "
+
+		###### A systematic uncertainty of 1.6% of the flux is recommended for the 3" photometry
+		###### to account for variations in the PSF ( 0.015 * 2.5/ln(10) ) in Breeveld et al. 2010 section 2.2.
+		###### However, a larger, filter-dependent error is already associated with the 3" aperture correction,
+		###### so I am setting this to zero for now
+
+		#ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="PSF_SYSERR"     tform=1E  expression=" 0.016 "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="PSF_SYSERR"     tform=1E  expression=" 0.000 "
+
+
+		############ COMPUTE UPPER LIMITS   ############
+
+		######  Ratio of the source and standard region areas to the bkg region area
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="srcratio"   tform=1E  expression="src_area/bkg_area"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="stdratio"   tform=1E  expression="std_area/bkg_area"
+
+		######  Signal / Noise = ( total - Sratio * bkg - galrateS * exposure ) / sqrt ( total + Sratio^2 * bkg  + GalrateSerr^2.0*EXPOSURE^2.0 )
+		######  
+		###### Rearranging into a quadratic equation with source counts = X 
+		###### X= total - Xratio * bkg - galrateX * exposure 
+		###### gives the below coefficients a, b, and c and posRoot is the positive root (allowable solution)
+
+		######  Limit is calculated for a Signal/Noise = 3 with quadratic coefficients without the galaxy and with galaxy in 3 and 5 arcsec apertures 
+		###### SNlimit is the signal to noise limit you are calculating for 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SNlimit" tform=1E  expression="3.0"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="a"       tform=1E  expression="1.0"
+
+		###### We leave the systematic errors out, since they factor into the uncertainty on the flux 
+		###### but not whether or not it is detectable
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="a3fullerrs"       tform=1E  expression="1.0-SNlimit^2.0* (LSS_SYSERR^2.0+PSF_SYSERR^2.0)"
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="a5fullerrs"       tform=1E  expression="1.0-SNlimit^2.0*(LSS_SYSERR^2.0)"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="b"       tform=1E  expression="-(SNlimit^2.0)"
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="b3fullerrs"       tform=1E  expression="-(SNlimit^2.0*(1.0+LSS_SYSERR^2.0*2.0*GALRATE3))"
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="b5fullerrs"       tform=1E  expression="-(SNlimit^2.0*(1.0+LSS_SYSERR^2.0*2.0*GALRATE5))"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="c"            tform=1E  expression="-(SNlimit^2.0)*(raw_bkg_cnts*(srcratio+srcratio^2.0))"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="c3gal"        tform=1E  expression="-(SNlimit^2.0)*(raw_bkg_cnts*(srcratio+srcratio^2.0)+GALRATE3*EXPOSURE+GALRATE3err^2.0*EXPOSURE^2.0  )"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="c5gal"        tform=1E  expression="-(SNlimit^2.0)*(raw_bkg_cnts*(stdratio+stdratio^2.0)+GALRATE5*EXPOSURE+GALRATE5err^2.0*EXPOSURE^2.0  )"
+
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="c3galfull"        tform=1E  expression="-(SNlimit^2.0)*(raw_bkg_cnts*(srcratio+srcratio^2.0)+GALRATE3*EXPOSURE+GALRATE3err^2.0*EXPOSURE^2.0  + (LSS_SYSERR + LSS_SYSERR^2.0 )*GALRATE3*EXPOSURE)"
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="c5galfull"        tform=1E  expression="-(SNlimit^2.0)*(raw_bkg_cnts*(stdratio+stdratio^2.0)+GALRATE5*EXPOSURE+GALRATE5err^2.0*EXPOSURE^2.0  + (LSS_SYSERR + LSS_SYSERR^2.0 )*GALRATE5*EXPOSURE)"
+
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="c3fullerrs"   tform=1E  expression="-(SNlimit^2.0)*(raw_bkg_cnts*(srcratio+srcratio^2.0)+GALRATE3*EXPOSURE+GALRATE3err^2.0*EXPOSURE^2.0 + stdratio*raw_bkg_cnts+LSS_SYSERR^2.0*GALRATE3^2.0*exposure^2.0)"
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="c5fullerrs"   tform=1E  expression="-(SNlimit^2.0)*(raw_bkg_cnts*(stdratio+stdratio^2.0)+GALRATE5*EXPOSURE+GALRATE5err^2.0*EXPOSURE^2.0 + stdratio*raw_bkg_cnts+LSS_SYSERR^2.0*GALRATE5^2.0*exposure^2.0)"
+
+		###### Solve for the positive root of the quadratic equation -- that root is the SNR=3 source counts
+		###### Convert them to a corrected rate limit and magnitudes
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="posRoot"      tform=1E  expression="(-b + sqrt( b^2.0 - 4.0 * a * c ) )/(2.0 * a)"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BRul"       tform=1E  expression="( posRoot / exposure )"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCARul"     tform=1E  expression="S3BRul  * COI_STD_FACTOR *APCOR*SENSCORR_FACTOR/LSS_FACTOR"
+
+
+		# fine here. fv $SNname"_"$band"_phot.fits"
+		###### This is the magnitude upper limit not considering the galaxy, which matches the normal uvotsource upper limits
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCAMul"     tform=1E  expression="-2.5*log10(S3BCARul)+ZPT"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCAMabul"   tform=1E  expression="-2.5*log10(S3BCARul)+ZPTab"
+
+		###### This is the upper limit when considering the uncertainty on the galaxy subtraction
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="posRootgal3"  tform=1E  expression="(-b + sqrt( b^2.0 - 4.0 * a * c3gal ) )/(2.0 * a)"
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="posRootgal3fullerrs"  tform=1E  expression="(-b3fullerrs + sqrt( b3fullerrs^2.0 - 4.0 * a3fullerrs * c3fullerrs ) )/(2.0 * a3fullerrs)"
+
+		###### This converts the upper limit on the counts to a count rate
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BGRul"      tform=1E  expression="posRootgal3 / exposure"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGARul"    tform=1E  expression="S3BGRul * COI_STD_FACTOR *APCOR*SENSCORR_FACTOR/LSS_FACTOR"
+
+		###### 
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMul"    tform=1E  expression="-2.5*log10(S3BCGARul)+ZPT"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMabul"  tform=1E  expression="-2.5*log10(S3BCGARul)+ZPTab"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="posRootgal5"  tform=1E  expression="(-b + sqrt( b^2.0 - 4.0 * a * c5gal ) )/(2.0 * a)"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BGRul"      tform=1E  expression="posRootgal5 / exposure"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGRul"     tform=1E  expression="S5BGRul * COI_STD_FACTOR *SENSCORR_FACTOR/LSS_FACTOR"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMul"     tform=1E  expression="-2.5*log10(S5BCGRul)+ZPT"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMabul"   tform=1E  expression="-2.5*log10(S5BCGRul)+ZPTab"
+
+
+		###### The 3" aperture has the deepest upper limit because the background contributes less 
+		###### in the smaller area and the signal from the source is concentrated in the inner part of the aperture
+		##### When not considering the galaxy uncertainty, the limits match that from uvotsource
+		#####	ftlist $SNname"_"$band"_phot.fits" -t column="Mag_lim,S3BCAMul, S3BCGAMul, S5BCGMul" 
+
+############################################################################################################################
+		###### COMPUTE LOWER LIMITS DUE TO COINCIDENCE LOSS SATURATION, SET TO 0.98 COUNTS PER FRAME  ############
+                ###### These limits are slightly fainter than calculated by uvotsource because it subtracts the contribution 
+                ###### from the background and galaxy from that allowed to be from the source before saturating
+
+		###### These are the saturation rates for the known frame rates used.
+		###### They had to be computed numerically because of the coincidence loss.
+		###### WindowSize Windowdx FrameTime DeadTimeCorrection SatRate98 SatCoi98 SatRate99  SatCoi99
+		###### 17.00      2048     0.0110322 0.9842280          329.888   3.71366  362.259    4.03688
+		###### 12.75      1536     0.0083902 0.9792615          419.173   3.58872  455.806    3.86294
+		######  8.00      960      0.005413  0.967855163495289  607.284   3.35431  650.352    3.55592
+		######  5.00      608      0.003603  0.951658609768295  843.846   3.10242  892.098    3.24670
+
+		###### Here we select the appropriate goodtime fraction, saturation rate, 
+		###### and the coincidence loss correction at that count rate based on the frame time
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="goodfrac"     tform=1E  expression=" (framtime<0.012 .and. framtime>0.010)?0.9842280:#null "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="goodfrac"     tform=1E  expression=" (framtime<0.009 .and. framtime>0.007)?0.9792615:goodfrac "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="goodfrac"     tform=1E  expression=" (framtime<0.006 .and. framtime>0.004)?0.967855163495289:goodfrac "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="goodfrac"     tform=1E  expression=" (framtime<0.004 .and. framtime>0.002)?0.951658609768295:goodfrac "
+
+		###### Counts per frame
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="CpF"          tform=1E  expression="RAW_STD_RATE*framtime*goodfrac"
+
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimit"     tform=1E  expression=" (framtime<0.012 .and. framtime>0.01)?329.89:#null "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimit"     tform=1E  expression=" (framtime<0.009 .and. framtime>0.007)?419.17:RateLimit "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimit"     tform=1E  expression=" (framtime<0.006 .and. framtime>0.004)?607.28:RateLimit "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimit"     tform=1E  expression=" (framtime<0.004 .and. framtime>0.002)?843.85:RateLimit "
+
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimitcoi"     tform=1E  expression=" (framtime<0.012 .and. framtime>0.01)?3.71:#null "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimitcoi"     tform=1E  expression=" (framtime<0.009 .and. framtime>0.007)?3.59:RateLimitcoi "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimitcoi"     tform=1E  expression=" (framtime<0.006 .and. framtime>0.004)?3.35:RateLimitcoi "
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="RateLimitcoi"     tform=1E  expression=" (framtime<0.004 .and. framtime>0.002)?3.10:RateLimitcoi "
+
+		###### Subtract off of the saturation rate limit the part from the background and the galaxy
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCRll"      tform=1E  expression=" RateLimit - (coi_bkg_rate*std_area)*RateLimitcoi/COI_STD_FACTOR "
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGRll"     tform=1E  expression=" RateLimit - (coi_bkg_rate*std_area+GALRATE5)*RateLimitcoi/COI_STD_FACTOR "
+
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCMll"      tform=1E  expression="-2.5*log10(S5BCRll)+ZPT"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMll"     tform=1E  expression="-2.5*log10(S5BCGRll)+ZPT"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMabll"   tform=1E  expression="-2.5*log10(S5BCGRll)+ZPTab"
+
+	#	ftlist $SNname"_"$band"_phot.fits" -t column="mag_coi_lim, S5BCGRul, S5BCGMul" 
+
+################################################
+#fine here		fv $SNname"_"$band"_phot.fits"
+
+		###### echo " scale COI_SRC_RATE by the 1/large scale sensitivity and sensitivity loss and name it S3BCR " 
+	
+		ftcalc  $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCR" tform=1E  expression="COI_SRC_RATE*SENSCORR_FACTOR/LSS_FACTOR"
+	
+		###### echo " scale the statistical error by the correction factors and increase error on count rate by the systematic errors"
+	
+		ftcalc  $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCRe" tform=1E  expression="sqrt((COI_SRC_RATE_ERR*SENSCORR_FACTOR/LSS_FACTOR)^2+(S3BCR*LSS_SYSERR)^2+(S3BCR*PSF_SYSERR)^2)"
+	
+		######  
+		###### cho "  subtract galaxy, propogate error"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGR"   tform=1E  expression="(S3BCR-Galrate3)"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGRe"  tform=1E  expression="sqrt((S3BCRe)^2+(Galrate3err)^2)"
+
+
+
+		###### APERTURE CORRECTION   
+
+
+		###### From Wayne Landsman e-mail Dec 5, 2007
+		###### AP_FACTOR_ERR is *defined* to be equal to the ratio AP_COI_SRC_RATE_ERR/ COI_SRC_RATE_ERR.
+		###### And AP_COI_SRC_RATE_ERR is computed as you suggested, by uvotapercorr 
+		###### as the quadrature sum of two error terms; (1) AP_FACTOR*COI_SRC_RATE_ERR and 
+		###### (2) AP_FACTOR_UNCERTAINTY * COI_SRC_RATE.      
+		###### AP_FACTOR_UNCERTAINTY is the uncertainty in the aperture correction due to an uncertainty 
+		###### of (by default) 3% in the FWHM of the PSF.      
+		###### So the confusion arises if one thinks that  AP_FACTOR_ERR is 
+		###### what I am now calling AP_FACTOR_UNCERTAINTY.
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="AP_FACTOR_UNCERTAINTY"  tform=1E  expression="sqrt( AP_COI_SRC_RATE_ERR^2.0-AP_FACTOR^2.0*COI_SRC_RATE_ERR^2.0)/COI_SRC_RATE"
+
+                 ######## replacing AP_FACTOR in the above with APCOR can result in NULLs due to the square root of an imaginary number.  
+                 ######## AP_FACTOR_UNCERTAINTY is defined based on AP_FACTOR, so a new uncertainty would have to be determined independently.
+                 ######## Here we update the aperture correction factor but retain the uncertainties determined previously
+
+
+		###### This is what they are for the different filters.
+		###### The UV filters have a slightly broader psf and thus 
+		###### are more susceptible to changes in the psf in a small aperture
+		###### w2 0.066
+		###### m2 0.051
+		###### w1 0.048
+		###### u 0.044
+		###### b 0.037
+		###### v 0.035
+
+
+####################### replacing AP_FACTOR with APCOR manually determined in 2021
+
+		###### Now redo the calculation just to confirm this is what uvotsource did
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="AP_COI_SRC_RATE_ERR2"  tform=1E  expression="sqrt( (APCOR*COI_SRC_RATE_ERR)^2.0 + (AP_FACTOR_UNCERTAINTY*COI_SRC_RATE)^2.0 )"
+		###### This matches the AP_COI_SRC_RATE_ERR from uvotsource
+
+		### 
+		### echo " apply aperture correction"  
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAR"  tform=1E  expression="S3BCGR* APCOR"
+
+
+		###### this is how I used to do it wrong		
+		###### ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGARe" tform=1E  
+		###### expression="(S3BCGRe*AP_FACTOR_ERR)"
+		###### in uvotsource AP_FACTOR_ERR is by definition AP_COI_SRC_RATE_ERR/ COI_SRC_RATE_ERR,
+		###### but it cannot be used to scale the other errors that I have included at this point
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGARe" tform=1E  expression="sqrt( (APCOR*S3BCGRe)^2.0 + (AP_FACTOR_UNCERTAINTY*COI_SRC_RATE)^2.0 )"
+
+		######  ftlist $SNname"_"$band"_phot.fits" -t column="AP_COI_SRC_RATE_ERR, S3BCGARe, S3BCGARe2" 
+
+		###### writing out the final count rates and errors from the original 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAR_full"  tform=1E  expression="(COI_SRC_RATE*SENSCORR_FACTOR/LSS_FACTOR-Galrate3)* APCOR"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGARe_full" tform=1E  expression="sqrt((sqrt((sqrt((COI_SRC_RATE_ERR*SENSCORR_FACTOR/LSS_FACTOR)^2+(COI_SRC_RATE*SENSCORR_FACTOR/LSS_FACTOR*LSS_SYSERR)^2+(COI_SRC_RATE*SENSCORR_FACTOR/LSS_FACTOR*PSF_SYSERR)^2))^2+(Galrate3err)^2)*AP_FACTOR_ERR)^2)"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGARe_full" tform=1E  expression="sqrt( (APCOR*sqrt((sqrt((COI_SRC_RATE_ERR*SENSCORR_FACTOR/LSS_FACTOR)^2+(COI_SRC_RATE*SENSCORR_FACTOR/LSS_FACTOR*LSS_SYSERR)^2+(COI_SRC_RATE*SENSCORR_FACTOR/LSS_FACTOR*PSF_SYSERR)^2))^2+(Galrate3err)^2))^2.0 + (AP_FACTOR_UNCERTAINTY*COI_SRC_RATE)^2.0 )"
+
+		###### From Frank Marshall e-mail, Feb. 6, 2014
+		###### "The COI_STD_FACTOR_ERR = DELTA / RAW_STD_RATE, where
+		###### DELTA is the change in the COI_TOT_RATE corresponding to a
+		###### 1-sigma change in the RAW_STD_RATE."
+# broken by here		fv $SNname"_"$band"_phot.fits"
+
+		###### 
+		###### echo " determine significance"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGARs" tform=1E  expression="S3BCGR/S3BCGRe"
+
+		###### echo " now for 5 arcsec aperture photometry using the standard aperture if you want to compare"
+		###### Apply co-i correction to std rate
+		###### 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5CR"  tform=1E  expression="(RAW_STD_RATE*COI_STD_FACTOR*SENSCORR_FACTOR/LSS_FACTOR)"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5CRe" tform=1E  expression="sqrt((RAW_STD_RATE_ERR*COI_STD_FACTOR*SENSCORR_FACTOR/LSS_FACTOR)+(S5CR*LSS_SYSERR)^2)"
+		###### 
+		###### 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCR"  tform=1E  expression="S5CR-COI_BKG_RATE*STD_AREA*SENSCORR_FACTOR/LSS_FACTOR"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCRe" tform=1E  expression="sqrt((S5CRe)^2+(COI_BKG_RATE_ERR*STD_AREA*SENSCORR_FACTOR/LSS_FACTOR)^2)"
+		###### 
+		###### echo " subtract backgrounds, propogate error"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGR"  tform=1E  expression="(S5BCR-Galrate5)"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGRe" tform=1E  expression="sqrt((S5BCRe)^2+(Galrate5err)^2)"
+
+		###### echo "  determine significance after galaxy subtraction"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGRs" tform=1E  expression="S5BCGR/S5BCGRe"
+
+		###### echo " convert rate,err to magnitudes and upper limits"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMab" tform=1E  expression="-2.5*log10(S3BCGAR)+ZPTab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAM"   tform=1E  expression="-2.5*log10(S3BCGAR)+ZPT"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMe"  tform=1E  expression="(2.5/log(10))*((S3BCGARe/S3BCGAR))"
+		###### 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMab" tform=1E  expression="-2.5*log10(S5BCGR)+ZPTab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGM"   tform=1E  expression="-2.5*log10(S5BCGR)+ZPT"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMe"  tform=1E  expression="(2.5/log(10))*(S5BCGRe/S5BCGR)"
+		###### 
+
+
+		######  ftlist $SNname"_"$band"_phot.fits" -t column="S3BCGAMul,S3BCGAM,S3BCGAMe, S5BCGM,S5BCGMe,S3BCGAR,S3BCGARe, S5BCGR,S5BCGRe" 
+
+		###### this is where we choose aperture size
+
+		###### echo " determine aperture size with the lowest magnitude error"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="BestAp"   tform=1E  expression= "S5BCGRe>(S3BCGARe)?3:5"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestR"   tform=1E  expression= "BestAp==3?S3BCGAR:S5BCGR"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestRe"  tform=1E  expression= "BestAp==3?S3BCGARe:S5BCGRe"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestMab" tform=1E  expression= "BestAp==3?S3BCGAMab:S5BCGMab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestM"   tform=1E  expression= "BestAp==3?S3BCGAM:S5BCGM"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestMe"  tform=1E  expression= "BestAp==3?S3BCGAMe:S5BCGMe"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestRs"  tform=1E  expression= "SbestR/SbestRe"
+
+		###### Replace mags with nulls if below 3 sigma and mags and rates if brighter than saturation limit 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAR"   tform=1E  expression= "S3BCGAR>S5BCGRll?#null:S3BCGAR"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGARe"  tform=1E  expression= "S3BCGAR>S5BCGRll?#null:S3BCGARe"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMab" tform=1E  expression= "S3BCGAR>S5BCGRll?#null:S3BCGAMab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAM"   tform=1E  expression= "S3BCGAR>S5BCGRll?#null:S3BCGAM"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMe"  tform=1E  expression= "S3BCGAR>S5BCGRll?#null:S3BCGAMe"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMab"  tform=1E  expression= "S3BCGAR<S3BCGARul?#null:S3BCGAMab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAM"    tform=1E  expression= "S3BCGAR<S3BCGARul?#null:S3BCGAM"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S3BCGAMe"   tform=1E  expression= "S3BCGAR<S3BCGARul?#null:S3BCGAMe"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGR"   tform=1E  expression= "S5BCGR>S5BCGRll?#null:S5BCGR"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGRe"  tform=1E  expression= "S5BCGR>S5BCGRll?#null:S5BCGRe"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMab" tform=1E  expression= "S5BCGR>S5BCGRll?#null:S5BCGMab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGM"   tform=1E  expression= "S5BCGR>S5BCGRll?#null:S5BCGM"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMe"  tform=1E  expression= "S5BCGR>S5BCGRll?#null:S5BCGMe"
+
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMab" tform=1E  expression= "S5BCGR<S3BCGARul?#null:S5BCGMab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGM"   tform=1E  expression= "S5BCGR<S3BCGARul?#null:S5BCGM"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="S5BCGMe"  tform=1E  expression= "S5BCGR<S3BCGARul?#null:S5BCGMe"
+
+
+		###### replace with nulls if brighter than saturation limit 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestR"   tform=1E  expression= "SbestR>S5BCGRll?#null:SbestR"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestRe"  tform=1E  expression= "SbestR>S5BCGRll?#null:SbestRe"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestMab" tform=1E  expression= "SbestR>S5BCGRll?#null:SbestMab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestM"   tform=1E  expression= "SbestR>S5BCGRll?#null:SbestM"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestMe"  tform=1E  expression= "SbestR>S5BCGRll?#null:SbestMe"
+
+
+		###### replace with nulls if below 3 sigma 
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestMab" tform=1E  expression= "SbestR<S3BCGARul?#null:SbestMab"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestM"   tform=1E  expression= "SbestR<S3BCGARul?#null:SbestM"
+		ftcalc $SNname"_"$band"_phot.fits" $SNname"_"$band"_phot.fits" clobber=yes column="SbestMe"  tform=1E  expression= "SbestR<S3BCGARul?#null:SbestMe"
+
+#ftlist $SNname"_"$band"_phot.fits" -t column="S3BCGARul,SbestR,S3BCGAR"
+
+		#### frametime
+		fthedit $SNname"_"$band"_phot.fits" TDISP116 add f7.4
+
+		###### formatting for rates and magnitudes
+		#fthedit $SNname"_"$band"_phot.fits" TDISP131 add f7.3
+		#fthedit $SNname"_"$band"_phot.fits" TDISP132 add f7.3
+		#fthedit $SNname"_"$band"_phot.fits" TDISP133 add f7.3
+		#fthedit $SNname"_"$band"_phot.fits" TDISP134 add f7.3
+		#fthedit $SNname"_"$band"_phot.fits" TDISP135 add f7.3
+		#fthedit $SNname"_"$band"_phot.fits" TDISP136 add f7.3
+		#fthedit $SNname"_"$band"_phot.fits" TDISP137 add f7.3
+		#fthedit $SNname"_"$band"_phot.fits" TDISP138 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP139 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP140 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP141 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP142 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP143 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP144 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP145 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP146 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP147 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP148 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP149 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP150 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP151 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP152 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP153 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP154 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP155 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP156 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP157 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP158 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP159 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP160 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP161 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP162 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP163 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP164 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP165 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP166 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP167 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP168 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP169 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP170 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP171 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP172 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP173 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP174 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP175 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP176 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP177 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP178 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP179 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP180 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP181 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP182 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP183 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP184 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP185 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP186 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP187 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP188 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP189 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP190 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP191 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP192 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP193 add f7.3   #bestap
+		fthedit $SNname"_"$band"_phot.fits" TDISP194 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP195 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP196 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP197 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP198 add f4.1  #hopefully bestap
+		fthedit $SNname"_"$band"_phot.fits" TDISP199 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP200 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP201 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP202 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP203 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP204 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP205 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP206 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP207 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP208 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP209 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP210 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP211 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP212 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP213 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP214 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP215 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP216 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP217 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP218 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP219 add f7.3
+		fthedit $SNname"_"$band"_phot.fits" TDISP220 add f7.3
+
+
+		###### echo "create data files for each filter" 	
+
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_mags3B11.dat"  columns="MJD, S3BCGAM, S3BCGAMe" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_mags5B11.dat"  columns="MJD, S5BCGM, S5BCGMe" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_bestmags.dat"  columns="MJD, SbestM, SbestMe" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_nosubmags.dat"  columns="MJD, mag, mag_err" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_nosubrates.dat"  columns="MJD, corr_rate, corr_rate_err" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_bestrates.dat" columns="MJD, SbestR, SbestRe" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_all.dat"       columns="MJD, SbestM, SbestMe, S3BCGAMul, SbestR, SbestRe" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_all.dat"       columns="MJD, SbestM, SbestMe, S3BCGAMul, S5BCGMll, SbestR, SbestRe" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_all.dat"       columns="Filter, MJD, SbestM, SbestMe, S3BCGAMul, S5BCGMll, SbestR, SbestRe, bestap, framtime, exposure, telapse" clobber=yes rownum=no colheader=no
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_allobsid.dat"       columns="Filter, MJD, SbestM, SbestMe, S3BCGAMul, S5BCGMll, SbestR, SbestRe, bestap, framtime, exposure, telapse, obsid" clobber=yes rownum=no colheader=no
+
+		ftlist $SNname"_"$band"_phot.fits" option=t outfile=$SNname"_"$band"_all.tex"       columns="SNname, amp, filter, amp, MJD, amp, SbestM, amp, SbestMe, amp, S3BCGAMul, amp, S5BCGMll, amp, SbestR, amp, SbestRe, end, " clobber=yes rownum=no colheader=no
+
+	######  
+	else 
+		echo "no files for $band"
+	endif
+end
+
+if (-e $SNname"_*_lightcurve.agr")  then 
+
+	rm $SNname"_*_lightcurve.agr"
+	rm $SNname"_*_groundcomparison.agr"  
+	rm $SNname"_*_mags3.dat" 
+	rm $SNname"_*_mags.dat" 
+	rm $SNname"_uvot.dat"   
+	rm $SNname"_uvotB*.dat"   
+	rm $SNname"_uvotB14.1.dat"   
+	rm $SNname"_uvotB14.1.tex"   
+endif
+
+
+set swiftversion=`swiftversion`
+
+set dategenerated=`date`
+# 
+# 
+# 
+echo "# $SNname magnitudes from Swift UVOT                                                        "  > $datfile
+echo "# generated $dategenerated using version $myversion                                         " >> $datfile
+echo "# of Peter Brown's photometry pipeline                                                      " >> $datfile
+echo "# and version $swiftversion of HEASOFT                                                      " >> $datfile
+cat $SNSCRIPTS/UVOTdatablurb15.1.txt                                                                >> $datfile
+echo "#                                                                                           " >> $datfile
+if (-e $SNname"_ref.txt")  then 
+
+	echo "# Original reference for Swift observations:                                        " >> $datfile
+	cat $SNname"_ref.txt"                                                                       >> $datfile
+	echo "#                                                                                    " >> $datfile
+	echo "# If necessary, the data have been reanalyzed with the revised zeropoints             " >> $datfile
+	echo "# and sensitivity corrections of Breeveld et al. 2011.                                " >> $datfile
+
+endif
+
+echo "#                                                                                           " >> $datfile
+echo "# The underlying galaxy had the following count rates                                       " >> $datfile
+echo "# in a 5 arcsec aperture at the source position  " >> $datfile
+echo "# (missing filters list 0 but used a background region similar to the SN ):                 " >> $datfile
+
+cat $SNname"_galaxyrates.txt"                                                                       >> $datfile
+
+echo "#                                                                                           " >> $datfile
+if (-e $SNname"_*_comments.txt")  then 
+
+cat $SNname"_comments.txt"                                                                       >> $datfile
+else
+echo "# There are no known issues with this photometry.                                           " >> $datfile
+#echo "# b and v data consistent with BV data from ZZZZ et al.                                     " >> $datfile
+
+endif
+
+
+echo "#                                                                                           " >> $datfile
+echo "# Filter MJD[days] Mag MagErr 3SigMagLim 0.98SatLim[mag] Rate[c/s] RateErr[c/s] Ap[arcsec] Frametime[s] Exp[s] Telapse[s]" >> $datfile
+echo "#                                                                                           " >> $datfile
+#echo "# uvw2                                                                                      " >> $datfile
+cat $SNname"_w2_all.dat"                                                                            >> $datfile
+echo "#                                                                                           " >> $datfile
+#echo "# uvm2                                                                                      " >> $datfile
+cat $SNname"_m2_all.dat"                                                                            >> $datfile
+echo "#                                                                                           " >> $datfile
+#echo "# uvw1                                                                                      " >> $datfile
+cat $SNname"_w1_all.dat"                                                                            >> $datfile
+echo "#                                                                                           " >> $datfile
+#echo "# uvot u                                                                                    " >> $datfile
+cat $SNname"_uu_all.dat"                                                                            >> $datfile
+echo "#                                                                                           " >> $datfile
+#echo "# uvot b                                                                                    " >> $datfile
+cat $SNname"_bb_all.dat"                                                                            >> $datfile
+echo "#                                                                                           " >> $datfile
+#echo "# uvot v                                                                                    " >> $datfile
+cat $SNname"_vv_all.dat"                                                                            >> $datfile
+#echo "#                                                                                           " >> $datfile
+echo "#                                                                                           " >> $datfile
+# 
+
+
+echo "Photometry file " $datfile " complete -- please check for errors and add any necessary notes"
+# 
+cat $SNname"_w2_all.tex"                                                                             > $texfile
+cat $SNname"_m2_all.tex"                                                                            >> $texfile
+cat $SNname"_w1_all.tex"                                                                            >> $texfile
+cat $SNname"_uu_all.tex"                                                                            >> $texfile
+cat $SNname"_bb_all.tex"                                                                            >> $texfile
+cat $SNname"_vv_all.tex"                                                                            >> $texfile
+
+# gedit $SNname"_galaxyrates.txt" &
+#gedit $datfile &
+# 
+set title='"'$SNname'"'
+cat $SNSCRIPTS/SN200Yyy_6templatetest.agr    > $SNname"_lightcurve.agr"
+echo "@    title $title                   " >> $SNname"_lightcurve.agr"
+echo "@target G0.S0                       " >> $SNname"_lightcurve.agr"
+echo "@type xydy                          " >> $SNname"_lightcurve.agr"
+echo "#                                   " >> $SNname"_lightcurve.agr"
+cat $SNname"_w2_bestmags.dat"               >> $SNname"_lightcurve.agr"
+echo "&                                   " >> $SNname"_lightcurve.agr"
+echo "@target G0.S1                       " >> $SNname"_lightcurve.agr"
+echo "@type xydy                          " >> $SNname"_lightcurve.agr"
+echo "#                                   " >> $SNname"_lightcurve.agr"
+cat $SNname"_m2_bestmags.dat"               >> $SNname"_lightcurve.agr"
+echo "&                                   " >> $SNname"_lightcurve.agr"
+echo "@target G0.S2                       " >> $SNname"_lightcurve.agr"
+echo "@type xydy                          " >> $SNname"_lightcurve.agr"
+echo "#                                   " >> $SNname"_lightcurve.agr"
+cat $SNname"_w1_bestmags.dat"               >> $SNname"_lightcurve.agr"
+echo "&                                   " >> $SNname"_lightcurve.agr"
+echo "@target G0.S3                       " >> $SNname"_lightcurve.agr"
+echo "@type xydy                          " >> $SNname"_lightcurve.agr"
+echo "#                                   " >> $SNname"_lightcurve.agr"
+cat $SNname"_uu_bestmags.dat"               >> $SNname"_lightcurve.agr"
+echo "&                                   " >> $SNname"_lightcurve.agr"
+echo "@target G0.S4                       " >> $SNname"_lightcurve.agr"
+echo "@type xydy                          " >> $SNname"_lightcurve.agr"
+echo "#                                   " >> $SNname"_lightcurve.agr"
+cat $SNname"_bb_bestmags.dat"               >> $SNname"_lightcurve.agr"
+echo "&                                   " >> $SNname"_lightcurve.agr"
+echo "@target G0.S5                       " >> $SNname"_lightcurve.agr"
+echo "@type xydy                          " >> $SNname"_lightcurve.agr"
+echo "#                                   " >> $SNname"_lightcurve.agr"
+cat $SNname"_vv_bestmags.dat"               >> $SNname"_lightcurve.agr"
+echo "&                                   " >> $SNname"_lightcurve.agr"
+source $SNSCRIPTS/removenullonefile.txt $SNname"_lightcurve.agr"
+#xmgrace $SNname"_lightcurve.agr" &
+
+
+cat $SNSCRIPTS/SN200Yyy_6templateground.agr   > $SNname"_groundcomparison.agr"
+echo "@    title $title                    " >> $SNname"_groundcomparison.agr"
+echo "@target G0.S0                        " >> $SNname"_groundcomparison.agr"
+echo "@type xydy                           " >> $SNname"_groundcomparison.agr"
+echo "#                                    " >> $SNname"_groundcomparison.agr"
+cat $SNname"_vv_bestmags.dat"                >> $SNname"_groundcomparison.agr"
+echo "&                                    " >> $SNname"_groundcomparison.agr"
+echo "@target G0.S1                        " >> $SNname"_groundcomparison.agr"
+echo "@type xydy                           " >> $SNname"_groundcomparison.agr"
+echo "#                                    " >> $SNname"_groundcomparison.agr"
+cat $SNname"_bb_bestmags.dat"                >> $SNname"_groundcomparison.agr"
+echo "&                                    " >> $SNname"_groundcomparison.agr"
+echo "@target G0.S2                        " >> $SNname"_groundcomparison.agr"
+echo "@type xydy                           " >> $SNname"_groundcomparison.agr"
+echo "#                                    " >> $SNname"_groundcomparison.agr"
+cat $SNname"_vv_ground.dat"                  >> $SNname"_groundcomparison.agr"
+echo "&                                    " >> $SNname"_groundcomparison.agr"
+echo "@target G0.S3                        " >> $SNname"_groundcomparison.agr"
+echo "@type xydy                           " >> $SNname"_groundcomparison.agr"
+echo "#                                    " >> $SNname"_groundcomparison.agr"
+cat $SNname"_bb_ground.dat"                  >> $SNname"_groundcomparison.agr"
+echo "&                                    " >> $SNname"_groundcomparison.agr"
+source $SNSCRIPTS/removenullonefile.txt $SNname"_groundcomparison.agr"
+
+#xmgrace $SNname"_groundcomparison.agr" &
+
+#cp $datfile $SWIFT_FINALDATA/Photarchive/
+
+#cp $datfile $SWIFT_FINALDATA/UVOTDATA/
+#cp $SNname"_uvot.dat" $SWIFT_FINALDATA/UVOTDATA/nonull
+
+exit 0
+ 
