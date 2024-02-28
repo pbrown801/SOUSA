@@ -78,7 +78,7 @@ for i, name in enumerate(names):
             break
 
 # reformat SN supernovae so they have the correct(?) casing
-print(f'{changed} cross-matches found. Formatting...')
+print(f'\n{changed} cross-matches found. Formatting...')
 for i, name in enumerate(names):
     if name[:2].lower() == 'sn':
         names[i] = 'SN' + name[2:].lower()
@@ -120,7 +120,7 @@ print('Reformatting types...')
 seen = []
 for i, t in enumerate(types):
     if t.startswith('SN '):
-        types[i] = t[4:]
+        types[i] = t[3:]
     if 'like' in t.lower():
         idxh = t.find('-')
         idxb = t.find('[')
@@ -128,12 +128,12 @@ for i, t in enumerate(types):
         if idxb == -1: idxb = 10000
         types[i] = t[:min(idxh, idxb)]
     types[i] = types[i].strip()
-for t in types:
-    print(t)
 
 # create df, write to csv
 print('Creating dataframe...')
 df = pd.DataFrame(list(zip(names, types, redshifts, ra, dec)), columns = ['name', 'type', 'redshift', 'right ascension', 'declination'])
+
+print(df)
 
 print ('Dropping duplicates...')
 df.drop_duplicates()
