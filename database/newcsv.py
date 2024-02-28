@@ -120,13 +120,13 @@ print('Reformatting types...')
 seen = []
 for i, t in enumerate(types):
     if t.startswith('SN '):
-        types[i] = t[3:]
+        t = t[3:]
+        types[i] = t
     if 'like' in t.lower():
-        idxh = t.find('-')
         idxb = t.find('[')
-        if idxh == -1: idxh = 10000
         if idxb == -1: idxb = 10000
-        types[i] = t[:min(idxh, idxb)]
+        types[i] = t[:idxb]
+        print(f'{t} -> {types[i]}')
     types[i] = types[i].strip()
 
 # create df, write to csv
