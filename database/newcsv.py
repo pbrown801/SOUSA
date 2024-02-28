@@ -6,11 +6,13 @@ f = open('found.json')
 found = json.load(f)
 f.close()
 
-names, types, redshifts = [], [], []
+names, types, redshifts, ra, dec = [], [], [], [], []
 for i, j in found.items():
     names.append(i)
     types.append(j)
     redshifts.append('')
+    ra.append('')
+    dec.append('')
     print(f'Added {i} with type {j}.')
 
 # append the updated.csv names, types
@@ -22,15 +24,28 @@ with open('updated.csv', newline='') as csvfile:
         names.append(row[0])
         types.append(row[1])
         redshifts.append(row[2])
+        ra.append('')
+        dec.append('')
         print(f'Added {row[0]} with type {row[1]} and redshift {row[2]}.')
-        
+
+
+# need to ensure that the PTFs we add are in the swift list too
+swifts = []
+with open('NewSwiftSNweblist.csv', 'r') as swiftfile:
+    reader = csv.reader(swiftfile)
+    for row in reader:
+        swifts.append(row[0])
+        print(row[0])
 # get PTFs
 with open('PTF_CClist.txt', 'r') as ptflist:
     for line in ptflist:
         line = line.split()        
+        if line[0] not in str(swifts): continue
         names.append(line[0])
         types.append(line[1])
         redshifts.append(line[2])
+        ra.append('')
+        dec.append('')
         print(f'Added {line[0]} with type {line[1]} and redshift {line[2]}.')
 
 # load all the json data as lowercased
@@ -68,16 +83,21 @@ for i, name in enumerate(names):
     if name[:2].lower() == 'sn':
         names[i] = 'SN' + name[2:].lower()
 
-# search for missing redshifts
+# search for missing redshifts and other data
 print('Searching for missing redshifts...')
 names_shifts = {}
+ras = {}
+decs = {}
 with open('tns.csv', 'r') as tnscsv:
     reader = csv.reader(tnscsv)
     next(reader, None)
     next(reader, None)
     for row in reader:
-        print(f'SN{row[0]} -> {row[5]}?')
-        names_shifts['SN' + row[2]] = row[5]
+        print(f'SN{row[2]} -> {row[5]}?')
+        currname = 'SN' + row[2]
+        names_shifts[currname] = row[5]
+        ras[currname] = row[3]
+        decs[currname] = row[4]
 
 for i, name in enumerate(names):
     if redshifts[i] == '':
@@ -86,10 +106,34 @@ for i, name in enumerate(names):
             print(f"{name}'s redshift was updated to {names_shifts[name]}.")
         except:
             print(f'No redshift found for {name}.')
+        try:
+            ra[i] = ras[name]
+        except:
+            print('not found')
+        try:
+            dec[i] = decs[name]
+        except:
+            print('not found')
+
+# reformat types
+print('Reformatting types...')
+seen = []
+for i, t in enumerate(types):
+    if t.startswith('SN '):
+        types[i] = t[4:]
+    if 'like' in t.lower():
+        idxh = t.find('-')
+        idxb = t.find('[')
+        if idxh == -1: idxh = 10000
+        if idxb == -1: idxb = 10000
+        types[i] = t[:min(idxh, idxb)]
+    types[i] = types[i].strip()
+for t in types:
+    print(t)
 
 # create df, write to csv
 print('Creating dataframe...')
-df = pd.DataFrame(list(zip(names, types, redshifts)), columns = ['name', 'type', 'redshift'])
+df = pd.DataFrame(list(zip(names, types, redshifts, ra, dec)), columns = ['name', 'type', 'redshift', 'right ascension', 'declination'])
 
 print ('Dropping duplicates...')
 df.drop_duplicates()
