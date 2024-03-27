@@ -36,19 +36,64 @@ with open('NewSwiftSNweblist.csv', 'r') as swiftfile:
     for row in reader:
         swifts.append(row[0].lower())
         # print(row[0])
+
+                
 # get PTFs
 with open('PTF_CClist.txt', 'r') as ptflist:
     for line in ptflist:
         line = line.split()
         for nova in swifts:
             if nova == line[0].lower():
-                print(f'{nova} = {line[0]}')
+                # print(f'{nova} = {line[0]}')
                 names.append(line[0])
                 types.append(line[1])
                 redshifts.append(line[2])
                 ra.append(line[5] + ' ' + line[6] + ' ' + line[7])
                 dec.append(line[8] + ' ' + line[9] + ' ' + line[10])
-                print(f'Added {line[0]} with type {line[1]} and redshift {line[2]}.')
+                # print(f'Added {line[0]} with type {line[1]} and redshift {line[2]}.')
+
+
+already_checked = []
+with open('iPTFlist.txt', 'r') as iptflist:
+    for line in iptflist:
+        line = line.split()
+        for nova in swifts:
+            curr = 'iPTF' + line[0]
+            if curr in already_checked:
+                continue
+            already_checked.append(curr)
+            for nova in swifts:
+                if nova == curr.lower():
+                    names.append(curr)
+                    types.append('Ia')
+                    redshifts.append('')
+                    ra.append('')
+                    dec.append('')
+                    # print(f'{nova} = {curr}')
+
+
+# PTF list csv
+'''
+with open('ptfs.csv', 'r') as ptfcsv:
+    reader = csv.reader(ptfcsv)
+    for row in reader:
+        if row[1] != 'NULL':
+            if 'SN' + row[1] in swifts:
+                names.append('SN' + row[1])
+                types.append(row[-3])
+                redshifts.append(row[-2])
+                ra.append(row[2])
+                dec.append(row[3])
+                print(f'SN{row[1]} found.')
+                continue
+        if row[0].lower() in swifts:
+            names.append(row[0])
+            types.append(row[-3])
+            redshifts.append(row[-2])
+            ra.append(row[2])
+            dec.append(row[3])
+            print(f'{row[0]} found.')
+'''
 
 # load all the json data as lowercased
 with open('altnames.json', 'r') as json_file:
