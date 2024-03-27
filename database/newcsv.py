@@ -13,7 +13,7 @@ for i, j in found.items():
     redshifts.append('')
     ra.append('')
     dec.append('')
-    print(f'Added {i} with type {j}.')
+    # print(f'Added {i} with type {j}.')
 
 # append the updated.csv names, types
 with open('updated.csv', newline='') as csvfile:
@@ -26,7 +26,7 @@ with open('updated.csv', newline='') as csvfile:
         redshifts.append(row[2])
         ra.append('')
         dec.append('')
-        print(f'Added {row[0]} with type {row[1]} and redshift {row[2]}.')
+        # print(f'Added {row[0]} with type {row[1]} and redshift {row[2]}.')
 
 
 # need to ensure that the PTFs we add are in the swift list too
@@ -34,19 +34,21 @@ swifts = []
 with open('NewSwiftSNweblist.csv', 'r') as swiftfile:
     reader = csv.reader(swiftfile)
     for row in reader:
-        swifts.append(row[0])
-        print(row[0])
+        swifts.append(row[0].lower())
+        # print(row[0])
 # get PTFs
 with open('PTF_CClist.txt', 'r') as ptflist:
     for line in ptflist:
-        line = line.split()        
-        if line[0] not in str(swifts): continue
-        names.append(line[0])
-        types.append(line[1])
-        redshifts.append(line[2])
-        ra.append('')
-        dec.append('')
-        print(f'Added {line[0]} with type {line[1]} and redshift {line[2]}.')
+        line = line.split()
+        for nova in swifts:
+            if nova == line[0].lower():
+                print(f'{nova} = {line[0]}')
+                names.append(line[0])
+                types.append(line[1])
+                redshifts.append(line[2])
+                ra.append(line[5] + ' ' + line[6] + ' ' + line[7])
+                dec.append(line[8] + ' ' + line[9] + ' ' + line[10])
+                print(f'Added {line[0]} with type {line[1]} and redshift {line[2]}.')
 
 # load all the json data as lowercased
 with open('altnames.json', 'r') as json_file:
@@ -72,7 +74,8 @@ for i, name in enumerate(names):
     for item in altnames:
         # if a SN match is found, change the name to the SN name
         if name.lower().strip() in altnames[item]:
-            print(f'Cross-match successful: {names[i]} was changed to {item}.')
+            if 'PTF' in name:
+                print(f'Cross-match successful: {names[i]} was changed to {item}.')
             names[i] = item
             changed += 1
             break
@@ -93,7 +96,7 @@ with open('tns.csv', 'r') as tnscsv:
     next(reader, None)
     next(reader, None)
     for row in reader:
-        print(f'SN{row[2]} -> {row[5]}?')
+        # print(f'SN{row[2]} -> {row[5]}?')
         currname = 'SN' + row[2]
         names_shifts[currname] = row[5]
         ras[currname] = row[3]
@@ -103,31 +106,37 @@ for i, name in enumerate(names):
     if redshifts[i] == '':
         try:
             redshifts[i] = names_shifts[name]
-            print(f"{name}'s redshift was updated to {names_shifts[name]}.")
+            # print(f"{name}'s redshift was updated to {names_shifts[name]}.")
         except:
-            print(f'No redshift found for {name}.')
+            do_nothing = 1
+            # print(f'No redshift found for {name}.')
         try:
             ra[i] = ras[name]
         except:
-            print('not found')
+            do_nothing = 1
+            # print('not found')
         try:
             dec[i] = decs[name]
         except:
-            print('not found')
+            do_nothing = 1
+            # print('not found')
 
 # reformat types
 print('Reformatting types...')
 seen = []
 for i, t in enumerate(types):
-    if t.startswith('SN '):
+    t.strip()
+    if t.startswith('SN ') or t.startswith('SL '):
         t = t[3:]
-        types[i] = t
-    if 'like' in t.lower():
-        idxb = t.find('[')
-        if idxb == -1: idxb = 10000
-        types[i] = t[:idxb]
-        print(f'{t} -> {types[i]}')
-    types[i] = types[i].strip()
+    if '[02cx-like]' in t:
+        t = 'Iax'
+    elif '91T' in t:
+        t = 'Ia-91T-like'
+    elif 'Ibc' in t:
+        t = 'Ib/c'
+
+    
+    types[i] = t.strip()
 
 # create df, write to csv
 print('Creating dataframe...')
