@@ -73,7 +73,7 @@ with open('iPTFlist.txt', 'r') as iptflist:
 
 
 # PTF list csv
-'''
+
 with open('ptfs.csv', 'r') as ptfcsv:
     reader = csv.reader(ptfcsv)
     for row in reader:
@@ -93,7 +93,18 @@ with open('ptfs.csv', 'r') as ptfcsv:
             ra.append(row[2])
             dec.append(row[3])
             print(f'{row[0]} found.')
-'''
+
+
+# haz's list
+
+with open('outfile1.txt', 'r') as outfile1:
+    for line in outfile1:
+        names.append(line)
+        types.append('')
+        redshifts.append('')
+        ra.append('')
+        dec.append('')
+
 
 # load all the json data as lowercased
 with open('altnames.json', 'r') as json_file:
@@ -107,6 +118,8 @@ for key, value in json_data.items():
         if item[-1] == ',': item = item[:-1]
         curr.append(item.lower())
     altnames[key] = curr
+
+
 
 # search for cross-matches and missing redshifts
 changed = 0
@@ -134,6 +147,7 @@ for i, name in enumerate(names):
 # search for missing redshifts and other data
 print('Searching for missing redshifts...')
 names_shifts = {}
+names_types = {}
 ras = {}
 decs = {}
 with open('tns.csv', 'r') as tnscsv:
@@ -143,11 +157,21 @@ with open('tns.csv', 'r') as tnscsv:
     for row in reader:
         # print(f'SN{row[2]} -> {row[5]}?')
         currname = 'SN' + row[2]
+        if isinstance(row[7], str) and row[7].strip():
+            names_types[currname] = row[7].split()[-1]
         names_shifts[currname] = row[5]
         ras[currname] = row[3]
         decs[currname] = row[4]
 
 for i, name in enumerate(names):
+    
+    if types[i] == '':
+        try:
+            types[i] = names_types[name]
+        except:
+            do_nothing = 1
+
+
     if redshifts[i] == '':
         try:
             redshifts[i] = names_shifts[name]
@@ -155,10 +179,14 @@ for i, name in enumerate(names):
         except:
             do_nothing = 1
             # print(f'No redshift found for {name}.')
+        
+    if ra[i] == '':
         try:
             ra[i] = ras[name]
         except:
             do_nothing = 1
+
+    if dec[i] == '':
             # print('not found')
         try:
             dec[i] = decs[name]
