@@ -3,9 +3,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-#with open('SwiftSNlist.txt') as f:
-#    swift_list= f.readlines()
-with open('NewSwiftSNweblist.csv') as f:
+with open('AllSwiftSNlist.csv') as f:
     swift_list=[line.split(',', 1)[0] for line in f]
 
 with open('nonSwiftSNlist.txt') as g:
@@ -32,7 +30,7 @@ for x in swift_list:
 swift_year_dict = {}
 swift_graph=[]
 
-for year in ['05','06','07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2020', '21']:
+for year in ['05','06','07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2020', '21','22','23','24','25']:
     swift_year_dict[year] = sum(1 for line in swift_list if year in line)
     for x in range(swift_year_dict[year]):
         if len(year) < 3:
@@ -54,7 +52,7 @@ xmm_graph=[]
 galex_graph=[]
 astrosat_graph=[]
 
-non_swift_year_list=['1972', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005','2006','2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019','2020','2021']
+non_swift_year_list=['1972', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005','2006','2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019','2020','2021','2022','2023','2024','2025']
 
 
 for x in non_swift_list:
@@ -168,7 +166,7 @@ plt.legend(loc='upper left')
 plt.xlabel("Year", color=fg_color, **font)
 plt.xlim(left=1970)
 plt.xlim(right=2025)
-plt.ylim(top=140)
+plt.ylim(top=180)
 plt.xticks(np.arange(1970,2025,3), **axis_font)
 plt.yticks(**axis_font)
 plt.ylabel("Supernovae Observed in the Ultraviolet", color=fg_color, **font)

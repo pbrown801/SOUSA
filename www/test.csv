@@ -1,0 +1,11 @@
+SNname,HostName,PSN,type,redshifts,OtherName,Nobs,targetids,SNra,SNdec,AV,AVerr,AVsour,HostRa,HostDec,Long,Lat,Redshift,Morphology,host_velocity,host_vel_err,host_vel_corr,host_vel_corr_err,Discover_date,Last_non-detection_date,template_status,max_ks,filters_used,notes,Explosion_Date,ExpDateReference,ExpDateReferenceLinks,ExpDateMethod,other_SNe,best_dm,best_dm_err,best_dm_method,best_dm_ref,Hubble_dm,Hubble_dm_err,Hubble_dm_ref,UVM2_DatPoints,Cep_dm,Cep_dm_err,Cep_dm_ref,SBF_dm,SBF_dm_err,SBF_dm_ref,TRGB_dm,TRGB_dm_err,TRGB_dm_ref,end
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,13,,,,,,,,,
+PTF10vzt,SDSS J032704.58-063542.4,,Ia,0.145,,,,51.769133,-6.595029,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,13,,,,,,,,,
+PTF10xfh,UGC 01398,,SNIb,0.017399,,,,01 55 58.183,+37 07 59.7011,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,13,,,14,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,13,0.1,,14,,,,,,
+SN2010md,PTF10hgi HOST,,SLSN-IIb,0.0986,PTF10hgi,,,16 37 47.0546,+06 12 31.8442,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,,,,14,,,15,,,
+SN2010md,A163747+0612, ,SLSN-I,0.0987,PTF10hgi,2, ,'16:37:47.00,+06:12:32.3,0.226,0.0226,S_F_2011, , , , , , , , , , ,'2010-05-15, ,skip,3, , , , , , , , , , , ,12,1,,2, , , ,14, , ,15,,,end
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,,,,,,,15,,,
+PTF11okh,NGC 7485,,Ia,0.019,,,,346.511728,34.110027,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,,,,,,,15,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,1,,,,,,,,,,,,
+SN2010O,NGC 3690, ,Ib,0.010411, ,1, ,'11:28:33.86,+58:33:51.6,0.035,0,"Brown_walker_2020,S_F_2011",11h28m31.326s,58d33m41.8s,141.90391,55.40714,0.010411,2.1,3121,3,3544,17,'2010-01-24, ,done,5, , , , , , , ,33.18480636,0.472492348,HF, ,12,1,,0, , ,ref, , ,ref,,,,end
