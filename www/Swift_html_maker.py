@@ -14,19 +14,19 @@ import webbrowser
 
 
 
-swift=pd.read_csv('NewSwiftSNweblist.txt',on_bad_lines='warn',delimiter='\t')
+swift=pd.read_csv('TypedSortedTrimmedAllSwiftSNlist.csv',on_bad_lines='warn',delimiter=',')
 #swift= pd.read_csv('SwiftSNweblist.csv')
 swift= swift.drop(swift.index[0]) #delete header row
-swift.dropna(subset=["SNname"], inplace= True) #drops all nan in SNname column
+#swift.dropna(subset=["SNname"], inplace= True) #drops all nan in SNname column
 swift= swift.reset_index(drop=True) #reset the index from 0
 swift = swift.replace(np.nan, '', regex=True) #turn all NANs into '' so it looks nice on webpage
 
 #define all of the columns needed from Swift CSV
-
+print(swift["SNname"])
 snname= swift.SNname 
 host= swift.HostName 
 othersn= swift.OtherName
-red= swift.Redshift
+red= swift.redshift
 #rounds the redshift numbers to the 6th decimal place
 red= red.map(lambda x: round(x, 6) if isinstance(x, (int, float)) else x)
 sntype= swift.type
