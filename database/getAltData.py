@@ -1,7 +1,10 @@
 import csv, json
 
+
+## download from https://www.wis-tns.org/system/files/tns_public_objects/tns_public_objects.csv.zip
+
 names = {}
-with open('tns.csv', 'r') as csvfile:
+with open('tns_public_objects.csv', 'r') as csvfile:
     reader = csv.reader(csvfile)
     next(reader)
     for row in reader:

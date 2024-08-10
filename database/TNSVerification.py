@@ -5,16 +5,7 @@
 
 import csv
 
-SWIFTNames = []
-SWIFTTypes = []
-
-with open("AllSwiftSupernovae.csv", newline="") as csvFile:
-    
-    reader = csv.reader(csvFile)
-
-    for row in reader: # row is a list containing [name, type, ra, dec]
-        
-        SWIFTNames.append(row[0].replace(" ","").replace("-","").upper())
+swift= pd.read_csv(inputcsv,on_bad_lines='warn',delimiter=',')
 
 # parallel lists for necessary TNS data
 TNSPrefixes = []
@@ -40,13 +31,13 @@ with open("tns_public_objects.csv", newline="", encoding="utf8") as csvFile2:
         else:
             TNSTypes.append('not found')
 
-for i in range(len(SWIFTNames)):
+for name in swift["SNname"]:
 
-    if SWIFTNames[i] in TNSNames:
+    if name TNSNames:     this part not done
 
-        index = TNSNames.index(SWIFTNames[i])
+        index = TNSNames.index(name)
         SWIFTTypes.append(TNSTypes[index])
-
+        print(SWIFTNames[i],TNSTypes[index])
     #else:
         #if internal names
         #for loop names after applying upper and replace stuff
@@ -54,5 +45,5 @@ for i in range(len(SWIFTNames)):
     else:
         SWIFTTypes.append("not found")
 
-for i in range(len(SWIFTNames)):
-    print(f"{SWIFTNames[i]} is of type {SWIFTTypes[i]}")
+#for i in range(len(SWIFTNames)):
+ #   print(f"{SWIFTNames[i]} is of type {SWIFTTypes[i]}")
