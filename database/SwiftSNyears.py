@@ -15,7 +15,8 @@ import matplotlib
 
 
 
-inputcsv='TrimmedAllSwiftSNlist.csv'
+#inputcsv='TrimmedAllSwiftSNlist.csv'
+inputcsv='SortedTrimmedAllSwiftSNlistadd2017.csv'
 swift= pd.read_csv(inputcsv,on_bad_lines='warn',delimiter=',')
 
 
@@ -51,6 +52,7 @@ for name in swift.SNname: #go through doc
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
         print(year, "ASASSN added")
+        year=[]
         continue
 
     elif "Gaia" in name:
@@ -58,6 +60,7 @@ for name in swift.SNname: #go through doc
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
         print(year, "Gaia added")
+        year=[]
         continue
 
     elif "OGLE" in name:
@@ -65,6 +68,7 @@ for name in swift.SNname: #go through doc
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
         print(year, "OGLE added")
+        year=[]
         continue
 
     elif "LSQ" in name:
@@ -72,53 +76,68 @@ for name in swift.SNname: #go through doc
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
         print(year, "LSQ added")
+        year=[]
         continue
 
     elif "ZTF" in name:
         year = name[3:5]
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
+        print(year, "ZTF added")
+        year=[]
         continue
 
     elif "iPTF" in name:
         year = name[4:6]
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
-        print("does iptf ever get caught?")
+        print(year, "iPTF added")
+        year=[]
         continue
 
     elif "PTF" in name:
         year = name[3:5]
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
+        print(year, "PTF added")
+        year=[]
         continue
 
     elif "CSS" in name:
         year = name[3:5]
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
+        print(year, "CSS added")
+        year=[]
         continue
 
     elif "PSN" in name:
         print(f"{name} needs a year")
+        year=[]
         continue
 
     elif "PS1-" in name:
         year = name[4:6]
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
+        print(year, "PS1 added")
+        year=[]
         continue
 
     elif "PS" in name:
         year = name[2:4]
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
+        print(year, "PS added")
+        year=[]
         continue
 
     elif "DES" in name:
         year = name[3:5]
         year = int(year) + 2000
         swift.year[swift['SNname'] == name] = year
+        print(year, "DES added")
+        year=[]
         continue
 
     else:
@@ -141,14 +160,19 @@ font = {'family' : 'normal',
 
 matplotlib.rc('font', **font)
 
+print(trimmedswift['year'])
+
 #extracting years and graphing
 yearcountlist = []
 for year in years:
+    print(year)
     yearcount = 0
     for Swiftyear in trimmedswift['year']:
-        if Swiftyear == str(year):
+        if str(Swiftyear) == str(year):
             yearcount += 1
     yearcountlist.append(yearcount)
+    print(yearcount)
+#print(sum(yearcountlist))
 
 plt.figure(figsize=(12, 8))
 plt.bar(shortyears, yearcountlist, color="slateblue")
@@ -160,5 +184,8 @@ plt.ylabel("Swift Supernovae per Year")
 plt.show()
 matplotlib.pyplot.savefig('SwiftSNyears.png')
 
-print(trimmedswift.SNname[trimmedswift.year == '2020'])
+#print(trimmedswift.year[trimmedswift.SNname.str.contains('ASASSN-15')])
+#print(trimmedswift.year[trimmedswift.SNname.str.contains('2015')])
+#print(" ")
+#print(trimmedswift.SNname[trimmedswift.year == '2015'])
 trimmedswift.to_csv('Sorted'+inputcsv, index= False)
