@@ -15,8 +15,8 @@ import matplotlib
 
 
 
-#inputcsv='TrimmedAllSwiftSNlist.csv'
-inputcsv='SortedTrimmedAllSwiftSNlistadd2017.csv'
+inputcsv='FinalforSwiftSNyears.csv'
+#inputcsv='SortedTrimmedAllSwiftSNlistadd2017.csv'
 swift= pd.read_csv(inputcsv,on_bad_lines='warn',delimiter=',')
 
 
@@ -50,7 +50,8 @@ for name in swift.SNname: #go through doc
     elif "ASASSN-" in name:
         year = name[7:9] #extract 2 digits of year "16, etc"
         year = int(year) + 2000
-        swift.year[swift['SNname'] == name] = year
+        #swift.year[swift['SNname'] == name] = year
+        swift.loc[swift.SNname == name, 'year'] = year
         print(year, "ASASSN added")
         year=[]
         continue

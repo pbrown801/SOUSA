@@ -117,12 +117,12 @@ if len(vmag) > 0:
 	plt.errorbar(vmjd, vmag, yerr=vmagerr, elinewidth=2, capthick = 2, color='g')
 
 
-ax.legend(loc='best')
+ax.legend(loc='lower right')
 #If you have labels specified in the plotting commands above, all you have to do is add this line to make a legend
 #Also, apparently you can set the location to 'best' so it'll place it wherever python thinks it's the best
 ax.set_xlabel('Modified Julian Date')
 
-#ax.set_ylabel('Observed Vega Magnitude')
+ax.set_ylabel('Observed Vega Magnitude')
 
 ax.set_title(snname, fontsize = 16)
 #plt.title('UVOT Light Curves', fontsize = 12) 

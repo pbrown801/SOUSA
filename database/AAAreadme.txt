@@ -2,12 +2,16 @@ download from https://www.wis-tns.org/system/files/tns_public_objects/tns_public
 
 copy into this folder
 
-run getAltData.py   creates altnames.json
+python getAltData.py   creates altnames.json
 
-run PossibleSwiftSupernovae.py  creates PossibleSwiftSupernovae.csv
+python PossibleSwiftSupernovae.py  creates PossibleSwiftSupernovae.csv
 
 (the code to update found.json was not found, so I used the above csv in MatchSwiftTNS.py)
-run MatchSwiftTNS.py creates MatchedSwiftTNS.csv
+
+
+python MatchSwiftTNS.py creates MatchedSwiftTNS.csv
+
+
 >ra and dec are in a different format.  
 >TNS prefix column can be dropped.  
 > Alternate names should be added.
@@ -22,9 +26,18 @@ saved as TrimmedAllSwiftSNlist.csv
 
 
 
+240228 version with help of chatGPT
+
+python mergeoldSwiftnewTNSchatgpt.py
+
+complete duplicates dropped, conflicting rows fixed by hand in CombinedTrimmedAllSwiftSNlist
 
 
-SwiftSNyears.py takes TrimmedAllSwiftSNlist.csv and makes SortedTrimmedAllSwiftSNlist.csv and SwiftSNyears.png -- a histogram of Swift SNe per year 
+
+
+
+
+SwiftSNyears.py takes CombinedTrimmedAllSwiftSNlist.csv and makes SortedCombinedTrimmedAllSwiftSNlist.csv.csv and SwiftSNyears.png -- a histogram of Swift SNe per year 
 
 
 SN_histogram makes the plot with the other UV satelites.  Plot has to be scaled to make labels visible.

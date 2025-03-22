@@ -97,13 +97,13 @@ with open('SortedTrimmedAllSwiftSNlist.csv','r') as csv_file:
         if (str(list_of_rows[index][3]).strip() == "Iax[02cx-like]" or str(list_of_rows[index][3]) == "Ia-02cx"):  # case were Iax[02cx-like] type is changed to Iax
             list_of_rows[index][3] = 'Iax'
 
-        if (str(list_of_rows[index][3]).strip() == "Ia-91T" ):  # case were Iax[02cx-like] type is changed to Iax
+        if (str(list_of_rows[index][3]).strip() == "Ia-91T" ):  # case were  
             list_of_rows[index][3] = 'Ia-91T-like'
 
-        if (str(list_of_rows[index][3]).strip() == "Ibc" ):  # case were Iax[02cx-like] type is changed to Iax
+        if (str(list_of_rows[index][3]).strip() == "Ibc" ):  # case were  
             list_of_rows[index][3] = 'Ib/c'
 
-        if (str(list_of_rows[index][3]).strip() == "Ibc" ):  # case were Iax[02cx-like] type is changed to Iax
+        if (str(list_of_rows[index][3]).strip() == "Ibc" ):  # case were  
             list_of_rows[index][3] = 'Ib/c'
         
 
@@ -126,6 +126,7 @@ with open('SortedTrimmedAllSwiftSNlist.csv','r') as csv_file:
             #--------------------------------EXPAND IF STATMENT IF NEEDED
 
             
+
         #II
         elif(str(list_of_rows[index][3].strip())=="II" or str(list_of_rows[index][3].strip())=="IIn" or str(list_of_rows[index][3].strip())=="IIP" or str(list_of_rows[index][3].strip())=="IIb" or str(list_of_rows[index][3].strip())=="SLSN-II"  or str(list_of_rows[index][3].strip())=="SN II-pec" or str(list_of_rows[index][3].strip())=="SN IIn-pec" or str(list_of_rows[index][3].strip())=="IIL"): # check for all supernova type one a
             #print("row:"+str(index)+" Name:"+list_of_rows[index][0]+" Type:"+list_of_rows[index][3]+" Group: II")
@@ -134,13 +135,16 @@ with open('SortedTrimmedAllSwiftSNlist.csv','r') as csv_file:
                 Cat_Num_II[0]=Cat_Num_II[0]+1
             elif((Catagories_II>=2)&(str(list_of_rows[index][3])=="SLSN-II")):    #--------------------------------EDIT SEARCH Items
                 Cat_Num_II[1]=Cat_Num_II[1]+1
-            elif((Catagories_II>=3)&(str(list_of_rows[index][3]).strip()=="SN IIn-pec")):    #--------------------------------EDIT SEARCH Items
+            elif((Catagories_II>=3)&(str(list_of_rows[index][3]).strip()=="SN IIn")):    #--------------------------------EDIT SEARCH Items
                 Cat_Num_II[2]=Cat_Num_II[2]+1
             elif((Catagories_II>=4)&(str(list_of_rows[index][3])=="IIL")):    #--------------------------------EDIT SEARCH Items
                 Cat_Num_II[3]=Cat_Num_II[3]+1
             else:
                 uncatagorized_II=uncatagorized_II+1
             #--------------------------------EXPAND IF STATMENT IF NEEDED
+
+
+
 
         #Ib/c
         elif(str(list_of_rows[index][3].strip())=="Ic-bl" or str(list_of_rows[index][3].strip())=="Ic" or str(list_of_rows[index][3].strip())=="Ib" or str(list_of_rows[index][3].strip())=="SLSN-I" or str(list_of_rows[index][3].strip())=="Ic-BL" or str(list_of_rows[index][3].strip())=="Ib/c" or str(list_of_rows[index][3].strip())=="Ibn"  or str(list_of_rows[index][3].strip())=="Ib-pec"  or str(list_of_rows[index][3].strip())=="Ib-Ca-rich" or str(list_of_rows[index][3].strip())=="Icn" or str(list_of_rows[index][3].strip())=="Ic-pec" or str(list_of_rows[index][3].strip())=="Ibn/Icn" or str(list_of_rows[index][3].strip())=="Ic-Ca-rich"): # check for all supernova type one a
@@ -175,12 +179,10 @@ with open('SortedTrimmedAllSwiftSNlist.csv','r') as csv_file:
         else:
             print("row:"+str(index)+" Name:"+list_of_rows[index][0]+" Type:"+list_of_rows[index][3]+" No Idea")
 
-    
+        
 
 
 
-
-    
     #if I delete this, it breaks, so im just not gonna touch this failed attempt
     if(1==2):
         ax = plt.subplots(figsize=(10, 7),subplot_kw=dict(polar=True))
@@ -192,17 +194,14 @@ with open('SortedTrimmedAllSwiftSNlist.csv','r') as csv_file:
         mylabels = ["Ia", "II", "Ibc", "Others"]
         plt.pie(y,labels = mylabels)
             
-
         plt.show()
 
     else:
 
-
-
         size = 1.2
         mylabels =["Ia", "II", "Ibc", "Others"]
         sublabels =["1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"] #add lables here
-
+        sublabels =['Iax','Ia-91bg','Ia-SC','Ia','II','SLSN-II','SN IIn','IIL','Ic-bl','Ic','Ib','Ic-Ca-Rich','ILRT','cv','tde','agn']
 
         #adds unregistered supernovie to pie chart
 

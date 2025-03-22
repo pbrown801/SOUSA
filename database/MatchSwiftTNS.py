@@ -123,6 +123,21 @@ for i, name in enumerate(SwiftNames):
             do_nothing = 1
             # print(f'No redshift found for {name}.')
         
+
+
+    try:
+        SwiftRa[i] = ras[checkname]
+    except:
+        do_nothing = 1
+
+    try:
+        SwiftDec[i] = decs[checkname]
+    except:
+        do_nothing = 1
+            # print('not found')
+
+'''
+
     if SwiftRa[i] == '':
         try:
             SwiftRa[i] = ras[checkname]
@@ -136,6 +151,7 @@ for i, name in enumerate(SwiftNames):
         except:
             do_nothing = 1
             # print('not found')
+'''
 
 Swiftfixedname=[]
 ATfixedname=[]

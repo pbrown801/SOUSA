@@ -10,7 +10,8 @@ import pandas as pd
 #    swift_list=[line.split(',', 1)[0] for line in f]
 
 
-inputcsv='TypedSortedTrimmedAllSwiftSNlist.csv'
+inputcsv='SortedTrimmedAllSwiftSNlist.csv'
+#inputcsv='BestList2024.csv'
 swift= pd.read_csv(inputcsv,on_bad_lines='warn',delimiter=',')
 
 swift_list=swift.SNname
@@ -28,9 +29,9 @@ y = str()
 swift_year_dict = {}
 swift_graph=[]
 
-Swiftyears = [2005,2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,2024]
+Swiftyears = [2005,2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,2024,2025]
 
-shortyears = ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23','24']
+shortyears = ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23','24','25']
 
 #for year in ['05','06','07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2020', '21']:
 
@@ -141,6 +142,16 @@ for year in non_swift_year_list:
         else:
             galex_graph.append(year)
 
+astrosat_year_dict = {}
+
+for year in non_swift_year_list:
+    astrosat_year_dict[year] = sum(1 for line in astrosat_list if year in line)
+    for x in range(astrosat_year_dict[year]):
+        if len(year) < 3:
+            astrosat_graph.append('20' + year)
+        else:
+            astrosat_graph.append(year)
+
 
 swift_graph = list(map(int, swift_graph))
 hst_graph   = list(map(int, hst_graph))
@@ -148,13 +159,14 @@ oao_graph   = list(map(int, oao_graph))
 iue_graph   = list(map(int, iue_graph))
 xmm_graph   = list(map(int, xmm_graph))
 galex_graph = list(map(int, galex_graph))
+astrosat_graph = list(map(int, astrosat_graph))
 
 b = np.arange(1971,2026, 1)
 
 bg_color = 'black'
 fg_color = 'white'
 
-fig=plt.figure(facecolor=bg_color, edgecolor=fg_color)
+fig=plt.figure(facecolor=bg_color, edgecolor=fg_color,figsize=(12,8))
 axes = fig.add_subplot(111)
 axes.patch.set_facecolor(bg_color)
 axes.xaxis.set_tick_params(color=fg_color, labelcolor=fg_color)
@@ -171,12 +183,13 @@ plt.hist(galex_graph,b, histtype='bar', rwidth=0.8, axes=axes, label="GALEX")
 plt.hist(oao_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="OAO-2")
 plt.hist(iue_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="IUE")
 plt.hist(xmm_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="XMM-OM")
+plt.hist(astrosat_graph,  b, histtype='bar', rwidth=0.8, axes=axes, label="Astrosat")
 plt.legend(loc='upper left')
 plt.xlabel("Year", color=fg_color, **font)
 plt.xlim(left=1970)
-plt.xlim(right=2025)
+plt.xlim(right=2026)
 plt.ylim(top=160)
-plt.xticks(np.arange(1970,2025,5), **axis_font)
+plt.xticks(np.arange(1970,2026,5), **axis_font)
 plt.yticks(**axis_font)
 plt.ylabel("Supernovae Observed in the Ultraviolet", color=fg_color, **font)
 

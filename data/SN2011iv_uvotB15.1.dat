@@ -33,7 +33,7 @@
 # UVM2           0.484121      0.0195135
 # UVW2           0.989713      0.0384532
 #                                                                                           
-# Opical excluded due to high galaxy count rates in the optical                                        
+# Optical data excluded due to high count rates                                        
 #                                                                                           
 # Filter MJD[days] Mag MagErr 3SigMagLim 0.98SatLim[mag] Rate[c/s] RateErr[c/s] Ap[arcsec] Frametime[s] Exp[s] Telapse[s]
 #                                                                                           
@@ -92,3 +92,4 @@ UVW1     55928.6543  17.087   0.140  18.753  11.176   1.384   0.179  3.0  0.0110
 UVW1     55931.6278  17.109   0.140  18.788  11.176   1.357   0.174  3.0  0.0110     229.76   29400.92
 UVW1     55934.1741  17.139   0.131  18.982  11.177   1.320   0.159  3.0  0.0110     351.52    6161.03
 #                                                                                           
+                                              
