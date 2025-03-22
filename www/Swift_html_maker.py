@@ -205,11 +205,11 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
 #-----------------data,images, and lcplots relative paths --------------------------------------------------------------------
 
     data_path= "data/"+SNnamen+"_uvotB15.1.dat"
-    data_path2= "data/"+SNnamen+"_uvotB20.0.dat"
+    data_path2= "data/"+SNnamen+"_uvotB25.0.dat"
     
     images_path= "images/"+SNnamen+"_uvot.png"
 
-    lcplots_path= "lcplots/"+SNnamen+"_lightcurve.jpg"
+    lcplots_path= "lcplots/"+SNnamen+"_pylightcurve.jpg"
     
 #-----------------------------------------------------HTML text---------------------------------------------------------------
 
