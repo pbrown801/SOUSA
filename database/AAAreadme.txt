@@ -2,12 +2,41 @@ download from https://www.wis-tns.org/system/files/tns_public_objects/tns_public
 
 copy into this folder
 
-python getAltData.py   creates altnames.json
+unzip tns_public_objects.csv.zip 
 
-python PossibleSwiftSupernovae.py  creates PossibleSwiftSupernovae.csv
+python getAltData.py   creates altnames.json from tns
+
+
+
+# use jupyter notebook instead python PossibleSwiftSupernovae.py  creates PossibleSwiftSupernovae.csv
 
 (the code to update found.json was not found, so I used the above csv in MatchSwiftTNS.py)
 
+%%%
+
+ProfBrown — 9/11/25, 12:02 PM
+except: #shouldn't ever happen... every comp sci major's famous last words
+        print(f"Something went wrong! Skipping for now...\n")
+ssally
+ — 9/11/25, 12:02 PM
+LOL
+I remember this
+It’a happened before a few times, only when the API is completely down
+ProfBrown — 9/11/25, 12:06 PM
+I pasted your code into a jupyter notebook and it isn't giving the same error.  Sometimes my terminal is fussy because some things were installed for the Mac M1 chip and others were pretending it was the Intel chip.
+ssally
+ — 9/11/25, 12:06 PM
+yea, programming is one of the most frustrating things I’ve done
+for the record, most of my work could now be one shotted by ChatGPT or Claude, they are powerful
+ProfBrown — 9/11/25, 12:24 PM
+Well, your code gave me what I needed, so I'll keep using it for now
+
+%%%
+
+
+jupyter notebook PossibleSwiftSNe.py
+
+makes PossibleSwiftSupernovae.csv
 
 python MatchSwiftTNS.py creates MatchedSwiftTNS.csv
 
@@ -28,16 +57,19 @@ saved as TrimmedAllSwiftSNlist.csv
 
 240228 version with help of chatGPT
 
-python mergeoldSwiftnewTNSchatgpt.py
+python mergeoldSwiftnewTNSchatgpt.py creates CombinedTrimmedAllSwiftSNlist.csv
 
 complete duplicates dropped, conflicting rows fixed by hand in CombinedTrimmedAllSwiftSNlist
 
 
+cp CombinedTrimmedAllSwiftSNlist.csv CombinedTrimmedAllSwiftSNlist.orig.csv
+cp CombinedTrimmedAllSwiftSNlist2026.csv CombinedTrimmedAllSwiftSNlist.csv
 
 
+cp CombinedTrimmedAllSwiftSNlist2026.csv FinalforSwiftSNyears.csv
 
-
-SwiftSNyears.py takes CombinedTrimmedAllSwiftSNlist.csv and makes SortedCombinedTrimmedAllSwiftSNlist.csv.csv and SwiftSNyears.png -- a histogram of Swift SNe per year 
+SwiftSNyears.py takes FinalforSwiftSNyears.csv
+ and makes SortedCombinedTrimmedAllSwiftSNlist.csv.csv and SwiftSNyears.png -- a histogram of Swift SNe per year 
 
 
 SN_histogram makes the plot with the other UV satelites.  Plot has to be scaled to make labels visible.
