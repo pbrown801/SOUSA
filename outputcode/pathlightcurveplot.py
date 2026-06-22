@@ -10,7 +10,8 @@ snname = sys.argv[1]
 path = sys.argv[2]
 version = sys.argv[3]
 filename =  path+snname + '_uvotB'+version+'.dat'
-savename = '/Users/supernova/Desktop/SN/github/SOUSA/lcplots/'+snname + '_pylightcurve.jpg'
+sousasavename = '/Users/supernova/Desktop/SN/github/SOUSA/lcplots/'+snname + '_pylightcurve.jpg'
+savename = snname + '_pylightcurve.jpg'
 data = open(filename, 'r')
 
 

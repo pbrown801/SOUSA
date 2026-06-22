@@ -12,6 +12,7 @@ path = '$SOUSA/data/'
 
 filename =  os.path.expandvars(path+snname + '_uvotB15.1.dat')
 filename2 = os.path.expandvars(path+snname + '_uvotB23.1.dat')
+filename3 = os.path.expandvars(path+snname + '_uvotB25.0.dat')
 print(filename2)
 savename = snname + '_pylightcurve.jpg'
 
@@ -20,8 +21,10 @@ if os.path.exists(filename2):
 	data = open(filename2, 'r')
 elif os.path.exists(filename):
 	data = open(filename, 'r')
+elif os.path.exists(filename3):
+	data = open(filename3, 'r')
 else:
-	print("Couldn't find the 15.1 or 23.1 file in $SOUSA/data/")
+	print("Couldn't find the 15.1 or 23.1 or 25.1 file in $SOUSA/data/")
 	print(filename2)
 	exit()
 
