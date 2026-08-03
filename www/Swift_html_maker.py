@@ -14,7 +14,7 @@ import webbrowser
 
 
 
-swift=pd.read_csv('TypedSortedTrimmedAllSwiftSNlist.csv',on_bad_lines='warn',delimiter=',')
+swift=pd.read_csv('../database/CombinedTrimmedAllSwiftSNlist2026.csv',on_bad_lines='warn',delimiter=',')
 #swift= pd.read_csv('SwiftSNweblist.csv')
 swift= swift.drop(swift.index[0]) #delete header row
 #swift.dropna(subset=["SNname"], inplace= True) #drops all nan in SNname column
@@ -183,7 +183,7 @@ If you want older versions of the data that were used in specific publications, 
 solid; border: 0px solid; width: 52px; height: 55px;"
 border="0" height="55" width="52"></a>
 
-<a href="http://people.physics.tamu.edu/pbrown/SwiftSN/SNname_lightcurve.jpg">
+<a href="http://people.physics.tamu.edu/pbrown/SwiftSN/SNname_pylightcurve.jpg">
 <img src="www/light.jpg" alt="Swift UVOT lightcurve"
 style="border: 0px solid; border: 0px solid; width:
 52px; height: 55px;" border="0" height="55" width="52"></a>
@@ -205,8 +205,9 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
 #-----------------data,images, and lcplots relative paths --------------------------------------------------------------------
 
     data_path= "data/"+SNnamen+"_uvotB15.1.dat"
-    data_path2= "data/"+SNnamen+"_uvotB25.0.dat"
-    
+    data_path20= "data/"+SNnamen+"_uvotB20.0.dat"
+    data_path25= "data/"+SNnamen+"_uvotB25.0.dat"
+
     images_path= "images/"+SNnamen+"_uvot.png"
 
     lcplots_path= "lcplots/"+SNnamen+"_pylightcurve.jpg"
@@ -235,20 +236,26 @@ def printsnline(SNnamen, PSNn, SNname2n, galaxyn, redshiftn, typen, n): #creates
 
     #lcfilename html section:
     if os.path.exists(lcplots_path) == True:
-        textlc= """href="lcplots/{SNnamen}_lightcurve.jpg"><img \n
+        textlc= """href="lcplots/{SNnamen}_pylightcurve.jpg"><img \n
                     src="www/light.jpg" alt="Swift UVOT lightcurve" \n
                      style="border: 0px solid; border: 0px solid; width: \n
                       52px; height: 55px;" border="0" height="55" width="52"></a><a \n""".format(**locals())
         text+= textlc
                     
     #datafilenmesousa html section:
-    if os.path.exists(data_path2) == True:
+    if os.path.exists(data_path25) == True:
+        textdata= """href="data/{SNnamen}_uvotB25.0.dat"><img \n
+                      src="www/sousa_galaxy_small.png" alt="Swift UVOT data" \n
+                       style="border: 0px solid; border: 0px solid; width: \n
+                        52px; height: 89px;" border="0" height="89" width="52"></a></td> \n""".format(**locals())
+        text+= textdata
+    if os.path.exists(data_path20) == True and os.path.exists(data_path25)== False:
         textdata= """href="data/{SNnamen}_uvotB20.0.dat"><img \n
                       src="www/sousa_galaxy_small.png" alt="Swift UVOT data" \n
                        style="border: 0px solid; border: 0px solid; width: \n
                         52px; height: 89px;" border="0" height="89" width="52"></a></td> \n""".format(**locals())
         text+= textdata
-    if os.path.exists(data_path) == True and os.path.exists(data_path2)== False:
+    if os.path.exists(data_path) == True and os.path.exists(data_path25)== False and os.path.exists(data_path20)== False:
         textdata= """href="data/{SNnamen}_uvotB15.1.dat"><img \n
                           src="www/sousa_galaxy_small.png" alt="Swift UVOT data" \n
                            style="border: 0px solid; border: 0px solid; width: \n

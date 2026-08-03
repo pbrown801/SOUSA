@@ -51,6 +51,7 @@ echo "rm $NAME*.img*" >> $appendscript
 ############################ set the names for the appropriate exposure maps and attitude files
 ############################ create large scale structure maps
 ############################ create commands for summing the images, exposure maps, and lss maps
+set UBERCOUNT = 0
 foreach BAND ($bandlist)
 		set COUNT = 0
 		set TEMPCOUNT = 0
@@ -101,12 +102,33 @@ foreach BAND ($bandlist)
 	endif
 end
 
+set UBERCOUNT = 0
+#############################
+set STACKFILE = `echo -n $SNname"_all.img"`
+set OUTFILE = `echo -n $SNname"_all_sum.img"`
+set UBERSUMFILE = `echo -n $SNname"_ubersumcommands.txt"`
+echo "rm $STACKFILE  "  > $UBERSUMFILE
+foreach band ($bandlist)
+        
+   	set FILTERFILE = `echo -n $SNname"_"$band"_sum.img"`
+#        [ -f "$FILTERFILE" ] && 
+	if (-f "$FILTERFILE" && $UBERCOUNT > 0)  then 
+		echo "fappend $FILTERFILE $STACKFILE  "  >> $UBERSUMFILE
+		@ UBERCOUNT = $UBERCOUNT + 1
+	else if (-f "$FILTERFILE" && $UBERCOUNT == 0)  then 
+		echo  "fcopy $FILTERFILE $STACKFILE "  >> $UBERSUMFILE
+		@ UBERCOUNT = $UBERCOUNT + 1
+	endif
+end
+    	echo "uvotimsum infile=$STACKFILE outfile=$OUTFILE clobber=no exclude=NONE "  >> $UBERSUMFILE
+
 
 # should already be downloaded  cat $downloadscript >> $allscript
 cat $sumscript >> $allscript
 [ -f "$othersumscript" ] && cat $othersumscript >> $allscript
 cat $appendscript >> $allscript
 [ -f "$otherappendscript" ] && cat $otherappendscript >> $allscript
+cat $uberscript >> $allscript
 #echo "gzip *.img" >> $appendscript
 #echo "gzip *.lss" >> $appendscript
 
