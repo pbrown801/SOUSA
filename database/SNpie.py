@@ -41,7 +41,7 @@ import numpy as np
 #____________________________________________________________________________________________________________________________________________________________________________
 
 #can edit what csv is opened here
-with open('SortedTrimmedAllSwiftSNlist.csv','r') as csv_file:
+with open('CombinedTrimmedAllSwiftSNlist2026.csv','r') as csv_file:
     print("index:")
     reader =csv.reader(csv_file)
     list_of_rows = list(reader)  # Pass reader object to list() to get a list of lists
